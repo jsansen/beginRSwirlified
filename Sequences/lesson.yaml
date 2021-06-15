@@ -87,90 +87,72 @@ La limite maximale de 10 n'est jamais atteinte puisque le nombre suivant de notr
 
 # Q13
 - Class: cmd_question
-  Output: To confirm that my_seq has length 30, we can use the length() function.
-    Try it now.
+  Output: Pour confirmer que my_seq a bien une taille/longueur de 30, on peut utiliser la commande length(). Essayez !
   CorrectAnswer: length(my_seq)
   AnswerTests: omnitest(correctExpr='length(my_seq)')
-  Hint: Use length(my_seq) to view the length of the my_seq variable.
+  Hint: Utilisez length(my_seq) pour voir la taille du vecteur my_seq.
 
+# Q14
 - Class: text
-  Output: Let's pretend we don't know the length of my_seq, but we want to generate
-    a sequence of integers from 1 to N, where N represents the length of the my_seq
-    vector. In other words, we want a new vector (1, 2, 3, ...) that is the same length
-    as my_seq.
+  Output: Imaginons que nous ne connaissions pas la longueur du vecteur my_seq, mais que nous voulions générer une séquence d'entiers de 1 à N, ou N représente la longueur du vecteur my_seq.
+  En d'autres mots, nous voulons un nouveau vecteur (1, 2, 3, ...) qui fait la même longueur que my_seq.
 
+# Q15
 - Class: cmd_question
-  Output: 'There are several ways we could do this. One possibility is to combine
-    the `:` operator and the length() function like this: 1:length(my_seq). Give that
-    a try.'
+  Output: 'Plusieurs façon de faire sont possible. Une possibilité est de combiner l'opérateur ':' et la fonction length, comme ceci 1:length(my_seq). Essayez cette commande.'
   CorrectAnswer: 1:length(my_seq)
   AnswerTests: omnitest(correctExpr='1:length(my_seq)')
-  Hint: Try 1:length(my_seq), without assigning the result to a new variable.
+  Hint: Essayez 1:length(my_seq), sans attribuer le résultat à une nouvelle variable.
 
+# Q16
 - Class: cmd_question
-  Output: Another option is to use seq(along.with = my_seq). Give that a try.
+  Output: Une autre option est d'utiliser seq(along.with = my_seq). Essayez!
   CorrectAnswer: seq(along.with = my_seq)
   AnswerTests: omnitest(correctExpr='seq(along.with = my_seq)')
-  Hint: Type seq(along.with = my_seq). Notice we're using the same seq() function, but
-    with a different argument called `along.with`. This tells R that you want a sequence
-    'along with' the sequence my_seq. Remember you can type ?seq if you have questions
-    about the seq() function.
+  Hint: Tapez seq(along.with = my_seq). Remarquez que nous utilisons toujours la même fonction seq(), mais avec un nouvel argument cet fois-ci, appelé "along.with". Cela indique à R que vous voulez une sequence de longueur identique à celle fournit en argument.(ici, la sequence my_seq). Rappelez vous que vous pouvez tapez ?seq si vous aviez besoin de détails sur la fonction seq().
 
+
+# Q17
 - Class: cmd_question
-  Output: However, as is the case with many common tasks, R has a separate built-in
-    function for this purpose called seq_along(). Type seq_along(my_seq) to see it
-    in action.
+  Output: Cependant, comme dans de nombreux cas pour des tâches communes et fréquentes, R fournit une fonction dédiée pour cela, appelée seq_along(). Tapez seq_along(my_seq) pour le constater.
   CorrectAnswer: seq_along(my_seq)
   AnswerTests: omnitest(correctExpr='seq_along(my_seq)')
-  Hint: The seq_along() function is a variation of the seq() function. Try seq_along(my_seq)
-    to get the same result yet another way.
+  Hint: La fonction seq_along()  est une variation de la fonction seq(). Essayez seq_along(my_seq) pour obtenir le même résultat par cette autre méthode.
 
+# Q18
 - Class: text
-  Output: There are often several approaches to solving the same problem, particularly
-    in R. Simple approaches that involve less typing are generally best. It's also
-    important for your code to be readable, so that you and others can figure out
-    what's going on without too much hassle.
+  Output: EN informatique, il y a souvent plusieurs approches pour résoudre un problème, c'est tout particulièrement le cas en programmation, incluant en R. De manière générale, on considère que plus une solution est "courte" (implique peu de code) meilleure elle est. J'ajouterai à titre personnel qu'il faut également prendre en considération la clarté du code, surtout en milieu professionnel ou scolaire ou d'autres personnes sont souvent amenées à lire votre code.
 
+# Q19
 - Class: text
-  Output: If R has a built-in function for a particular task, it's likely that function
-    is highly optimized for that purpose and is your best option. As you become a
-    more advanced R programmer, you'll design your own functions to perform tasks
-    when there are no better options. We'll explore writing your own functions in
-    future lessons.
+  Output: Si R a une fonction de base (on parle de fonction built-in car fournies directement par R sans bibliothèques additionnelles), il y a de fortes chances pour que cette fonction soit hautement optimisée pour cette tâche et il y a de fortes chances pour que ce soit la meilleure solution.
+  Plus vous gagnerez en compétence de programmation avec R, plus vous serez amené à écrire vos propres fonction pour effectuer des tâches spécifique pour lesquelles il n'existe pas de meilleure solution. Nous verons l'écriture de fonctions dans une future leçon.
 
+# Q20
 - Class: text
-  Output: One more function related to creating sequences of numbers is rep(), which
-    stands for 'replicate'. Let's look at a few uses.
+  Output: Une autre fonction associée à la création de séquences est la fonction rep(), qui permet de "répliquer". Regardons d'un peu plus près son utilisation.
 
+# Q21
 - Class: cmd_question
-  Output: If we're interested in creating a vector that contains 40 zeros, we can
-    use rep(0, times = 40). Try it out.
+  Output: Si on est intéréssé dans la création d'un vecteur contenant 40 zéros, on peut utiliser la fonction rep(0, times = 40). Essayez cela.
   CorrectAnswer: rep(0, times = 40)
   AnswerTests: omnitest(correctExpr='rep(0, times = 40)')
-  Hint: Type rep(0, times = 40) to make a vector containing 40 zeros.
+  Hint: Tapez rep(0, times = 40) pour créer un vecteur contenant 40 zeros.
 
+# Q22
 - Class: cmd_question
-  Output: If instead we want our vector to contain 10 repetitions of the vector (0,
-    1, 2), we can do rep(c(0, 1, 2), times = 10). Go ahead.
+  Output: Si nous voulons que notre vecteur contienne 10 répétitions de l'ensemble de valeurs (0, 1, 2), on fera alors: rep(c(0, 1, 2), times = 10). A vous, testez ça.
   CorrectAnswer: rep(c(0, 1, 2), times = 10)
   AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), times = 10)')
-  Hint: Try rep(c(0, 1, 2), times = 10) for a different variation on the same theme.
-    Be sure to use the c() function to tell R that the numbers 0, 1, and 2 make up
-    a vector.
+  Hint: Essayez rep(c(0, 1, 2), times = 10) pour une autre forme de réplication. Soyez vigilant à utiliser la fonction c() pour indiquer à R que les nombres 0, 1, 2 forment l'ensemble à dupliquer.
 
+# Q23
 - Class: cmd_question
-  Output: Finally, let's say that rather than repeating the vector (0, 1, 2) over
-    and over again, we want our vector to contain 10 zeros, then 10 ones, then 10
-    twos. We can do this with the `each` argument. Try rep(c(0, 1, 2), each = 10).
+  Output: Enfin, imaginez que vous cherchiez à répeter d'abord 10 fois le zero, puis 10 fois le un, puis 10 fois le deux. Pour cela, nous utilisons l'argument "each". A vous !
   CorrectAnswer: rep(c(0, 1, 2), each = 10)
   AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), each = 10)')
-  Hint: Type rep(c(0, 1, 2), each = 10) to see how the `each` argument to the rep()
-    function alters its behavior slightly.
+  Hint: Tapez rep(c(0, 1, 2), each = 10) pour voir comment l'argument each agit sur la répétition et modifie le résultat.
 
-- Class: mult_question
-  Output: Would you like to inform someone about your successful completion of
-    this lesson via email?
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+
+- Class: text
+  Output: Sur Moodle, selectionnez le test "Sequences" et entrez le code "HamblyD4rW4rtH" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
