@@ -1,0 +1,246 @@
+- Class: meta
+  Course: beginR
+  Lesson: R_101
+  Author: Joris SANSEN
+  Type: Standard
+  Organization: Bordeaux-INP / ENSTBB
+  Version: 2.4.5
+
+- Class: text
+  Output: Dans la suite de ce cours, les ". . ." signifie que vous pouvez afficher le message
+    ou la question suivante. Tapez la touche "Entrée" pour continuer.
+
+- Class: text
+  # Output: In this lesson, we will explore some basic building blocks of the R programming
+  Output: "Dans cette leçon, nous allons explorer les bases de l'utilisation du langage R."
+
+- Class: text
+  Output: Si, à tout moment, vous souhaitez obtenir plus d'informations sur un sujet particulier lié à R, vous pouvez taper "help.start()" dans la console, ce qui ouvrira un menu de ressources.
+    Sinon, une simple recherche sur le Web permettra souvent d'obtenir la réponse que vous cherchez.
+
+- Class: cmd_question
+  Output: Dans sa forme la plus simple, R peut être utilisé comme une calculatrice interactive.
+    Ecrivez 5 + 7 et validez en tapant sur la touche Entrée.
+  CorrectAnswer: 5 + 7
+  AnswerTests: omnitest(correctExpr='5 + 7')
+  Hint: Ecrivez 5 + 7 et tapez sur la touche Entrée.
+
+- Class: text
+  Output: R affiche bien le résultat de l'opération (12). On remarque également qu'il ajoute le numéro de ligne ([1]).
+    Cependant, R est un langage de programmation, l'objectif n'est pas de l'utiliser en tant que calculatrice mais d'automatiser certains processus ou d'accélerer certaines opérations (entre autre, il y en a bien d'autres).
+
+- Class: text
+  Output: Imaginons que nous voulions ré-utiliser le résultat de cette opération un autre calcul.
+    Au lieu de ré-écrire l'opération à chaque fois que cela est nécessaire,
+    nous pouvons créer une "variable".
+
+- Class: text
+  Output: En informatique/programmation, une variable est une entité, un objet qui permet de stocker une information, une valeur.
+    Il en existe de différents types (chiffre, texte, liste, tableau matrice, etc) et elles s'utilisent plus ou moins de la même façon dans les différents langages (à quelques nuances près mais nous ne nous attarderons pas la-dessus aujourd'hui).
+    L'objectif de passer par une variable est donc de pouvoir réutiliser l'information qu'elle représente.
+
+- Class: text
+  Output: Dans R, il existe plusieurs façons d'assigner une valeur à une variable (lui affecter une information). Dans quasiment tous les  langages de programmation, une affectation se fait via le symbole "=".
+
+- Class: text
+  Output: Historiquement, R n'acceptait que la flèche à gauche ("<-" écrite avec les symboles inférieur et moins collé) et l'accepte encore à l'heure actuelle mais je trouve préférable d'utiliser le symbole "égale".
+    Que vous choississiez l'un ou l'autre, le choix reste vôtre, les deux sont acceptables.
+
+- Class: text
+  Output: Attention, vous pouvez voir sur internet des affectations par la droite ("->") mais c'est une abérration, oubliez cela et "fuyez, pauvre fou!"
+    (cela a probablement une utilité mais cela est loin de vos préoccupations actuelles et n'est vraiment pas une bonne habitude à prendre...)
+
+- Class: text
+  Output: On effectue donc l'affectation en disant "voici ma variable, donne lui cette information"; ce qui se traduit en programmation par variable = information (ou variable <- information).
+
+- Class: cmd_question
+  Output: Pour assigner le résultat de l'expression "5 + 7" a une nouvelle variable que nous appellerons 'x', on écrit donc "x = 5 + 7" sans guillements (ou "x <- 5 + 7" si vous persistez dans cette voie).
+    Essayez d'affecter 5+7 à x.
+  CorrectAnswer: x = 5 + 7
+  AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5', 'x = 5 + 7', 'x = 7 + 5')
+  Hint: Ecrivez "x = 5 + 7". Les espaces ont peu d'importance dans R mais améliorent la lisibilité.
+    Tant qu'ils ne séparent pas la flèche si vous l'utilisez ("<-" est ok, "< -" est mauvais), vous faites comme ça vous chante.
+
+- Class: text
+  Output: On s'aperçoit que R n'a pas affiché la réponse cette fois-ci.
+    On considère que ce n'est pas nécessaire lors d'une affectation.
+
+- Class: cmd_question
+  Output: Pour afficher le contenu d'une variable, tapez le nom de la variable (ici, "x" sans les guillemets)  et tapez sur la touche Entrée.
+    A vous d'essayer.
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr='x')
+  Hint: Tapez x puis Entrée
+
+- Class: cmd_question
+  Output: Maintenant, assignez à une variable "y", la valeur "x - 3".
+  CorrectAnswer: y = x - 3
+  AnswerTests: any_of_exprs('y <- x - 3','y = x - 3')
+  Hint: Tapez y = x - 3 puis Entrée.
+
+- Class: cmd_question
+  Output: Quelle est la valeur de y? Vérifiez le.
+  CorrectAnswer: 'y'
+  AnswerTests: omnitest(correctExpr='y')
+  Hint: Tapez y puis Entrée
+
+- Class: text
+  Output: Une variable peut également conserver un ensemble de valeurs; on parle alors de listes, vecteurs, matrices, etc.,  suivant les cas (nombres de dimensions, "types" des données stockées, etc.).
+    Pour l'instant, nous allons créer une "collection" de nombres; on parle de vecteur.
+    Tout object (variable, etc) contenant une donnée est appelé une structure de données et les vecteurs numériques sont les structures de données les plus simples dans R.
+    Techniquement parlant, même une variable ne stockant qu'un simple chiffre est considéré comme étant un vecteur de taille 1.
+
+- Class: cmd_question
+  Output: La façon la plus simple de créer un vecteur est d'utiliser la fonction "c()".
+    (Fun fact, "c" viendrait du mot anglais concatenate ou "combine", signifiant combiner, associer.)
+    Pour créer un vecteur contenant les nombres 1.1, 0 et 3.14, on écrira ainsi "c(1.1, 9, 3.14)".
+    Vous remarquerez deux choses ici... 1. le séparateur de décimal est le point (écriture à l'anglaise) et 2. les chiffres sont séparés par des virgules.
+    Ce deuxième point est important, la virgule servant à séparer différents éléments dans une fonction (suivant un ordre pré-établi ou non, nous le verrons par la suite).
+    Essayez maitenant de créer un vecteur contenant ces trois chiffres et assignez-le à une variable "z".
+
+  CorrectAnswer: z = c(1.1, 9, 3.14)
+  AnswerTests: any_of_exprs('z <- c(1.1, 9, 3.14)', 'z = c(1.1, 9, 3.14)')
+  Hint: Ecrire z = c(1.1, 9, 3.14) assignera le vecteur (1.1, 9, 3.14) a une nouvelle variable appelée "z".
+    Ajouter les espaces entre les virgules n'est pas nécessaire mais facilite la lecture en le rendant plus lisible, moins "tassé".
+
+- Class: cmd_question
+  Output: Lorsque vous avez une question à propos d'une fonction particulière, vous pouvez accéder aux aides fournies par R via la commande '?'.
+    Par exemple, pour obtenir de l'aide ou des détails sur la fonction c(), vous pouvez écrire "?c" dans la console.
+    Vous remarquerez que nous n'avons pas mis les parenthèses, celles-ci ne sont pas nécessaire pour accéder à la documentation.
+    Deux cas peuvent se produire alors... 1. il n'y a qu'une fonction qui porte ce nom, la fiche de documentation de la fonction est alors affichée. 2. Il existe d'autres fonctions portant le même nom (cela arrive lorsqu'on charge des bibliothèques de fonctions spécifiques mais nous reviendrons sur ces aspects plus tard).  Dans ce cas, R vous affichera une liste des fonctions homonymes sous la forme "package::fonction", vous pouvez alors choisir celle qui vous intéresse spécifiquement.
+    Au début de votre utilisation de R, la plupart des fonctions appartiennent aux bibliothèques chargées par défaut (base, stats, math, etc.).
+    Essayez d'afficher la documentation de la fonction c.
+  CorrectAnswer: ?c
+  AnswerTests: omnitest(correctExpr='?c')
+  Hint: Tapez ?c and press Entrée.
+
+- Class: text
+  Output: Attention, les documentations peuvent donner beaucoup d'informations, pour peu qu'on se donne la peine de prendre le temps de les lire et de les comprendre.
+    L'anglais technique représente un frein qu'il vous faudra dépasser j'en ai peur...
+    N'hésitez pas à chercher une information sur le web ou de demander à votre enseignant plus d'informations si cela s'avère nécessaire.
+
+- Class: cmd_question
+  Output: Revenons à notre variable z, observez-en le contenu.
+  CorrectAnswer: z
+  AnswerTests: omnitest(correctExpr='z')
+  Hint: Tapez "z" puis Entrée et observez le contenu de la variable.
+
+- Class: cmd_question
+  Output: Vous pouvez combinez des vecteurs afin d'en créer un nouveau.
+    Créez un vecteur contenant le vecteur z, 555, puis z à nouveau.
+    N'affectez pas ce vecteur, nous voulons juste observer directement le résultat.
+  CorrectAnswer: c(z, 555, z)
+  AnswerTests: omnitest(correctExpr='c(z, 555, z)')
+  Hint: Tapez c(z, 555, z). Ne créez pas de nouvelle variable.
+
+- Class: cmd_question
+  Output: les vecteurs numériques peuvent être utilisés dans des expressions arythmétiques.
+    Tapez ceci pour voir ce que cela fait... "z * 2 + 100".
+  CorrectAnswer: z * 2 + 100
+  AnswerTests: omnitest(correctExpr='z * 2 + 100')
+  Hint: Entrer z * 2 + 100, sans affectation. Le symbole `*` est un caractère utilisé pour l'opérateur de multiplication.
+
+- Class: text
+  Output: D'abord, R a multiplié chaque élément de z par 2, puis il a ajouté 100 à chaque élément pour fournir le résultat que vous voyez juste au dessus.
+    Vous remarquerez qu'il a suivi l'ordre classique des opérations arithmétiques (de gauche à droite, priorité aux parenthèses, etc.)
+
+- Class: text
+  Output: Il existe d'autres opérateurs arithmétiques, ils sont généralement les mêmes quelques soient les langages. Les classique sont '+', '-', '/', '*', '^' (ou '**') pour la puissance (x^2 et 2**3 signifie respectivement 2 puissance 2 (2 au carré) et 2 puissance 3 (2 au cube)).
+    Pour d'autres opérations arithmétiques, nous utiliserons des fonctions spécifique, comme la racine carré (square root en anglais) qui est accessible via la fonction sqrt().
+
+- Class: cmd_question
+  Output: Calculez la racine carré de "z - 1" et assignez le résultat à une variable "my_sqrt".
+    (Une bonne pratique est de bannir le francais lorsque vous écrivez du code, et ce quelque soit le langage.
+    Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté de les utiliser dans vos affectations si vous écrivez en anglais.)
+  CorrectAnswer: my_sqrt = sqrt(z - 1)
+  AnswerTests: any_of_exprs('my_sqrt <- sqrt(z - 1)', 'my_sqrt = sqrt(z - 1)')
+  Hint: Affectez le résultat de la fonction "sqrt(z - 1)" à un variable appelée my_sqrt.
+
+- Class: mult_question
+  Output: Avant d'afficher le contenu de la variable my_sqrt, selon vous, que contient-elle ?
+  CorrectAnswer: un vecteur de taille 3
+  AnswerChoices: un vecteur de taille 3; un chiffre unique (un vecteur de taille 1); un vecteur vide (de taille 0)
+  AnswerTests: omnitest(correctVal='un vecteur de taille 3')
+  Hint: Rappelez vous comment R avez traité les opérations sur les vecteurs... un élément à la fois...
+
+- Class: cmd_question
+  Output: Affichez maintenant le contenu de la variable my_sqrt.
+  CorrectAnswer: my_sqrt
+  AnswerTests: omnitest(correctExpr='my_sqrt')
+  Hint: Tapez juste my_sqrt puis Entrée pour afficher le contenu de cette variable.
+
+- Class: text
+  Output: Comme vous l'aviez peut-être deviné, R a soustrait 1 à chaque élément, puis a calculé la racine carré des valeurs résultantes. Cela nous donne donc un vecteur de la même taille que le vecteur z avant opérations.
+
+- Class: cmd_question
+  Output: Maintenant, créez une variable appelée "my_div" qui prend les éléments du vecteur z et les divise par my_sqrt.
+  CorrectAnswer: my_div = z / my_sqrt
+  AnswerTests: any_of_exprs('my_div = z / my_sqrt','my_div <- z / my_sqrt')
+  Hint: Tapez "my_div = z / my_sqrt". Comme précédemment, les espaces ne sont pas nécessaire mais rendent le code plus lisible, c'est une question de choix (il n'existe pas pour R de recommandations stylistique officiel comme le PEP8 en Python).
+
+- Class: mult_question
+  Output: Choisissez la bonne réponse
+  CorrectAnswer: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc.
+  AnswerChoices: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc.; my_div est un vecteur de taille 1 (une valeur unique); my_div est non définie
+  AnswerTests: omnitest(correctVal='Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc.')
+  Hint: Rappelez vous comment R à géré les précédentes opérations '+' et '-' sur les vecteurs.
+
+- Class: cmd_question
+  Output: Affichez maintenant ce que contient my_div.
+  CorrectAnswer: my_div
+  AnswerTests: omnitest(correctExpr='my_div')
+  Hint: Tapez my_div et pressez Entrée pour afficher son contenu.
+
+- Class: text
+  Output: Lorsqu'on lui donne deux vecteurs de même taille, R effectue l'opération arithmétique  (`+`, `-`, `*`, etc.) élément par élément.
+    Si les vecteurs ne sont pas de la même taille, le vecteur le plus petit sera "recyclé" jusqu'à atteindre la taille du vecteur le plus grand.
+    Ainsi, si nous avons deux vecteurs v1 = c(6, 5, 4, 3, 2, 1) et v2=c(1, 2, 3), lors d'une opération arithmétique entre ces deux vecteurs, mettons v1+v2, v2 étant le plus petit des deux vecteurs (de taille 3 -contient 3 valeurs- contre v1 de taille 6 -contient 6 valeurs-), il sera recyclé jusqu'à atteindre la même taille que v1, soit sous la forme c(1, 2, 3, 1, 2, 3).
+
+- Class: text
+  Output: Vous comprenez maintenant que lorsque l'on a effectué l'opération "z * 2 + 100" dans notre exemple précédent, z était un vecteur de taille 3 et 2 et 100 sont techniquement des vecteurs de taille 1. De façon invisible, R a recyclé les vecteurs c(2) et c(100) en c(2, 2, 2) et c(100, 100, 100).
+
+- Class: cmd_question
+  Output: Exerçons nous à effectuer des opérations sur des vecteurs... essayez d'additionner c(1, 2, 3, 4) et c(0, 10). Ne faites pas d'affectation à une nouvelle variable, nous allons juste observer le résultat.
+  CorrectAnswer: c(1, 2, 3, 4) + c(0, 10)
+  AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10)')
+  Hint: Tapez c(1, 2, 3, 4) + c(0, 10) dans la console pour voir comment R additionne les deux vecteurs. Ne faites pas d'affectation.
+
+- Class: text
+  Output: Si la taille du vecteur le plus grand n'est pas un multiple entier du vecteur le plus petit, R appliquera quand même sa méthode de recyclage mais en retournant un message d'avertissement (warning) pour vous le faire savoir.
+
+- Class: cmd_question
+  Output: Essayez l'opération c(1, 2, 3, 4) + c(0, 10, 100)par exemple.
+  CorrectAnswer: c(1, 2, 3, 4) + c(0, 10, 100)
+  AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)')
+  Hint: Tapez c(1, 2, 3, 4) + c(0, 10, 100) pour voir comment R gère l'addition de ces deux vecteurs alors que leurs tailles ne correspondent pas et ne sont pas multiples. Ne faites pas d'affectation.
+
+- Class: text
+  Output: Avant de finir cette leçon, quelques astuces permettant de gagner du temps.
+
+- Class: text
+  Output: Un peu plus tôt, nous avons calculé z * 2 + 100. Imaginons que nous nous soyons trompé et qu'au lieu d'ajouter 100, nous voulions ajouter 1000. Nous pouvons ré-écrire entièrement la formule, mais cela peut vite devenir pénible lorsque celle-ci est longue et complexe, et rien ne nous assure de ne pas faire à nouveau une erreur...
+
+- Class: cmd_question
+  Output: Dans beaucoup d'environments de programmation, la flèche vers le haut permet de parcourir un historique des commandes précédentes. Essayez de retrouver cette opération (z * 2 + 100) dans l'historique puis modifiez 100 par 1000 et appuyez sur Entrée.
+  CorrectAnswer: z * 2 + 1000
+  AnswerTests: omnitest(correctExpr='z * 2 + 1000')
+  Hint: appuyez plusieurs fois sur la flèche vers le haut pour retrouver la commande z * 2 + 100 et modifier le '100' en '1000'. Si l'historique ne fonctionne pas, écrivez directement la bonne commande pour pouvoir passer à la suite.
+
+- Class: text
+  Output: Si vous utilisez RStudio, vous pouvez afficher l'intégralité de l'historique en cliquant sur Affichage puis Afficher l'historique (View puis Show history). Celui-ci devrait s'afficher dans un onglet à haut à droite (position susceptible de varier d'un environment à un autre..)
+
+- Class: text
+  Output: Imaginons maintenant que vous vouliez afficher le contenu d'une variable créée un peu plus tôt. Problème, vous ne vous rappelez pas comment elle s'appelle... c'est my_div ou myDiv? Mince alors.... Vous pourriez essayez les deux... ou commencer à écrire 'my' puis appuyer sur la touche 'Tab', la touche au dessus de Maj et Verr.Maj, avec les deux flèches gauche/droite l'une au dessus de l'autres (ctrl+espace fonctionne aussi) afin d'afficher toutes les variables et fonctions commençant par 'my'.
+
+- Class: text
+  Output: Suivant les environnements, la liste peut même être intéractive et vous pouvez alors utiliser les flèches pour selectionner l'entrée qui vous intéresse. Cela s'appelle l'auto-completion et vous fera gagner un temps non négligeable au fur et à mesure que vous programmerez pour vous économisez l'écriture des quelques derniers caractères.
+
+- Class: cmd_question
+  Output: Essayez cette fonctionnalité, tapez "my" puis "Tab" pour retrouver la variable "my_div". (Si l'autocomplétion ne fonctionne pas, tapez juste my_div puis Entrée pour terminer cette leçon).
+  CorrectAnswer: my_div
+  AnswerTests: omnitest(correctExpr='my_div')
+  Hint: Tapez "my" puis appuyez sur la touche Tab et completer pour obtenir my_div.
+
+
+- Class: text
+  Output: Sur Moodle, selectionnez le test "R101" et entrez le code "KING22/11/63" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.

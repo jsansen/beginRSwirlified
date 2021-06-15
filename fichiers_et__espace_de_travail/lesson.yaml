@@ -1,0 +1,229 @@
+- Class: meta
+  Course: beginR
+  Lesson: Espace_de_travail_et_fichiers
+  Author: SANSEN Joris
+  Type: Standard
+  Organization: Bordeaux-INP / ENSTBB
+  Version: 2.4.5
+# Q1
+- Class: text
+  Output: Dans cette leçon, vous allez apprendre comment examiner votre espace de travail local dans R et commencer à explorer la relation entre votre espace de travail et le système de fichier de votre ordinateur.
+#Q2
+- Class: text
+  Output: Attention, vue la variété des systèmes d'exploitation (linux, windows, mac) et des différences entre chaque, les résultats des commandes peuvent varier d'un ordinateur à un autre.
+#Q3
+- Class: text
+  Output: Cependant, il est important de comprendre que R fournit une API -Application Programming Interface- un ensemble de commandes) permettant d'interagir avec les fichiers afin que votre code fonctionne quelque soit le système d'exploitation.
+#Q4
+- Class: cmd_question
+  Output: A son éxecution, R considère qu'il se trouve quelque part dans votre hiérarchie de dossiers; on appelle ce dossier l'espace de travail (working directory dans la langue de Shakespeare). Vous pouvez identifier l'emplacement de cet espace de travail en utilisant la commande "getwd()".. essayez la.
+  CorrectAnswer: getwd()
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: Ecrivez 'getwd()' sans les guillemets pour identifier l'emplacement de l'espace de travail courant.
+
+#Q5
+- Class: cmd_question
+  Output: Lister tous les éléments présents dans votre espace de travail en utilisant la commande 'ls()'
+  CorrectAnswer: ls()
+  AnswerTests: omnitest(correctExpr='ls()')
+  Hint: Ecrivez ls() pour voir tout les objets présents dans votre espace de travail.
+
+#Q6
+- Class: text
+  Output: Certaines de ces commandes sont équivalentes à celles utilisées dans un terminal Linux ou Mac, tout deux étant basé sur un système Unix. Windows a un fonctionnement un peu différent.
+
+#Q7
+- Class: cmd_question
+  Output: Créez une variable x contenant la valeur 9.
+  CorrectAnswer: x = 9
+  AnswerTests: any_of_exprs('x = 9','x <- 9')
+  Hint: Ecrivez x = 9 pour affecter la valeur 9 à une variable appelée x.
+
+#Q8
+- Class: cmd_question
+  Output: Observez à nouveau les objets contenus dans votre espace de travail.
+  CorrectAnswer: ls()
+  AnswerTests: omnitest(correctExpr='ls()')
+  Hint: Ecrivez ls() pour voir les éléments contenus dans l'espace de travail.
+#Q9
+- Class: cmd_question
+  Output: Lister les fichiers contenus dans l'espace de travail en utilisant la commande list.files() ou la commande dir().
+  CorrectAnswer: list.files()
+  AnswerTests: any_of_exprs('list.files()', 'dir()')
+  Hint: Ecrivez list.files() ou dir() pour voir les fichiers contenus dans l'espace de travail.
+#Q10
+- Class: cmd_question
+  Output: Affichez la fiche de documentation de la commande list.files
+  CorrectAnswer: ?list.files
+  AnswerTests: any_of_exprs('?list.files', '?dir', 'help("list.files")', 'help("dir")')
+  Hint: Ecrivez ?list.files ou ?dir pour acceder à la fiche de documentation
+
+#Q11
+- Class: text
+  Output: Une des partie les plus utiles d'une fiche de documentation est la section "See Also" (avec les sections Description, arguments, Details et examples... oui, tout est utile dans une fiche de documentation :-) .Lisez avec attention la section "See also" pour la commande list.files. Certaines des fonctions mentionnées seront utilisées plus loin dans la leçon.
+#Q12
+- Class: text
+  Output: Une fonction peut s'utiliser telle quelle, sans arguments spécifique (comme nous l'avons fait pour utiliser les fonction list.files() ou dir()) ou s'utiliser avec des arguments, c'est-à-dire en lui fournissant des données complémentaires à utiliser. C'est par exemple ce que nous avons fait lorsque nous avons créer un vecteur; nous avons utiliser une fonction (c()) a qui nous avons fournit un ou plusieurs arguments (une valeur ou un ensemble de données), comme dans c(9) (ou 9 est un nombre fourni en argument) ou encore c(1,2,3) (ou 1, 2 et 3 sont 3 arguments fournis à la fonction).
+
+#Q13
+- Class: text
+  Output: Chaque fonction à ses spécificités, certaines s'utilisent sans arguments, d'autres avec, certaines ont des arguments obligatoires tandis que pour d'autres, les arguments sont optionnels, cela varie d'une fonction à une autre. Vous pouvez utiliser la fonction args() pour obtenir le detail des arguments qu'une fonction peut (ou doit s'ils sont obligatoires) utiliser. Pour cela, vous ajouterez le nom de la fonction dont vous voulez plus d'information en argument.
+
+#Q14
+- Class: cmd_question
+  Output: Utiliser la fonction args() pour avoir plus d'informations sur les arguments de la fonction list.files.
+  CorrectAnswer: args(list.files)
+  AnswerTests: omnitest(correctExpr='args(list.files)')
+  Hint: Ecrivez args(list.files) pour voir les arguments de la fonction list.files.
+
+#Q15
+- Class: cmd_question
+  Output: Sauvegardez l'emplacemen de l'espace de travail courant dans une variable appelée old_dir.
+  CorrectAnswer: old_dir = getwd()
+  AnswerTests: any_of_exprs('old_dir = getwd()','old_dir <- getwd()')
+  Hint: Ecrivez  old_dir = getwd() pour assigner l'emplacement de l'espace de travail courant dans une variable appelée old_dir.
+
+- Class: text
+  Output: Nous utiliserons cette variable pour rétablir l'espace de travail à son emplacement initial à la fin de la leçon.
+
+- Class: cmd_question
+  Output: Utilisez dir.create() pour créer un répértoire (dossier) dans l'espace de travail courant. Vous appellerez ce dossier "test_dir".
+  CorrectAnswer: dir.create("test_dir")
+  AnswerTests: omnitest(correctExpr='dir.create("test_dir")')
+  Hint: Ecrivez dir.create("test_dir") pour créer le dossier test_dir dans l'espace de travail.
+
+- Class: text
+  Output: Tout ce que nous allons faire dans la suite de cette leçon sera fait dans ce répértoire, nous pourrons ainsi le supprimer à la fin de la leçon.
+
+- Class: cmd_question
+  Output: Comme nous voulons effectuer toutes nos actions depuis le répértoire que nous venons de créer, il faut le déclarer comme étant le nouvel espace de travail. Pour cela, nous utiliserons la commande setwd() (pour "Set working directory" soit "définir l'espace de travail" en anglais) avec le nouveau répértoire en argument. Attention à le fournir en tant que chaine de caractère (donc encadré par des guillemets), il ne s'agit pas d'une variable !
+  CorrectAnswer: setwd("test_dir")
+  AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/")')
+  Hint: Utiliser la fonction setwd("test_dir") pour définir ce répértoire comme notre nouvel espace de travail.
+
+#Q20
+- Class: text
+  Output: En général, vous voudrez travailler dans un répértoire spécifique, généralement créé spécifiquement pour un projet mais tout dépend de votre méthode d'organisation... Sachez cependant que c'est une bonne pratique de séparer vos projets en différents dossiers, cela vous permettra notamment de créer plus facilement vos packages si cela s'avère opportun.
+
+- Class: cmd_question
+  Output: Créez un fichier dans votre espace de travail, fichier que vous appellerez "mytest.R" en utilisant la fonction file.create().
+  CorrectAnswer: file.create("mytest.R")
+  AnswerTests: omnitest(correctExpr='file.create("mytest.R")')
+  Hint: file.create("mytest.R") devrait très bien fonctionner!
+
+- Class: mult_question
+  Output: Ce devrait être le seul fichier présent dans ce dossier. Quelle commande utiliseriez vous pour vérifier cela?
+  CorrectAnswer: list.files()
+  AnswerChoices: ls();getwd();list.files()
+  AnswerTests: omnitest(correctVal='list.files()')
+  Hint: ls() vous donnera la liste des variables instanciées, getwd() donnera le chemin de l'espace de travail....
+
+- Class: cmd_question
+  Output: Affichez maintenant le contenu de l'espace de travail
+  CorrectAnswer: list.files()
+  AnswerTests: omnitest(correctExpr='list.files()')
+  Hint: vous avez déjà oublié que list.files() affiche le contenu du répértoire de l'espace de travail?! Un vrai poisson rouge ! :-)
+
+- Class: cmd_question
+  Output: Vérifiez maintenant que "mytest.R" existe dans l'espace de travail via la fonction file.exists() en lui passant en argument le nom du fichier dont on cherche à vérifier l'existence.
+  CorrectAnswer: file.exists("mytest.R")
+  AnswerTests: omnitest(correctExpr='file.exists("mytest.R")')
+  Hint: Use file.exists("mytest.R") to check that a file exists.
+
+#Q25
+- Class: text
+  Output: Ces fonctions sont utiles pour automatiser des processus de création et vérification de dossiers/fichiers. Cela s'avère utile si l'on exécute un programme qui, pour une raison ou une autre, a besoin d'accéder à un fichier spécifique ou veut vérifier son existence pour n'importe quelle raison.
+
+
+- Class: cmd_question
+  Output: Vous pouvez accéder aux informations technique du fichier en utilisant la commande file.info(). A vous..
+  CorrectAnswer: file.info("mytest.R")
+  AnswerTests: omnitest(correctExpr='file.info("mytest.R")')
+  Hint: file.info("mytest.R") devrait faire l'affaire...
+
+- Class: text
+  Output: Sachez également que les commandes vues ici pour un fichier ou un dossier (ex. file.exists(), dir.create(), etc.) sont utilisable dans les deux cas, pour les fichiers (via file.***) et les dossiers (via dir.***).
+
+- Class: text
+  Output: Vous pouvez utiliser l'opérateur $ (exemple file.info("mytest.R")$mode )pour accéder à des informations spécifique. (nous reviendrons plus tard sur cet opérateur $, il est beaucoup utilisé)
+
+- Class: cmd_question
+  Output: Changez le nnom du fichier "mytest.R" en "mytest2.R" en utilisant la commande file.rename().
+    N'hésitez pas à regarder la documentation pour savoir comment utiliser cette commande!
+  CorrectAnswer: file.rename("mytest.R", "mytest2.R")
+  AnswerTests: any_of_exprs('file.rename("mytest.R", "mytest2.R")', 'file.rename(from = "mytest.R", to = "mytest2.R")')
+  Hint: La réponse est file.rename("mytest.R", "mytest2.R").
+    Pensez à regarder la fiche de documentation et, si le contenu est trop obscure ou peu clair, n'oubliez pas qu'internet est fait pour ça!
+#Q30
+- Class: text
+  Output: Votre système d'exploitation vous fournit des outils plus simple pour ce type de tâches mais être en capacité de ls effectuer automatiquement et programmatiquement est toujours utile.
+
+- Class: mult_question
+  Output: Pourrions nous supprimer le document mytest.R ?
+  CorrectAnswer: No
+  AnswerChoices: Yes; No
+  AnswerTests: omnitest(correctVal='No')
+  Hint: Ce document existe-t-il encore?
+
+- Class: text
+  Output: Rappelez-vous, nous avons renommé le document mytest.R en mytest2.R, cela est donc tout à fait normal!
+
+
+- Class: cmd_question
+  Output: Créez une copie de "mytest2.R" et appelez cette copie "mytest3.R" en utilisant la commande file.copy().
+  CorrectAnswer: file.copy("mytest2.R", "mytest3.R")
+  AnswerTests: any_of_exprs('file.copy("mytest2.R", "mytest3.R")', 'file.copy(from = "mytest2.R", to = "mytest3.R")')
+  Hint: file.copy("mytest2.R", "mytest3.R") works.
+
+- Class: text
+  Output: Vous devriez avoir désormais 2 fichiers dans le répértoire. Encore une fois, ce type d'opérations se fait simplement via votre système d'exploitation mais est plus simple a effectuer par programmation lorsque l'on doit manipuler des dizaines/centaines de documents.
+#You now have two files in the current directory. That may not seem very interesting. But what if you were working with dozens, or millions,    of individual files? In that case, being able to programatically act on    many files would be absolutely necessary. Don't forget that you can,    temporarily, leave the lesson by typing play() and then    return by typing nxt().
+
+#Q35
+- Class: cmd_question
+  Output: Récupérez le chemin relatif du document  "mytest3.R" en utilisant la commande file.path().
+  CorrectAnswer: file.path("mytest3.R")
+  AnswerTests: omnitest(correctExpr='file.path("mytest3.R")')
+  Hint: file.path("mytest3.R") suffit pour cela.
+
+- Class: cmd_question
+  Output: Vous pouvez utiliser file.path() pour construire des arborescences de fichiers et répértoires indépendamment du système d'exploitation utilisé. Utilisez la commande file.path("folder1","folder2") pour générer un chemin multi-plateforme.
+  CorrectAnswer: file.path("folder1", "folder2")
+  AnswerTests: omnitest(correctExpr='file.path("folder1", "folder2")')
+  Hint: file.path("folder1", "folder2") suffit.
+
+- Class: cmd_question
+  Output: Regardez la documentation de la commande dir.create.
+  CorrectAnswer: ?dir.create
+  AnswerTests: omnitest(correctExpr='?dir.create')
+  Hint: ?dir.create will show you the docs.
+
+- Class: text
+  Output: Prettez attention tout particulièrement la partie sur l'argument "recursive".
+    Cet argument permet de créer des répértoires imbriqués, pour cela, il faut passer l'argument recursive à TRUE.
+
+- Class: cmd_question
+  Output: Créez en une seule commande un répértoire dans l'espace de travail courant et ajoutez, dans ce nouveau répértoire, un 3e répértoire. Vous appellerez le 1er répértoire créé "testdir2" et le 3e "testdir3". Pour cela, vous utiliserez les commandes file.path et dir.create.
+  CorrectAnswer: dir.create(file.path("testdir2", "testdir3"), recursive = TRUE)
+  AnswerTests: omnitest(correctExpr='dir.create(file.path("testdir2", "testdir3"), recursive = TRUE)')
+  Hint: La bonne commande est "dir.create(file.path('testdir2', 'testdir3'), recursive = TRUE). Il faut pensez à utiliser les deux commandes conjointement et surtout penser à définir l'argument recursive pour bien creer une hiérarchie imbriquée et non pas les créer l'un à coté de l'autre.
+
+#Q40
+#---------------------------------------------------------------------------
+- Class: cmd_question
+  Output: Nous avons maitenant fini les exercices, retournez à votre espace de travail initial.
+#Go back to your original working directory using setwd(). (Recall that we    created the variable old.dir with the full path for the orginal working  directory at the start of these questions.)
+  CorrectAnswer: setwd(old_dir)
+  AnswerTests: omnitest(correctExpr='setwd(old_dir)')
+  Hint: Pensez à utiliser la commande setwd et la variable créée au début de la session pour revenir à l'emplacement initial de l'espace de travail.
+
+- Class: text
+  Output: C'est souvent pratique de sauvegarder des paramètres initiaux avant de démarrer une analyse et de les restaurer une fois votre travail terminé.
+# "It is often helpful to save the settings that you had before you    began an analysis and then go back to them at the end. This trick is    often used within functions; you save, say, the par() settings that    you started with, mess around a bunch, and then set them back to the    original values at the end. This isn't the same as what we have done    here, but it seems similar enough to mention."
+
+- Class: text
+  Output: Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créé !
+
+
+- Class: text
+  Output: Sur Moodle, selectionnez le test "fic_wd" et entrez le code "GLUKHOVSKY2033" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
