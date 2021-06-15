@@ -138,11 +138,11 @@
     Tapez ceci pour voir ce que cela fait... "z * 2 + 100".
   CorrectAnswer: z * 2 + 100
   AnswerTests: omnitest(correctExpr='z * 2 + 100')
-  Hint: Entrer z * 2 + 100, sans affectation. Le symbole `*` est un caractère utilisé pour l'opérateur de multiplication.
+  Hint: Entrez z * 2 + 100, sans affectation. Le symbole `*` est un caractère utilisé pour l'opérateur de multiplication.
 
 - Class: text
   Output: D'abord, R a multiplié chaque élément de z par 2, puis il a ajouté 100 à chaque élément pour fournir le résultat que vous voyez juste au dessus.
-    Vous remarquerez qu'il a suivi l'ordre classique des opérations arithmétiques (de gauche à droite, priorité aux parenthèses, etc.)
+  Vous remarquerez qu'il a suivi l'ordre classique des opérations arithmétiques (de gauche à droite, priorité aux parenthèses, etc.)
 
 - Class: text
   Output: Il existe d'autres opérateurs arithmétiques, ils sont généralement les mêmes quelques soient les langages. Les classique sont '+', '-', '/', '*', '^' (ou '**') pour la puissance (x^2 et 2**3 signifie respectivement 2 puissance 2 (2 au carré) et 2 puissance 3 (2 au cube)).
@@ -150,8 +150,8 @@
 
 - Class: cmd_question
   Output: Calculez la racine carré de "z - 1" et assignez le résultat à une variable "my_sqrt".
-    (Une bonne pratique est de bannir le francais lorsque vous écrivez du code, et ce quelque soit le langage.
-    Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté de les utiliser dans vos affectations si vous écrivez en anglais.)
+  (Une bonne pratique est de bannir le francais lorsque vous écrivez du code, et ce quelque soit le langage.
+  Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté de les utiliser dans vos affectations si vous écrivez en anglais.)
   CorrectAnswer: my_sqrt = sqrt(z - 1)
   AnswerTests: any_of_exprs('my_sqrt <- sqrt(z - 1)', 'my_sqrt = sqrt(z - 1)')
   Hint: Affectez le résultat de la fonction "sqrt(z - 1)" à un variable appelée my_sqrt.
@@ -226,8 +226,12 @@
   AnswerTests: omnitest(correctExpr='z * 2 + 1000')
   Hint: appuyez plusieurs fois sur la flèche vers le haut pour retrouver la commande z * 2 + 100 et modifier le '100' en '1000'. Si l'historique ne fonctionne pas, écrivez directement la bonne commande pour pouvoir passer à la suite.
 
-- Class: text
-  Output: Si vous utilisez RStudio, vous pouvez afficher l'intégralité de l'historique en cliquant sur Affichage puis Afficher l'historique (View puis Show history). Celui-ci devrait s'afficher dans un onglet à haut à droite (position susceptible de varier d'un environment à un autre..)
+- Class: cmd_question
+  Output: Si vous utilisez RStudio, vous pouvez afficher l'intégralité de l'historique en cliquant sur Affichage puis Afficher l'historique (View puis Show history). Celui-ci devrait s'afficher dans un onglet à haut à droite (position susceptible de varier d'un environment à un autre..) Vous pouvez également taper history() dans la console pour l'afficher. Essayez!
+  CorrectAnswer: history()
+AnswerTests: omnitest(correctExpr='history()')
+Hint: Tapez "history()" dans la console puis Entrée pour afficher l'historique des commandes.
+
 
 - Class: text
   Output: Imaginons maintenant que vous vouliez afficher le contenu d'une variable créée un peu plus tôt. Problème, vous ne vous rappelez pas comment elle s'appelle... c'est my_div ou myDiv? Mince alors.... Vous pourriez essayez les deux... ou commencer à écrire 'my' puis appuyer sur la touche 'Tab', la touche au dessus de Maj et Verr.Maj, avec les deux flèches gauche/droite l'une au dessus de l'autres (ctrl+espace fonctionne aussi) afin d'afficher toutes les variables et fonctions commençant par 'my'.
