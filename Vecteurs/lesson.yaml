@@ -20,58 +20,57 @@
 
 # Q4
 - Class: text
-  Output: Les vecteurs logiques peuvent contenir les valeurs TRUE, FALSE, et NA (pour VRAI, FAUX et 'not available' -non disponible- dans notre merveilleuse langue nationale).
-  Ces valeurs sont le résultats de conditions logiques. Expérimentons un peu cela avec des conditions simples.
+  Output: "Les vecteurs logiques peuvent contenir les valeurs TRUE, FALSE, et NA (pour VRAI, FAUX et 'not available' -non disponible- dans notre merveilleuse langue nationale). Ces valeurs sont le résultats de conditions logiques. Expérimentons un peu cela avec des conditions simples."
 
 # Q5
 - Class: cmd_question
-  Output: Tout d'abord, créez un vecteur numérique num_vect contenant les valeurs suivantes: 0.5, 55, -10, and 6.
+  Output: "Tout d'abord, créez un vecteur numérique num_vect contenant les valeurs suivantes: 0.5, 55, -10, and 6."
   CorrectAnswer: num_vect = c(0.5, 55, -10, 6)
   AnswerTests: omnitest(correctExpr='num_vect <- c(0.5, 55, -10, 6)')
   Hint: Souvenez vous de la fonction c(), utilisée pour créer un vecteur. Si vous avez oubliez comment l'utiliser, penser à lire la documentation avec ?c. N'oubliez pas l'affectation à la variable num_vect.
 
 # Q6
 - Class: cmd_question
-  Output: Maintenant, créez une variable appelée tf contenant le résultat de ceci : num_vect < 1, ce qui ce lit comme "num_vect est plus petit que 1".
+  Output: "Maintenant, créez une variable appelée tf contenant le résultat de ceci : num_vect < 1, ce qui ce lit comme 'num_vect est plus petit que 1'."
   CorrectAnswer: tf = num_vect < 1
   AnswerTests: omnitest(correctExpr='tf = num_vect < 1')
-  Hint: Utilisez tf = num_vect < 1 pour affecter le résultat de num_vect < 1 à la variable tf.
+  Hint: "Utilisez tf = num_vect < 1 pour affecter le résultat de num_vect < 1 à la variable tf."
+
 # Q7
 - Class: mult_question
-  Output: Selon vous, à quoi ressemblera tf?
+  Output: "Selon vous, à quoi ressemblera tf?"
   CorrectAnswer: un vecteur de 4 valeurs logiques
   AnswerChoices: un vecteur de 4 valeurs logiques; une valeur logique simple
   AnswerTests: omnitest(correctVal='un vecteur de 4 valeurs logiques')
-  Hint: Rappelez vous le cours sur les vecteurs et les operations arithmétiques, notamment sur la réplication des éléments d'un vecteurs lors des opérations entre vecteurs de taille différente, les opérations "vectorisée".
+  Hint: "Rappelez vous le cours sur les vecteurs et les operations arithmétiques, notamment sur la réplication des éléments d'un vecteurs lors des opérations entre vecteurs de taille différente, les opérations 'vectorisée'."
 
 # Q8
 - Class: cmd_question
   Output: Affichez le contenu de tf.
   CorrectAnswer: tf
   AnswerTests: omnitest(correctExpr='tf')
-  Hint: tapez juste tf puis Entrée pour afficher le contenu de cette variable.
+  Hint: Tapez juste tf puis Entrée pour afficher le contenu de cette variable.
 
 # Q9
 - Class: text
-  Output: L'affirmation num_vect < 1 est une condition et tf nous dit si oui ou non chaque élément de notre vecteur satisfait cette condition.
+  Output: "L'affirmation num_vect < 1 est une condition et tf nous dit si oui ou non chaque élément de notre vecteur satisfait cette condition."
 
 # Q10
 - Class: text
-  Output: Le premier élément de num_vect est 0.5, ce qui est plus petit que 1, ainsi la réponse à l'affirmation 0.5 < 1 est TRUE (VRAI).
+  Output: "Le premier élément de num_vect est 0.5, ce qui est plus petit que 1, ainsi la réponse à l'affirmation 0.5 < 1 est TRUE (VRAI).
   Le second élement de num_vect est 55, ce qui est plus grand que 1, donc l'affirmation 55 < 1 est FALSE (FAUX).
-  Cette logique s'applique pour tout les éléments du vecteur.
+  Cette logique s'applique pour tout les éléments du vecteur."
 
 # Q11
 - Class: cmd_question
-  Output: Essayons-en un autre. tapez num_vect >= 6 sans affecter le résultat à une nouvelle variable.
+  Output: "Essayons-en un autre. tapez num_vect >= 6 sans affecter le résultat à une nouvelle variable."
   CorrectAnswer: num_vect >= 6
   AnswerTests: omnitest(correctExpr='num_vect >= 6')
-  Hint: Attention, ne créez pas de nouvelle variable pour cet essai, Nous voulons juste voir le résultat de l'affirmation num_vect >= 6.
-  Assurez vous qu'il n'y ai pas d'espace entre les symboles supérieur `>` et égal `=`. Voyez-les comme un seul opérateur représentant la condition "supérieur ou égal".
+  Hint: "Attention, ne créez pas de nouvelle variable pour cet essai, Nous voulons juste voir le résultat de l'affirmation num_vect >= 6. Assurez vous qu'il n'y ai pas d'espace entre les symboles supérieur `>` et égal `=`. Voyez-les comme un seul opérateur représentant la condition 'supérieur ou égal'."
 
 # Q12
 - Class: text
-  Output: Cette fois, nous cherchons à savoir si chaque élément pris séparement est supérieur ou égal à 6. Puisque 55 et 6 sont supérieur ou égal à 6, les éléments en deuxième et quatrième position du résultat de notre opération sont à TRUE, tandis que les premier et troisième éléments sont à FALSE.
+  Output: "Cette fois, nous cherchons à savoir si chaque élément pris séparement est supérieur ou égal à 6. Puisque 55 et 6 sont supérieur ou égal à 6, les éléments en deuxième et quatrième position du résultat de notre opération sont à TRUE, tandis que les premier et troisième éléments sont à FALSE."
 
 # Q13
 - Class: text
@@ -87,8 +86,7 @@
 
 # Q16
 - Class: text
-  Output: Dans la mesure du possible, essayez de prédire le résultat de chacune des affirmations/opérations suivantes.
-  N'hésitez pas à utiliser papier et crayons pour les "travailler" si cela peut vous aider. Si vous êtes bloqué, tentez votre chance, vous aurez une chance sur deux de tomber sur la bonne solution!
+  Output: "Dans la mesure du possible, essayez de prédire le résultat de chacune des affirmations/opérations suivantes.  N'hésitez pas à utiliser papier et crayons pour les 'travailler' si cela peut vous aider. Si vous êtes bloqué, tentez votre chance, vous aurez une chance sur deux de tomber sur la bonne solution!"
 
 # Q17
 - Class: mult_question
@@ -96,7 +94,7 @@
   CorrectAnswer: 'FALSE'
   AnswerChoices: TRUE; FALSE
   AnswerTests: omnitest(correctVal='FALSE')
-  Hint: Séparez ce problème en deux parties. le `&` du milieu affirme que les deux ensemble de gauche et droites sont vrais. Votre travail est de trouver si c'est réellement le cas. Si oui, alors toute l'affirmation est vraie(TRUE), sinon elle est fausse (FALSE).
+  Hint: "Séparez ce problème en deux parties. le `&` du milieu affirme que les deux ensemble de gauche et droites sont vrais. Votre travail est de trouver si c'est réellement le cas. Si oui, alors toute l'affirmation est vraie(TRUE), sinon elle est fausse (FALSE)."
 
 # Q18
 - Class: mult_question
@@ -124,11 +122,10 @@
 
 # Q22
 - Class: cmd_question
-  Output: 'Créez un vecteur de caractères contenant les mots suivants: "Mon", "nom", "est".
-  Rappelez vous d'encadrer chaque mot dans son propre lot de guillemets afin que R les identifie comme des chaînes de caractères.Stockez ce vecteur dans une variable appelée my_char.'
+  Output: 'Créez un vecteur de caractères contenant les mots suivants: "Mon", "nom", "est". Rappelez-vous de mettre chaque mot dans son propre lot de guillemets afin que R les identifie comme des chaînes de caractères. Stockez ce vecteur dans une variable appelée my_char.'
   CorrectAnswer: my_char = c("Mon", "nom", "est")
   AnswerTests: omnitest(correctExpr='my_char <- c("Mon", "nom", "est")')
-  Hint: Tapez my_char = c("Mon", "nom", "est") pour créer la nouvelle variable my_char qui contiendra un vecteur de chaines de caractères de taille 3. Assurez vous que les virgules séparent les mots soient en dehors des guillemets ou R pensera que la virgule fait partie de la chaine de caractères.
+  Hint: 'Tapez my_char = c("Mon", "nom", "est") pour créer la nouvelle variable my_char qui contiendra un vecteur de chaines de caractères de taille 3. Assurez vous que les virgules séparent les mots soient en dehors des guillemets ou R pensera que la virgule fait partie de la chaine de caractères.'
 
 # Q23
 - Class: cmd_question
@@ -158,7 +155,7 @@
 
 # Q28
 - Class: cmd_question
-  Output: 'Pour ajouter (en informatique pour les chaines de caractère on dit concaténer  -concatenate-) votre nom à la fin de la variable my_char, utilisez la fonction c() comme suit: c(my_char, "notre_nom_ici"). Placez votre nom entre guillemets de la même façon que dans l'exemple. Essayez en stockant le résultat dans une variable appelée mon_nom.'
+  Output: 'Pour ajouter (en informatique pour les chaines de caractère on dit concaténer  -concatenate-) votre nom à la fin de la variable my_char, utilisez la fonction c() comme suit: c(my_char, "notre_nom_ici"). Placez votre nom entre guillemets de la même façon que dans l`exemple. Essayez en stockant le résultat dans une variable appelée mon_nom.'
   CorrectAnswer: mon_nom = c(my_char, "Swirl")
   AnswerTests: var_is_a("character", "mon_nom"); expr_uses_func("c"); expr_creates_var("mon_nom"); val_has_length(4)
   Hint: ajoutez votre nom à la fin du vecteur my_char en utilisant la fonction c() function. Assurez-vous d'affecter le résultat à une nouvelle variable appelée mon_nom. Si votre nom était "Swirl",
@@ -198,7 +195,7 @@
 
 # Q34
 - Class: text
-  Output: 'Que pensez-vous qu'il va se passer si nos vecteurs étaient de taille différente? (astuce: nous en avons déjà parlé à deux reprises dans les précédents cours!)'
+  Output: "Que pensez-vous qu'il va se passer si nos vecteurs étaient de taille différente? (astuce: nous en avons déjà parlé à deux reprises dans les précédents cours!)"
 
 # Q35
 - Class: cmd_question
