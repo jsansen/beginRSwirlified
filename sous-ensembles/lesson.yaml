@@ -21,164 +21,197 @@
   AnswerTests: omnitest(correctExpr='x')
   Hint: Tapez x pour voir son contenu.
 
+# Q4
 - Class: text
   Output: La façon de dire à R que l'on veut selectionner certains éléments en particulier (on parle de créer un sous-ensemble - subset en anglais) à partir d'un vecteur est de placer un indice (position) entre crochets directement après le nom du vecteur.
 
+# Q5
 - Class: cmd_question
   Output: Exemple simple, essayez try x[1:10] pour voir les 10 premiers éléments de x.
   CorrectAnswer: x[1:10]
   AnswerTests: omnitest(correctExpr='x[1:10]')
   Hint: Affichez les 10 premiers éléments de x avec la commande x[1:10].
 
+# Q6
 - Class: text
-  Output: Les indices de positions peuvent être de différents types: Index vectors come in four different flavors -- logical vectors, vectors of positive integers, vectors of negative integers, and vectors of character strings -- each of which we'll cover in this lesson.
+  Output: Les indices de vecteurs peuvent être de différentes sortes: logiques, entiers, , vectors of positive integers, vectors of negative integers, and vectors of character strings -- each of which we'll cover in this lesson.
 
+# Q7
 - Class: text
-  Output: Let's start by indexing with logical vectors. One common scenario when working with real-world data is that we want to extract all elements of a vector that are not NA (i.e. missing data). Recall that is.na(x) yields a vector of logical values the same length as x, with TRUEs corresponding to NA values in x and FALSEs corresponding to non-NA values in x.
+  Output: Commençons avec les vecteurs logique. Un scenario classique lorsque l'on travaille avec des données réelles (issues de vraies expériences, acquises sur le terrain) est de vouloir extraire tout les éléments n'étant pas NA (retirer les données manquantes, on parle de nettoyage de données). Rappelez-vous que is.na(x) retourne un vecteur logique de la même taille que x, avec des TRUE aux positions des NA et des FALSE aux positions des non- NA dans x.
 
+# Q8
 - Class: mult_question
-  Output: What do you think x[is.na(x)] will give you?
-  AnswerChoices: A vector of all NAs; A vector with no NAs; A vector of TRUEs and FALSEs; A vector of length 0
-  CorrectAnswer: A vector of all NAs
-  AnswerTests: omnitest(correctVal="A vector of all NAs")
-  Hint: Remember that is.na(x) tells us where the NAs are in a vector. So if we subset x based on that, what do you expect to happen?
+  Output: Que pensez-vous que x[is.na(x)] nous donnera ?
+  AnswerChoices: Un vecteur entièrement rempli de NAs; un vecteur sans NAs; un vecteur de TRUE/FALSE; un vecteur de taille 0
+  CorrectAnswer: Un vecteur entièrement rempli de NAs
+  AnswerTests: omnitest(correctVal="Un vecteur entièrement rempli de NAs")
+  Hint: Rappelez-vou que is.na(x) nous dit ou sont les NAs dans le vecteur. Si on échantillonne x sur cette base, à quoi dois-on s'attendre?
 
+# Q9
 - Class: cmd_question
-  Output: Prove it to yourself by typing x[is.na(x)].
+  Output: Expérimentez le en tapant x[is.na(x)].
   CorrectAnswer: x[is.na(x)]
   AnswerTests: omnitest(correctExpr='x[is.na(x)]')
-  Hint: Type x[is.na(x)] to see that you get all NAs, which is clearly not what we want!
+  Hint: Tapez x[is.na(x)] pour voir que l'on n'obtient que des NAs, ce qui n'est clairement pas ce que l'on veut.
 
+# Q10
 - Class: cmd_question
-  Output: Recall that `!` gives us the negation of a logical expression, so !is.na(x) can be read as 'is not NA'. Therefore, if we want to create a vector called y that contains all of the non-NA values from x, we can use y <- x[!is.na(x)]. Give it a try.
+  Output: SOuvenez-vous que `!` nous permet d'obtenir la négation d'une expression logique. Ainsi, !is.na(x) peut se lire comme 'is not NA'. Du coup, si on veut créer un vecteur (appelons-le y) qui contiendrait toutes les valeurs non NA de x, on peut utiliser cette syntaxe: y = x[!is.na(x)]. Essayez cela.
   CorrectAnswer: y <- x[!is.na(x)]
   AnswerTests: omnitest(correctExpr='y <- x[!is.na(x)]')
-  Hint: Type y <- x[!is.na(x)] to capture all non-missing values from x.
+  Hint: Tapez y = x[!is.na(x)] pour 'capturer'/récupérer tout les valeurs non manquantes de x.
 
+# Q11
 - Class: cmd_question
-  Output: Print y to the console.
+  Output: Affichez y.
   CorrectAnswer: 'y'
   AnswerTests: omnitest(correctExpr='y')
-  Hint: Type y to view its contents.
+  Hint: Tapez y pour voir son contenu.
 
+# Q12
 - Class: text
-  Output: Now that we've isolated the non-missing values of x and put them in y, we can subset y as we please.
+  Output: Maintenant que nous avons isolé les valeurs non manquantes de x (stockées dans y), on peut échantillonner y comme on le souhaite.
 
+# Q13
 - Class: mult_question
-  Output: Recall that the expression y > 0 will give us a vector of logical values the same length as y, with TRUEs corresponding to values of y that are greater than zero and FALSEs corresponding to values of y that are less than or equal to zero. What do you think y[y > 0] will give you?
-  AnswerChoices: A vector of all the positive elements of y; A vector of all the negative elements of y; A vector of all NAs; A vector of length 0; A vector of TRUEs and FALSEs
-  CorrectAnswer: A vector of all the positive elements of y
-  AnswerTests: omnitest(correctVal="A vector of all the positive elements of y")
-  Hint: The logical expression y > 0 will give us TRUE for each element of y that is positive. Based on that, what do you think y[y > 0] will return?
+  Output: Rappelez-vous que l'expression y > 0 nous donnera un vecteur de valeurs logique de la même taille que y, avec des TRUE ou FALSE pour chaque élément en fonction de la véracité de cette expression. Selon vous, que donnera y[y > 0]?
+  AnswerChoices: Un vecteur de toutes les valeurs positives de y; un vecteur de toutes les valeurs négativs de y; un vecteur rempli de NA; un vecteur de taille 0; un vecteur de TRUE/FALSE
+  CorrectAnswer: Un vecteur de toutes les valeurs positives de y
+  AnswerTests: omnitest(correctVal="Un vecteur de toutes les valeurs positives de y")
+  Hint: l'expression logique y > 0 nous donnera TRUE pour chaque éléments de y qui est positif. En partant de ce postulat, selon-vous, que donnera y[y > 0] ?
 
+# Q14
 - Class: cmd_question
-  Output: Type y[y > 0] to see that we get all of the positive elements of y, which are also the positive elements of our original vector x.
+  Output: Tapez y[y > 0] pour constater que l'on obtient les éléments positifs de y, qui sont par conséquent également les éléments positifs de notre vecteur d'origine x.
   CorrectAnswer: y[y > 0]
   AnswerTests: omnitest(correctExpr='y[y > 0]')
-  Hint: Type y[y > 0] to view only the positive elements of y.
+  Hint: Tapez y[y > 0] pour voir uniquement les éléments positifs de y.
 
+# Q15
 - Class: cmd_question
-  Output: You might wonder why we didn't just start with x[x > 0] to isolate the positive elements of x. Try that now to see why.
+  Output: Il serait légitime de se demander pourquoi nous n'avons pas directement appliquer cette commande sur x, avec x[x > 0] pour isoler les éléments positifs de x. Essayez cette commande pour comprendre pourquoi.
   CorrectAnswer: x[x > 0]
   AnswerTests: omnitest(correctExpr='x[x > 0]')
-  Hint: Try x[x > 0] to see why we didn't use this approach.
+  Hint: Tapez x[x > 0] pour voir pourquoi nous n'avons pas utilisé cette approche.
 
+# Q16
 - Class: text
-  Output: Since NA is not a value, but rather a placeholder for an unknown quantity, the expression NA > 0 evaluates to NA. Hence we get a bunch of NAs mixed in with our positive numbers when we do this.
+  Output: Puisque NA n'est pas une valeur mais un espace reservé pour une quantité inconnue, l'expression NA > 0 retourne automatiquement NA. Par conséquent, on obtient un mélange de NA et de nos valeurs positives lorsque l'on fait cela.
 
+# Q17
 - Class: cmd_question
-  Output: Combining our knowledge of logical operators with our new knowledge of subsetting, we could do this -- x[!is.na(x) & x > 0]. Try it out.
+  Output: Si on s'appuie sur nos connaissances des opérateurs logiques et sur ce que l'on vient de voir sur l'échantillonnage, on peut faire cela: x[!is.na(x) & x > 0]. Essayez cette commande.
   CorrectAnswer: x[!is.na(x) & x > 0]
   AnswerTests: omnitest(correctExpr='x[!is.na(x) & x > 0]')
-  Hint: Try x[!is.na(x) & x > 0] to see what you get.
+  Hint: Tapez x[!is.na(x) & x > 0] pour voir ce que l'on obtient.
 
+# Q18
 - Class: text
-  Output: In this case, we request only values of x that are both non-missing AND greater than zero.
+  Output: Dans ce cas, on ne subset que les valeurs qui sont à la fois non NA ET supérieures à zero.
 
+# Q19
 - Class: text
-  Output: I've already shown you how to subset just the first ten values of x using x[1:10]. In this case, we're providing a vector of positive integers inside of the square brackets, which tells R to return only the elements of x numbered 1 through 10.
+  Output: Nous avons déjà vu comment extraire (les 10 premiers éléments de x en utilisant x[1:10]. Dans ce cas, on fournit un vecteur d'entiers positifs entre les crochets, ce qui indique à R de ne retourner que les éléments de x aux positions 1 à 10.
 
+# Q20
 - Class: text
-  Output: Many programming languages use what's called 'zero-based indexing', which means that the first element of a vector is considered element 0. R uses 'one-based indexing', which (you guessed it!) means the first element of a vector is considered element 1.
+  Output: gardez en tête que dans R, le premier élément d'un vecteur/liste/etc est à 1 (one-based indexing) dans la plupart des autres langages informatique, le premier indice (la première position) est plutôt numérotée 0 (zero-based indexing).
 
+# Q21
 - Class: cmd_question
-  Output: Can you figure out how we'd subset the 3rd, 5th, and 7th elements of x? Hint -- Use the c() function to specify the element numbers as a numeric vector.
+  Output: Pouvez-vous deviner comment faire pour obtenir les éléments en position 3, 5 et 7 ? (pour faciliter l'évaluation de votre réponse, ordonnez les indices par ordre croissant mais sachez que ce n'est pas obligatoire)
   CorrectAnswer: x[c(3, 5, 7)]
   AnswerTests: omnitest(correctExpr='x[c(3, 5, 7)]')
-  Hint: Create a vector of indexes with c(3, 5, 7), then put that inside of the square brackets.
+  Hint: créez un vecteur d'indices c(3, 5, 7), et utilisez le entre les crochets.
 
+# Q22
 - Class: cmd_question
-  Output: It's important that when using integer vectors to subset our vector x, we stick with the set of indexes {1, 2, ..., 40} since x only has 40 elements. What happens if we ask for the zeroth element of x (i.e. x[0])? Give it a try.
+  Output: Il est important de rester dans les bornes de positions existant au sein de notre vecteur, soit l'ensemble des indices {1, 2, ..., 40} puisque notre vecteur x est composé de 40 éléments. Que se passe-t-il lorsque nous demandons à obtenir l'élément en position zero ? essayez avec la commande x[0].
   CorrectAnswer: x[0]
   AnswerTests: omnitest(correctExpr='x[0]')
-  Hint: Try x[0] to see what happens when we refer to the zeroth element of a vector, which is not defined in R.
+  Hint: Tapez x[0] pour voir ce qui se passe lorsque l'on fait référence à la position zéro du vecteur, ce qui n'est logiquement pas possible dans R.
 
+# Q23
 - Class: cmd_question
-  Output: As you might expect, we get nothing useful. Unfortunately, R doesn't prevent us from doing this. What if we ask for the 3000th element of x? Try it out.
+  Output: Comme vous vous doutiez, on n'obtient rien de très utile. Malheureusement, R ne nous empêche pas de faire ce type d'opérations. Que se passe-t-il si on essaie de dépasser les limites du vecteur et d'obtenir l'élément en position 3000 ? Essayez!
   CorrectAnswer: x[3000]
   AnswerTests: omnitest(correctExpr='x[3000]')
-  Hint: Request the 3000th element of x (which does not exist) with x[3000].
+  Hint: Obtenez l'élement en position 3000 avec x[3000].
 
+# Q24
 - Class: text
-  Output: Again, nothing useful, but R doesn't prevent us from asking for it. This should be a cautionary tale. You should always make sure that what you are asking for is within the bounds of the vector you're working with.
+  Output: Une fois encore, rien de très utile et R ne nous empêche pas d'effectuer ce type de requête. Ce sera à vous d'être vigilant à bien rester dans les limites du ou des vecteurs avec lesquels vous travaillez.
 
+# Q25
 - Class: text
-  Output: What if we're interested in all elements of x EXCEPT the 2nd and 10th? It would be pretty tedious to construct a vector containing all numbers 1 through 40 EXCEPT 2 and 10.
+  Output: Et maintenant, comment faire si on veut tout les éléments SAUF ceux en positions 2 et 10? Il serait plutôt compliqué de construire un vecteur contenant tout les nombre allant de 1 jusqu'à 40 excepté les nombres 2 et 10.
 
+# Q26
 - Class: cmd_question
-  Output: Luckily, R accepts negative integer indexes. Whereas x[c(2, 10)] gives us ONLY the 2nd and 10th elements of x, x[c(-2, -10)] gives us all elements of x EXCEPT for the 2nd and 10 elements.  Try x[c(-2, -10)] now to see this.
+  Output: Heureusement, R accepte les nombres négatifs comme indices de position. Là ou x[c(2, 10)] nous donne uniquement les éléments en position 2 et 10, x[c(-2, -10)] nous donnera tout les éléments excepté les éléments 2 et 10. Tapez x[c(-2, -10)] pour constater cela par vous-même.
   CorrectAnswer: x[c(-2, -10)]
   AnswerTests: omnitest(correctExpr='x[c(-2, -10)]')
-  Hint: Give x[c(-2, -10)] a try.
+  Hint: Tapez x[c(-2, -10)] pour en voir l'effet.
 
+# Q27
 - Class: cmd_question
-  Output: A shorthand way of specifying multiple negative numbers is to put the negative sign out in front of the vector of positive numbers. Type x[-c(2, 10)] to get the exact same result.
+  Output: Un raccourci très pratique pour spécifier plusieurs nombres comme étant négatifs (et donc à retirer de notre sélection) consiste à placer le signe `-` devant le vecteur des nombres positifs. Tapez x[-c(2, 10)] pour obtenir exactement le même résultat.
   CorrectAnswer: x[-c(2, 10)]
   AnswerTests: omnitest(correctExpr='x[-c(2, 10)]')
-  Hint: Use x[-c(2, 10)] to simply things a bit. This could be a time saver if specifying many negative indexes.
+  Hint: Utilisez x[-c(2, 10)] pour simplifier l'écriture. Cela fait gagner un peu de temps lorsque l'on doit spécifier de nombreux nombres comme étant négatifs.
 
+# Q28
 - Class: text
-  Output: So far, we've covered three types of index vectors -- logical, positive integer, and negative integer. The only remaining type requires us to introduce the concept of 'named' elements.
+  Output: Jusqu'à présent nous avons travailler avec trois types d'indices de position: logiques et les nombres entiers positifs et négatifs. Celui qui reste nécessite de vous présenter le concept d'éléments nommés (named elements).
 
+# Q29
 - Class: cmd_question
-  Output: Create a numeric vector with three named elements using vect <- c(foo = 11, bar = 2, norf = NA).
+  Output: Créez un vecteur numérique avec 3 éléments nommés en utilisant cette commande: vect <- c(foo = 11, bar = 2, norf = NA).
   CorrectAnswer: vect <- c(foo = 11, bar = 2, norf = NA)
   AnswerTests: omnitest(correctExpr='vect <- c(foo = 11, bar = 2, norf = NA)')
-  Hint: Create a named vector with vect <- c(foo = 11, bar = 2, norf = NA).
+  Hint: Créez un vector nommé avec vect <- c(foo = 11, bar = 2, norf = NA).
 
+# Q30
 - Class: cmd_question
-  Output: When we print vect to the console, you'll see that each element has a name. Try it out.
+  Output: lorsque l'on affiche ce vecteur, vous verrez que chaque élément à un nom. Vérifiez cela.
   CorrectAnswer: vect
   AnswerTests: omnitest(correctExpr='vect')
-  Hint: Type vect to view its contents.
+  Hint: Tapez vect pour voir son contenu.
 
+# Q31
 - Class: cmd_question
-  Output: We can also get the names of vect by passing vect as an argument to the names() function. Give that a try.
+  Output: Nous pouvons également obtenir le nom du vecteur en passant le vecteur en argument à la fonction names(). Essayez cela.
   CorrectAnswer: names(vect)
   AnswerTests: omnitest(correctExpr='names(vect)')
-  Hint: Check out the results of names(vect).
+  Hint: Vérifiez le résultat de names(vect).
 
+# Q32
 - Class: cmd_question
   Output: Alternatively, we can create an unnamed vector vect2 with c(11, 2, NA). Do that now.
   CorrectAnswer: vect2 <- c(11, 2, NA)
   AnswerTests: omnitest(correctExpr='vect2 <- c(11, 2, NA)')
   Hint: Create an ordinary (unnamed) vector called vect2 that contains c(11, 2, NA).
 
+# Q33
 - Class: cmd_question
   Output: Then, we can add the `names` attribute to vect2 after the fact with names(vect2) <- c("foo", "bar", "norf"). Go ahead.
   CorrectAnswer: names(vect2) <- c("foo", "bar", "norf")
   AnswerTests: omnitest(correctExpr='names(vect2) <- c("foo", "bar", "norf")')
   Hint: Add names to vect2 with names(vect2) <- c("foo", "bar", "norf").
 
+# Q34
 - Class: cmd_question
   Output: Now, let's check that vect and vect2 are the same by passing them as arguments to the identical() function.
   CorrectAnswer: identical(vect, vect2)
   AnswerTests: any_of_exprs('identical(vect, vect2)', 'identical(vect2, vect)')
   Hint: The identical() function tells us if its first two arguments are, well, identical.
 
+# Q35
 - Class: text
   Output: Indeed, vect and vect2 are identical named vectors.
 
+# Q36
 - Class: mult_question
   Output: Now, back to the matter of subsetting a vector by named elements. Which of the following commands do you think would give us the second element of vect?
   AnswerChoices: vect["bar"]; vect[bar]; vect["2"]
