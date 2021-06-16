@@ -34,7 +34,7 @@
 
 # Q6
 - Class: text
-  Output: Les indices de vecteurs peuvent être de différentes sortes: logiques, entiers, , vectors of positive integers, vectors of negative integers, and vectors of character strings -- each of which we'll cover in this lesson.
+  Output: "Les indices de vecteurs peuvent être de différentes sortes: logiques, entiers, vecteurs d'entiers positifs, vecteurs d'entiers négatifs et vecteur de chaines de caractères, nous les étudierons plus en détails ici."
 
 # Q7
 - Class: text
@@ -57,7 +57,7 @@
 
 # Q10
 - Class: cmd_question
-  Output: SOuvenez-vous que `!` nous permet d'obtenir la négation d'une expression logique. Ainsi, !is.na(x) peut se lire comme 'is not NA'. Du coup, si on veut créer un vecteur (appelons-le y) qui contiendrait toutes les valeurs non NA de x, on peut utiliser cette syntaxe: y = x[!is.na(x)]. Essayez cela.
+  Output: "Souvenez-vous que `!` nous permet d'obtenir la négation d'une expression logique. Ainsi, !is.na(x) peut se lire comme 'is not NA'. Du coup, si on veut créer un vecteur (appelons-le y) qui contiendrait toutes les valeurs non NA de x, on peut utiliser cette syntaxe: y = x[!is.na(x)]. Essayez cela."
   CorrectAnswer: y <- x[!is.na(x)]
   AnswerTests: omnitest(correctExpr='y <- x[!is.na(x)]')
   Hint: Tapez y = x[!is.na(x)] pour 'capturer'/récupérer tout les valeurs non manquantes de x.
@@ -101,7 +101,7 @@
 
 # Q17
 - Class: cmd_question
-  Output: Si on s'appuie sur nos connaissances des opérateurs logiques et sur ce que l'on vient de voir sur l'échantillonnage, on peut faire cela: x[!is.na(x) & x > 0]. Essayez cette commande.
+  Output: "Si on s'appuie sur nos connaissances des opérateurs logiques et sur ce que l'on vient de voir sur l'échantillonnage, on peut faire cela: x[!is.na(x) & x > 0]. Essayez cette commande."
   CorrectAnswer: x[!is.na(x) & x > 0]
   AnswerTests: omnitest(correctExpr='x[!is.na(x) & x > 0]')
   Hint: Tapez x[!is.na(x) & x > 0] pour voir ce que l'on obtient.
@@ -163,11 +163,11 @@
 
 # Q28
 - Class: text
-  Output: Jusqu'à présent nous avons travailler avec trois types d'indices de position: logiques et les nombres entiers positifs et négatifs. Celui qui reste nécessite de vous présenter le concept d'éléments nommés (named elements).
+  Output: "Jusqu'à présent nous avons travailler avec trois types d'indices de position: logiques et les nombres entiers positifs et négatifs. Celui qui reste nécessite de vous présenter le concept d'éléments nommés (named elements)."
 
 # Q29
 - Class: cmd_question
-  Output: Créez un vecteur numérique avec 3 éléments nommés en utilisant cette commande: vect <- c(foo = 11, bar = 2, norf = NA).
+  Output: "Créez un vecteur numérique avec 3 éléments nommés en utilisant cette commande: vect <- c(foo = 11, bar = 2, norf = NA)."
   CorrectAnswer: vect <- c(foo = 11, bar = 2, norf = NA)
   AnswerTests: omnitest(correctExpr='vect <- c(foo = 11, bar = 2, norf = NA)')
   Hint: Créez un vector nommé avec vect <- c(foo = 11, bar = 2, norf = NA).
