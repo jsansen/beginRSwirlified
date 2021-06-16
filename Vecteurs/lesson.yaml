@@ -158,8 +158,7 @@
   Output: 'Pour ajouter (en informatique pour les chaines de caractère on dit concaténer  -concatenate-) votre nom à la fin de la variable my_char, utilisez la fonction c() comme suit: c(my_char, "notre_nom_ici"). Placez votre nom entre guillemets de la même façon que dans l`exemple. Essayez en stockant le résultat dans une variable appelée mon_nom.'
   CorrectAnswer: mon_nom = c(my_char, "Swirl")
   AnswerTests: var_is_a("character", "mon_nom"); expr_uses_func("c"); expr_creates_var("mon_nom"); val_has_length(4)
-  Hint: ajoutez votre nom à la fin du vecteur my_char en utilisant la fonction c() function. Assurez-vous d'affecter le résultat à une nouvelle variable appelée mon_nom. Si votre nom était "Swirl",
-    vous écririez my_name = c(my_char, "Swirl").
+  Hint: ajoutez votre nom à la fin du vecteur my_char en utilisant la fonction c() function. Assurez-vous d'affecter le résultat à une nouvelle variable appelée mon_nom. Si votre nom était "Swirl", vous écririez my_name = c(my_char, "Swirl").
 
 # Q29
 - Class: cmd_question

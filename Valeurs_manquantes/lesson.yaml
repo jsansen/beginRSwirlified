@@ -34,84 +34,97 @@
 
 # Q6
 - Class: cmd_question
-  Output: To make things a little more interesting, lets create a vector containing 1000 draws from a standard normal distribution with y <- rnorm(1000).
-  CorrectAnswer: y <- rnorm(1000)
-  AnswerTests: omnitest(correctExpr='y <- rnorm(1000)')
-  Hint: The function rnorm() generates random numbers from a normal distribution. Type y <- rnorm(1000).
+  Output: Pour rendre les choses un peu plus intéressantes, créons un vecteur contenant 1000 tirages issus d'une distribution normale avec y = rnorm(1000).
+  CorrectAnswer: y = rnorm(1000)
+  AnswerTests: omnitest(correctExpr='y = rnorm(1000)')
+  Hint: La fonction rnorm() génère des nombres aléatoires issus d'une distribution normale. tapez y = rnorm(1000).
 
-- Class: cmd_question
-  Output: Next, let's create a vector containing 1000 NAs with z <- rep(NA, 1000).
-  CorrectAnswer: z <- rep(NA, 1000)
-  AnswerTests: omnitest(correctExpr='z <- rep(NA, 1000)')
-  Hint: Type z <- rep(NA, 1000) to generate a vector of 1000 NAs.
+# Q7
+- Class: mult_question
+  Output: Question surprise! On veut créer un vecteur contenant 1000 NA, quelle fonction utiliseriez-vous?
+  CorrectAnswer: 'rep'
+  AnswerChoices: rep; rnorm; c; l'operateur :
+  AnswerTests: omnitest(correctVal='rep')
+  Hint: Réflechissez un peu, vous l'avez vu dans un précédent cours !
 
+# Q8
 - Class: cmd_question
-  Output: Finally, let's select 100 elements at random from these 2000 values (combining y and z) such that we don't know how many NAs we'll wind up with or what positions they'll occupy in our final vector -- my_data <- sample(c(y, z), 100).
-  CorrectAnswer: my_data <- sample(c(y, z), 100)
-  AnswerTests: omnitest(correctExpr='my_data <- sample(c(y, z), 100)')
-  Hint: The sample() function draws a random sample from the data provided as its first argument (in this case c(y, z)) of the size specified by the second argument (100). The command my_data <- sample(c(y, z), 100) will give us what we want.
+  Output: Créons donc ce vecteur contenant 1000 NAs et appelons le z.
+  CorrectAnswer: z = rep(NA, 1000)
+  AnswerTests: omnitest(correctExpr='z = rep(NA, 1000)')
+  Hint: Type z = rep(NA, 1000) pour générer le vecteur de 1000 NAs.
 
+# Q9
 - Class: cmd_question
-  Output: Let's first ask the question of where our NAs are located in our data. The is.na() function tells us whether each element of a vector is NA. Call is.na() on my_data and assign the result to my_na.
-  CorrectAnswer: my_na <- is.na(my_data)
-  AnswerTests: omnitest(correctExpr='my_na <- is.na(my_data)')
-  Hint: Assign the result of is.na(my_data) to the variable my_na.
+  Output: Enfin, tirons 100 éléments de façon aléatoire de ces deux vecteurs combinés de façon à ne pas savoir combien de NAs ni leurs positions dans le vecteur. On va donc utiliser cette commande: my_data = sample(c(y, z), 100).
+  CorrectAnswer: my_data = sample(c(y, z), 100)
+  AnswerTests: omnitest(correctExpr='my_data = sample(c(y, z), 100)')
+  Hint: La fonction sample() tire un échantillon aléatoire des données fournies en premier argument (dans notre cas le vecteur c(y, z)) de la taille spécifié en second argument (100). La commande my_data = sample(c(y, z), 100) vous donnera ce que l'on veut.
 
+# Q10
 - Class: cmd_question
-  Output: Now, print my_na to see what you came up with.
+  Output: Cherchons d'abord à trouver où se trouvent les NAs dans notre échantillon. La fonction is.na() permets de savoir, pour chaque élément du vecteur, s'ils sont NA ou non.Appelez is.na() sur my_data et affectez le résultat à une variable appelée my_na.
+  CorrectAnswer: my_na = is.na(my_data)
+  AnswerTests: omnitest(correctExpr='my_na = is.na(my_data)')
+  Hint: Affectez le résultat de is.na(my_data) à la variable my_na.
+
+# Q11
+- Class: cmd_question
+  Output: Maintenant affichez my_na pour voir ce qu'il en résulte.
   CorrectAnswer: my_na
   AnswerTests: omnitest(correctExpr='my_na')
-  Hint: Type my_na to view its contents.
+  Hint: Tapez my_na pour voir son contenu.
 
+# Q12
 - Class: text
-  Output: Everywhere you see a TRUE, you know the corresponding element of my_data is NA. Likewise, everywhere you see a FALSE, you know the corresponding element of my_data is one of our random draws from the standard normal distribution.
+  Output: Partout où vous voyez TRUE, représente la présence d'un NA à cette position dans le vecteur my_data. De façon similaire, les FALSE représentent les éléments de my_data issus du tirage aléatoire dans la distribution normale.
 
+# Q13
 - Class: cmd_question
-  Output: In our previous discussion of logical operators, we introduced the `==` operator as a method of testing for equality between two objects. So, you might think the expression my_data == NA yields the same results as is.na(). Give it a try.
+  Output: Dans notre cours précédent sur les opérateurs logiques, nous avons introduit l'opérateur `==` comme moyen pour vérifier l'égalité entre deux objets. Ainsi, on peut supposer que l'expression my_data == NA fournira le même résultat que la fonction is.na(). Essayez !
   CorrectAnswer: my_data == NA
   AnswerTests: omnitest(correctExpr='my_data == NA')
-  Hint: Try my_data == NA to see what happens.
+  Hint: Essayez my_data == NA pour voir ce qui se produit.
 
+# Q14
 - Class: text
-  Output: The reason you got a vector of all NAs is that NA is not really a value, but just a placeholder for a quantity that is not available. Therefore the logical expression is incomplete and R has no choice but to return a vector of the same length as my_data that contains all NAs.
+  Output: Cela ne fonctionne pas, vous obtenez un vecteur ou tout est NA! La raison derrière cela est que NA n'est pas réellement une valeur mais un espace reservé pour une valeur qui n'est pas disponible. Ainsi, l'expression logique est incomplète et R n'a pas le choix que de retourner un vecteur de la même taille que my_data ne contenant que des NAs.
 
+# Q15
 - Class: text
-  Output: Don't worry if that's a little confusing. The key takeaway is to be cautious when using logical expressions anytime NAs might creep in, since a single NA value can derail the entire thing.
+  Output: Ne vous inquietez pas si cela reste un peu confus pour vous. L'important à garder en mémoire est d'être vigilant en utilisant les expressions logiques lorsque des NAs peuvent être impliqué, surtout lorsqu'un seul NA peut completement modifier le comportement attendu.
 
+# Q16
 - Class: text
-  Output: So, back to the task at hand. Now that we have a vector, my_na, that has a TRUE for every NA and FALSE for every numeric value, we can compute the total number of NAs in our data.
+  Output: Bref, revenons à nos moutons. Maintenant que nous avons un vecteur (my_na) contenant des TRUE aux emplacements des NAs et des FALSE à aux emplacements des valeurs numérique, nous pouvons calculer le nombre total de NAs dans nos données.
 
+# Q17
 - Class: text
-  Output: The trick is to recognize that underneath the surface, R represents TRUE as the number 1 and FALSE as the number 0. Therefore, if we take the sum of a bunch of TRUEs and FALSEs, we get the total number of TRUEs.
+  Output: L'astuce consiste à comprendre que de façon interne, R représente TRUE par le chiffre 1 et FALSE par le chiffre 0 (c'est une convention informatique, en ce qui me concerne, je m'en rappelle en imaginant le Ø (ou rond/zero barré) qui veut dire absence d'où 0=FALSE mais chacun son moyen mnémotechnique). Ainsi, si on calcule la sum d'un ensemble de TRUE/FALSE, on obtient le nombre total de TRUE.
 
 - Class: cmd_question
-  Output: Let's give that a try here. Call the sum() function on my_na to count the total number of TRUEs in my_na, and thus the total number of NAs in my_data. Don't assign the result to a new variable.
+  Output: Essayons cela dès maintenant. Appelez la fonction sum() sur my_na pour compter le nombre de TRUE dans ce vecteur, et par inférence, le nombre de NA dans my_data. N'assignez ce résultat à aucune variable.
   CorrectAnswer: sum(my_na)
   AnswerTests: omnitest(correctExpr='sum(my_na)')
-  Hint: Use sum(my_na) to count the number NAs in the data.
+  Hint: Utilisez sum(my_na) pour compter le nombre de NAs dans les données.
 
 - Class: cmd_question
-  Output: Pretty cool, huh? Finally, let's take a look at the data to convince ourselves that everything 'adds up'. Print my_data to the console.
+  Output: Pratique, non? Enfin, observons nos données pour nous rendre compte que tout cela fonctionne bien comme attendu. Affichez le contenu de my_data
   CorrectAnswer: my_data
   AnswerTests: omnitest(correctExpr='my_data')
-  Hint: Print my_data to the console.
+  Hint: Affichez le contenu de my_data.
 
 - Class: cmd_question
-  Output: Now that we've got NAs down pat, let's look at a second type of missing value -- NaN, which stands for 'not a number'. To generate NaN, try dividing (using a forward slash) 0 by 0 now.
+  Output: Maintenant que nous avons maitrisé les NAs (j'exagère mais au moins, maintenant vous comprenez l'idée général du fonctionnement de cette valeur si particulière), penchons nous au deuxieme type de valeurs manquantes: NaN -- Not a Number-- (pas un nombre). Pour génerer des NaN, essayez de diviser 0 par 0.
   CorrectAnswer: 0/0
   AnswerTests: omnitest(correctExpr='0/0')
-  Hint: Try 0/0.
+  Hint: Essayez 0/0.
 
 - Class: cmd_question
-  Output: Let's do one more, just for fun. In R, Inf stands for infinity. What happens if you subtract Inf from Inf?
+  Output: Encore un autre, pour le plaisir. Dans R, Inf permet d'utiliser l'infinité (Infinity). Que se passe-t-il si on soustrait Inf de Inf?
   CorrectAnswer: Inf - Inf
   AnswerTests: omnitest(correctExpr='Inf - Inf')
-  Hint: Type Inf - Inf. Can you guess the result?
+  Hint: Tapez Inf - Inf. Pouvez-vous prédire le résultat ?
 
-- Class: mult_question
-  Output: Would you like to inform someone about your successful completion of
-    this lesson via email?
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+- Class: text
+  Output: Sur Moodle, sélectionnez le test "valeurs_manquantes" et entrez le code "Ell4NAB0TT3ro" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
