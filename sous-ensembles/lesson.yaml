@@ -188,56 +188,51 @@
 
 # Q32
 - Class: cmd_question
-  Output: Alternatively, we can create an unnamed vector vect2 with c(11, 2, NA). Do that now.
+  Output: Créez un vecteur normal (non nommé) vect2 avec c(11, 2, NA).
   CorrectAnswer: vect2 <- c(11, 2, NA)
   AnswerTests: omnitest(correctExpr='vect2 <- c(11, 2, NA)')
-  Hint: Create an ordinary (unnamed) vector called vect2 that contains c(11, 2, NA).
+  Hint: Créez un vecteur normal appelé vect2 et qui contiendra c(11, 2, NA).
 
 # Q33
 - Class: cmd_question
-  Output: Then, we can add the `names` attribute to vect2 after the fact with names(vect2) <- c("foo", "bar", "norf"). Go ahead.
-  CorrectAnswer: names(vect2) <- c("foo", "bar", "norf")
+  Output: on peut ensuite ajouter l'attribut `names` au vecteur grâce à la commande names(vect2) = c("foo", "bar", "norf"). Essayez cela.
+  CorrectAnswer: names(vect2) = c("foo", "bar", "norf")
   AnswerTests: omnitest(correctExpr='names(vect2) <- c("foo", "bar", "norf")')
-  Hint: Add names to vect2 with names(vect2) <- c("foo", "bar", "norf").
+  Hint: Ajoutez des noms à vect2 via la commande names(vect2) = c("foo", "bar", "norf").
 
 # Q34
 - Class: cmd_question
-  Output: Now, let's check that vect and vect2 are the same by passing them as arguments to the identical() function.
+  Output: Maintenant, vérifions que vect et vect2 sont identique en les passant en argument à la fonction identical().
   CorrectAnswer: identical(vect, vect2)
   AnswerTests: any_of_exprs('identical(vect, vect2)', 'identical(vect2, vect)')
-  Hint: The identical() function tells us if its first two arguments are, well, identical.
+  Hint: La fonction identical() nous dit si les deux arguments sont, de façon relativement logique, identiques.
 
 # Q35
 - Class: text
-  Output: Indeed, vect and vect2 are identical named vectors.
+  Output: Et normalement, ce devrait bien être le cas.
 
 # Q36
 - Class: mult_question
-  Output: Now, back to the matter of subsetting a vector by named elements. Which of the following commands do you think would give us the second element of vect?
+  Output: maitnenant, retour à nos moutons et à la sélection d'un sosu-ensemble d'un vecteur avec des éléments nommés. Laquelle de ces commande, selon vous, nous donnera le deuxième élément de vect?
   AnswerChoices: vect["bar"]; vect[bar]; vect["2"]
   CorrectAnswer: vect["bar"]
   AnswerTests: omnitest(correctVal='vect["bar"]')
-  Hint: If we want the element named "bar" (i.e. the second element of vect), which command would get us that?
+  Hint: Si nous voulons l'élément nommé "bar" (i.e. le deuxième élément de vect), quelle commande nous fournirait cela ?
 
 - Class: cmd_question
-  Output: Now, try it out.
+  Output: Essayons cela de suite.
   CorrectAnswer: vect["bar"]
   AnswerTests: omnitest(correctExpr='vect["bar"]')
-  Hint: Try vect["bar"].
+  Hint: Tapez vect["bar"].
 
 - Class: cmd_question
-  Output: Likewise, we can specify a vector of names with vect[c("foo", "bar")]. Try it out.
+  Output: De façon similaire, on peut spécifier un vecteur de noms pour sélectionner des éléments spécifique dans un vecteur, avec, par exemple vect[c("foo", "bar")]. Essayez cela.
   CorrectAnswer: vect[c("foo", "bar")]
   AnswerTests: omnitest(correctExpr='vect[c("foo", "bar")]')
-  Hint: Use vect[c("foo", "bar")] to get only the elements of vect named "foo" and "bar".
+  Hint: Utilisez vect[c("foo", "bar")] pour n'obtenir que les éléments nommés "foo" et "bar".
 
 - Class: text
-  Output: Now you know all four methods of subsetting data from vectors. Different approaches are best in different scenarios and when in doubt, try it out!
+  Output: Maintenant vous connaissez les 4 méthodes de sélection de données dans un vecteur (en tout cas les méthodes de bases, il en existe d'autres plus avancées que nous verrons ultérieurement). suivant les cas, certaines approches sont plus pratiques que d'autres, dans le doute, n'hésitez pas à en tester plusieurs!
 
-- Class: mult_question
-  Output: Would you like to inform someone about your successful completion of
-    this lesson via email?
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+- Class: text
+  Output: Sur Moodle, sélectionnez le test "subsets" et entrez le code "SnyderDN4CaPULLo" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
