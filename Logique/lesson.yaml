@@ -198,206 +198,149 @@
 
 # Q32
 - Class : text
-  Output: "Let's walk through the order of operations in the above case. First the
-    left and right operands of the AND operator are evaluated. 6 is not equal 8,
-    4 is greater than 3.9, therefore both operands are TRUE so the resulting expression
-    `TRUE && TRUE` evaluates to TRUE. Then the left operand of the OR operator is
-    evaluated: 5 is not greater than 8 so the entire expression is reduced to FALSE
-    || TRUE. Since the right operand of this expression is TRUE the entire expression
-    evaluates to TRUE."
+  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et droite de l'operateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE && TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE || TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vraie."
 
-
-# Q
+# Q33
 - Class: mult_question
-  Output: Which one of the following expressions evaluates to TRUE?
+  Output: Laquelle de ces expressions retournera TRUE?
   CorrectAnswer: "TRUE && FALSE || 9 >= 4 && 3 < 6"
   AnswerChoices: "TRUE && FALSE || 9 >= 4 && 3 < 6; TRUE && 62 < 62 && 44 >= 44; 99.99 > 100 || 45 < 7.3 || 4 != 4.0; FALSE || TRUE && FALSE"
   AnswerTests: omnitest(correctVal='TRUE && FALSE || 9 >= 4 && 3 < 6')
-  Hint: 'Try to evaluate each expression in isolation and build up an answer.'
+  Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
-
-# Q
+# Q34
 - Class: mult_question
-  Output: Which one of the following expressions evaluates to FALSE?
+  Output: Laquelle de ces expressions retournera FALSE?
   CorrectAnswer: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5"
   AnswerChoices: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5; FALSE || TRUE && 6 != 4 || 9 > 4; !(8 > 4) ||  5 == 5.0 && 7.8 >= 7.79; 6 >= -9 && !(6 > 7) && !(!TRUE)"
   AnswerTests: omnitest(correctVal='FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5')
-  Hint: 'Try to evaluate each expression in isolation and build up an answer.'
+  Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
-
-# Q
+# Q35
 - Class : text
-  Output: "Now that you're familiar with R's logical operators you can take advantage
-    of a few functions that R provides for dealing with logical expressions."
+  Output: "Maintenant que vous êtes familier avec les expressions logiques de R, vous pouvez tirer partie de certaines fonctions de R utilisées pour manipuler les expressions booléennes."
 
-
-# Q
+# Q36
 - Class : cmd_question
-  Output: "The function isTRUE() takes one argument. If that argument evaluates to
-    TRUE, the function will return TRUE. Otherwise, the function will return FALSE.
-    Try using this function by typing: isTRUE(6 > 4)"
+  Output: "La fonction isTRUE() prend un suel argument
+. Si cet argument est évalué à TRUE, la fonction retournera TRUE. Sinon, elle retournera FALSE. Essayez en tapant: isTRUE(6 > 4)"
   CorrectAnswer: "isTRUE(6 > 4)"
   AnswerTests: omnitest(correctExpr='isTRUE(6 > 4)')
-  Hint: "Test out isTRUE() by typing: isTRUE(6 > 4)"
+  Hint: "Testez la fonction isTRUE() en tapant: isTRUE(6 > 4)"
 
-
-# Q
+# Q37
 - Class: mult_question
-  Output: Which of the following evaluates to TRUE?
+  Output: Laquelle de ces expressions retournera TRUE?
   CorrectAnswer: "!isTRUE(4 < 3)"
   AnswerChoices: "isTRUE(!TRUE); isTRUE(3); isTRUE(NA); !isTRUE(4 < 3); !isTRUE(8 != 5)"
   AnswerTests: omnitest(correctVal='!isTRUE(4 < 3)')
-  Hint: 'isTRUE() will only return TRUE if the statement passed to it as an argument is TRUE.'
+  Hint: 'isTRUE() ne retournera TRUE que si son argument est évalué à TRUE.'
 
-
-# Q
+# Q38
 - Class : cmd_question
-  Output: "The function identical() will return TRUE if the two R objects passed to it as arguments
-    are identical. Try out the identical() function by typing: identical('twins', 'twins')"
+  Output: "La fonction identical() retournera TRUE si les deux objets mis ena rguments sont identiques. Essayez cela avec cette commande: identical('twins', 'twins')"
   CorrectAnswer: "identical('twins', 'twins')"
   AnswerTests: omnitest(correctExpr="identical('twins', 'twins')")
-  Hint: "If you want to see if two R objects are identical, type: identical('twins', 'twins')"
+  Hint: "Tapez: identical('twins', 'twins')"
 
-
-# Q
+# Q39
 - Class: mult_question
-  Output: Which of the following evaluates to TRUE?
+  Output: Laquelle de ces expressions retournera TRUE?
   CorrectAnswer: "identical(5 > 4, 3 < 3.1)"
   AnswerChoices: "identical(5 > 4, 3 < 3.1); identical(4, 3.1); identical('hello', 'Hello'); !identical(7, 7)"
   AnswerTests: omnitest(correctVal='identical(5 > 4, 3 < 3.1)')
-  Hint: "identical() will only evaluate to TRUE if its arguments are exactly the same."
+  Hint: "Rappelez-vous, identical() ne retournera TRUE que si ses arguments sont strictement identiques."
 
-
-# Q
+# Q40
 - Class : cmd_question
-  Output: "You should also be aware of the xor() function, which takes two arguments.
-  The xor() function stands for exclusive OR.
-  If one argument evaluates to TRUE and one argument evaluates to FALSE, then this
-  function will return TRUE, otherwise it will return FALSE. Try out the xor() function
-  by typing: xor(5 == 6, !FALSE)"
+  Output: "Vous devriez également être informé du fonctionnement de la fonction xor(). Cette fonction prends deux arguments et correspond à l'operateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE.Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
   CorrectAnswer: "xor(5 == 6, !FALSE)"
   AnswerTests: omnitest(correctExpr='xor(5 == 6, !FALSE)')
-  Hint: "Test out the xor() function by typing: xor(5 == 6, !FALSE)"
+  Hint: "Testez le xor en tapant: xor(5 == 6, !FALSE)"
 
-
-# Q
+# Q41
 - Class : text
-  Output: "5 == 6 evaluates to FALSE, !FALSE evaluates to TRUE, so xor(FALSE, TRUE)
-    evaluates to TRUE. On the other hand if the first argument was changed to 5 == 5
-    and the second argument was unchanged then both arguments would have been TRUE,
-    so xor(TRUE, TRUE) would have evaluated to FALSE."
+  Output: "5 == 6 retournera FALSE, !FALSE retourne TRUE, d'ou xor(FALSE, TRUE)
+    retourne TRUE. D'un autre côté, si le premier argument était changé en 5 == 5 et le 2eme maitenu tel quel, alors les deux aurait retourné TRUE, donc  xor(TRUE, TRUE) aurait retourné FALSE."
 
-
-# Q
+# Q42
 - Class: mult_question
-  Output: Which of the following evaluates to FALSE?
+  Output: Laquelle de ces expressions retournera FALSE?
   CorrectAnswer: "xor(4 >= 9, 8 != 8.0)"
   AnswerChoices: "xor(4 >= 9, 8 != 8.0); xor(!isTRUE(TRUE), 6 > -1); xor(identical(xor, 'xor'), 7 == 7.0); xor(!!TRUE, !!FALSE)"
   AnswerTests: omnitest(correctVal='xor(4 >= 9, 8 != 8.0)')
-  Hint: "For xor() to evaluate to TRUE, one argument must be TRUE and one must be FALSE."
+  Hint: "Pour que xor() retourne TRUE, un seul des deux arguments doit être évalué à TRUE."
 
 
-# Q
+# Q43
 - Class : cmd_question
-  Output: "For the next few questions, we're going to need to create a vector of
-   integers called ints. Create this vector by typing: ints <- sample(10)"
+  Output: "Pour les prochaines questions, nous allons avoir besoin de créer un vecteur d'entiers que nous appellerons ints. Créez ce vecteur d'entier en effectuant un tirage aléatoire de 10 éléments."
   CorrectAnswer: "ints <- sample(10)"
   AnswerTests: omnitest(correctExpr='ints <- sample(10)')
-  Hint: "To create a vector of ten integers without replacement type: ints <- sample(10)"
+  Hint: "Bloqué? Rappelez-vous que l'on peut tirer aléatoirement 10 éléments suivant une distribution normale sans remise avec la commande sample(10). Pensez bien à affecter ce tirage à une variable appelée ints."
 
-
-# Q
+# Q44
 - Class : cmd_question
-  Output: "Now simply display the contents of ints."
-  CorrectAnswer: "ints"
+  Output: "Affichez le contenu de ints."
   AnswerTests: omnitest(correctExpr='ints')
-  Hint: "To view the vector type: ints"
+  CorrectAnswer: "ints"
+  Hint: "Tapez: ints"
 
-
-# Q
+# Q45
 - Class : cmd_question
-  Output: "The vector `ints` is a random sampling of integers from 1 to 10 without
-    replacement. Let's say we wanted to ask some logical questions about contents
-    of ints. If we type ints > 5, we will get a logical vector corresponding to
-    whether each element of ints is greater than 5. Try typing: ints > 5"
+  Output: "Le vecteur `ints` correspond donc à un tirage aléatoire de 10 éléments suivant une distribution normale sans remise. Imaginons que nous cherchions a evaluer des expressions booléennes à propos des valeurs contenues dans ints. Si l'on tape ints > 5, nous obtiendrons un vecteur de booléens évaluant pour chaque valeurs de ints si oui ou non elles sont plus grandes que 5. Essayez cela en tapant: ints > 5"
   CorrectAnswer: "ints > 5"
   AnswerTests: omnitest(correctExpr='ints > 5')
-  Hint: "To see which elements of `ints` are larger than 5 type: ints > 5"
+  Hint: "Vérifiez quels éléments de `ints` sont plus grands que 5 en tapant: ints > 5."
 
-
-# Q
+# Q46
 - Class : text
-  Output: "We can use the resulting logical vector to ask other questions about ints.
-    The which() function takes a logical vector as an argument and returns the indices
-    of the vector that are TRUE. For example which(c(TRUE, FALSE, TRUE)) would return
-    the vector c(1, 3)."
+  Output: "Nous pouvons utiliser le vecteur logique résultant pour poser d'aurtes question à propos de ints.La fonction which() prend un vecteur logique en argument et retourne les indices de position du vecteur évalué à TRUE. Par exemple which(c(TRUE, FALSE, TRUE)) retournerai le vecteur c(1, 3)."
 
-
-# Q
+# Q47
 - Class : cmd_question
-  Output: "Use the which() function to find the indices of ints that are greater
-    than 7."
+  Output: "Utilisez la fonction which() pour identifier les indices de position des valeurs de ints plus grandes que 7."
   CorrectAnswer: "which(ints > 7)"
   AnswerTests: omnitest(correctExpr='which(ints > 7)')
-  Hint: "Use the which() function on the logical vector produced by: `ints > 7`"
+  Hint: "Utilisez la fonction which() sur le vecteur logique produit par `ints > 7`"
 
-
-# Q
+# Q48
 - Class: mult_question
-  Output: Which of the following commands would produce the indices of the elements in ints that
-    are less than or equal to 2?
+  Output: Laquelle de ces expressions fournirait les indices de position des éléments de ints inférieurs ou égaux à 2 ?
   CorrectAnswer: "which(ints <= 2)"
   AnswerChoices: "ints < 2; ints <= 2; which(ints < 2); which(ints <= 2)"
   AnswerTests: omnitest(correctVal='which(ints <= 2)')
-  Hint: 'Use the which() function.'
+  Hint: 'Utilisez la fonction which().'
 
-
-# Q
+# Q49
 - Class : text
-  Output: "Like the which() function, the functions any() and all() take logical
-    vectors as their argument. The any() function will return TRUE if one or more
-    of the elements in the logical vector is TRUE. The all() function will return
-    TRUE if every element in the logical vector is TRUE."
+  Output: "De façon similaire à la fonction which(), les fonctionsany() et all() prennent des vecteurs logique en argument. La fonction any() retournera TRUE si UN OU PLUS des éléments dans le vecteuer logique est à TRUE. La fonction all() ne retournera TRUE que si TOUT les élements du vecteur logique sont à TRUE."
 
-
-# Q
+# Q50
 - Class : cmd_question
-  Output: "Use the any() function to see if any of the elements of ints are less
-    than zero."
+  Output: "Utilisez la fonction any() pour voir si au moins un des éléments de ints est inférieur à 0."
   CorrectAnswer: "any(ints < 0)"
   AnswerTests: omnitest(correctExpr='any(ints < 0)')
-  Hint: "Use the any() function on the logical vector produced by: `ints < 0`"
+  Hint: "Utilisez la fonction any() sur le vecteur logique produit par l'expression `ints < 0`"
 
-
-# Q
+# Q51
 - Class : cmd_question
-  Output: "Use the all() function to see if all of the elements of ints are greater
-    than zero."
+  Output: "Utilisez la fonction all() pour voir si tout les éléments de ints sont plus grands que 0."
   CorrectAnswer: "all(ints > 0)"
   AnswerTests: omnitest(correctExpr='all(ints > 0)')
-  Hint: "Use the all() function on the logical vector produced by: `ints > 0`"
+  Hint: "Utilisez la fonction all() sur le vectur logique produit par l'expression `ints > 0`"
 
-
-# Q
+# Q52
 - Class: mult_question
-  Output: Which of the following evaluates to TRUE?
+  Output: Laquelle de ces expression est evaluée à TRUE?
   CorrectAnswer: "any(ints == 10)"
   AnswerChoices: "any(ints == 10); all(ints == 10); all(c(TRUE, FALSE, TRUE)); any(ints == 2.5)"
   AnswerTests: omnitest(correctVal='any(ints == 10)')
-  Hint: "any() will evaluate to TRUE if there is one or more TRUE elements in a logical vector."
+  Hint: "any() retournera TRUE si au moins un des éléments du vecteur vérifie l'expression (est évalué à TRUE dans le vecteur logique)."
 
-
-# Q
+# Q53
 - Class : text
-  Output: "That's all for this introduction to logic in R. If you really want to see
-    what you can do with logic, check out the control flow lesson!"
+  Output: "C'est tout pour cette introduction aux booléen dans R. Félicitations!"
 
-
-# Q
-- Class: mult_question
-  Output: Would you like to inform someone about your successful completion of
-    this lesson via email?
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+- Class: text
+  Output: Sur Moodle, selectionnez le test "Logique" et entrez le code "MAUDOUX'sfr34k's" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
