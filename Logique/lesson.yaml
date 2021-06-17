@@ -67,27 +67,25 @@
   AnswerTests: omnitest(correctExpr='10 <= 10')
   Hint: "Utilisez l'opérateur `<=` et tapez 10 <= 10"
 
-
 # Q12
 - Class: text
-  Output: Nous ne l'expérimenterons pas içi mais gardez à l'esprit qu'il y a l'équivlanet `supérieur (ou égal) à`  `>` et `>=`.
-
+  Output: "Nous ne l'expérimenterons pas içi mais gardez à l'esprit qu'il y a l'équivalent `supérieur (ou égal) à`  `>` et `>=`."
 
 # Q13
 - Class: mult_question
-  Output: 'Laquelle de ces expressions s'évalue à FALSE ?'
+  Output: "Laquelle de ces expressions s'évalue à FALSE ?"
   CorrectAnswer: 9 >= 10
   AnswerChoices: 9 >= 10; 7 == 7; 6 < 8; 0 > -36
   AnswerTests: omnitest(correctVal='9 >= 10')
-  Hint: 'Si besoin, n'hésitez pas à les tester dans une deuxième session R.'
+  Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R."
 
 # Q14
 - Class: mult_question
-  Output: 'Laquelle de ces expressions s'évalue à TRUE?'
+  Output: "Laquelle de ces expressions s'évalue à TRUE?"
   CorrectAnswer: 9 >= 10
   AnswerChoices: 9 >= 10; 7 == 9; 57 < 8; -6 > -7
   AnswerTests: omnitest(correctVal='-6 > -7')
-  Hint: 'Si besoin, n'hésitez pas à les tester dans une deuxième session R.'
+  Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R."
 
 # Q15
 - Class: cmd_question
@@ -101,7 +99,7 @@
   Output: "On peut également utiliser le point d'exclamation (le `not`) pour négativer une expression booléenne. Ainsi, le `!` dans !TRUE (not TRUE) repond FALSE et !FALSE (not FALSE) répond TRUE. Essayez d'utiliser le `not` and l'opérateur d'egalité pour trouver la négation de 5 est égal à 7."
   CorrectAnswer: '!5 == 7'
   AnswerTests: any_of_exprs('!5 == 7', '!(5 == 7)')
-  Hint: Cette expression peut sembler un peu tordue, penser à décomposer en différentes partie, ce que l'on teste (5 == 7) et ce que l'on veut négativer (le résultat de ce qui a été testé).
+  Hint: "Cette expression peut sembler un peu tordue, penser à décomposer en différentes partie, ce que l'on teste (5 == 7) et ce que l'on veut négativer (le résultat de ce qui a été testé)."
 
 # Q17
 - Class: text
@@ -113,7 +111,7 @@
   CorrectAnswer: "!(0 >= -1)"
   AnswerChoices: "!(0 >= -1); !FALSE; 7 != 8; 9 < 10"
   AnswerTests: omnitest(correctVal='!(0 >= -1)')
-  Hint: 'Si besoin, n'hésitez pas à les tester dans une deuxième session R.'
+  Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R."
 
 
 # Q19
