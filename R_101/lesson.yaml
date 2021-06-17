@@ -141,49 +141,49 @@
   Hint: Entrez z * 2 + 100, sans affectation. Le symbole `*` est un caractère utilisé pour l'opérateur de multiplication.
 
 - Class: text
-  Output: D'abord, R a multiplié chaque élément de z par 2, puis il a ajouté 100 à chaque élément pour fournir le résultat que vous voyez juste au dessus.
-  Vous remarquerez qu'il a suivi l'ordre classique des opérations arithmétiques (de gauche à droite, priorité aux parenthèses, etc.)
+  Output: "D'abord, R a multiplié chaque élément de z par 2, puis il a ajouté 100 à chaque élément pour fournir le résultat que vous voyez juste au dessus.
+  Vous remarquerez qu'il a suivi l'ordre classique des opérations arithmétiques (de gauche à droite, priorité aux parenthèses, etc.)"
 
 - Class: text
   Output: Il existe d'autres opérateurs arithmétiques, ils sont généralement les mêmes quelques soient les langages. Les classique sont '+', '-', '/', '*', '^' (ou '**') pour la puissance (x^2 et 2**3 signifie respectivement 2 puissance 2 (2 au carré) et 2 puissance 3 (2 au cube)).
     Pour d'autres opérations arithmétiques, nous utiliserons des fonctions spécifique, comme la racine carré (square root en anglais) qui est accessible via la fonction sqrt().
 
 - Class: cmd_question
-  Output: Calculez la racine carré de "z - 1" et assignez le résultat à une variable "my_sqrt".
+  Output: "Calculez la racine carré de 'z - 1' et assignez le résultat à une variable 'my_sqrt'.
   (Une bonne pratique est de bannir le francais lorsque vous écrivez du code, et ce quelque soit le langage.
-  Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté de les utiliser dans vos affectations si vous écrivez en anglais.)
+  Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté de les utiliser dans vos affectations si vous écrivez en anglais.)"
   CorrectAnswer: my_sqrt = sqrt(z - 1)
   AnswerTests: any_of_exprs('my_sqrt <- sqrt(z - 1)', 'my_sqrt = sqrt(z - 1)')
-  Hint: Affectez le résultat de la fonction "sqrt(z - 1)" à un variable appelée my_sqrt.
+  Hint: "Affectez le résultat de la fonction 'sqrt(z - 1)' à un variable appelée my_sqrt."
 
 - Class: mult_question
-  Output: Avant d'afficher le contenu de la variable my_sqrt, selon vous, que contient-elle ?
+  Output: "Avant d'afficher le contenu de la variable my_sqrt, selon vous, que contient-elle ?"
   CorrectAnswer: un vecteur de taille 3
   AnswerChoices: un vecteur de taille 3; un chiffre unique (un vecteur de taille 1); un vecteur vide (de taille 0)
   AnswerTests: omnitest(correctVal='un vecteur de taille 3')
-  Hint: Rappelez vous comment R avez traité les opérations sur les vecteurs... un élément à la fois...
+  Hint: "Rappelez-vous comment R avez traité les opérations sur les vecteurs... un élément à la fois..."
 
 - Class: cmd_question
   Output: Affichez maintenant le contenu de la variable my_sqrt.
   CorrectAnswer: my_sqrt
   AnswerTests: omnitest(correctExpr='my_sqrt')
-  Hint: Tapez juste my_sqrt puis Entrée pour afficher le contenu de cette variable.
+  Hint: "Tapez juste my_sqrt puis Entrée pour afficher le contenu de cette variable."
 
 - Class: text
-  Output: Comme vous l'aviez peut-être deviné, R a soustrait 1 à chaque élément, puis a calculé la racine carré des valeurs résultantes. Cela nous donne donc un vecteur de la même taille que le vecteur z avant opérations.
+  Output: "Comme vous l'aviez peut-être deviné, R a soustrait 1 à chaque élément, puis a calculé la racine carré des valeurs résultantes. Cela nous donne donc un vecteur de la même taille que le vecteur z avant opérations."
 
 - Class: cmd_question
-  Output: Maintenant, créez une variable appelée "my_div" qui prend les éléments du vecteur z et les divise par my_sqrt.
+  Output: "Maintenant, créez une variable appelée 'my_div' qui prend les éléments du vecteur z et les divise par my_sqrt."
   CorrectAnswer: my_div = z / my_sqrt
   AnswerTests: any_of_exprs('my_div = z / my_sqrt','my_div <- z / my_sqrt')
-  Hint: Tapez "my_div = z / my_sqrt". Comme précédemment, les espaces ne sont pas nécessaire mais rendent le code plus lisible, c'est une question de choix (il n'existe pas pour R de recommandations stylistique officiel comme le PEP8 en Python).
+  Hint: "Tapez la commande 'my_div = z / my_sqrt'. Comme précédemment, les espaces ne sont pas nécessaire mais rendent le code plus lisible, c'est une question de choix (il n'existe pas pour R de recommandations stylistique officiel comme le PEP8 en Python)."
 
 - Class: mult_question
   Output: Choisissez la bonne réponse
-  CorrectAnswer: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc.
+  CorrectAnswer: "Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc."
   AnswerChoices: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc.; my_div est un vecteur de taille 1 (une valeur unique); my_div est non définie
   AnswerTests: omnitest(correctVal='Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e, etc.')
-  Hint: Rappelez vous comment R à géré les précédentes opérations '+' et '-' sur les vecteurs.
+  Hint: "Rappelez-vous comment R à géré les précédentes opérations '+' et '-' sur les vecteurs."
 
 - Class: cmd_question
   Output: Affichez maintenant ce que contient my_div.
@@ -192,9 +192,7 @@
   Hint: Tapez my_div et pressez Entrée pour afficher son contenu.
 
 - Class: text
-  Output: Lorsqu'on lui donne deux vecteurs de même taille, R effectue l'opération arithmétique  (`+`, `-`, `*`, etc.) élément par élément.
-    Si les vecteurs ne sont pas de la même taille, le vecteur le plus petit sera "recyclé" jusqu'à atteindre la taille du vecteur le plus grand.
-    Ainsi, si nous avons deux vecteurs v1 = c(6, 5, 4, 3, 2, 1) et v2=c(1, 2, 3), lors d'une opération arithmétique entre ces deux vecteurs, mettons v1+v2, v2 étant le plus petit des deux vecteurs (de taille 3 -contient 3 valeurs- contre v1 de taille 6 -contient 6 valeurs-), il sera recyclé jusqu'à atteindre la même taille que v1, soit sous la forme c(1, 2, 3, 1, 2, 3).
+  Output: "Lorsqu'on lui donne deux vecteurs de même taille, R effectue l'opération arithmétique  (`+`, `-`, `*`, etc.) élément par élément. Si les vecteurs ne sont pas de la même taille, le vecteur le plus petit sera 'recyclé'' jusqu'à atteindre la taille du vecteur le plus grand. Ainsi, si nous avons deux vecteurs v1 = c(6, 5, 4, 3, 2, 1) et v2=c(1, 2, 3), lors d'une opération arithmétique entre ces deux vecteurs, mettons v1+v2, v2 étant le plus petit des deux vecteurs (de taille 3 -contient 3 valeurs- contre v1 de taille 6 -contient 6 valeurs-), il sera recyclé jusqu'à atteindre la même taille que v1, soit sous la forme c(1, 2, 3, 1, 2, 3)."
 
 - Class: text
   Output: Vous comprenez maintenant que lorsque l'on a effectué l'opération "z * 2 + 100" dans notre exemple précédent, z était un vecteur de taille 3 et 2 et 100 sont techniquement des vecteurs de taille 1. De façon invisible, R a recyclé les vecteurs c(2) et c(100) en c(2, 2, 2) et c(100, 100, 100).
@@ -229,8 +227,8 @@
 - Class: cmd_question
   Output: Si vous utilisez RStudio, vous pouvez afficher l'intégralité de l'historique en cliquant sur Affichage puis Afficher l'historique (View puis Show history). Celui-ci devrait s'afficher dans un onglet à haut à droite (position susceptible de varier d'un environment à un autre..) Vous pouvez également taper history() dans la console pour l'afficher. Essayez!
   CorrectAnswer: history()
-AnswerTests: omnitest(correctExpr='history()')
-Hint: Tapez "history()" dans la console puis Entrée pour afficher l'historique des commandes.
+  AnswerTests: omnitest(correctExpr='history()')
+  Hint: Tapez "history()" dans la console puis Entrée pour afficher l'historique des commandes.
 
 
 - Class: text
