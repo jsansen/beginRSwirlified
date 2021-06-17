@@ -1,5 +1,3 @@
-
-# Q1
 - Class: meta
   Course: beginR
   Lesson: matrices_et_Dataframes
@@ -10,7 +8,7 @@
 
 # Q1
 - Class: text
-  Output: "Ce cours va traiter les matrices et dataframes, des représentation "rectangulaire"/tabulaire (tableau) de données, un peu à la façon de ce que permet de faire un tableur type calc ou excel."
+  Output: "Ce cours va traiter les matrices et dataframes, des représentation 'rectangulaire'/tabulaire (tableau) de données, un peu à la façon de ce que permet de faire un tableur type calc ou excel."
 
 
 # Q2
@@ -144,7 +142,7 @@
 
 # Q20
 - Class: text
-  Output: "Maintenant, imaginez que les valeurs de notre matriice représentent des mesures d'une expérience clinique, où chaque ligne correspond à un-e patient-e, et chaque colonne représente une variable pour laquelle une mesure à été effectuée."
+  Output: "Maintenant, imaginez que les valeurs de notre matrice représentent des mesures d'une expérience clinique, où chaque ligne correspond à un-e patient-e, et chaque colonne représente une variable pour laquelle une mesure à été effectuée."
 
 # Q21
 - Class: text
@@ -163,10 +161,10 @@
 
 # Q23
 - Class: cmd_question
-  Output: Maintenant, nous allons utiliser la fonction cbind() pour 'combiner les colonnes' (cbind vient de column binding -- associer les colonnes--). Ne vous embetez pas à stocker le résultat dans une nouvelle variable, appelez juste la fonction avec deux arguments: nos deux vecteur/matrice patients et my_matrix.
+  Output: "Maintenant, nous allons utiliser la fonction cbind() pour 'combiner les colonnes' (cbind vient de column binding -- associer les colonnes--). Ne vous embetez pas à stocker le résultat dans une nouvelle variable, appelez juste la fonction avec deux arguments: nos deux vecteur/matrice patients et my_matrix."
   CorrectAnswer: cbind(patients, my_matrix)
   AnswerTests: any_of_exprs('cbind(patients, my_matrix)', 'cbind(my_matrix, patients)')
-  Hint: Tapez cbind(patients, my_matrix) pour ajouter le vecteur des noms de nos patient-e-s à la matrice des mesures.
+  Hint: "Tapez cbind(patients, my_matrix) pour ajouter le vecteur des noms de nos patient-e-s à la matrice des mesures."
 
 
 # Q24
@@ -206,15 +204,15 @@
   Output: Confirmons cela en appelant la focntion class() sur notre tout nouveau dataframe.
   CorrectAnswer: class(my_data)
   AnswerTests: omnitest(correctExpr='class(my_data)')
-  Hint: La fonction class prend un seul argument: l'objet dont on veut identifier la classe.
+  Hint: "La fonction class prend un seul argument: l'objet dont on veut identifier la classe."
 
 # Q31
 - Class: text
-  Output: Il est aussi possible d'assigner des noms individuellement aux lignes et colonnes d'un dataframe, ce qui offre une alternative pour identifier quelle ligne de valeurs correspond à quel patient-e.
+  Output: "Il est aussi possible d'assigner des noms individuellement aux lignes et colonnes d'un dataframe, ce qui offre une alternative pour identifier quelle ligne de valeurs correspond à quel patient-e."
 
 # Q32
 - Class: text
-  Output: Cependant, puisque nous avons déjà résolu ce problème, resolvons-en un nouveau, celui d'attribuer un nom au colonnes de notre dataframe afin de clairement identifier quel type d'examen/mesure chaque colonne représente.
+  Output: "Cependant, puisque nous avons déjà résolu ce problème, resolvons-en un nouveau, celui d'attribuer un nom au colonnes de notre dataframe afin de clairement identifier quel type d'examen/mesure chaque colonne représente."
 
 # Q33
 - Class: cmd_question
@@ -225,21 +223,21 @@
 
 # Q34
 - Class: cmd_question
-  Output: Maintenant, de façon très similaire à ce qui a été fait précédemment, utilisez la fonction colnames() pour définir l'attribut colnames de notre dataframe.
+  Output: "Maintenant, de façon très similaire à ce qui a été fait précédemment, utilisez la fonction colnames() pour définir l'attribut colnames de notre dataframe."
   CorrectAnswer: colnames(my_data) = cnames
   AnswerTests: omnitest(correctExpr='colnames(my_data) = cnames')
-  Hint: Vous ne trouvez pas? Essayez colnames(my_data) = cnames.
+  Hint: "Vous ne trouvez pas? Essayez colnames(my_data) = cnames."
 
 # Q35
 - Class: cmd_question
-  Output: Voyons si cela fait le boulot: affichez le contenu de my_data.
+  Output: "Voyons si cela fait le boulot: affichez le contenu de my_data."
   CorrectAnswer: my_data
   AnswerTests: omnitest(correctExpr='my_data')
-  Hint: Affichez le Contenu de my_data.
+  Hint: "Affichez le contenu de my_data."
 
 # Q36
 - Class: text
   Output: "Dans ce cours, vous avez appris les bases d'utilisation de deux des structures les plus couramment utilisées dans R: les matrices et les data frames. Il y a encore beaucoup de chose à apprendre les concernant et nous les verrons un peu plus tard dans le cours, notamment concernant les dataframe qui sont un incontournable du traitement de données en R."
 
 - Class: text
-  Output: Sur Moodle, sélectionnez le test "dataframes" et entrez le code "G4rrickhsalF4ll3N" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
+  Output: 'Sur Moodle, sélectionnez le test "dataframes" et entrez le code "G4rrickhsalF4ll3N" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.'
