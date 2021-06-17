@@ -43,7 +43,7 @@
 - Class: mult_question
   Output: Question surprise! On veut créer un vecteur contenant 1000 NA, quelle fonction utiliseriez-vous?
   CorrectAnswer: 'rep'
-  AnswerChoices: rep; rnorm; c; l'operateur :
+  AnswerChoices: rep; rnorm; c; "l'opérateur :"
   AnswerTests: omnitest(correctVal='rep')
   Hint: Réflechissez un peu, vous l'avez vu dans un précédent cours !
 
@@ -56,7 +56,7 @@
 
 # Q9
 - Class: cmd_question
-  Output: Enfin, tirons 100 éléments de façon aléatoire de ces deux vecteurs combinés de façon à ne pas savoir combien de NAs ni leurs positions dans le vecteur. On va donc utiliser cette commande: my_data = sample(c(y, z), 100).
+  Output: "Enfin, tirons 100 éléments de façon aléatoire de ces deux vecteurs combinés de façon à ne pas savoir combien de NAs ni leurs positions dans le vecteur. On va donc utiliser cette commande: my_data = sample(c(y, z), 100)."
   CorrectAnswer: my_data = sample(c(y, z), 100)
   AnswerTests: omnitest(correctExpr='my_data = sample(c(y, z), 100)')
   Hint: La fonction sample() tire un échantillon aléatoire des données fournies en premier argument (dans notre cas le vecteur c(y, z)) de la taille spécifié en second argument (100). La commande my_data = sample(c(y, z), 100) vous donnera ce que l'on veut.
@@ -115,7 +115,7 @@
   Hint: Affichez le contenu de my_data.
 
 - Class: cmd_question
-  Output: Maintenant que nous avons maitrisé les NAs (j'exagère mais au moins, maintenant vous comprenez l'idée général du fonctionnement de cette valeur si particulière), penchons nous au deuxieme type de valeurs manquantes: NaN -- Not a Number-- (pas un nombre). Pour génerer des NaN, essayez de diviser 0 par 0.
+  Output: "Maintenant que nous avons maitrisé les NAs (j'exagère mais au moins, maintenant vous comprenez l'idée général du fonctionnement de cette valeur si particulière), penchons nous au deuxieme type de valeurs manquantes: NaN -- Not a Number-- (pas un nombre). Pour génerer des NaN, essayez de diviser 0 par 0."
   CorrectAnswer: 0/0
   AnswerTests: omnitest(correctExpr='0/0')
   Hint: Essayez 0/0.
