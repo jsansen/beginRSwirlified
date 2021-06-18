@@ -53,163 +53,165 @@
 
 # Q10
 - Class: cmd_question
-  Output: "Maintenant que vous avez créé (disons plutôt édité) votre première fonction, testons la! Tapez: boring_function('Hello World !'). Si tout fonctionne correctement, la fonction devrait tout simplement vous retourner la chaine de caractère fournie en argument : 'Hello World !.'
+  Output: "Maintenant que vous avez créé (disons plutôt édité) votre première fonction, testons la! Tapez: boring_function('Hello World !'). Si tout fonctionne correctement, la fonction devrait tout simplement vous retourner la chaine de caractère fournie en argument : 'Hello World !.'"
   CorrectAnswer: "boring_function('Hello World !')"
   AnswerTests: omnitest(correctExpr="boring_function('Hello World !')")
   Hint: "Testez votre fonction en tapant: boring_function('Hello World !')"
 
 # Q11
 - Class: text
-  Output: "Félicitations pour votre première fonction! En écrivant des fonctions, vous pouvez sérieusement améliorer votre compréhension du fonctionnement de R. Comme l'a un jour dit John Chambers, le créatoeur de R: \n\n Il y a deux choses utiles à savoir pour bien comprendre comment fonctionne les calculs dans R: 1. Tout ce qui existe dans R est un objet. 2. Tout ce qui se produit dans R est lié à un appel de fonction."
+  Output: "Félicitations pour votre première fonction! Que s'est-il passé? en appelant la fonction boring_function avec la commande 'boring_function('Hello World !')', R a en réalité compris la commande suivante: boring_function(x='Hello World !'). "
+# Maintenant un peu d'imagination. Admettons que nous ayant une fonction qui calcule une addition de deux chiffres, il faut donc deux arguments à notre fonction."
+
+#- Class: script
+#  Output: "Créons cette fonction dans notre prochain script. Vous y verrez notamment deux lignes pré-fournies utilisant la fonction message qui permet d'afficher des message dans la console (nous verrons d'autres façon de faire cela ultérieurement, ne nous en préoccupez pas pour le moment). Ces deux lignes permettent notamment d'afficher la valeur attribuée à x et celle attribuée à y. Assurez-vous de sauvegarder vos changements au script avant de taper submit()."
+#  AnswerTests: test_func_j()
+#  Hint: "Additionnez simplement le premier argument et le deuxième argument."
+#  Script: even_more_boring_function.R
+
+
+# Q10
+#- Class: cmd_question
+#  Output: "Testons notre fonction en tapant : even_more_borign_function(2, 3)."
+#  CorrectAnswer: "boring_function(2, 3)"
+#  AnswerTests: omnitest(correctExpr="boring_function(1, 3)")
+#  Hint: "Testez votre fonction en tapant: even_more_boring_function(2, 3)"
+
+# Q11
+#- Class: text
+#  Output: "Que s'est-il passé ici? la variable x étant le premier argument défini pour notre fonction, il a pris la valeur du premier argument fournit lors de l'appel de la fonction (ici, 2) tandis que la variable y, deuxième argument défini pour notre function, a pris la valeur du deuxième argument défini lors de l'appel de la fonction (ici, 3). "
+
 
 # Q12
+#- Class: cmd_question
+#  Output: "Cela nous permet de constater que les arguments indiqué dans l'appel de la fonction doivent suivre l'ordre des arguments indiqué lors de la déclaration fonction. Ainsi, la commande 'even_more_boring_function(3, 2)' impliquerait que x=3 et y=2. Vérifiez cela en tapant cette commande."
+#  CorrectAnswer: even_more_boring_function(3, 2)
+#  AnswerTests: omnitest(correctExpr='even_more_boring_function(3, 2)')
+#  Hint: "Tapez: even_more_boring_function(3, 2)  pour voir les effets."
+
+# Q11
+#- Class: cmd_question
+#  Output: "Il n'existe qu'une seule façon de ne pas respecter cet ordre, il faut pour cela effectuer un nommage explicite. Cela consiste à explicitement déclarer les arguments et les valeurs que l'on veut leurs donner lors de l'appel de la fonction. Ainsi, on pourrait écrire 'even_more_boring_function(y=3, x=2)'. Essayez cela."
+#  CorrectAnswer: even_more_boring_function(y=3, x=2)
+#  AnswerTests: omnitest(correctExpr='even_more_boring_function(y=3, x=2)')
+#  Hint: "Tapez: even_more_boring_function(y=3, x=2) pour voir les effets."
+
+# Q12
+- Class: text
+  Output: "En écrivant des fonctions, vous pouvez sérieusement améliorer votre compréhension du fonctionnement de R. Comme l'a un jour dit John Chambers, le créatoeur de R: \n\n Il y a deux choses utiles à savoir pour bien comprendre comment fonctionne les calculs dans R: 1. Tout ce qui existe dans R est un objet. 2. Tout ce qui se produit dans R est lié à un appel de fonction."
+
+# Q13
 - Class: cmd_question
   Output: "Si vous voulez voir le code source de n'importe quelle fonction, tapez simplement le nom de la fonction sans parenthèses ni argument. Essayons cela avec la fonction que vous venez d'éditer. Tapez 'boring_function' pour voir son code source."
   CorrectAnswer: boring_function
   AnswerTests: omnitest(correctExpr='boring_function')
-  Hint: "Pour voir le code source d'une fonction il suffit de taper son nom. Tapez: boring_function  pour le constater."
+  Hint: "Pour voir le code source d'une fonction il suffit de taper son nom. Tapez: boring_function pour le constater."
 
-# Q13
+# Q14
 - Class: text
-  Output: "Time to make a more useful function! We're going to replicate the
-    functionality of the mean() function by creating a function called: my_mean().
-    Remember that to calculate the average of all of the numbers in a vector you
-    find the sum of all the numbers in the vector, and then divide that sum by the
-    number of numbers in the vector."
+  Output: "Bon, tout ça c'est bien mais il est temps de faire une fonction un peu plus utile que ça. Nous allons répliquer la fonction mean() en créant une fonction my_mean(). Rappelez-vous, elle calcule la moyenne des nombres d'un vecteur en calculant la somme de ces nombres et en divisant cette somme par la taille du vecteur (nombre d'élements dans le vecteur)."
 
-# Q
+# Q15
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Assurez-vous de sauvegarder le script avant de taper submit().
   AnswerTests: test_func2()
-  Hint: "Use the sum() function to find the sum of all the numbers in the vector. Use
-    the length() function to find the size of the vector."
+  Hint: "Utilisez la fonction sum() pour trouver la somme des nombres d'un vecteur. Utilisez length() pour trouver la taille de ce vecteur."
   Script: my_mean.R
 
-# Q
+# Q16
 - Class: cmd_question
-  Output: "Now test out your my_mean() function by finding the mean of the vector
-    c(4, 5, 10)."
+  Output: "Maintenant testez votre fonction my_mean() pour trouver la moyenne du vecteur c(4, 5, 10)."
   CorrectAnswer: my_mean(c(4, 5, 10))
   AnswerTests: omnitest(correctExpr='my_mean(c(4, 5, 10))')
-  Hint: "Run the command my_mean(c(4, 5, 10)) to test out your new function."
+  Hint: "Executez my_mean(c(4, 5, 10)) pour tester votre nouvelle fonction."
 
-# Q
+# Q17
 - Class: text
-  Output: "Next, let's try writing a function with default arguments. You can set
-    default values for a function's arguments, and this can be useful if you think
-    someone who uses your function will set a certain argument to the same value
-    most of the time."
+  Output: "Maintenant, esayons d'écrire une fonction avec des arguments par défaut. Un argument par défaut est une valeur fournie à la fonction si aucun argument ne vient remplacer cette valeur par defaut. On peut définir cette ou ces valeur-s lorsque l'on définit/crée/écrit la fonction en ajoutant '= valeur' à la variable pour laquelle on veut définir une valeur par défaut. C'est très utile pour paramétrer des fonctions avec des variables qui ne changeront que rarement."
 
-# Q
+# Q18
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: "Assurez-vous de sauvegarder le script avant de taper submit()."
   AnswerTests: test_func3()
-  Hint: "Remember to set the appropriate default values!"
+  Hint: "Rappelez-vous de correctement définir la valeur par défaut !"
   Script: remainder.R
 
-# Q
+# Q19
 - Class: cmd_question
-  Output: "Let's do some testing of the remainder function. Run remainder(5)
-    and see what happens."
+  Output: "Faisons quelques tests avec cette fonction remainder qui calcul le reste d'une division entière. Executez la commande remainder(5) et constatez ce qu'il se passe."
   CorrectAnswer: remainder(5)
   AnswerTests: omnitest(correctExpr='remainder(5)')
-  Hint: "Let's test your remainder function by running: remainder(5)"
+  Hint: "Testez votre fonction remainder avec la commande: remainder(5)"
 
-# Q
+# Q20
 - Class: text
-  Output: "Let's take a moment to examine what just happened. You provided one
-    argument to the function, and R matched that argument to 'num' since 'num'
-    is the first argument. The default value for 'divisor' is 2, so the function
-    used the default value you provided."
+  Output: "Prenons quelques instant pour examiner ce qu'il s'est passé. Vous avez passé un argument à la fonction, et R a fait coïncider cet argument a la variable 'num' puisque 'num' est le premier argument. L'argument 'divisor' n'ayant pas été fournit, R a utiisé la valeur par défaut qui avait été indiquée lors de la définition de la fonction, soit 2."
 
-# Q
+# Q21
 - Class: cmd_question
-  Output: "Now let's test the remainder function by providing two arguments.
-    Type: remainder(11, 5) and let's see what happens."
+  Output: "Maintenant, testons notre fonction remainder en apportant deux arguments cette fois-ci. Tapez: remainder(11, 5) et observons ce qu'il se produit."
   CorrectAnswer: remainder(11, 5)
   AnswerTests: omnitest(correctExpr='remainder(11, 5)')
-  Hint: "Let's test your remainder function by running: remainder(11, 5)"
+  Hint: "testons notre fonction en tapant: remainder(11, 5)"
 
-# Q
+# Q22
 - Class: text
-  Output: "Once again, the arguments have been matched appropriately."
+  Output: "Une fois encore, les arguments ont été modifié en accord avec ce qu'on a fournit à l'appel de fonction."
 
-# Q
+# Q23
 - Class: cmd_question
-  Output: "You can also explicitly specify arguments in a function. When you
-    explicitly designate argument values by name, the ordering of the arguments
-    becomes unimportant. You can try this out by typing:
-    remainder(divisor = 11, num = 5)."
+  Output: "Vous pouvez également expliciter les arguments d'une fonction lors de l'appel de fonction. En designant explicitement les arguments, vous pouvez vous permettre de ne pas respecter l'ordre (R utilisera les noms des variables plutôt que l'ordre des arguments pour faire la concordance) mais il est de bon usage d'essayer de le respecter lorsque c'est possible. Vous pouvez essayer cela en tapant: remainder(divisor = 11, num = 5)."
   CorrectAnswer: remainder(divisor = 11, num = 5)
   AnswerTests: omnitest(correctExpr='remainder(divisor = 11, num = 5)')
-  Hint: "Order no longer matters when you explicity state argument values! Test
-  this out by typing: remainder(divisor = 11, num = 5)"
+  Hint: "L'ordre n'a plus d'importance lorsque l'on nomme explicitement les arguments et les valeurs que l'on veut leurs attribuer. Testez cela en tapant: remainder(divisor = 11, num = 5)"
 
-# Q
+# Q24
 - Class: text
-  Output: "As you can see, there is a significant difference between
-    remainder(11, 5) and remainder(divisor = 11, num = 5)!"
+  Output: "Comme vous pouvez le voir, il y a une nette différence entre remainder(11, 5) et remainder(divisor = 11, num = 5)."
 
-# Q
+# Q25
 - Class: cmd_question
-  Output: "R can also partially match arguments. Try typing remainder(4, div = 2)
-    to see this feature in action."
+  Output: "R peut aussi partiellement faire la concordance. essayez de taper remainder(4, div = 2) pour constater cela."
   CorrectAnswer: remainder(4, div = 2)
   AnswerTests: omnitest(correctExpr='remainder(4, div = 2)')
-  Hint: "Test out partial matching by typing: remainder(4, div = 2)"
+  Hint: "Testez la concordance partielle en tapant la commande: remainder(4, div = 2)"
 
-# Q
+# Q26
 - Class: text
-  Output: "A word of warning: in general you want to make your code as easy to
-    understand as possible. Switching around the orders of arguments by
-    specifying their names or only using partial argument names can be
-    confusing, so use these features with caution!"
+  Output: "Un point de vigilance: en général on essaie d'écrire un code aussi claire et compréhensible que possible. Evitez de changer de 'convention' d'écriture en passant alternativement entre le nommage explicite et arguments ordonnés."
 
-# Q
+# Q27
 - Class: cmd_question
-  Output: "With all of this talk about arguments, you may be wondering if there
-    is a way you can see a function's arguments (besides looking at the
-    documentation). Thankfully, you can use the args() function! Type:
-    args(remainder) to examine the arguments for the remainder function."
+  Output: "Avec toutes ces informations à propos des arguments, vous pouvez vous demander s'il y a une fonction permettant de connaitre les arguments d'une fonction (sans passer par la documentation). Fort heureusement, vous pouvez utiliser la fonction args() pour connaitre les arguments d'une fonction! Tapez: args(remainder) pour examiner les arguments de la fonction remainder."
   CorrectAnswer: args(remainder)
   AnswerTests: omnitest(correctExpr='args(remainder)')
-  Hint: "Look at the arguments of the remainder function by typing:
-    args(remainder)"
+  Hint: "Inspectez les arguments de la fonction remainder en tapant: args(remainder)"
 
 # Q
 - Class: text
-  Output: "You may not realize it but I just tricked you into doing something
-    pretty interesting! args() is a function, remainder() is a function, yet
-    remainder was an argument for args(). Yes it's true: you can pass functions
-    as arguments! This is a very powerful concept. Let's write a script to see
-    how it works."
+  Output: "Vous ne vous en êtes probablement pas rendu compte mais je viens de vous attirer dans un piège fort intéressant! args() est une fonction, remainder() est une fonction, et pourtant, on a passé remainder en tant qu'argument à la fonction args(). Oui, c'est bien cela, on peut passer des fonctions en arguments! (Rappelez-vous, avec R, tout est objet!) C'est un concept très pratique !Ecrivons un script pour voir un peu mieux comment cela fonctionne."
 
 # Q
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Assurez-vous de sauvegarder votre script avant de lancer la commande submit().
   AnswerTests: test_func4()
-  Hint: "Make sure that when you pass a function as an argument you pass the
-    name of the function without parentheses!"
+  Hint: "Faites attention, lorsque vous passez une fonction en argument, à ne pas mettre les parenthèses avec mais uniquement le nom de la fonction !"
   Script: evaluate.R
 
 # Q
 - Class: cmd_question
-  Output: "Let's take your new evaluate() function for a spin! Use evaluate to
-    find the standard deviation of the vector c(1.4, 3.6, 7.9, 8.8)."
+  Output: "Amusons-nous un peu avec notre fonction evaluate(). Utilisez la fonction evaluate pour trouver l'écart-type du vecteur suivant: c(1.4, 3.6, 7.9, 8.8). Utilisez la fonction 'sd' pour calculer l'écart-type avec R."
   CorrectAnswer: evaluate(sd, c(1.4, 3.6, 7.9, 8.8))
   AnswerTests: omnitest(correctExpr='evaluate(sd, c(1.4, 3.6, 7.9, 8.8))')
-  Hint: "The function for standard deviation is called sd(). Make sure that when
-    you pass a function as an argument you pass the
-    name of the function without parentheses!"
+  Hint: "La fonction R pour calculer l'écart-type est sd(). Assurez-vous de ne passer que le nom de la fonction (sans parenthèses ni arguments) et de fournir le vecteur en second argument."
 
 # Q
 - Class: text
-  Output: "The idea of passing functions as arguments to other functions is an
-    important and fundamental concept in programming."
+  Output: "Le principe de passer des fonctions en arguments d'autres fonctions est un concept fondamental en programmation."
 
 # Q
 - Class: text
-  Output: "You may be surprised to learn that you can pass a function as an
+  Output: "Vous pouvez être surpris d'apprendre que l'on peut passer une fonction (appelons la A) en argument à une autre fonction (B) sans quela fonction A ne soit défini en premier lieu. nsYou may be surprised to learn that you can pass a function as an
     argument without first defining the passed function. Functions that are not
     named are appropriately known as anonymous functions."
 

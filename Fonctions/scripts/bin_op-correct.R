@@ -9,7 +9,7 @@
 # Let's say I wanted to define a binary operator that multiplied two numbers and
 # then added one to the product. An implementation of that operator is below:
 #
-# "%mult_add_one%" <- function(left, right){ # Notice the quotation marks!
+# "%mult_add_one%" = function(left, right){ # Notice the quotation marks!
 #   left * right + 1
 # }
 #
@@ -23,6 +23,6 @@
 #
 # will evaluate to: "Good job!"
 
-"%p%" <- function(left, right){ # Remember to add arguments!
+"%p%" = function(left, right){ # Remember to add arguments!
   paste(left, right)
 }

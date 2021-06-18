@@ -9,6 +9,17 @@ test_func1 <- function() {
   exists('ok') && isTRUE(ok)
 }
 
+test_func_j <- function() {
+  try({
+    func <- get('even_more_boring_function', globalenv())
+    t1 <- identical(func(1, 2), sum(1,2))
+    t2 <- identical(func(4,10), sum(4,10)
+    t3 <- identical(func(0,-1), sum(0,-1))
+    ok <- all(t1, t2, t3)
+  }, silent = TRUE)
+  exists('ok') && isTRUE(ok)
+}
+
 test_func2 <- function() {
   try({
     func <- get('my_mean', globalenv())

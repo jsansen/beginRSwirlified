@@ -4,7 +4,7 @@
 # "by" where "number" is the digit I want to increment and "by" is the amount I
 # want to increment "number" by. I've written the function below.
 #
-# increment <- function(number, by = 1){
+# increment = function(number, by = 1){
 #     number + by
 # }
 #
@@ -30,7 +30,7 @@
 # Remember to set appropriate default values! Be sure to save this
 # script and type submit() in the console after you write the function.
 
-remainder <- function(num, divisor) {
+remainder = function(num, divisor) {
   # Write your code here!
   # Remember: the last expression evaluated will be returned!
 }
