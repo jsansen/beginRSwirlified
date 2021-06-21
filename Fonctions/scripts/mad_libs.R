@@ -1,37 +1,29 @@
-# Let's explore how to "unpack" arguments from an ellipses when you use the
-# ellipses as an argument in a function. Below I have an example function that
-# is supposed to add two explicitly named arguments called alpha and beta.
-#
+# Explorons comment depaqueter/délier ("unpack") les arguments contenu dans une ellipse lorsqu'elle est utilisée en argument d'une fonction.
+
+# Ci-dessous, un exemple de fonction qui est censée additionner deux nombres, alpha et beta.
+
 # add_alpha_and_beta = function(...){
-#   # First we must capture the ellipsis inside of a list
-#   # and then assign the list to a variable. Let's name this
-#   # variable `args`.
-#
+#   # Tout d'abord, on doit attraper l'ellipse et l'affecter à une liste que nous affecterons à une variable appelée 'args'. Cela se fait tout simplement par:
+
 #   args = list(...)
-#
-#   # We're now going to assume that there are two named arguments within args
-#   # with the names `alpha` and `beta.` We can extract named arguments from
-#   # the args list by using the name of the argument and double brackets. The
-#   # `args` variable is just a regular list after all!
-#
+
+# Nous allons maintenant supposer qu'il y a deux arguments nommés dans notre variable args, variable appelées 'alpha' et 'beta'.
+# On peut extraire des arguments nommés de la liste args en utilisant les doubles crochets et le noms des varaibles à récupérer (args, n'est rien d'autre qu'une list classique après tout!):
+
 #   alpha = args[["alpha"]]
 #   beta  = args[["beta"]]
-#
-#   # Then we return the sum of alpha and beta.
-#
+
+#   # Ensuite, on retourne la somme de alpha et beta:
+
 #   alpha + beta
 # }
-#
-# Have you ever played Mad Libs before? The function below will construct a
-# sentence from parts of speech that you provide as arguments. We'll write most
-# of the function, but you'll need to unpack the appropriate arguments from the
-# ellipses.
+
+# Avez-vous déjà joué au jeu Mad Libs? La fonction suivante construit une phrase à partir d'éléments de discours que l'on fournit en arguments.
+# Nous allons écrire la majeure partie de la fonction mais vous aurez besoin d'extraire les arguments appropriés de l'ellipse.
 
 mad_libs = function(...){
-  # Do your argument unpacking here!
+  # Faites ici l'extraction des arguments recherchés.
 
-  # Don't modify any code below this comment.
-  # Notice the variables you'll need to create in order for the code below to
-  # be functional!
+  # Ne modifiez rien de ce qui suit. Remarquez les variables utilisées ici, il y en a trois. Ce sont ces varaibles que vous devez créer ci-dessus pour que le code soit fonctionnel.
   paste("News from", place, "today where", adjective, "students took to the streets in protest of the new", noun, "being installed on campus.")
 }

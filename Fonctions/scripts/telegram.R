@@ -1,33 +1,27 @@
-# The ellipses can be used to pass on arguments to other functions that are
-# used within the function you're writing. Usually a function that has the
-# ellipses as an argument has the ellipses as the last argument. The usage of
-# such a function would look like:
-#
+# L'ellipse peut être utilisée pour passer des arguments à une fonction cotnenue dans la fonction appelée.
+
+# Généralement, l'ellipse  est passée en tant que dernier argument, après les arguments nommés. En voici un exemple:
+
 # ellipses_func(arg1, arg2 = TRUE, ...)
 #
-# In the above example arg1 has no default value, so a value must be provided
-# for arg1. arg2 has a default value, and other arguments can come after arg2
-# depending on how they're defined in the ellipses_func() documentation.
-# Interestingly the usage for the paste function is as follows:
+# Dans cet exemple, arg1 n'a pas de valeur par défaut, donc une valeur doit obligatoirement être fournie lors de l'appel de fonction. args2 a une valeur par défaut définie à TRUE. Enfin, la fonction peut recevoir d'autres arguments, inconnus, qui seront utilisés dans le corps de la fonction ellipses_func() et dont l'usage/l'interét est généralement décrit dans la documentation de la fonction.
+# Si on s'intéresse à la fonction paste(), on s'aperçoit qu'elle transige ces 'règles' (conventions est plus approprié):
 #
 # paste (..., sep = " ", collapse = NULL)
 #
-# Notice that the ellipses is the first argument, and all other arguments after
-# the ellipses have default values. This is a strict rule in R programming: all
-# arguments after an ellipses must have default values. Take a look at the
-# simon_says function below:
+# On s'aperçoit en effet que l'ellipse est le premier argument de la fonction, et que les autres arguments nommés ont tous une valeur par défaut. Il s'agit d'une règle stricte dans R, tous les arguments déclarés après l'ellipse doivent obligatoirement avoir une valeur àar défaut. Inspectez la fonction simon_says  qui suit:
 #
 # simon_says = function(...){
 #   paste("Simon says:", ...)
 # }
 #
-# The simon_says function works just like the paste function, except the
-# begining of every string is prepended by the string "Simon says:"
-#
-# Telegrams used to be peppered with the words START and STOP in order to
-# demarcate the beginning and end of sentences. Write a function below called
-# telegram that formats sentences for telegrams.
-# For example the expression `telegram("Good", "morning")` should evaluate to:
+# La fonction simon_says fonctionne tout comme la fonction paste(), à l'exeption que le début de chaque chaîne de caractères commencera par "Simon says:"
+
+# Lors de leurs utilisation, les télégrammes étaient initiés et terminés par les mots START et STOP afin de demarquer le début d'une fin de message.
+
+# Ecrivez une fonction telegram() qui transforme des phrases au format télégramme.
+# Par exemple, la commande `telegram("Good", "morning")` devra nous retourner:
+
 # "START Good morning STOP"
 
 telegram = function(...){
