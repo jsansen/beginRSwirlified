@@ -1,10 +1,9 @@
-# You can pass functions as arguments to other functions just like you can pass
-# data to functions. Let's say you define the following functions:
-#
+# Vous pouvez passer des fonctions en arguments à d'autres fonctions, tout comme on peut fournir des données (variables). Imaginons que nous définissions les fonctions suivantes:
+
 # add_two_numbers = function(num1, num2){
 #    num1 + num2
 # }
-#
+
 # multiply_two_numbers = function(num1, num2){
 #	num1 * num2
 # }
@@ -13,23 +12,23 @@
 #    func(2, 4)
 # }
 #
-# As you can see we use the argument name "func" like a function inside of
-# "some_function()." By passing functions as arguments
-# some_function(add_two_numbers) will evaluate to 6, while
-# some_function(multiply_two_numbers) will evaluate to 8.
-#
-# Finish the function definition below so that if a function is passed into the
-# "func" argument and some data (like a vector) is passed into the dat argument
-# the evaluate() function will return the result of dat being passed as an
-# argument to func.
-#
-# Hints: This exercise is a little tricky so I'll provide a few example of how
-# evaluate() should act:
-#    1. evaluate(sum, c(2, 4, 6)) should evaluate to 12
-#    2. evaluate(median, c(7, 40, 9)) should evaluate to 9
-#    3. evaluate(floor, 11.1) should evaluate to 11
+# Comme vous pouvez le voir, nous utilisons l'argument 'func' comme une fonction dans le corps de la fonction "some_function".
+
+# En passant la fonction add_two_number en argument à la fonction some_function (comme ceci: "some_function(add_two_numbers)" ) La fonction retournera 6.
+#Par contre, si on lui passe plutôt la fonction multiply_two_numbers (comme ceci: "some_function(multiply_two_numbers)" ), elle retournera cette fois 8.
+
+# Terminez la définition de la fonction ci-dessous afin que lorsqu'on lui passe une fonction en argument 'func' et des données (comme un vecteur) pour l'argument 'dat', la fonction evaluate retournera le resultat de func avec dat en argument.
+
+# astuces: bien que simpliste, cete exercice est compliqué si on ne comprend pas la tâche attendue, voici donc quelques exemple d'application et de la réponse attendue:
+
+#    1. evaluate(sum, c(2, 4, 6)) retournera 12
+#    2. evaluate(median, c(7, 40, 9)) retournera 9
+#    3. evaluate(floor, 11.1) retournera 11
+
+# pour informations, les fonctions sum, median et floor calculent respectivement la somme, la médiane et un arrondi à l'entier inférieur (aussi appelée seuillage par troncature).
 
 evaluate = function(func, dat){
-  # Write your code here!
-  # Remember: the last expression evaluated will be returned!
+  # Ecrivez votre code ici !
+  # Rappelez-vous que la dernière expression évaluée par R est celle qui sera retournée par la fonction !
+
 }

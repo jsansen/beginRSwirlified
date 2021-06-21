@@ -211,151 +211,116 @@
 
 # Q
 - Class: text
-  Output: "Vous pouvez être surpris d'apprendre que l'on peut passer une fonction (appelons la A) en argument à une autre fonction (B) sans quela fonction A ne soit défini en premier lieu. nsYou may be surprised to learn that you can pass a function as an
-    argument without first defining the passed function. Functions that are not
-    named are appropriately known as anonymous functions."
+  Output: "Vous pouvez être surpris d'apprendre que l'on peut passer une fonction (appelons la A) en argument à une autre fonction (B) sans que la fonction A ne soit défini en premier lieu. Ces fonctions, qui n'existent que dans l'appel de la fonction B et n'ont donc pas de noms qui leurs sont propres permettant de les utiliser comme les fonctions usuelles s'appellent des fonctions anonymes."
 
 # Q
 - Class: text
-  Output: "Let's use the evaluate function to explore how anonymous functions
-    work. For the first argument of the evaluate function we're going to write a
-     tiny function that fits on one line. In the second argument we'll pass some
-     data to the tiny anonymous function in the first argument."
+  Output: "Utilisons la fonction évaluate vu un peu plus haut pour explorer comment fonctionnent ces fonctions anonymes. Pour le premier argument de la fonction 'evaluate', nous allons écrire une petite fonction qui tient en une seule ligne. Pour le second argument, nous allons fournir des données qui seront utilisées par la fonction anonyme (fournie en 1er argument)."
 
 # Q
 - Class: cmd_question
-  Output: "Type the following command and then we'll discuss how it works:
-    evaluate(function(x){x+1}, 6)"
+  Output: "Tapez la commande suivante, nous allons ensuite analyser un  peu ce qu'il s'est passé: evaluate(function(x){x+1}, 6)"
   CorrectAnswer: evaluate(function(x){x+1}, 6)
   AnswerTests: test_eval1()
   Hint: "Just type the command evaluate(function(x){x+1}, 6)"
 
 # Q
 - Class: text
-  Output: "The first argument is a tiny anonymous function that takes one argument
-  `x` and returns `x+1`. We passed the number 6 into this function so the entire
-  expression evaluates to 7."
+  Output: "Le premier argument est une petite fonction anonyme qui prend un argument 'x' et retourne 'x+1'.  Nous passons le nombre 6 à cette fonction afin que toute l'expression retourne 7."
 
 # Q
 - Class: cmd_question
-  Output: "Try using evaluate() along with an anonymous function to return the
-    first element of the vector c(8, 4, 0). Your anonymous function should only
-    take one argument which should be a variable `x`."
+  Output: "Essayez d'utiliser la fonction evaluate() avec une autre fonction anonyme que vous écrirez afin d'obtenir le premier élément du vecteur c(8, 4, 0). Votre fonction anonmyme ne devrait prendre qu'une variable en argument que vous appellerez 'x'."
   CorrectAnswer: evaluate(function(x){x[1]}, c(8, 4, 0))
   AnswerTests: test_eval2()
-  Hint: "You may need to recall how to index vector elements. Remember that your
-    anonymous function should only have one argument, and that argument should
-    be named `x`."
+  Hint: "Rappelez-vous comment récupérer un élément d'un vecteur par sa position dans le vecteur. Rappelez vous également qu'une fonction R retourne la dernière variable évaluée. Enfin, je rappelle que vous fontion ne prend qu'un seul argument, appelé 'x'."
 
 # Q
 - Class: cmd_question
-  Output: "Now try using evaluate() along with an anonymous function to return the
-    last element of the vector c(8, 4, 0). Your anonymous function should only
-    take one argument which should be a variable `x`."
+  Output: "Maintenant, essayez d'utiliser la fonctoin evaluate() avec une fonction anonyme que retourne le dernier élément d'un vecteur c(8, 4, 0). Comme pour l'exercice précédent, votre fonction anonyme ne prendra qu'un argument, appelé 'x'."
   CorrectAnswer: evaluate(function(x){x[length(x)]}, c(8, 4, 0))
   AnswerTests: test_eval3()
-  Hint: "You may need to recall how to index vector elements. Remember that your
-    anonymous function should only have one argument, and that argument should
-    be named `x`. Using the length() function in your anonymous function may
-    help you."
+  Hint: "Rappelez-vous comment récupérer le dernier élément d'un vecteur... un petit coup de main? vous avez besoin de la fonction length! (et comme précédemment, rappelez vous qu'une fonction retourne la dernière variable évaluée et que votre fonction anonyme ne prend qu'un argument, que vous appellerez 'x')."
 
 # Q
 - Class: cmd_question
-  Output: "For the rest of the course we're going to use the paste() function
-    frequently. Type ?paste so we can take a look at the documentation for the
-    paste function."
+  Output: "Pour le reste du cours, nous allons utiliser la fonction paste() à plusieurs reprises. Tapez ?paste pour jeter un oeil à la documentation de cette fonction."
   CorrectAnswer: ?paste
   AnswerTests: omnitest(correctExpr='?paste')
-  Hint: "Just type: ?paste"
+  Hint: "Tapez juste '?paste'"
 
 # Q
 - Class: text
-  Output: "As you can see the first argument of paste() is `...` which is referred
-    to as an ellipsis or simply dot-dot-dot. The ellipsis allows an indefinite
-    number of arguments to be passed into a function. In the case of paste() any
-    number of strings can be passed as arguments and paste() will return all of
-    the strings combined into one string."
+  Output: "Comme vous pouvez le voir, le premier argument de la fonction paste() est `...` (appelé ellipse, ou trois-points). L'ellipse permet de passer un nombre d'arguments indéfini à la fonction. Dans le cas de paste(), on peut lui fournir autant de chaine de caractères que l'on veut, la fonction retournera une unqiue chaine de caractère combinant toutes celles passées en arguments."
 
 # Q
 - Class: cmd_question
-  Output: 'Just to see how paste() works, type paste("Programming", "is", "fun!")'
+  Output: "Juste pour s'amuser et voir la fonction paste() en action, tapez paste('Programming', 'is', 'fun!')"
   CorrectAnswer: paste("Programming", "is", "fun!")
   AnswerTests: omnitest(correctExpr='paste("Programming", "is", "fun!")')
-  Hint: 'Just type: paste("Programming", "is", "fun!")'
+  Hint: 'Tapez simplement: paste("Programming", "is", "fun!")'
 
 # Q
 - Class: text
-  Output: "Time to write our own modified version of paste()."
+  Output: "Il est temps d'écrire notre propre version modifiée de paste() que nous appellons telegram."
 
 # Q
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Assurez-vous de sauvegarder votre script avant de taper submit().
   AnswerTests: test_func5()
-  Hint: "Remember that arguments can come after ..."
+  Hint: "Rappelez-vous que les arguments peuvent être indiqué par les trois-points."
   Script: telegram.R
 
 # Q
 - Class: cmd_question
-  Output: "Now let's test out your telegram function. Use your new telegram
-    function passing in whatever arguments you wish!"
+  Output: "Maintenant testons notre fonction telegram. Utilisez la fonction telegram et passez-lui les arguments que vous voulez!"
   CorrectAnswer: telegram()
   AnswerTests: expr_uses_func('telegram')
-  Hint: 'Use the telegram function with whatever arguments you want to use.'
+  Hint: 'Utilisez la fonction telegram avec les arguments de votre choix.'
 
 # Q
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: "Ecrivons une nouvelle fonction mad_libs maitnenant. Assurez-vous de sauvegarder votre script avant de taper submit()."
   AnswerTests: test_func6()
-  Hint: "Your function should have three sections: capture the ellipsis in a
-    list(), unpack the arguments from the ellipsis and assign them to variables,
-    then pass those variables to paste()."
+  Hint: "Votre fonction devrait avoir trois sections: 1. capturer l'ellipse dans une fonction list(), 2. libérer les arguments de l'ellipse et les assigner à une ou plusieurs variables, 3. passer ces variables à la fonction paste()."
   Script: mad_libs.R
 
 # Q
 - Class: cmd_question
-  Output: "Time to use your mad_libs function. Make sure to name the place,
-    adjective, and noun arguments in order for your function to work."
+  Output: "Testons cette fonction maintenant. Assurez-vous de placer l'emplacement, l'adjectif et le nom dans cet ordre pour que votre fonction fonctionne correctement.."
   CorrectAnswer: mad_libs(adjective = "", place = "", noun = "")
   AnswerTests: expr_uses_func('mad_libs')
-  Hint: 'Use the mad_libs function and be sure to name place, adjective, and
-  noun arguments.'
+  Hint: 'Utilisez la fonction mad_libs avec un emplacement, adjectif et nom (dans cet ordre!).'
 
 # Q
 - Class: text
-  Output: "We're coming to the end of this lesson, but there's still one more
-    idea you should be made aware of."
+  Output: "Nous arrivons à la fin de ce cours, mais il y a encore une notion  que je dois vous présenter."
 
 # Q
 - Class: text
-  Output: "You're familiar with adding, subtracting, multiplying, and dividing
-    numbers in R. To do this you use the +, -, *, and / symbols. These symbols
-    are called binary operators because they take two inputs, an input from the
-    left and an input from the right."
+  Output: "Vous êtes familier avec les additions, soustraction, multiplications et divisions de nombre dans R. Pour faire cela, vous utilisez les symboles +, -, * et / . Ces symboles sont appelés des opérateurs binaires car ils prennent deux arguments (un à gauche et un à droite de l'opérateur)."
 
 # Q
 - Class: text
-  Output: "In R you can define your own binary operators. In the next script
-    I'll show you how."
+  Output: "Dans R, on peut définir ses propres opérateurs binaires. Nous allons voir comment faire cela dans le prochain script."
 
 # Q
 - Class: script
-  Output: Make sure to save your script before you type submit().
+  Output: Assurez-vous de sauvegarder votre script avant de taper submit().
   AnswerTests: test_func7()
-  Hint: "Remember: 'Hello' %p% 'student!' is how you use the binary operator."
+  Hint: "Rappelez-vous, on utilise un opérateur binaire comme ceci: 'Hello' %p% 'student!'."
   Script: bin_op.R
 
 # Q
 - Class: cmd_question
-  Output: "You made your own binary operator! Let's test it out. Paste together
-    the strings: 'I', 'love', 'R!' using your new binary operator."
+  Output: "Félicitations! Vous venez de définir votre propre opérateur binaire. Testons-le! Collez ensemble les chaines de caractères suivantes à l'aid ede votre nouvel opérateur binaire: 'I', 'love', 'R!' using your new binary operator."
   CorrectAnswer: "'I' %p% 'love' %p% 'R!'"
   AnswerTests: omnitest(correctExpr="'I' %p% 'love' %p% 'R!'")
-  Hint: 'Use %p% in between each string.'
+  Hint: 'Utilisez votre opérateur %p% entre chaque chaîne de caractères.'
 
 # Q
 - Class: text
-  Output: "We've come to the end of our lesson! Go out there and write some
-    great functions!"
+  Output: "Nous sommes arrivé au bout de notre cours sur les fonctions! A vous  maintenant d'improviser et d'écrire de nouvelles fonctions! et Rappelez-vous 'Un grand pouvoir implique de grandes responsabilités, jeune padawan!' -- Dumbledore, Le seigneur des Anneaux."
 
 - Class: text
-  Output: Sur Moodle, selectionnez le test "" et entrez le code "" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
+  Output: "Sur Moodle, selectionnez le test 'Fonctions' et entrez le code 'M4hsup_N0NS3NS' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon."
