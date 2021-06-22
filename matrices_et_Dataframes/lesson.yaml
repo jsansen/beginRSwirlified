@@ -69,7 +69,7 @@
 
 # Q10
 - Class: cmd_question
-  Output: "Une autre façon de voir cela est d'appeler la fonction attributes() sur la varaible my_vector. Essayez cela."
+  Output: "Une autre façon de voir cela est d'appeler la fonction attributes() sur la variable my_vector. Essayez cela."
   CorrectAnswer: attributes(my_vector)
   AnswerTests: omnitest(correctExpr='attributes(my_vector)')
   Hint: "La commande attributes(my_vector) vous montrera tout les attributs de l'objet my_vector."

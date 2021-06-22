@@ -2,7 +2,7 @@
 
 #Les opérateurs binaires définis par le développeur s'écrivent de cette façon:
 #      %[whatever]%
-# ou [whatever] représente n'importe quel nom de varaible valide.
+# ou [whatever] représente n'importe quel nom de variable valide.
 
 # Imaginons que nous cherchions à définir un opérateur binaire qui multiplie deux nombres et ajoute 1 à ce produit.
 # En voici un exemple d'implémentation :

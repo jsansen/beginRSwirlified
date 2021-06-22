@@ -8,7 +8,7 @@
 #   args = list(...)
 
 # Nous allons maintenant supposer qu'il y a deux arguments nommés dans notre variable args, variable appelées 'alpha' et 'beta'.
-# On peut extraire des arguments nommés de la liste args en utilisant les doubles crochets et le noms des varaibles à récupérer (args, n'est rien d'autre qu'une list classique après tout!):
+# On peut extraire des arguments nommés de la liste args en utilisant les doubles crochets et le noms des variables à récupérer (args, n'est rien d'autre qu'une list classique après tout!):
 
 #   alpha = args[["alpha"]]
 #   beta  = args[["beta"]]
@@ -24,6 +24,6 @@
 mad_libs = function(...){
   # Faites ici l'extraction des arguments recherchés.
 
-  # Ne modifiez rien de ce qui suit. Remarquez les variables utilisées ici, il y en a trois. Ce sont ces varaibles que vous devez créer ci-dessus pour que le code soit fonctionnel.
+  # Ne modifiez rien de ce qui suit. Remarquez les variables utilisées ici, il y en a trois. Ce sont ces variables que vous devez créer ci-dessus pour que le code soit fonctionnel.
   paste("News from", place, "today where", adjective, "students took to the streets in protest of the new", noun, "being installed on campus.")
 }
