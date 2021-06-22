@@ -187,7 +187,7 @@
   Output: "Lorsqu'on lui fournit un vecteur, la fonction unique() retournera un vecteur dont on aura retiré les duplicats (on obtient donc un vecteur des valeurs présentent dans le vecteur d'entrée, sans répétitions). Pour voir le fonctionnement, essayez la commande suivante: unique(c(3, 4, 5, 5, 5, 6, 6))."
   CorrectAnswer: unique(c(3, 4, 5, 5, 5, 6, 6))
   AnswerTests: omnitest(correctExpr='unique(c(3, 4, 5, 5, 5, 6, 6))')
-  Hint: "Tapez la commande unique(c(3, 4, 5, 5, 5, 6, 6)) pour voir la fonciton unique() en action."
+  Hint: "Tapez la commande unique(c(3, 4, 5, 5, 5, 6, 6)) pour voir la fonction unique() en action."
 
 - Class: cmd_question
   Output: "On cherche à connaitre les valeurs uniques de chaque variable du jeu de données flags. Pour faire cela, utilisez la fonction lapply() pour appliquer la fonction unique() sur chaque colonne des données flags et stockez le résultat dans une variable appelée unique_vals."
