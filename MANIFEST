@@ -6,10 +6,10 @@ Valeurs_manquantes
 sous-ensembles
 matrices_et_Dataframes
 Logique
-#Functions
-#lapply_and_sapply
-#vapply_and_tapply
-#Looking_at_Data
-#Simulation
+Fonctions
+lapply_sapply
+vapply_tapply
+Looking_at_Data
+Simulation
 #Dates_and_Times
-#Base_Graphics
+Base_Graphics

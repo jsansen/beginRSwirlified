@@ -21,22 +21,22 @@
 
 # Q4
 - Class: text
-  Output: Créer une expression logique nécessite d'utiliser un opérateur logique. Vous êtes familier des opérateurs arithmétiques (+, -, *, /), nous allons nou spencher un peu plus sur les opérateurs logiques (bien que vous en ayez déjà croisés certains dans des précédents cours).
+  Output: "Créer une expression logique nécessite d'utiliser un opérateur logique. Vous êtes familier des opérateurs arithmétiques (+, -, *, /), nous allons nou spencher un peu plus sur les opérateurs logiques (bien que vous en ayez déjà croisés certains dans des précédents cours)."
 
 # Q5
 - Class: cmd_question
-  Output: Le premier que nous allons aborder est l'opérateur d'égalité `==`. Utilisez cet operateur pour savoir si TRUE est égal à TRUE.
+  Output: "Le premier que nous allons aborder est l'opérateur d'égalité `==`. Utilisez cet operateur pour savoir si TRUE est égal à TRUE."
   CorrectAnswer: TRUE == TRUE
   AnswerTests: omnitest(correctExpr='TRUE == TRUE')
-  Hint: Tapez TRUE == TRUE pour savoir si TRUE est égal à TRUE avec l'operateur d'égalité `==`
+  Hint: "Tapez TRUE == TRUE pour savoir si TRUE est égal à TRUE avec l'operateur d'égalité `==`"
 
 # Q6
 - Class: text
-  Output: Tout comme en arithmétique, les expressions logiques peuvent être groupées dans des parenthèses pour ordonner les expressions à évaluer. Ainsi (TRUE == TRUE) == TRUE donne TRUE.
+  Output: "Tout comme en arithmétique, les expressions logiques peuvent être groupées dans des parenthèses pour ordonner les expressions à évaluer. Ainsi (TRUE == TRUE) == TRUE donne TRUE."
 
 # Q7
 - Class: cmd_question
-  Output: Pour tester cette propriété, évaluez (FALSE == TRUE) == FALSE .
+  Output: "Pour tester cette propriété, évaluez (FALSE == TRUE) == FALSE."
   CorrectAnswer: (FALSE == TRUE) == FALSE
   AnswerTests: omnitest(correctExpr='(FALSE == TRUE) == FALSE')
   Hint: "Tapez: (FALSE == TRUE) == FALSE"
