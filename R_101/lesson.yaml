@@ -3,7 +3,7 @@
   Lesson: R_101
   Author: Joris SANSEN
   Type: Standard
-  Organization: Bordeaux-INP / ENSTBB
+  Organization: Bordeaux INP / ENSTBB
   Version: 2.4.5
 
 - Class: text
@@ -242,7 +242,6 @@
   CorrectAnswer: my_div
   AnswerTests: omnitest(correctExpr='my_div')
   Hint: "Tapez 'my'  (sans guillemets) puis appuyez sur la touche Tab et completer pour obtenir my_div."
-
 
 - Class: text
   Output: Sur Moodle, selectionnez le test 'R101' et entrez le code 'KING22/11/63' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon.
