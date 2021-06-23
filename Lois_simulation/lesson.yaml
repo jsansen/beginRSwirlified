@@ -43,7 +43,7 @@
   Output: "Puisque la dernière commande est un tirage sans remise, aucun chiffre ne peut apparaitre plus d'une fois."
 
 - Class: cmd_question
-  Output: "LETTERS, que vous avez déjà rencontré dans un autre cours, est une varaible pré-définie contenant un vecteur avec les 26 lettres de l'alphabet anglais. Jetez-y un oeil dès mantenant."
+  Output: "LETTERS, que vous avez déjà rencontré dans un autre cours, est une variable pré-définie contenant un vecteur avec les 26 lettres de l'alphabet anglais. Jetez-y un oeil dès mantenant."
   CorrectAnswer: LETTERS
   AnswerTests: omnitest(correctExpr='LETTERS')
   Hint: "Tapez LETTERS pour afficher le contenu dans la console."
@@ -73,102 +73,103 @@
   Hint: "Tapez juste flips pour en voir le contenu."
 
 - Class: cmd_question
-  Output: Since we set the probability of landing heads on any given flip to be 0.7, we'd expect approximately 70 of our coin flips to have the value 1. Count the actual number of 1s contained in flips using the sum() function.
+  Output: "Puisque nous définissons la probabilité d'obtenir face pour n'importe quel lancer à 0.7, nous devrions obtenir approximativement 70 de nos valeurs à 1. Comptez le nombre réel de 1 contenu dans la variable flips en utilisant la fonction sum()."
   CorrectAnswer: sum(flips)
   AnswerTests: omnitest(correctExpr='sum(flips)')
-  Hint: sum(flips) will add up all the 1s and 0s, giving you the total number of 1s in flips.
-
+  Hint: "sum(flips) additionnera tout les 1 et les 0, nous donnons, en toute logique, le nombre de 1 dans notre vecteur."
+  
 - Class: cmd_question
-  Output: A coin flip is a binary outcome (0 or 1) and we are performing 100 independent trials (coin flips), so we can use rbinom() to simulate a binomial random variable. Pull up the documentation for rbinom() using ?rbinom.
+  Output: "Un lancer de piece fournit un résultat binaire (0 ou 1) et nous venons d'effectuer 100 essais indépendants (des lancer de dès), donc nous pourrions utiliser la fonction rbinom() pour simuler une variable aléatoire suivant la loi binomiale. Affichez la focumentation de la fonction rbinom."
   CorrectAnswer: ?rbinom
   AnswerTests: omnitest(correctExpr='?rbinom')
-  Hint: Type ?rbinom to pull up the help file for rbinom().
+  Hint: "Tpez ?rbinom pour afficher la documentation de cette fonction."
 
 - Class: text
-  Output: Each probability distribution in R has an r*** function (for "random"), a d*** function (for "density"), a p*** (for "probability"), and q*** (for "quantile"). We are most interested in the r*** functions in this lesson, but I encourage you to explore the others on your own.
-
+  Output: "Chaque loi de distribution a une fonction r'something' (random 'quelque chose'), une fonction d'something' (pour density'something'), p'something' (pour probability) et q'something' (pour quantile). Dans ce cours, nous nous interesserons essentiellement aux fonctions random mais je vous encourage à expérimenter avec les autres de votre côté."
+ 
 - Class: cmd_question
-  Output: A binomial random variable represents the number of 'successes' (heads) in a given number of independent 'trials' (coin flips). Therefore, we can generate a single random variable that represents the number of heads in 100 flips of our unfair coin using rbinom(1, size = 100, prob = 0.7). Note that you only specify the probability of 'success' (heads) and NOT the probability of 'failure' (tails). Try it now.
+  Output: "Une variable aléatoire binomiale représentent le nombre de succès (face) lors de tirages aléatoires indépendants (les lancers de dès). Ainsi, nous pouvons générer une varaible aléatoire qui représente le nombre de face dans 100 lancers de notre pièce truquée en utilisant la commande rbinom(1, size=100, prob=0.7). Remarquez que nous n'avons besoin de spécifier que la probabilité des succès (face) et non pas la probabilité des échecs (pile). Essayez cela dès maintenant."
   CorrectAnswer: rbinom(1, size = 100, prob = 0.7)
   AnswerTests: match_call('rbinom(1, size = 100, prob = 0.7)')
-  Hint: Call rbinom() with n = 1, size = 100, and prob = 0.7.
+  Hint: "Appelez la fonction rbinom() avec les paramètres n = 1, size = 100, et prob = 0.7."
 
 - Class: cmd_question
-  Output: Equivalently, if we want to see all of the 0s and 1s, we can request 100 observations, each of size 1, with success probability of 0.7. Give it a try, assigning the result to a new variable called flips2.
-  CorrectAnswer: flips2 <- rbinom(100, size = 1, prob = 0.7)
-  AnswerTests: match_call('flips2 <- rbinom(100, size = 1, prob = 0.7)')
-  Hint: Call rbinom() with n = 100, size = 1, and prob = 0.7 and assign the result to flips2.
+  Output: "De façon similaire à ce qui a été fait précédemment, si l'on veut constater le respect des conditions de tirage, nous pouvons demander à obtenir 100 observations, chacune de taille 1, avec une probabilité de succès définie à 0.7. Essayez cela et stockez la réponse dans une variable appelée flips2."
+  CorrectAnswer: flips2 = rbinom(100, size = 1, prob = 0.7)
+  AnswerTests: match_call('flips2 = rbinom(100, size = 1, prob = 0.7)')
+  Hint: "Appelez la fonction rbinom() avec les arguments suivants: n = 100, size = 1, et prob = 0.7 et affectez le résultat à une variable appelée flips2."
 
 - Class: cmd_question
-  Output: View the contents of flips2.
+  Output: "Affichez le contenu de flips2."
   CorrectAnswer: flips2
   AnswerTests: omnitest('flips2')
-  Hint: Type flips2 to view its contents.
+  Hint: "Tapez flips2 pour en afficher le contenu."
 
 - Class: cmd_question
-  Output: Now use sum() to count the number of 1s (heads) in flips2. It should be close to 70!
+  Output: "Maintenant, calculez la somme pour compter le nombre de 1 (côté pile) dans la variable flips2. Cela devrait être relativement proche de 70."
   CorrectAnswer: sum(flips2)
   AnswerTests: omnitest('sum(flips2)')
-  Hint: Use sum(flips2) to count the number of 1s.
+  Hint: "Utilisez la fonction sum() pour compter le nombre de 1 dans notre variable flips2."
 
 - Class: cmd_question
-  Output: Similar to rbinom(), we can use R to simulate random numbers from many other probability distributions. Pull up the documentation for rnorm() now.
+  Output: "De daçon similaire à rbinom(), nous pouvons utiliser R pour simuler des nombres aléatoires suivant d'auters lois de distribution. Affichez la documentation de la fonction rnorm."
   CorrectAnswer: ?rnorm
   AnswerTests: omnitest('?rnorm')
-  Hint: Type ?rnorm to view its help file.
+  Hint: "Tapez ?rnorm pour en afficher la documentation."
 
 - Class: cmd_question
-  Output: The standard normal distribution has mean 0 and standard deviation 1. As you can see under the 'Usage' section in the documentation, the default values for the 'mean' and 'sd' arguments to rnorm() are 0 and 1, respectively. Thus, rnorm(10) will generate 10 random numbers from a standard normal distribution. Give it a try.
+  Output: "la distribution Normale standard a une moyenne à 0 et un écart-type de 1. Comme vous vpouvez le voir dans la section 'Usage' de la documentation, les valeurs par défaut pour les arguments mean et sd (standard deviation) sont à 0 et 1 respectivement. Ainsi, rnorm(10) générera un échntillon de 10 nombres aléatoires repsectant la loi de distribution Normale standard. Essayez-cela."
   CorrectAnswer: rnorm(10)
   AnswerTests: omnitest('rnorm(10)')
-  Hint: Use rnorm(10) to generate 10 random numbers from a standard normal distribution.
+  Hint: "Utilisez rnorm(10) pour générer 10 nombres aléatoires tirés d'une distribution Normale standard."
 
 - Class: cmd_question
-  Output: Now do the same, except with a mean of 100 and a standard deviation of 25.
+  Output: "Maintenant, répetez l'opération avec une moyenne à 100 et un écart-type de 25."
   CorrectAnswer: rnorm(10, 100, 25)
   AnswerTests: match_call('rnorm(10, 100, 25)')
-  Hint: Use rnorm(10, mean = 100, sd = 25) to generate 10 random numbers from a normal distribution with mean 100 and standard deviation 25.
+  Hint: "Utilisez la fonction rnorm(10, mean = 100, sd = 25) pour générer 10 nombres aléatoires, suivant une loi de distribution Normale ayant une moyenne de 100 et un écart-type de 25."
 
 - Class: text
-  Output: Finally, what if we want to simulate 100 *groups* of random numbers, each containing 5 values generated from a Poisson distribution with mean 10? Let's start with one group of 5 numbers, then I'll show you how to repeat the operation 100 times in a convenient and compact way.
+  Output: "Autre défi: comment faire pour simuler 100 groupes de nombres aléatoires, chacun contenant 5 valeurs générées à partir d'une distribution de Poisson ayant pour moyenne 10? Essayons déjà avec un groupe de 5 valeurs, puis nous verrons comment répeter l'opération 100 fois de façon simple et compacte."
 
 - Class: cmd_question
-  Output: Generate 5 random values from a Poisson distribution with mean 10. Check out the documentation for rpois() if you need help.
+  Output: "Génerez 5 nombres aléatoire issus d'une distribution de Poisson de moyenne 10. Regardez la documentation de la fonction rpois si cela s'avère nécessaire."
   CorrectAnswer: rpois(5, 10)
   AnswerTests: match_call('rpois(5, 10)')
-  Hint: Use rpois(5, 10) to generate 5 random numbers from a Poisson distribution with mean 10.
+  Hint: "Utilisez rpois(5, 10) pour génerer 5 nobmres aléatoires issus d'une distribution de Poisson de moyenne 10."
 
 - Class: cmd_question
-  Output: Now use replicate(100, rpois(5, 10)) to perform this operation 100 times. Store the result in a new variable called my_pois.
-  CorrectAnswer: my_pois <- replicate(100, rpois(5, 10))
-  AnswerTests: match_call('my_pois <- replicate(100, rpois(5, 10))')
-  Hint: my_pois <- replicate(100, rpois(5, 10)) will repeat the operation 100 times and store the result.
+  Output: "Maintenant, utilisez la fonction replicate pour effectuer cette opération 100 fois. Stockez le résultat dans une nouvelle variable appelée my_pois."
+  CorrectAnswer: my_pois = replicate(100, rpois(5, 10))
+  AnswerTests: match_call('my_pois = replicate(100, rpois(5, 10))')
+  Hint: "my_pois = replicate(100, rpois(5, 10)) vous permettra de repeter l'operation 100 fois et de stocker le résultat."
 
 - Class: cmd_question
-  Output: Take a look at the contents of my_pois.
+  Output: "Jetez maintenant un oeil au contenu de la variable my_pois."
   CorrectAnswer: my_pois
   AnswerTests: omnitest('my_pois')
-  Hint: Print the contents of my_pois to the console.
+  Hint: "Affichez le contenu de la variable my_pois."
 
 - Class: cmd_question
-  Output: replicate() created a matrix, each column of which contains 5 random numbers generated from a Poisson distribution with mean 10. Now we can find the mean of each column in my_pois using the colMeans() function. Store the result in a variable called cm.
-  CorrectAnswer: cm <- colMeans(my_pois)
-  AnswerTests: omnitest('cm <- colMeans(my_pois)')
-  Hint: Use cm <- colMeans(my_pois) to create a vector of column means, storing the result in cm.
+  Output: "replicate() crée une matrice, chaque colonne représentant un vecteur de 5 nombres aléatoires tirés d'une distribution de Poisson de moyenne 10. Maintenant nous pouons calculer la moyenne de chaque colonne de my_pois en utilisant par exemple la fonction colMeans(). Stockez le résultat dans une variable appelée cm."
+  CorrectAnswer: cm = colMeans(my_pois)
+  AnswerTests: omnitest('cm = colMeans(my_pois)')
+  Hint: "Utilisez cm = colMeans(my_pois) pour créer un vecteur 'cm' contenant les moyennes par colonne."
 
 - Class: cmd_question
-  Output: And let's take a look at the distribution of our column means by plotting a histogram with hist(cm).
+  Output: "Inspectons la distribution de nos moyennes en les représentant par un histogramme. Pour cela, utilisez la commande hist(cm).".
   CorrectAnswer: hist(cm)
   AnswerTests: omnitest('hist(cm)')
-  Hint: hist(cm) will give you a histogram of column means.
+  Hint: "hist(cm) vous permettra d'afficher un histogramme des moyennes des colonnes."
 
 - Class: text
-  Output: Looks like our column means are almost normally distributed, right? That's the Central Limit Theorem at work, but that's a lesson for another day!
+  Output: "On dirait presque que nos moyennes suivent une loi Normale non? C'est la magie du théorème central limite, mais c'est une histoire que je vous conterai (peut-être) un autre jour !"
 
 - Class: text
-  Output: All of the standard probability distributions are built into R, including exponential (rexp()), chi-squared (rchisq()), gamma (rgamma()), .... Well, you see the pattern.
+  Output: "Toutes les lois de distribution standard sont implémentées dans R, incluant la loi exponentielle (rexp()), chi-carré (rchisq()), gamma(rgamma()),... bref, vous devriez commencer à comprendre le schéma. "
 
 - Class: text
-  Output: Simulation is practically a field of its own and we've only skimmed the surface of what's possible. I encourage you to explore these and other functions further on your own.
+  Output: "La simulation est tout un pan de la statistique et nous n'avons fait qu'effleurer la surface des possibilités qu'offre R dans ce domaine. Si cela vous intéresse, je ne peux que vous encourager à explorer un peu plus les fonctionnalités proposées par R dans ce domaine."
+
 - Class: text
-  Output: Sur Moodle, selectionnez le test "Logique" et entrez le code "MAUDOUX'sfr34k's" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
+  Output: "Sur Moodle, selectionnez le test 'Logique' et entrez le code 'MAUDOUX'sfr34k's' (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon."
