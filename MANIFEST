@@ -1,19 +1,14 @@
 R_101
-fichiers_et_espace_de_travail
+Fichiers_et_espace_de_travail
 Sequences
 Vecteurs
 Valeurs_manquantes
 sous-ensembles
-matrices_et_Dataframes
+Matrices_et_Dataframes
 Logique
 Fonctions
-lapply_sapply
-vapply_tapply
-Looking_at_Data
-<<<<<<< HEAD
+Lapply_sapply
+Vapply_tapply
+Data_first_encounter
 Lois_simulation
-=======
-Simulation
->>>>>>> lapply_sapply
-#Dates_and_Times
 Base_Graphics
