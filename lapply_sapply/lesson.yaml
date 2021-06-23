@@ -233,3 +233,7 @@
 
 - Class: text
   Output: "Dans ce cours, vous avez appris à utiliser les fonctions lapply() et sapply() pour appliquer une opération sur chaque éléments d'une liste. Dans le prochain cours, nous allons nous pencher sur le cas des fonctions voisines de lapply() et sapply()."
+
+
+- Class: text
+  Output: Sur Moodle, selectionnez le test 'lapply_sapply' et entrez le code '2StepSfR0Mh3lL' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon.
