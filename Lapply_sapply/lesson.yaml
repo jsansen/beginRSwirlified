@@ -25,7 +25,7 @@
   Output: "J'ai d'ores et déjà stocké ces fonctions dans une variable appelée flags. Tapez head(flags) pour afficher les 6 premières lignes des données."
   CorrectAnswer: head(flags)
   AnswerTests: omnitest(correctExpr='head(flags)')
-  Hint: "Tapez head(flags) pour afficher la 'tête' des données, c'est-à-dire les quelques premières lignes".
+  Hint: "Tapez head(flags) pour afficher la 'tête' des données, c'est-à-dire les quelques premières lignes."
 
 - Class: cmd_question
   Output: "Vous pourrez avoir besoin de 'scroller' (dérouler) l'affichage pour voir toutes les sorties de vos commandes. Maintenant vérifiez les dimensions du jeu de données en tuilisant la fonction dim()"
@@ -76,7 +76,7 @@
   Hint: Tapez as.character(cls_list) pour convertir  cls_list en un vecteur de chaines de caractères.
 
 - Class: cmd_question
-  Output: "La fonction sapply permet d'automatiser cette procédure (elle appelle lapply en interne) puis en essayant de simplifier le résultat avant de nous le retourner. D'où le 's' de 'sapply' (pour 'simplify'). Utilisez sapply() de la même façon que lapply pour obtenir la classe de chaque colonne des données flags et stockez le résultat dans une variable appelée cls_vect. Si vous avez besoin d'aide, n"hésitez pas à utiliser ?sapply pour en afficher la documentation."
+  Output: "La fonction sapply permet d'automatiser cette procédure (elle appelle lapply en interne) puis en essayant de simplifier le résultat avant de nous le retourner. D'où le 's' de 'sapply' (pour 'simplify'). Utilisez sapply() de la même façon que lapply pour obtenir la classe de chaque colonne des données flags et stockez le résultat dans une variable appelée cls_vect. Si vous avez besoin d'aide, n'hésitez pas à utiliser ?sapply pour en afficher la documentation."
   CorrectAnswer: cls_vect <- sapply(flags, class)
   AnswerTests: omnitest(correctExpr='cls_vect <- sapply(flags, class)')
   Hint: "Bloqué-e? Tapez cls_vect = sapply(flags, class) pour stocker les classes de colonnes dans un vecteur de chaine de caractères appelé cls_vect."
@@ -157,7 +157,7 @@
   Output: "La fonction range() retourne le minimum et maximum de son premier argument, qui devrait donc être un vecteur numérique (difficile de calculer un min/max sur des valeurs non numérique, me direz-vous... et j'aurais bien du mal à vous contredire !). Utilisez lapply() pour appliquer la fonction range à chaque colonne des données flag_shapes. Ne vous embétez pas à stocker le résultat, nous ne le réutiliserons pas."
   CorrectAnswer: lapply(flag_shapes, range)
   AnswerTests: omnitest(correctExpr='lapply(flag_shapes, range)')
-  Hint:"Essayez lapply(flag_shapes, range) pour appliquer la fonction range() sur chaque colonnes de flag_shapes."
+  Hint: "Essayez lapply(flag_shapes, range) pour appliquer la fonction range() sur chaque colonnes de flag_shapes."
 
 - Class: cmd_question
   Output: "Faites la même opération, mais en utilisant cette fois-ci sapply() et stockez le résultat dans une variable appelée shape_mat."
@@ -233,10 +233,6 @@
 
 - Class: text
   Output: "Dans ce cours, vous avez appris à utiliser les fonctions lapply() et sapply() pour appliquer une opération sur chaque éléments d'une liste. Dans le prochain cours, nous allons nous pencher sur le cas des fonctions voisines de lapply() et sapply()."
-<<<<<<< HEAD
-
 
 - Class: text
   Output: Sur Moodle, selectionnez le test 'lapply_sapply' et entrez le code '2StepSfR0Mh3lL' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon.
-=======
->>>>>>> lapply_sapply

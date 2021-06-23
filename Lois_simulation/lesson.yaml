@@ -157,7 +157,7 @@
   Hint: "Utilisez cm = colMeans(my_pois) pour créer un vecteur 'cm' contenant les moyennes par colonne."
 
 - Class: cmd_question
-  Output: "Inspectons la distribution de nos moyennes en les représentant par un histogramme. Pour cela, utilisez la commande hist(cm).".
+  Output: "Inspectons la distribution de nos moyennes en les représentant par un histogramme. Pour cela, utilisez la commande hist(cm)."
   CorrectAnswer: hist(cm)
   AnswerTests: omnitest('hist(cm)')
   Hint: "hist(cm) vous permettra d'afficher un histogramme des moyennes des colonnes."

@@ -1,0 +1,122 @@
+- Class: meta
+  Course: beginR
+  Lesson: Vapply_tapply
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: text
+  Output: "Dans le précédent cours, vous avez appris à utiliser deux fonctions fondamentales de la famille des *apply: lapply et sapply. Ces deux fonctions prennent une liste en entrée, appliquent une fonction fournie en argument à chaque élément de la liste, puis combinent pour former le résultat. lapply retourne une liste tandis que sapply tente de simplifier la réponse dans un format le plus adapté possible."
+
+- Class: text
+  Output: "Dans ce cours-ci, vous allez apprendre à utiliser vapply() et tapply(), chacune ayant un rôle spécifique au sein de la méthodologie 'Split-apply-combine'. Nous allons utiliser le même jeu de données que dans le cours pour lapply et sapply."
+
+
+- Class: text
+  Output: "Pour rappel, le jeu de données Flags représente des informations concernant les pays et leurs drapeaux respectifs et il peut être obtenu ici (ainsi qu'un complément d'informations si besoin): http://archive.ics.uci.edu/ml/datasets/Flags"
+
+
+- Class: text
+  Output: "Le jeu de données est toujours accessible dans une variable appelée flags. Si cela fait un bon moment que vous avez suivi le cours sur lapply et sapply, n'hésitez pas à vous remettre un peu le jeu de données en mémoire avec les fonctions dim(), head(), str(), et summary() lorsque vous récupérerez la main sur la console (> : appelé le prompt). Vous pouvez également utiliser la fonction viewinfo() pour afficher la documentation du jeu de données (attention, elle n'est pas accessible sur tout les jeux de données mais cela vaut parfois le coup de tenter!). C'est bon? ok, allons-y!"
+
+- Class: cmd_question
+  Output: "Comme vous l'avez vu précédemment, la fonction unique() retourne un vecteurs des valeurs distinctes contenues dans un objet passé en argument. AInsi, sapply(flags, unique) nous retournait une liste un vecteur par colonne contenant les valeurs distinctes qu'elles contiennent. Essayez à nouveau cette fonction."
+  CorrectAnswer: sapply(flags, unique)
+  AnswerTests: omnitest(correctExpr='sapply(flags, unique)')
+  Hint: "Utilisez sapply(flags, unique) pour récupérer une liste contenant un vecteur de valeurs distinctes pour chaque variable des données flags."
+
+- Class: text
+  Output: "Imaginons que vous ayez oublié comment fonctionne la fonction unique() et que, dans votre grande erreur, vous vous imaginiez qu'elle retournerai le nombre de valeurs distinctes contenues dans l'objet fourni en argument? Dans ce cas, vous vous seriez attendu, pauvre fou que vous êtes, à ce que sapply(flags, unique) vous retournerai un vecteur numérique, puisque chaque éléments de la liste contiendrai un simple nombre et sapply() l'aurait simplifié en vecteur."
+
+- Class: text
+  Output: "Lorsque l'on travaille de façon interactive (en fournissant les commandes une-à-une dans la console) ce n'est pas un gros problème puisque vous vous seriez immédiatement rendu compte de votre erreur. Cependant, lorsque l'on travaille de façon non-interactive (par des fonctions ou des scripts par exemple), une erreur de comprehension comme celle-ci peut vite passer inaperçu et avoir un impact majeur dans la suite du traitement sans que vous ne vous en rendiez compte immédiatement. Ainsi, vous voudriez peut-être être un peu plus précautionneux-se et c'est là que vapply() peut se révéler utile."
+
+- Class: text
+  Output: "Tandis que sapply() essaie de deviner le format correct du résultat à retourner, vapply() vous permettra de le spécifier explicitement. Si le résultat ne correspond pas au format spécifié, vapply() jettera/lévera une erreur (on dit 'raise/throw an error') forçant l'arrêt des opérations. Cela peut prévenir des problèmes majeurs dans vore code qui pourraient induire un comportement non attendu, voir pire, invisible mais fournissant une réponse érronée."
+
+- Class: cmd_question
+  Output: "Essayez la commande vapply(flags, unique, numeric(1)), qui dit, en substance, que l'on s'attend à ce que chaque élément de la réponse soit un vecteur numérique de taille 1. Puisque ce ne sera pas le cas, vous obtiendrez une erreur à l'éxecution. Une fois que vous avez obtenu cette erreur, tapez ok() pour passer à la suite du cours."
+  CorrectAnswer: ok()
+  AnswerTests: omnitest(correctExpr="ok()")
+  Hint: "Tapez vapply(flags, unique, numeric(1)) pour constater la levée d'une erreur puis tapez ok() pour continuer la suite du cours."
+
+- Class: cmd_question
+  Output: "Souvenez-vous du précédent cours que sapply(flags, class) nous retournera un vecteur de chaine de caractères contenant la class de chaque colonne des données. Essayez cela pour le constater à nouveau."
+  CorrectAnswer: sapply(flags, class)
+  AnswerTests: omnitest(correctExpr="sapply(flags, class)")
+  Hint: "Tapez sapply(flags, class) pour obtenir un vecteur de chaine de caractères représentant les classes de chaque colonne."
+
+- Class: cmd_question
+  Output: "Si on souhaitait être explicite à propos du format de données attendu en sortie, nous aurions utilisé vapply(flags, class, character(1)). l'argument 'character(1)' indique à R que vous vous attendez à ce que la fonction class retourne un vecteur de chaine de caractères de taille 1 lorsque appliqué à chaque colonne des données flags. Essayez cette commande."
+  CorrectAnswer: vapply(flags, class, character(1))
+  AnswerTests: omnitest(correctExpr="vapply(flags, class, character(1))")
+  Hint: "Utilisez vapply(flags, class, character(1)) pour retourner un vecteur de chaine de caractères pour chaque colonne indiquant la classe de la colonne concernée."
+
+- Class: text
+  Output: "Remarquez que puisque notre pré-requis était correct (i.e. character(1)), le résultat retourné par la fonction vapply() est identique à celui de sapply(), un vecteur de chaine de caractères."
+
+- Class: text
+  Output: "Vous pourriez vous demander l'intérêt de passer par sapply puisque vapply est plus 'sécurisé' vu que l'on spécifie la sortie attendue au lieu d'espérer que R trouve tout seul le format adapté, et c'est effectivement le cas. Par ailleurs, vapply sera généralement plus rapide que sapply sur des grands jeux de données. Pourtant, lorsque l'on fait de l'analyse de données interactive (à la console ou en tout cas avec des retours de fonction visible réguliers), sapply est plus rapide à écrire et sera généralement suffisant pour 80% des tâches."
+
+- Class: text
+  Output: "En tant que data analyst, vous passerez beaucoup de temps à découper/filtrer vos données en groupes sur la base de la correspondance à une valeur spécifique, puis à appliquer une fonction ou un ensemble de fonction à chaque membre de cette sélection. La prochaine fonction que nous allons voir, tapply(), est justement tout indiquée pour faire cela."
+
+- Class: cmd_question
+  Output: Utilisez ?tapply pour afficher sa documentation.
+  CorrectAnswer: ?tapply
+  AnswerTests: any_of_exprs('?tapply', 'help(tapply)')
+  Hint: Affichez la documentation en tapant ?tapply.
+
+- Class: cmd_question
+  Output: "La variable 'landmass' prend un entier entre 1 et 6, chaque chiffre représentant une partie différente du monde. Utilisez la commande table(flags$landmass) pour voir combien de drapeaux/pays appartiennent à chaque groupe."
+  CorrectAnswer: table(flags$landmass)
+  AnswerTests: omnitest(correctExpr="table(flags$landmass)")
+  Hint: "Utilisez la fonction table(flags$landmass) pour voir les groupes associés à chaque drapeaux/pays."
+
+- Class: cmd_question
+  Output: "La variable 'animate' de notre jeu de données prend en valeur 1 si le drapeau du pays représente un objet 'vivant' (par exemple un aigle, un arbre, une main, etc) et 0 sinon. Utilisez la fonction table pour voir combien de drapeaux contiennent de telles représentation."
+  CorrectAnswer: table(flags$animate)
+  AnswerTests: omnitest(correctExpr="table(flags$animate)")
+  Hint: "Utilisez table(flags$animate) pour voir combien de drapeaux contiennent une représentation du vivant."
+
+- Class: text
+  Output: "Cela nous indique que 39 drapeaux représentent un objet 'vivant'(animate est à 1) et 155 non (animate est à 0)."
+
+- Class: cmd_question
+  Output: "Si vous prenez la moyenne arithmétique d'un ensemble de 0 et 1, vous obtenez la proportion de 1 dans l'ensemble. Utilisez tapply(flags$animate, flags$landmass, mean) pour appliquer la fonction de moyenne à la variable 'animate' séparémment pour les six groupes identifiés par la variable 'landmass'. Cela nous donnera donc la proportion de drapeaux représentant un objet du vivant AU SEIN de chaque groupe de landmass."
+  CorrectAnswer: tapply(flags$animate, flags$landmass, mean)
+  AnswerTests: omnitest(correctExpr="tapply(flags$animate, flags$landmass, mean)")
+  Hint: "tapply(flags$animate, flags$landmass, mean) nous fournira la proportion de drapeaux contenant une représentation du vivant en fonction des 'landmass' considérés."
+
+- Class: text
+  Output: "Le groupe 1 de la variable 'landmass' correspond à l'Amérique du Nord et représente la plus grande proportion de drapeaux avec une représentation du vivant (0.4194)."
+
+- Class: cmd_question
+  Output: "De façon similaire, nous pouvons observer un résumé de la valeur population (arrondi au millions) pour les pays avec ou sans rouge dans le drapeau avec la commande tapply(flags$population, flags$red, summary)."
+  CorrectAnswer: tapply(flags$population, flags$red, summary)
+  AnswerTests: omnitest(correctExpr="tapply(flags$population, flags$red, summary)")
+  Hint: "Vous pouvez voir le résumé des populations par pays avec ou sans la couleur rouge dans le drapeau avec la commande tapply(flags$population, flags$red, summary)."
+
+- Class: mult_question
+  Output: Quelle est la médiane (en millions) des pays N'AYANT PAS la couleur rouge sur leurs drapeaux?
+  AnswerChoices: 9.0; 4.0; 27.6; 3.0; 22.1; 0.0
+  CorrectAnswer: 3.0
+  AnswerTests: omnitest(correctVal= '3.0')
+  Hint: "Utilisez le résultat de la question précédente. Rappelez-vous que red = 0 signifie que la couleur rouge n'est pas présente sur le drapeau"
+
+- Class: cmd_question
+  Output: "Enfin, utilisez la même approche pour analyser le résumé des populations pour les 6 valeurs de 'landmass'."
+  CorrectAnswer: tapply(flags$population, flags$landmass, summary)
+  AnswerTests: omnitest(correctExpr="tapply(flags$population, flags$landmass, summary)")
+  Hint: "Vous pouvez obtenir ce résumé des populations pour chacune des 6 valeurs de landmass en appelant la fonction tapply() avec trois arguments: flags$population, flags$landmass, et summary."
+
+- Class: mult_question
+  Output: "Quel est la population maximale (en millions) pour le groupe 4 (Afrique)?"
+  AnswerChoices: 56.00; 1010.0; 119.0; 5.00; 157.00
+  CorrectAnswer: 56.00
+  AnswerTests: omnitest(correctVal= '56.00')
+  Hint: "Observez le résultat obtenu précédemment pour trouver la bonne réponse."
+
+- Class: text
+  Output: "Dans ce cours, vous avec appris à utiliser la fonction vapply, une variante plus sûre de sapply, ce qui est plus conseillée lorsqu'on l'intègre dans une fonction ou dans un script. Vous avez également appris à utiliser la fonction tapply pour séparer des données en groupes sur la base de la valeur dans une autre variable, puis a appliquer une fonction sur chacun des groupes résultants. vous vous rendrez compte que ces fonctions sont très pratique au cours de votre apprentissage et progression en traitement et analyse de données. Comme tout en informatique, on apprend et on retient par la pratique. Je tairais l'auteur de cette citation mais 'pour devenir un bon codeur, il faut pisser du code'* (*expression signifiant qu'il faut beaucoup coder pour s'améliorer)"
