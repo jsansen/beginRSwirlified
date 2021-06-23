@@ -1,76 +1,76 @@
 - Class: meta
   Course: beginR
   Lesson: Lois_simulation
-  Author: your name goes here
+  Author: Joris SANSEN
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: Bordeaux INP / ENSTBB
   Version: 2.4.5
 
 - Class: text
-  Output: One of the great advantages of using a statistical programming language like R is its vast collection of tools for simulating random numbers.
+  Output: "Un des plus grands avantages d'utiliser un langage de programmation statistique tel que R est la grande collection d'outils pour simuler des nombres aléatoires."
 
 - Class: text
-  Output: This lesson assumes familiarity with a few common probability distributions, but these topics will only be discussed with respect to random number generation. Even if you have no prior experience with these concepts, you should be able to complete the lesson and understand the main ideas.
+  Output: "Ce cours assumera que vous êtes familier avec la plupart des lois de distributions usuelles, mais ces notions ne seront discutées que dans l'objectif de la génération de nombres aléatoires. Même si vous n'avez aucune notion des lois usuelles (ce dont je doute fort), vous devriez être en capacité de comprendre les idées principales qui seront vues ici."
 
 - Class: cmd_question
-  Output: The first function we'll use to generate random numbers is sample(). Use ?sample to pull up the documentation.
+  Output: "La première fonction que nous allons utiliser pour générer des nombres aléatoires est sample(). Afficher la documentation de cette fonction."
   CorrectAnswer: ?sample
   AnswerTests: omnitest(correctExpr='?sample')
-  Hint: Use '?sample' to pull up the documentation for the sample() function.
+  Hint: "Utilisez '?sample' pour afficher la documentation de la fonction sample()."
 
 - Class: cmd_question
-  Output: "Let's simulate rolling four six-sided dice: sample(1:6, 4, replace = TRUE)."
+  Output: "Simulons le lancement de 4 dès à 6 faces: sample(1:6, 4, replace = TRUE)."
   CorrectAnswer: sample(1:6, 4, replace = TRUE)
   AnswerTests: match_call('sample(1:6, 4, replace = TRUE)')
-  Hint: Type sample(1:6, 4, replace = TRUE) to simulate rolling four six-sided dice.
+  Hint: "Tapez sample(1:6, 4, replace = TRUE) pour simuler le lancement de 4 dès à six faces."
 
 - Class: cmd_question
-  Output: Now repeat the command to see how your result differs. (The probability of rolling the exact same result is (1/6)^4 = 0.00077, which is pretty small!)
+  Output: "Miantenant répetez cette commande pour constater que les résutlats ont changés. La probabilité d'obtenir exactement le même résultat est de (1/6)^4 = 0,00077, donc bien que non nulle, ça serait un sacré coup de chance que d'avoir 2, si ce n'est 3 fois de suite le même tirage !"
   CorrectAnswer: sample(1:6, 4, replace = TRUE)
   AnswerTests: match_call('sample(1:6, 4, replace = TRUE)')
-  Hint: Type sample(1:6, 4, replace = TRUE) to simulate rolling four six-sided dice again.
+  Hint: "Tapez sample(1:6, 4, replace = TRUE) pour simuler à nouveau un lancement de 4 dès à 6 faces."
 
 - Class: text
-  Output: sample(1:6, 4, replace = TRUE) instructs R to randomly select four numbers between 1 and 6, WITH replacement. Sampling with replacement simply means that each number is "replaced" after it is selected, so that the same number can show up more than once. This is what we want here, since what you roll on one die shouldn't affect what you roll on any of the others.
+  Output: "sample(1:6, 4, replace=TRUE) indique à R de sélectionner aléatoirement 4 nombres dans l'interval [1,6] AVEC remise. Si vous vous rappelez vos cours du secondaire, vous savez sûrement qu'un tirage avec remise implique qu'un numero peut-être tiré plusieurs fois de suite (il est remis dans le lot des nombres utilisable), ce qui est le comportement recherché ici, puisque l'on veut simuler 4 dès différents et que le résultat sur un dès ne doit pas influencer le résultat sur les autres dès."
 
 - Class: cmd_question
-  Output: Now sample 10 numbers between 1 and 20, WITHOUT replacement. To sample without replacement, simply leave off the 'replace' argument.
+  Output: "Maintenant, tirer aléatoirement 10 nombres entre 1 et 20, cette fois-ci sans remise. A vous."
   CorrectAnswer: sample(1:20, 10)
   AnswerTests: match_call('sample(1:20, 10)')
-  Hint: Type sample(1:20, 10) to sample 10 numbers between 1 and 20, without replacement.
+  Hint: "Tapez tout simplement sample(1:20, 10) pour tirer aléatoirement 10 nombres entre 1 et 20, sans remise (la valeur par defaut de to replacement est déjà à FALSE)."
 
 - Class: text
-  Output: Since the last command sampled without replacement, no number appears more than once in the output.
+  Output: "Puisque la dernière commande est un tirage sans remise, aucun chiffre ne peut apparaitre plus d'une fois."
 
 - Class: cmd_question
-  Output: LETTERS is a predefined variable in R containing a vector of all 26 letters of the English alphabet. Take a look at it now.
+  Output: "LETTERS, que vous avez déjà rencontré dans un autre cours, est une varaible pré-définie contenant un vecteur avec les 26 lettres de l'alphabet anglais. Jetez-y un oeil dès mantenant."
   CorrectAnswer: LETTERS
   AnswerTests: omnitest(correctExpr='LETTERS')
-  Hint: Type LETTERS to print its contents to the console.
+  Hint: "Tapez LETTERS pour afficher le contenu dans la console."
 
 - Class: cmd_question
-  Output: The sample() function can also be used to permute, or rearrange, the elements of a vector. For example, try sample(LETTERS) to permute all 26 letters of the English alphabet.
+  Output: "La fonction sample() peut aussi être utilisé pour permuter, ou re-arranger les éléments d'un vecteur. Par exemple, la commande sample(LETTERS) permettra de permuter toutes les lettres du vecteur. A vous."
   CorrectAnswer: sample(LETTERS)
   AnswerTests: omnitest(correctExpr='sample(LETTERS)')
-  Hint: Use sample(LETTERS) to permute all 26 letters of the English alphabet.
+  Hint: "Utilisez la commande sample(LETTERS) pour permutter les 26 lettres de l'alphabet anglais."
 
 - Class: text
-  Output: This is identical to taking a sample of size 26 from LETTERS, without replacement. When the 'size' argument to sample() is not specified, R takes a sample equal in size to the vector from which you are sampling.
+  Output: "Cela revient à effectuer un tirage aléatoire au sein de LETTERS, d'une taille 26 (la taille du vecteur), sans remise. Lorsque la taille n'est pas spécifié dans l'appel à la fonction sample, R prends simplement une taille de tirage identique à celle du vecteur dont les données sont tirées."
 
 - Class: text
-  Output: Now, suppose we want to simulate 100 flips of an unfair two-sided coin. This particular coin has a 0.3 probability of landing 'tails' and a 0.7 probability of landing 'heads'.
+  Output: "Maintenant, supposons que nous cherchions à simuler 100 lancements d'une pièce à deux faces truquée. Cette pièce truquée a une probabilité de 0.3 de montrer le côté pile, et 0.7 de montrer le côté face."
 
 - Class: cmd_question
-  Output: Let the value 0 represent tails and the value 1 represent heads. Use sample() to draw a sample of size 100 from the vector c(0,1), with replacement. Since the coin is unfair, we must attach specific probabilities to the values 0 (tails) and 1 (heads) with a fourth argument, prob = c(0.3, 0.7). Assign the result to a new variable called flips.
-  CorrectAnswer: flips <- sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))
-  AnswerTests: match_call('flips <- sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))')
-  Hint: 'The following command will produce 100 flips of an unfair coin and assign the result: flips <- sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))'
+  Output: "Imaginons que 0 représente le côté pile, 1 représente le côté face. Utilisez la fonction sample() pour tirer un échantillon de taille 100 du vecteur c(0,1) avec remise. Puisque la pièce est truquée, nous devons également définir les probabilités spécifique aux valeurs 0 (pile) et 1 (face). Pour cela, nous fournissons un quatrième argument: prob=c(0.3, 0.7). Testez cela et affectez le résultat à une ariable appelée flips."
+  CorrectAnswer: flips = sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))
+  AnswerTests: match_call('flips = sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))')
+  Hint: "La commande qui suit vous permettra de simuler 100 lancers d'une pièce truquée. flips = sample(c(0,1), 100, replace = TRUE, prob = c(0.3, 0.7))"
 
 - Class: cmd_question
-  Output: View the contents of the flips variable.
+  Output: "Affichez le contenu de la variable flips."
   CorrectAnswer: flips
   AnswerTests: omnitest(correctExpr='flips')
-  Hint: Just type flips to view its contents.
+  Hint: "Tapez juste flips pour en voir le contenu."
 
 - Class: cmd_question
   Output: Since we set the probability of landing heads on any given flip to be 0.7, we'd expect approximately 70 of our coin flips to have the value 1. Count the actual number of 1s contained in flips using the sum() function.
