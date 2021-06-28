@@ -6,6 +6,10 @@
   Organization: bordeaux INP / ENSTBB
   Version: 2.4.5
 
+
+- Class: text
+  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
+
 - Class: text
   Output: "Dans ce cours, vous allez apprendre à utiliser lapply() et sapply(), les deux membres les plus importants de la famille de fonction *apply de R, aussi connu comme fonctions de boucles."
 

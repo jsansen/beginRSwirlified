@@ -7,6 +7,10 @@
   Organization: Bordeaux INP / ENSTBB
   Version: 2.4.5
 
+
+- Class: text
+  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
+
 # Q1
 - Class: text
   Output: "Ce cours est une courte introduction à l'utilisation des operateurs logiques dans R."

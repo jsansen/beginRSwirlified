@@ -6,6 +6,14 @@
   Organization: Bordeaux INP / ENSTBB
   Version: 2.4.5
 
+
+
+
+- Class: text
+  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
+
+
+
 - Class: text
   Output: "Un des plus grands avantages d'utiliser un langage de programmation statistique tel que R est la grande collection d'outils pour simuler des nombres aléatoires."
 

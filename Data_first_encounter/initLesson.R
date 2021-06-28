@@ -7,7 +7,7 @@
 
 # Path to data
 .datapath <- file.path(.get_course_path(),
-                      'R_Programming_E', 'Looking_at_Data',
+                      'beginR', 'Data_first_encounter',
                       'plant-data.txt')
 # Read in data
 plants <- read.csv(.datapath, strip.white=TRUE, na.strings="")
@@ -20,4 +20,4 @@ plants <- plants[, !(names(plants) %in% .cols2rm)]
 names(plants) <- c('Scientific_Name', 'Duration', 'Active_Growth_Period',
                    'Foliage_Color', 'pH_Min', 'pH_Max',
                    'Precip_Min', 'Precip_Max',
-                   'Shade_Tolerance', 'Temp_Min_F
+                   'Shade_Tolerance', 'Temp_Min_F')

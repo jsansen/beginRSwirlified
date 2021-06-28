@@ -5,7 +5,10 @@
   Type: Standard
   Organization: Bordeaux-INP / ENSTBB
   Version: 2.4.5
-# Q1
+
+- Class: text
+  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
+
 - Class: text
   Output: Dans cette leçon, vous allez apprendre comment examiner votre espace de travail local dans R et commencer à explorer la relation entre votre espace de travail et le système de fichier de votre ordinateur.
 #Q2
@@ -211,7 +214,7 @@
 #Q40
 #---------------------------------------------------------------------------
 - Class: cmd_question
-  Output: Nous avons maitenant fini les exercices, retournez à votre espace de travail initial.
+  Output: Nous avons maintenant fini les exercices, retournez à votre espace de travail initial.
 #Go back to your original working directory using setwd(). (Recall that we    created the variable old.dir with the full path for the orginal working  directory at the start of these questions.)
   CorrectAnswer: setwd(old_dir)
   AnswerTests: omnitest(correctExpr='setwd(old_dir)')

@@ -8,6 +8,9 @@
 
 
 - Class: text
+  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
+
+- Class: text
   Output: "Une des forces de R, comparé à beaucoup d'autres langages de programmation, est la facilité avec laquelle on peut créer des graphiques de qualité. Dans ce cours, nous allons nous pencher sur les fonctionnalités graphiques de base."
 
 - Class: text

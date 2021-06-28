@@ -8,7 +8,7 @@
 
 - Class: text
   Output: Dans la suite de ce cours, les ". . ." signifie que vous pouvez afficher le message
-    ou la question suivante. Tapez la touche "Entrée" pour continuer. A tout moment vous pouvez (lorsque vous avez la main sur la console) taper la commande 'play()' pour mettre temporairement le cours en pause, vous amuser avec la console, puis revenir en tapant 'nxt()'. Je vous recommande fortement de prendre quelques notes au fur et à mesure de votre progression dans les cours swirl. Ceux-ci ont pour objectifs de vous présenter de façon interactive des notions et concepts nécessaire à l'utilisation intelligente de R/Rstudio, il n'a pas pour ambition de vous servir de document de support ou de fiche de révision.
+    ou la question suivante. Tapez la touche "Entrée" pour continuer. A tout moment vous pouvez (lorsque vous avez la main sur la console) taper la commande 'play()' pour mettre temporairement le cours en pause, vous amuser avec la console, puis revenir en tapant 'nxt()'. bye() vous permettra de quitter le cours (en sauvegardant la progression associée au nom d'utilisateur fourni au début. 'info()' vous rappellera ces quelques commandes! Je vous recommande fortement de prendre quelques notes au fur et à mesure de votre progression dans les cours swirl. Ceux-ci ont pour objectifs de vous présenter de façon interactive des notions et concepts nécessaire à l'utilisation intelligente de R/Rstudio, il n'a pas pour ambition de vous servir de document de support ou de fiche de révision.
 
 - Class: text
   # Output: In this lesson, we will explore some basic building blocks of the R programming
@@ -58,8 +58,8 @@
     Essayez d'affecter 5+7 à x.
   CorrectAnswer: x = 5 + 7
   AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5', 'x = 5 + 7', 'x = 7 + 5')
-  Hint: Ecrivez "x = 5 + 7". Les espaces ont peu d'importance dans R mais améliorent la lisibilité.
-  Tant qu'ils ne séparent pas la flèche si vous l'utilisez ("<-" est ok, "< -" est mauvais), vous faites comme ça vous chante :-).
+  Hint: "Ecrivez 'x = 5 + 7'. Les espaces ont peu d'importance dans R mais améliorent la lisibilité.
+  Tant qu'ils ne séparent pas la flèche si vous l'utilisez ('<-' est ok, '< -' est mauvais), vous faites comme ça vous chante :-)."
 
 - Class: text
   Output: On s'aperçoit que R n'a pas affiché la réponse cette fois-ci. On considère que ce n'est pas nécessaire lors d'une affectation.
@@ -86,14 +86,14 @@
 - Class: text
   Output: Une variable peut également conserver un ensemble de valeurs; on parle alors de listes, vecteurs, matrices, etc.,  suivant les cas (nombres de dimensions, "types" des données stockées, etc.).
     Pour l'instant, nous allons créer une "collection" de nombres; on parle de vecteur.
-    Tout object (variable, etc) contenant une donnée est appelé une structure de données et les vecteurs numériques sont les structures de données les plus simples dans R.
+    Tout objet (variable, etc) contenant une donnée est appelé une structure de données et les vecteurs numériques sont les structures de données les plus simples dans R.
     Techniquement parlant, même une variable ne stockant qu'un simple chiffre est considérée comme étant un vecteur de taille 1.
 
 - Class: cmd_question
   Output: "La façon la plus simple de créer un vecteur est d'utiliser la fonction 'c()'.
     (Fun fact, 'c' viendrait du mot anglais concatenate ou combine, signifiant combiner, associer.)
     Pour créer un vecteur contenant les nombres 1.1, 0 et 3.14, on écrira ainsi 'c(1.1, 9, 3.14)'.
-  Vous remarquerez deux choses ici: 1. le séparateur de décimal est le point (écriture à l'anglaise) et 2. les chiffres sont séparés par des virgules.  Ce deuxième point est important, la virgule servant à séparer différents éléments dans une fonction (suivant un ordre pré-établi ou non, nous le verrons par la suite). Essayez maitenant de créer un vecteur contenant ces trois chiffres et assignez-le à une variable 'z'."
+  Vous remarquerez deux choses ici: 1. le séparateur de décimal est le point (écriture à l'anglaise) et 2. les chiffres sont séparés par des virgules.  Ce deuxième point est important, la virgule servant à séparer différents éléments dans une fonction (suivant un ordre pré-établi ou non, nous le verrons par la suite). Essayez maintenant de créer un vecteur contenant ces trois chiffres et assignez-le à une variable 'z'."
   CorrectAnswer: z = c(1.1, 9, 3.14)
   AnswerTests: any_of_exprs('z <- c(1.1, 9, 3.14)', 'z = c(1.1, 9, 3.14)')
   Hint: Ecrire z = c(1.1, 9, 3.14) assignera le vecteur (1.1, 9, 3.14) a une nouvelle variable appelée "z".
