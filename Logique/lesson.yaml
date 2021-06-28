@@ -277,8 +277,8 @@
 # Q43
 - Class : cmd_question
   Output: "Pour les prochaines questions, nous allons avoir besoin de créer un vecteur d'entiers que nous appellerons ints. Créez ce vecteur d'entier en effectuant un tirage aléatoire de 10 éléments."
-  CorrectAnswer: "ints <- sample(10)"
-  AnswerTests: omnitest(correctExpr='ints <- sample(10)')
+  CorrectAnswer: "ints = sample(10)"
+  AnswerTests: omnitest(correctExpr='ints = sample(10)')
   Hint: "Bloqué? Rappelez-vous que l'on peut tirer aléatoirement 10 éléments suivant une distribution normale sans remise avec la commande sample(10). Pensez bien à affecter ce tirage à une variable appelée ints."
 
 # Q44

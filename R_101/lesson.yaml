@@ -43,23 +43,20 @@
   Output: Dans R, il existe plusieurs façons d'assigner une valeur à une variable (lui affecter une information). Dans quasiment tous les langages de programmation, une affectation se fait via le symbole "=".
 
 - Class: text
-  Output: Historiquement, R n'acceptait que la flèche à gauche ("<-" écrite avec les symboles 'inférieur' et 'moins' collé) et l'accepte encore à l'heure actuelle mais je trouve préférable d'utiliser le symbole "égal".
-    Que vous choississiez l'un ou l'autre, le choix reste vôtre, les deux sont acceptables.
+  Output: "Historiquement, R n'acceptait que la flèche à gauche ("<-" écrite désormais avec les symboles 'inférieur' et 'moins' collé mais à l'époque, il y avait une touche flèche sur les claviers...) et l'accepte encore à l'heure actuelle mais je trouve préférable d'utiliser le symbole 'égal'. Que vous choississiez l'un ou l'autre, le choix reste vôtre, les deux sont acceptables mais dans la suite des cours, nous utiliserons le symbol '=' et, sauf quelques rares exceptions, l'utilisation d'un symbol autre que = pourra induire une réponse fausse (la comparaison du "texte" de votre réponse ne correspondra pas à celle attendu)."
 
 - Class: text
-  Output: Attention, vous pouvez voir sur internet des affectations par la droite ("->") mais c'est une abérration, oubliez cela et "fuyez, pauvre fou!"
-    (cela a probablement une utilité mais cela est loin de vos préoccupations actuelles et n'est VRAIMENT pas une bonne habitude à prendre...)
+  Output: Attention, vous pouvez voir sur internet des affectations par la droite ("->") mais c'est un usage spécifique, oubliez cette méthode d'affectation et "fuyez, pauvre fou!"  (cela a une utilité mais c'est loin de vos préoccupations actuelles et n'est VRAIMENT pas une bonne habitude à prendre...)
 
 - Class: text
-  Output: On effectue donc l'affectation en disant "voici ma variable, donne lui cette information"; ce qui se traduit en programmation par variable = information (ou variable <- information).
+  Output: On effectue donc l'affectation en disant "voici ma variable, donne lui cette information"; ce qui se traduit en programmation par variable = information.
 
 - Class: cmd_question
-  Output: Pour assigner le résultat de l'expression "5 + 7" a une nouvelle variable que nous appellerons 'x', on écrit donc "x = 5 + 7" sans guillements (ou "x <- 5 + 7" si vous persistez dans cette voie).
+  Output: Pour assigner le résultat de l'expression "5 + 7" a une nouvelle variable que nous appellerons 'x', on écrit donc "x = 5 + 7" sans guillements.
     Essayez d'affecter 5+7 à x.
   CorrectAnswer: x = 5 + 7
   AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5', 'x = 5 + 7', 'x = 7 + 5')
-  Hint: "Ecrivez 'x = 5 + 7'. Les espaces ont peu d'importance dans R mais améliorent la lisibilité.
-  Tant qu'ils ne séparent pas la flèche si vous l'utilisez ('<-' est ok, '< -' est mauvais), vous faites comme ça vous chante :-)."
+  Hint: "Ecrivez 'x = 5 + 7'. Les espaces ont peu d'importance dans R mais améliorent la lisibilité."
 
 - Class: text
   Output: On s'aperçoit que R n'a pas affiché la réponse cette fois-ci. On considère que ce n'est pas nécessaire lors d'une affectation.

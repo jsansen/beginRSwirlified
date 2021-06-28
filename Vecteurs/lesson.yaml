@@ -26,7 +26,7 @@
 - Class: cmd_question
   Output: "Tout d'abord, créez un vecteur numérique num_vect contenant les valeurs suivantes: 0.5, 55, -10, and 6."
   CorrectAnswer: num_vect = c(0.5, 55, -10, 6)
-  AnswerTests: omnitest(correctExpr='num_vect <- c(0.5, 55, -10, 6)')
+  AnswerTests: omnitest(correctExpr='num_vect = c(0.5, 55, -10, 6)')
   Hint: Souvenez vous de la fonction c(), utilisée pour créer un vecteur. Si vous avez oubliez comment l'utiliser, penser à lire la documentation avec ?c. N'oubliez pas l'affectation à la variable num_vect.
 
 # Q6
@@ -124,7 +124,7 @@
 - Class: cmd_question
   Output: 'Créez un vecteur de caractères contenant les mots suivants: "Mon", "nom", "est". Rappelez-vous de mettre chaque mot dans son propre lot de guillemets afin que R les identifie comme des chaînes de caractères. Stockez ce vecteur dans une variable appelée my_char.'
   CorrectAnswer: my_char = c("Mon", "nom", "est")
-  AnswerTests: omnitest(correctExpr='my_char <- c("Mon", "nom", "est")')
+  AnswerTests: omnitest(correctExpr='my_char = c("Mon", "nom", "est")')
   Hint: 'Tapez my_char = c("Mon", "nom", "est") pour créer la nouvelle variable my_char qui contiendra un vecteur de chaines de caractères de taille 3. Assurez vous que les virgules séparent les mots soient en dehors des guillemets ou R pensera que la virgule fait partie de la chaine de caractères.'
 
 # Q23

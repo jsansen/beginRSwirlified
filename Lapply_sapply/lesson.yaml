@@ -54,7 +54,7 @@
 
 - Class: cmd_question
   Output: "Tapez cls_list = lapply(flags, class) pour appliquer la fonction class (le deuxième argument de l'appel), sur chaque élément de la variable flags (nos données fournies en premier argument), et stocker le résultat dans une variable appelée cls_list. Remarquez comme on a tout simplement indiqué le nom de la fonction à appliquer (ici, class) sans les parenthèses qui suivent traditionnellement l'appel à une fonction. c'est le même mécanisme que celui présenté pour le passage de fonction en argument de fonction."
-  CorrectAnswer: cls_list <- lapply(flags, class)
+  CorrectAnswer: cls_list = lapply(flags, class)
   AnswerTests: omnitest(correctExpr='cls_list = lapply(flags, class)')
   Hint: "Tapez cls_list = lapply(flags, class) pour appliquer la fonction class() à chaque colonne de nos données et  stocker le résultat dans une variable appelée cls_list."
 
@@ -81,8 +81,8 @@
 
 - Class: cmd_question
   Output: "La fonction sapply permet d'automatiser cette procédure (elle appelle lapply en interne) puis en essayant de simplifier le résultat avant de nous le retourner. D'où le 's' de 'sapply' (pour 'simplify'). Utilisez sapply() de la même façon que lapply pour obtenir la classe de chaque colonne des données flags et stockez le résultat dans une variable appelée cls_vect. Si vous avez besoin d'aide, n'hésitez pas à utiliser ?sapply pour en afficher la documentation."
-  CorrectAnswer: cls_vect <- sapply(flags, class)
-  AnswerTests: omnitest(correctExpr='cls_vect <- sapply(flags, class)')
+  CorrectAnswer: cls_vect = sapply(flags, class)
+  AnswerTests: omnitest(correctExpr='cls_vect = sapply(flags, class)')
   Hint: "Bloqué-e? Tapez cls_vect = sapply(flags, class) pour stocker les classes de colonnes dans un vecteur de chaine de caractères appelé cls_vect."
 
 - Class: cmd_question

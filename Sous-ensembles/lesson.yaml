@@ -58,8 +58,8 @@
 # Q10
 - Class: cmd_question
   Output: "Souvenez-vous que `!` nous permet d'obtenir la négation d'une expression logique. Ainsi, !is.na(x) peut se lire comme 'is not NA'. Du coup, si on veut créer un vecteur (appelons-le y) qui contiendrait toutes les valeurs non NA de x, on peut utiliser cette syntaxe: y = x[!is.na(x)]. Essayez cela."
-  CorrectAnswer: y <- x[!is.na(x)]
-  AnswerTests: omnitest(correctExpr='y <- x[!is.na(x)]')
+  CorrectAnswer: y = x[!is.na(x)]
+  AnswerTests: omnitest(correctExpr='y = x[!is.na(x)]')
   Hint: Tapez y = x[!is.na(x)] pour 'capturer'/récupérer tout les valeurs non manquantes de x.
 
 # Q11
@@ -167,10 +167,10 @@
 
 # Q29
 - Class: cmd_question
-  Output: "Créez un vecteur numérique avec 3 éléments nommés en utilisant cette commande: vect <- c(foo = 11, bar = 2, norf = NA)."
-  CorrectAnswer: vect <- c(foo = 11, bar = 2, norf = NA)
-  AnswerTests: omnitest(correctExpr='vect <- c(foo = 11, bar = 2, norf = NA)')
-  Hint: Créez un vector nommé avec vect <- c(foo = 11, bar = 2, norf = NA).
+  Output: "Créez un vecteur numérique avec 3 éléments nommés en utilisant cette commande: vect = c(foo = 11, bar = 2, norf = NA)."
+  CorrectAnswer: vect = c(foo = 11, bar = 2, norf = NA)
+  AnswerTests: omnitest(correctExpr='vect = c(foo = 11, bar = 2, norf = NA)')
+  Hint: Créez un vector nommé avec vect = c(foo = 11, bar = 2, norf = NA).
 
 # Q30
 - Class: cmd_question
@@ -189,15 +189,15 @@
 # Q32
 - Class: cmd_question
   Output: Créez un vecteur normal (non nommé) vect2 avec c(11, 2, NA).
-  CorrectAnswer: vect2 <- c(11, 2, NA)
-  AnswerTests: omnitest(correctExpr='vect2 <- c(11, 2, NA)')
+  CorrectAnswer: vect2 = c(11, 2, NA)
+  AnswerTests: omnitest(correctExpr='vect2 = c(11, 2, NA)')
   Hint: Créez un vecteur normal appelé vect2 et qui contiendra c(11, 2, NA).
 
 # Q33
 - Class: cmd_question
   Output: on peut ensuite ajouter l'attribut `names` au vecteur grâce à la commande names(vect2) = c("foo", "bar", "norf"). Essayez cela.
   CorrectAnswer: names(vect2) = c("foo", "bar", "norf")
-  AnswerTests: omnitest(correctExpr='names(vect2) <- c("foo", "bar", "norf")')
+  AnswerTests: omnitest(correctExpr='names(vect2) = c("foo", "bar", "norf")')
   Hint: Ajoutez des noms à vect2 via la commande names(vect2) = c("foo", "bar", "norf").
 
 # Q34

@@ -3,91 +3,80 @@ options(warn = -1)
 
 test_func1 <- function() {
   try({
-    func <- get('boring_function', globalenv())
+    func <- get("boring_function", globalenv())
     t1 <- identical(func(9), 9)
     t2 <- identical(func(4), 4)
     t3 <- identical(func(0), 0)
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
-}
-
-test_func_j <- function() {
-  try({
-    func <- get('even_more_boring_function', globalenv())
-    t1 <- identical(func(1, 2), sum(1,2))
-    t2 <- identical(func(4,10), sum(4,10)
-    t3 <- identical(func(0,-1), sum(0,-1))
-    ok <- all(t1, t2, t3)
-  }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 test_func2 <- function() {
   try({
-    func <- get('my_mean', globalenv())
+    func <- get("my_mean", globalenv())
     t1 <- identical(func(9), mean(9))
     t2 <- identical(func(1:10), mean(1:10))
     t3 <- identical(func(c(-5, -2, 4, 10)), mean(c(-5, -2, 4, 10)))
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 test_func3 <- function() {
   try({
-    func <- get('remainder', globalenv())
+    func <- get("remainder", globalenv())
     t1 <- identical(func(9, 4), 9 %% 4)
     t2 <- identical(func(divisor = 5, num = 2), 2 %% 5)
     t3 <- identical(func(5), 5 %% 2)
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 test_func4 <- function() {
   try({
-    func <- get('evaluate', globalenv())
+    func <- get("evaluate", globalenv())
     t1 <- identical(func(sum, c(2, 4, 7)), 13)
     t2 <- identical(func(median, c(9, 200, 100)), 100)
     t3 <- identical(func(floor, 12.1), 12)
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 test_func5 <- function() {
   try({
-    func <- get('telegram', globalenv())
+    func <- get("telegram", globalenv())
     t1 <- identical(func("Good", "morning"), "START Good morning STOP")
     t2 <- identical(func("hello", "there", "sir"), "START hello there sir STOP")
     t3 <- identical(func(), "START STOP")
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 test_func6 <- function() {
   try({
-    func <- get('mad_libs', globalenv())
+    func <- get("mad_libs", globalenv())
     t1 <- identical(func(place = "Baltimore", adjective = "smelly", noun = "Roger Peng statue"), "News from Baltimore today where smelly students took to the streets in protest of the new Roger Peng statue being installed on campus.")
     t2 <- identical(func(place = "Washington", adjective = "angry", noun = "Shake Shack"), "News from Washington today where angry students took to the streets in protest of the new Shake Shack being installed on campus.")
     ok <- all(t1, t2)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 test_func7 <- function() {
   try({
-    func <- get('%p%', globalenv())
+    func <- get("%p%", globalenv())
     t1 <- identical(func("Good", "job!"), "Good job!")
     t2 <- identical(func("one", func("two", "three")), "one two three")
     ok <- all(t1, t2)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
-test_eval1 <- function(){
+test_eval1 <- function() {
   try({
     e <- get("e", parent.frame())
     expr <- e$expr
@@ -96,10 +85,10 @@ test_eval1 <- function(){
     t2 <- identical(eval(expr), 8)
     ok <- all(t1, t2)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
-test_eval2 <- function(){
+test_eval2 <- function() {
   try({
     e <- get("e", parent.frame())
     expr <- e$expr
@@ -109,10 +98,10 @@ test_eval2 <- function(){
     t3 <- identical(eval(expr), 5)
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
-test_eval3 <- function(){
+test_eval3 <- function() {
   try({
     e <- get("e", parent.frame())
     expr <- e$expr
@@ -122,15 +111,15 @@ test_eval3 <- function(){
     t3 <- identical(eval(expr), 6)
     ok <- all(t1, t2, t3)
   }, silent = TRUE)
-  exists('ok') && isTRUE(ok)
+  exists("ok") && isTRUE(ok)
 }
 
 notify <- function() {
   e <- get("e", parent.frame())
-  if(e$val == "No") return(TRUE)
+  if (e$val == "No") return(TRUE)
 
   good <- FALSE
-  while(!good) {
+  while (!good) {
     # Get info
     name <- readline_clean("What is your full name? ")
     address <- readline_clean("What is the email address of the person you'd like to notify? ")
@@ -140,7 +129,7 @@ notify <- function() {
     message("Your name: ", name, "\n", "Send to: ", address)
 
     yn <- select.list(c("Yes", "No"), graphics = FALSE)
-    if(yn == "Yes") good <- TRUE
+    if (yn == "Yes") good <- TRUE
   }
 
   # Get course and lesson names
@@ -176,4 +165,4 @@ readline_clean <- function(prompt = "") {
 hrule <- function() {
   message("\n", paste0(rep("#", getOption("width") - 2), collapse = ""), "\n")
 }
-options(warn=defaultW)
+options(warn = defaultW)
