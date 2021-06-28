@@ -1,3 +1,6 @@
+defaultW <- getOption("warn")
+options(warn = -1)
+
 match_call <- function(correct_call = NULL) {
   e <- get("e", parent.frame())
   # Trivial case
@@ -45,3 +48,5 @@ expand_call <- function(call_string) {
   # Return expanded function call
   qcall
 }
+
+options(warn = defaultW)

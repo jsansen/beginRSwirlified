@@ -2,3 +2,5 @@
       # lesson is started. Any variables created here will show up in
       # the user's working directory and thus be accessible to them
       # throughout the lesson.
+
+x <- sample(c(rnorm(20), rep(NA, 20)))

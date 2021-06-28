@@ -1,3 +1,6 @@
+defaultW <- getOption("warn")
+
+options(warn = -1)
 # For compatibility with 2.2.21
 .get_course_path <- function(){
   tryCatch(swirl:::swirl_courses_dir(),
@@ -21,3 +24,5 @@ names(plants) <- c('Scientific_Name', 'Duration', 'Active_Growth_Period',
                    'Foliage_Color', 'pH_Min', 'pH_Max',
                    'Precip_Min', 'Precip_Max',
                    'Shade_Tolerance', 'Temp_Min_F')
+
+options(warn = defaultW)

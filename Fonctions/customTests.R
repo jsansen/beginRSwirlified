@@ -1,3 +1,6 @@
+defaultW <- getOption("warn")
+options(warn = -1)
+
 test_func1 <- function() {
   try({
     func <- get('boring_function', globalenv())
@@ -173,3 +176,4 @@ readline_clean <- function(prompt = "") {
 hrule <- function() {
   message("\n", paste0(rep("#", getOption("width") - 2), collapse = ""), "\n")
 }
+options(warn=defaultW)
