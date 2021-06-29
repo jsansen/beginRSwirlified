@@ -22,9 +22,11 @@ De façon assez simple, ce cours s'installe de cette façon:
 ![Rstudio console position](images/RStudioConsole.png)
 
 Image source :
-![](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
-1. Taper les commandes suivantes:
+[sthda - Running Rstudio and  setting up your working directory](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
+
+5. Taper les commandes suivantes:
 et sélectionner le fichier téléchargé en étape 1.
+
 ```r
 install.packages("swirl")
 #si besoin, installer les dépendances requises
