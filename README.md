@@ -16,13 +16,12 @@ De façon assez simple, ce cours s'installe de cette façon:
 1. Installer R/RStudio
 1. Ouvrir R/Rstudio
 1. Mettre le focus (curseur actif) sur la console:
-    + dans R, vous n'avez qu'une   console, donc pas de problème
-    + dans Rstudio, la console est censée être en bas à gauche. Si vous ne la voyez pas, cliquez sur View(Affichage) > Panes (Panneau > Zoom Console
+    - dans R, vous n'avez qu'une   console, donc pas de problème
+    - dans Rstudio, la console est censée être en bas à gauche. Si vous ne la voyez pas, cliquez sur View(Affichage) > Panes (Panneau) > Zoom Console
 
-![Rstudio console position](images/RStudioConsole.png)
+[Rstudio console position](images/RStudioConsole.png)
 
-Image source :
-[sthda - Running Rstudio and  setting up your working directory](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
+Image source : [sthda - Running Rstudio and  setting up your working directory](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
 
 5. Taper les commandes suivantes:
 et sélectionner le fichier téléchargé en étape 1.
