@@ -11,7 +11,7 @@
 
 # Q1
 - Class: text
-  Output: "Les fonctions font parties des éléments essentiels en programmation, y compris avec R. Elles permettent de définir de petits blocks de code ré-utilisable et pouvant être exploitée comme tout autre objet R."
+  Output: "Les fonctions font parties des éléments essentiels en programmation, y compris avec R. Elles permettent de définir de petits blocks de code ré-utilisable et pouvant être exploitée comme tout autre élément."
 
 # Q2
 - Class: text
@@ -26,30 +26,30 @@
 
 # Q4
 - Class: text
-  Output: "La plupart des fonctions de R retourne une valeur. Les fonctions comme Sys.Date() retourne une valeur qui dépend de l'environnement d'exploitation de votre ordinateur (Windows, Mac, Linux, versions, etc) tandis que d'autres fonctions manipulent des données afin d'effectuer des calculs ou opérations et retourne une valeur."
+  Output: "La plupart des fonctions de R retourne une valeur. Les fonctions comme Sys.Date() retourne une valeur qui dépend de l'environnement d'exploitation de votre ordinateur (Windows, Mac, Linux, versions, etc) tandis que d'autres fonctions manipulent des données afin d'effectuer des calculs ou opérations et retourne une valeur (numérique, booléenne, vecteurs, etc)."
 
 # Q5
 - Class: cmd_question
-  Output: "La fonction mean() prend un vecteur en entrée et retourne la moyenne de tout les nombres présents dans le vecteur d'entrée. Les variables d'entrée d'une fonction sont généralement appelées des arguments. Pur fournir des arguments à une fonction (on peut également dire passer des arguments), on les indique dans la parenthèse de la fonction. Essayez de passer l'argument c(2, 4, 5) à la fonction mean()."
+  Output: "La fonction mean() prend un vecteur en entrée et retourne la moyenne de tout les nombres présents dans le vecteur d'entrée. Les variables d'entrée d'une fonction sont généralement appelées des arguments. Pour fournir des arguments à une fonction (on dit également 'passer des arguments'), on les indique dans la parenthèse de la fonction. Essayez de passer l'argument c(2, 4, 5) à la fonction mean()."
   CorrectAnswer: mean(c(2, 4, 5))
   AnswerTests: omnitest(correctExpr='mean(c(2, 4, 5))')
-  Hint: "Calculez la moyenne de 2, 4, and 5 en tapant: mean(c(2, 4, 5))"
+  Hint: "Calculez la moyenne de 2, 4, and 5 en tapant: mean(c(2, 4, 5)). Ce n'est normalement pas nécessaire mais nous entrerons ici les valeurs dans cet ordre spécifiquement afin de faciliter la vérification de votr réponse par le logiciel. "
 
 # Q6
 - Class: text
-  Output: "Les arguments passés à la fonction sont généralement des variables nécessaire aux opérations qu'effectue la fonction. Par exemple, la fonction mean() prend un vecteur en argument, comme vu dans l'exemple précédent mean(c(2,6,8)). La fonction moyenne additionne ensuite tout les nobmres de ce vecteur et divise cette somme par la taille du vecteur."
+  Output: "Les arguments passés à la fonction sont généralement des variables nécessaire aux opérations qu'effectue la fonction. Par exemple, la fonction mean() prend un vecteur en argument, comme vu dans l'exemple précédent mean(c(2,6,8)). La fonction moyenne additionne ensuite tout les nombres de ce vecteur et divise cette somme par la taille du vecteur."
 
 # Q7
 - Class: text
-  Output: "Dans les questions à venir, il vous sera demandé de modifier un script qui apparaitra dès que vous aurez passé cette question. Lorsque vous avez fini de modifier le script, sauvegardez vos changements et tapez submit() pour lancer l'évaluation du script. Le script qui va s'afficher contient des commentaires, assurez vous bien de les lire !"
+  Output: "Dans les questions à venir, il vous sera demandé de modifier un script qui apparaitra dès que vous aurez passé cette question. Lorsque vous avez fini de modifier le script, sauvegardez vos changements et tapez submit() pour lancer l'évaluation du script. Le script qui va s'afficher contient des commentaires (symbole de commentaire en R, un commentaire sert à 'mettre de côté' la/les lignes, c'est-à-dire demander à R à ne pas interpréter ce code/texte et est défini en mettant un croisillon/dièse (mais c'est un usage erroné)/hash en anglais) en début de lignes). Assurez vous bien de les lire, ils contiennent des informations pour vous aider à compléter l'exercice !"
 
 # Q8
 - Class: text
-  Output: "Dans tout les cas, lors de l'appelle à une fonction, nous obtiendrons une valeur en réponse. Cette valeur est définie au sein de la fonction par deux mécanismes: -- soit elle est définie explicitement via la commande 'return(valeur à retourner)' -- soit elle est définie implicitement par la dernière variable évaluée dans la fonction"
+  Output: "Dans tout les cas, lors de l'appel à une fonction, nous obtiendrons une valeur en réponse. Cette valeur est définie au sein de la fonction par deux mécanismes: -- soit elle est définie explicitement via la commande 'return(valeur à retourner)' -- soit elle est définie implicitement par la dernière variable évaluée dans la fonction (comportement propre à R et non généralisé aux autres langages)."
 
 # Q9
 - Class: script
-  Output: "Nous voulons écrire une fonction qui ne prenne qu'un argument, appelé x, et retournera cette variable x sans la modifier. Supprimez le dièse (symbole de commentaire en R, un commentaire servant à 'mettre de côté' la ligne, c'est-à-dire demander à R à ne pas interpréter ce code/texte). Assurez-vous de sauvegarder vos changements au script avant de taper submit()."
+  Output: "Nous voulons écrire une fonction qui ne prenne qu'un argument, appelé x, et retournera cette variable x sans la modifier. Supprimez le dièse. Assurez-vous de sauvegarder vos changements au script avant de taper submit()."
   AnswerTests: test_func1()
   Hint: "Assurez-vous de supprimer le symbole dièse (#) pour que la dernière expression de la fonction soit juste x."
   Script: boring_function.R

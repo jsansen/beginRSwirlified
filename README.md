@@ -5,16 +5,21 @@ ajouter une présentation
 ### What is this repository for? ###
 Expliquer l'installation du cours
 
-### How do I get set up? ###
-
 Cours traduit et parfois completé du cours [A-very-short-introduction-to-R-Programming](https://github.com/ClaudiaBrauer/A-very-short-introduction-to-R) de Claudia Brauer.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+# Remaining work #
+
+- les bibliothèques externes : trouver, installer, charger rechercher et utiliser une bibliothèque ext.
+- les types de données: manipulations et casting
+- indexation de données : exercices pratiques
+- importation de données : extension de fichier, separateur, décimal, header, autres formats
+- for/while/repeat loops
+
+source d'information :
+https://rstudio-education.github.io/hopr/speed.html#how-to-write-fast-for-loops-in-r)
+
+https://r4ds.had.co.nz/introduction.html
+
 # Contenu du cours #
 
 ## R101 ##

@@ -81,7 +81,7 @@
 
 # Q11
 - Class: text
-  Output: "Tout comme en cours de mathématiques, lorsque l'on a affaire à un objet à deux dimensions (table de données), le premier nobmre correspond au nombre de lignes, tandis que le second correspond au nombre de colonnes. Ainsi, nous venons de donner à notre vecteur my_vector 4 lignes et 5 colonnes."
+  Output: "Tout comme en cours de mathématiques, lorsque l'on a affaire à un objet à deux dimensions (table de données), le premier nombre correspond au nombre de lignes, tandis que le second correspond au nombre de colonnes. Ainsi, nous venons de donner à notre vecteur my_vector 4 lignes et 5 colonnes."
 
 
 # Q12

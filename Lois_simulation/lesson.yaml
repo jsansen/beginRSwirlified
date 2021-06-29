@@ -144,7 +144,7 @@
   Output: "Génerez 5 nombres aléatoire issus d'une distribution de Poisson de moyenne 10. Regardez la documentation de la fonction rpois si cela s'avère nécessaire."
   CorrectAnswer: rpois(5, 10)
   AnswerTests: match_call('rpois(5, 10)')
-  Hint: "Utilisez rpois(5, 10) pour génerer 5 nobmres aléatoires issus d'une distribution de Poisson de moyenne 10."
+  Hint: "Utilisez rpois(5, 10) pour génerer 5 nombres aléatoires issus d'une distribution de Poisson de moyenne 10."
 
 - Class: cmd_question
   Output: "Maintenant, utilisez la fonction replicate pour effectuer cette opération 100 fois. Stockez le résultat dans une nouvelle variable appelée my_pois."

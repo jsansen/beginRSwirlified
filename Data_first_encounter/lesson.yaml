@@ -10,13 +10,16 @@
   Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
 
 - Class: text
-  Output: "Dès lors que vous démarré un travail avec un nouveau jeu de données, l'une des première choses que vous devez faire est inspecter les données. Quel est le format utilisé? quelles sont les dimensions? quels sont les noms des variables? comment les données sont-elles stockées (types)? Y a-t-il des données manquantes? y a-t-il des erreurs dans les données?"
+  Output: "Dès lors que vous démarrez un travail avec un nouveau jeu de données, l'une des premières choses que vous devez faire est inspecter les données. Quel est le format utilisé? quelles sont les dimensions? quels sont les noms des variables? comment les données sont-elles stockées (types)? Y a-t-il des données manquantes? y a-t-il des erreurs dans les données?"
 
 - Class: text
-  Output: "Ce cours va vous montrer comment répondre à la plupart de ces questions et quelques autres en utilisant les fonctions de base de R. Evidemment on ne saurait couvrir l'intégralité des cas qui peuvent se produire mais cela vous donnera les bons réflexes de bases, après il ne tiendra qu'à vous d'être vigilant à bien inspecter vos données et à essayer de repérer les erreurs qui auraient pu passer ces premiers filtres (et je vous l'annonce d'avance, il y en a toujours qui passent à l'as à l'occasion... malheureusement). Nous allons utiliesr ici un jeu de données construit à partir de la base de données PLANTS du United States Department of Agriculture(http://plants.usda.gov/adv_search.html)."
+  Output: "Ce cours va vous montrer comment répondre à la plupart de ces questions et quelques autres en utilisant les fonctions de base de R. Evidemment on ne saurait couvrir l'intégralité des cas qui peuvent se produire mais cela vous donnera les bons réflexes de bases, après il ne tiendra qu'à vous d'être vigilant à bien inspecter vos données et à essayer de repérer les erreurs qui auraient pu passer ces premiers filtres (et je vous l'annonce d'avance, cela arrive... malheureusement)."
+
+- Class: text
+  Output: "Nous allons utiliser ici un jeu de données construit à partir de la base de données PLANTS du United States Department of Agriculture (http://plants.usda.gov/adv_search.html)."
 
 - Class: cmd_question
-  Output: "J'ai stocké pour vous les données dans une variable appelée plants. Tapez ls() pour lister les variables de votre espace de travail, vous devriez trouver, quelque part dans la liste, la variable plants."
+  Output: "J'ai stocké pour vous les données dans une variable appelée plants. Tapez ls() pour lister les variables de votre espace de travail, vous devriez trouver cette variable, quelque part dans la liste."
   CorrectAnswer: ls()
   AnswerTests: omnitest(correctExpr='ls()')
   Hint: "Utilisez ls() pour lister les variables de votre espace de travail."
@@ -28,10 +31,10 @@
   Hint: "Utilisez la commande class(plants) pour vérifier la classe de la variable plants."
 
 - Class: text
-  Output: "Il est très commun pour des données d'être stockées sous forme de dataframe. C'est la classe par defaut lorsque l'on charge des données avec R en (lorsque l'on utilise la fonctoin read.csv() ou read.table() par exemple, mais vous verrez ces fonctions dans un autre cours)."
+  Output: "Il est très commun pour des données d'être stockées sous forme de dataframe. C'est la classe par defaut lorsque l'on charge des données avec R  (lorsque l'on utilise la fonction read.csv() ou read.table() par exemple, mais vous verrez ces fonctions dans un autre cours)."
 
 - Class: cmd_question
-  Output: "Puisque les données sont stockées dans un dataframe, nous savons que les données sont 'rectangulaires', tabulaires; en d'autres mots, qu'il y a deux dimensions (lignes et colonnes) et que cela se présente sous la forme d'un tableau. Utilisez la commande dim(plants) pour voir exactement combien de lignes et de colonnes sont présentent dans les données."
+  Output: "Puisque les données sont stockées dans un dataframe, nous savons que les données sont 'rectangulaires', tabulaires. En d'autres mots, qu'il y a deux dimensions (lignes et colonnes) et que cela se présente sous la forme d'un tableau. Utilisez la commande dim(plants) pour voir exactement combien de lignes et de colonnes sont présentent dans les données."
   CorrectAnswer: dim(plants)
   AnswerTests: omnitest(correctExpr='dim(plants)')
   Hint: "Utilisez dim(plants) pour connaitre les dimensions exactes de nos données."
@@ -40,40 +43,43 @@
   Output: "Le premier nombre que vous voyez (5166) est le nombre de lignes (observations) tandis que le deuxième (10) est le nombre de colonnes (variables)."
 
 - Class: cmd_question
-  Output: "Vous pouvez aussi utiliser la fonction nrow(plants) pour n'obtenir que le nombre de lignes. Essayez la!"
+  Output: "Vous pouvez aussi utiliser la fonction nrow(plants) pour n'obtenir que le nombre de lignes. Essayez-la!"
   CorrectAnswer: nrow(plants)
   AnswerTests: omnitest(correctExpr='nrow(plants)')
   Hint: "Utilisez nrow(plants) pour obtenir uniquement le nombre d'observations décrites dans les données."
 
 - Class: cmd_question
-  Output: "et de façon relativement évidente, ncol.... permettra d'obtenir le nombre de colonnes. A vous!"
+  Output: "et de façon relativement évidente, ncol permettra d'obtenir... le nombre de colonnes. A vous!"
   CorrectAnswer: ncol(plants)
   AnswerTests: omnitest(correctExpr='ncol(plants)')
   Hint: Utilisez ncol(plants) pour voir uniquement le nombre de colonnes des données.
 
 - Class: cmd_question
-  Output: "Si vous êtes curieux de savoir l'espace mémoire occupé par le jeu de données, vous pouvez utiliser la fonction object.size(). A vous!"
+  Output: "Si vous êtes curieux de connaitre l'espace mémoire occupé par le jeu de données, vous pouvez utiliser la fonction object.size(). à vos claviers.. go!"
   CorrectAnswer: object.size(plants)
   AnswerTests: omnitest(correctExpr='object.size(plants)')
   Hint: "object.size(plants) vous indiquera l'espace mémoire occupé par le jeu de données plants."
 
 - Class: cmd_question
-  Output: "Maintenant que nous avons les informations de tailles et de longueur de nos données, jetons un oeil à ce qu'elles contiennent. La commande names(plants) vous retournera un vecteur de chaine de caractères des noms des variables (colonnes). Essayez la !"
+  Output: "Maintenant que nous avons les informations de taille et de longueur de nos données, jetons un oeil à ce qu'elles contiennent. La commande names(plants) vous retournera un vecteur de chaine de caractères des noms des variables (colonnes). Essayez cela."
   CorrectAnswer: names(plants)
   AnswerTests: omnitest(correctExpr='names(plants)')
   Hint: "names(plants) vous fournira une vecteur avec les noms des variables représentées dans les données."
 
 - Class: text
-  Output: "Les variables ont un nom relativement explicite, mais ne vous détrompez pas, ce ne sera pas toujours le cas, souvent des acronymes ou noms 'techniques' sont utilisés et seront moins descriptifs que ceux-là. En toute logique, l'étape suivante consiste à regarder les données en elles-même... problème, nous sommes face à 5k observations (lignes), c'est donc relativement difficile de toutes les observer et d'avoir un aperçu global de l'ensemble."
+  Output: "Les variables ont un nom relativement explicite, mais ne vous détrompez pas, ce ne sera pas toujours le cas, souvent des acronymes ou noms 'techniques' sont utilisés et seront moins descriptifs que ceux-là."
+
+- Class: text
+  Output: "En toute logique, l'étape suivante consiste à regarder les données en elles-même... problème, nous sommes face à 5k observations (lignes), il est donc relativement difficile de toutes les observer et d'avoir un aperçu global de l'ensemble."
 
 - Class: cmd_question
-  Output: "La fonction head() vous permettra d'afficher un aperçi des premières lignes des données. Essayez cette fonction en lui donnant votre variable en argument."
+  Output: "La fonction head() vous permettra d'afficher un aperçu des premières lignes des données. Essayez cette fonction en lui donnant votre variable en argument."
   CorrectAnswer: head(plants)
   AnswerTests: omnitest(correctExpr='head(plants)')
   Hint: "head(plants) vous permettra de voir les premières lignes de vos données."
 
 - Class: text
-  Output: "Prenez une minute pour regarder tout ça. Chaque ligne est étiquetée (labélisée par anglicisme --labeled--) avec un numéro d'observation et chaque colonne avec un nom de variable. Votre écran n'est probablement pas assez large pour voir l'intégralité des colonnes les unes à coté des autres, dans ce cas, R affichera autant de colonnes que possible sur une ligne puis continuera en dessous."
+  Output: "Prenez une minute pour regarder tout ça. Chaque ligne est étiquetée (on dit également labélisée par anglicisme --labeled--) avec un numéro d'observation et chaque colonne avec un nom de variable. Votre écran n'est probablement pas assez large pour voir l'intégralité des colonnes les unes à coté des autres, dans ce cas, R affichera autant de colonnes que possible sur une ligne puis continuera en dessous."
 
 - Class: cmd_question
   Output: "Par défaut, head() affichera les 6 pemières lignes des données. Vous pouvez cependant modifier ce paramètre en passant le nombre de lignes voulu en second argument. A vous maintenant, utilisez head() pour afficher les 10 premières lignes des données plants."
@@ -82,34 +88,34 @@
   Hint: "head(plants, 10) vous affichera les 10 premières lignes des données."
 
 - Class: cmd_question
-  Output: Le même principe s'applique avec la fonction tail() qui, vous l'aurez deviné assez facilement, n'affiche pas les premières lignes mais les dernières. Utilisez la fonction tail pour afficher les 15 dernières lignes.
+  Output: Le même principe s'applique avec la fonction tail() qui, vous l'aurez deviné assez facilement je pense, n'affiche pas les premières lignes mais les dernières. Utilisez la fonction tail pour afficher les 15 dernières lignes.
   CorrectAnswer: tail(plants, 15)
   AnswerTests: omnitest(correctExpr='tail(plants, 15)')
   Hint: tail(plants, 15) fera très bien le travail.
 
 - Class: cmd_question
-  Output: "Après avoir regardé un peu les quelques premières et dernières lignes, vous aurez probablement remarqué qu'il y a beaucoup de NAs, qui sont des espaces reservé indiquant des données manquantes. Utilisez la fonction summary() pour avoir une autre vision des données et tout particulièrement leurs distribution et la proportion de données manquantes par variable."
+  Output: "Après avoir regardé un peu les quelques premières et dernières lignes, vous aurez probablement remarqué qu'il y a beaucoup de NAs, qui sont des espaces reservés indiquant des données manquantes. Utilisez la fonction summary() pour avoir une autre vision des données et tout particulièrement leur distribution et la proportion de données manquantes par variable."
   CorrectAnswer: summary(plants)
   AnswerTests: omnitest(correctExpr='summary(plants)')
   Hint: "Essayez la fonction summary(plants) pour observer la distribution de vos données et la proportion de données manquantes."
 
 - Class: text
-  Output: "summary() fournit différentes informations pour chaque variable, dependant de sa classe. Pour des données numériques, comme Precip_min par exemple, summary affichera les minimum, 1er quartile, mediane, moyenne, 3e quartile et maximum. Ces informations nous servent à avoir un aperçu rapide de la distribution des données pour cette variable."
+  Output: "summary() fournit différentes informations pour chaque variable, dependant de sa classe. Pour des données numériques, comme Precip_min par exemple, summary affichera: le minimum, 1er quartile, mediane, moyenne, 3e quartile et maximum. Ces informations nous servent à avoir un aperçu numérique rapide de la distribution des données pour cette variable."
 
 - Class: text
-  Output: "Pour des variables catégorielles, (on appelle ces variables des facteurs, 'factor' en anglais) summary affichera le nombre de fois qu'un niveau est utilisé (une valeur utilisable -- 'level' en anglais). Par exemple, chaque valeur de la variable Scientific_Name n'apparait qu'une fois, puisque c'est une information qui est spécifique à chaque plante. AU contraire, le résumé de Duration (également une variable de type factor) nous dis que le jeu de données contient 3031 plantes vivaces, 682 plantes annuelles, etc."
+  Output: "Pour des variables catégorielles, (on appelle ces variables des facteurs, 'factor' en anglais) summary affichera le nombre de fois qu'un niveau (une valeur utilisable -- 'level' en anglais) est utilisé. Par exemple, chaque valeur de la variable Scientific_Name n'apparait qu'une fois, puisque c'est une information qui est spécifique à chaque plante. Au contraire, le résumé de Duration (également une variable de type factor) nous dis que le jeu de données contient 3031 plantes vivaces, 682 plantes annuelles, etc."
 
 - Class: cmd_question
-  Output: "Vous pouvez voir que R à tronquer le résumé de Active_Growth_Period en incluant une catégorie fourre-tout appelée 'Other'. Puisqu'il s'agit d'une variable catégorielle/factor, nous pouvons voir combien de fois chaque niveau(level) est utilisé dans les données avec la commande table(plants$Active_Growth_Period)."
+  Output: "Vous pouvez voir que R à tronqué le résumé de Active_Growth_Period en incluant une catégorie fourre-tout appelée 'Other'. Puisqu'il s'agit d'une variable catégorielle/factor, nous pouvons voir combien de fois chaque niveau(level) est utilisé dans les données avec la commande table(plants$Active_Growth_Period)."
   CorrectAnswer: table(plants$Active_Growth_Period)
   AnswerTests: omnitest(correctExpr='table(plants$Active_Growth_Period)')
   Hint: "table(plants$Active_Growth_Period) vous affichera un tableau des décomptes d'utilisation de chaque niveau du facteur Active_Growth_Period."
 
 - Class: text
-  Output: "Chacune des fonctions présentées jusqu'ici ont pour rôle de vous aider à bien appréhender la structure de vos données. Cependant, nous n'avons fait qu'effleurer les possibilités que nous offre R."
+  Output: "Chacune des fonctions présentées jusqu'içi a pour rôle de vous aider à bien appréhender la structure de vos données. Cependant, nous n'avons fait qu'effleurer les possibilités que nous offre R."
 
 - Class: cmd_question
-  Output: "Une des fonctions les plus utiles et concises de R pour comprendre la *str*ucture des données est la commande str(). Essayez la dès maintenant."
+  Output: "Une des fonctions les plus utiles et concises de R pour comprendre la *str*ucture des données est la commande str(). Essayez-la dès maintenant."
   CorrectAnswer: str(plants)
   AnswerTests: omnitest(correctExpr='str(plants)')
   Hint: "Utilisez str(plants) pour observer la structure de vos données."
@@ -121,7 +127,7 @@
   Output: "str() est en fait une fonction très générique que vous pouvez utiliser sur quasiment tout objet dans R. Chaque fois que vous voulez comprendre la structure de quoique ce soit (données, fonction, etc), str() sera en général un bon point de départ."
 
 - Class: text
-  Output: "Dans cette leçon vous avez appris à avoir un premier aperçu et un début de compréhension des données et de leurs structures en utilisant des fonctions faisant partie des bases de R. Prendre quelques minutes pour faire cette observation à chaque fois que vous utilisez de nouvelles données est un bon réflexes qui pourra vous faire gagner du temps et vous évitera pas mal de frustration plus tard dans votre analyse. Evidemment, il vous faudra toujours rester vigilant à ce que vous observez et à bien comprendre vos données pour pouvoir correctement les apprehender... Ces fonctions vous simplifieront la tâche mais elles ne serviront à rien si vous les appliquez machinalement sans analyser les réponses qu'elles vous donnent."
+  Output: "Dans cette leçon vous avez appris à avoir un premier aperçu et un début de compréhension des données et de leurs structures en utilisant des fonctions faisant partie des bases de R. Prendre quelques minutes pour faire cette observation à chaque fois que vous utilisez de nouvelles données est un bon réflexes qui pourra vous faire gagner du temps et vous évitera pas mal de frustration plus tard dans votre analyse. Evidemment, il vous faudra toujours rester vigilant à ce que vous observez et à bien comprendre vos données pour pouvoir correctement les appréhender... Ces fonctions vous simplifieront la tâche mais elles ne serviront à rien si vous les appliquez machinalement sans analyser les réponses qu'elles vous donnent."
 
 - Class: text
   Output: Sur Moodle, selectionnez le test 'Data_encounter' et entrez le code 'Villeneuve20164RRiv4l' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon.
