@@ -1,24 +1,69 @@
 # README #
 
-ajouter une présentation
+Dépôt du cours swirl de l'ENSTBB
 
-### What is this repository for? ###
-Expliquer l'installation du cours
+Ce cours n'a pas pour objectif d'apprendre la statistiques, il se focalise sur l'apprentissage de l'utilisation de R/RStudio, de son fonctionnement et de ses mécanismes programmatique.
 
-Cours traduit et parfois completé du cours [A-very-short-introduction-to-R-Programming](https://github.com/ClaudiaBrauer/A-very-short-introduction-to-R) de Claudia Brauer.
+L'objectif est de comprendre comment R fonctionne pour pouvoir l'utiliser correctement/efficacement/intelligement pour faire de la statistiques.
+
+Cours traduit et completé du cours [A-very-short-introduction-to-R-Programming](https://github.com/ClaudiaBrauer/A-very-short-introduction-to-R) de Claudia Brauer.
+
+# Installation #
+
+De façon assez simple, ce cours s'installe de cette façon:
+
+1. Télécharger le document beginr.swc
+1. Installer R/RStudio
+1. Ouvrir R/Rstudio
+1. Mettre le focus (curseur actif) sur la console:
+    a. dans R, vous n'avez qu'une   console, donc pas de problème
+    a. dans Rstudio, la console est censée être en bas à gauche. Si vous ne la voyez pas, cliquez sur View(Affichage) > Panes (Panneau > Zoom Console
+![Rstudio console position](images/RStudioConsole.png)
+1. Taper les commandes suivantes:
+et sélectionner le fichier téléchargé en étape 1.
+```r
+install.packages("swirl")
+#si besoin, installer les dépendances requises
+library(swirl)
+install_course()
+```
+Vous êtes maintenant prêt à démarrer le cours, il ne vous reste plus qu'à démarrer le cours
+
+```r
+install.packages("swirl")
+#si besoin, installer les dépendances requises
+library(swirl)
+swirl()
+# répondre aux quelques questions posées et sélectionner le cours beginr.
+```
 
 # Remaining work #
 
-- les bibliothèques externes : trouver, installer, charger rechercher et utiliser une bibliothèque ext.
-- les types de données: manipulations et casting
-- indexation de données : exercices pratiques
-- importation de données : extension de fichier, separateur, décimal, header, autres formats
-- for/while/repeat loops
+## les bibliothèques externes ##
 
-source d'information :
-https://rstudio-education.github.io/hopr/speed.html#how-to-write-fast-for-loops-in-r)
+Trouver, installer, charger rechercher et utiliser une bibliothèque ext.
 
-https://r4ds.had.co.nz/introduction.html
+## Données et typage ##
+
+Manipulations et casting
+
+## Indexation de données ##
+Exercices pratiques
+
+## Importation de données ##
+
+Extension de fichier, separateur, décimal, header, autres formats
+
+## les fonctions de manipulation générales ##
+
+for/while/repeat loops
+
+(en complément à la *apply family de R)
+
+# source d'information #
+
+- https://rstudio-education.github.io/hopr/speed.html#how-to-write-fast-for-loops-in-r)
+- https://r4ds.had.co.nz/introduction.html
 
 # Contenu du cours #
 
@@ -42,3 +87,21 @@ Ici on voit la création de séquences et les variants de création.
 Ici on parle de vecteurs numérique et de manipulation de vecteurs de (chaînes de )caractères, methode paste etc.
 
 ## Valeurs manquantes ##
+
+## Sous-ensembles ##
+
+## Matrices_et_Dataframes ##
+
+## Logique ##
+
+## Fonctions ##
+
+## Lapply_sapply ##
+
+## Vapply_tapply ##
+
+## Data_first_encounter ##
+
+## Lois_simulation ##
+
+## Graphiques_basiques ##
