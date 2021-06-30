@@ -6,7 +6,9 @@ Ce cours n'a pas pour objectif d'apprendre la statistiques, il se focalise sur l
 
 L'objectif est de comprendre comment R fonctionne pour pouvoir l'utiliser correctement/efficacement/intelligement pour faire de la statistiques.
 
-Cours traduit et completé du cours [A-very-short-introduction-to-R-Programming](https://github.com/ClaudiaBrauer/A-very-short-introduction-to-R) de Claudia Brauer.
+Cours traduit et completé du cours [R_programming_E](https://github.com/swirldev/R_Programming_E) lui-même issu du MOOC Coursera **R-programming** de l'équipe biostatistics du *John Hopkins School of Public Health*.
+
+Un grand merci à eux pour le travail accompli et la publication en open-source.
 
 # Installation #
 
@@ -42,7 +44,7 @@ swirl()
 # répondre aux quelques questions posées et sélectionner le cours beginr.
 ```
 
-# Remaining work #
+# Remaining lessons TODO #
 
 ## les bibliothèques externes ##
 
@@ -65,10 +67,10 @@ for/while/repeat loops
 
 (en complément à la *apply family de R)
 
-# source d'information #
+# source d'information externes #
 
-- https://rstudio-education.github.io/hopr/speed.html#how-to-write-fast-for-loops-in-r)
-- https://r4ds.had.co.nz/introduction.html
+- [Rstudio - Oreilly : how-to-write-fast-for-loops-in-r](https://rstudio-education.github.io/hopr/speed.html#how-to-write-fast-for-loops-in-r)
+- [O'reilly- R for data sciences](https://r4ds.had.co.nz/introduction.html)
 
 # Contenu du cours #
 
