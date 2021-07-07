@@ -148,7 +148,7 @@
   Output: "Sachez également que les commandes vues ici pour un fichier ou un dossier (ex. file.exists(), dir.create(), etc.) sont utilisable dans les deux cas, pour les fichiers (via file.***) et les dossiers (via dir.***)."
 
 - Class: text
-  Output: 'Vous pouvez utiliser l'opérateur $ (exemple file.info('mytest.R')$mode )pour accéder à des informations spécifique. (nous reviendrons plus tard sur cet opérateur $, il est beaucoup utilisé)'
+  Output: "Vous pouvez utiliser l'opérateur $ (exemple file.info('mytest.R')$mode )pour accéder à des informations spécifique. (nous reviendrons plus tard sur cet opérateur $, il est beaucoup utilisé)"
 
 - Class: cmd_question
   Output: "Changez le nom du fichier 'mytest.R' en 'mytest2.R' en utilisant la commande file.rename(). N'hésitez pas à regarder la documentation pour savoir comment utiliser cette commande!"

@@ -1,0 +1,36 @@
+- Class: meta
+  Course: beginR
+  Lesson: Introduction
+  Author: Joris SANSEN
+  Type: Standard
+  Organization: Bordeaux INP / ENSTBB
+  Version: 2.4.5
+
+- Class: text
+  Output: "Bonjour et bienvenu-e dans begin'R-Swirlified ! Félicitations, si vous êtes arrivé, jusqu'içi, vous avez effectuez le tiers des étapes les plus difficiles de ce module de formation ! Et vous pouvez être fier de vous, car vous y êtes arrivé en autonomie, guidé-e, mais seul-e, et ce n'est pas rien ! 
+Pour ce cours et pour tous les cours suivants, je vous présenterai quelques commandes et leurs effets et vous les testerez quasiment toutes en même temps, un apprentissage par la pratique et l'expérimentation, comme tout scientifique que vous êtes/serez ! Tapez la touche Entrée pour afficher la suite."
+
+- Class: text
+  Output: "Petit conseil de démarrage: 
+  Prenez un petit bloc-note ou ouvrez un nouveau document dans lequel vous noterez les commandes et notions abordées. Vous les pratiquerez mais vous vous apercevrez rapidement qu'il y en a beaucoup et on ne retiens malheureusement pas tout d'un coup, vous pourrez donc vous y référer de temps en temps."
+
+- Class: text
+  Output: "Si vous avez été vigilant-e à ce qui s'affiche à l'écran/la console, vous aurez remarquez qu'une barre de progression s'affiche à chaque étape du cours, vous indiquant 'grosso-modo' où vous en êtes dans le cours. Le cours n'est pas linéaire, certaines phases sont plus courtes que d'autres, mais c'est un indicateur relatif du travail restant à faire. De manière générale, chaque cours est construit pour être terminé en 10 à 20 minutes donc pas d'inquiètude, vous ne partez pas sur 2h de travail à chaque cours!"
+
+- Class: text
+  Output: "Ce module est construit avec plusieurs cours. Ceux-ci sont construits pour être parcouru/travaillé de façon séquentielle. A la fin de chaque cours, je vous fournirai les éléments nécessaires pour accèder à l'évaluation du cours concerné. Cette évaluation sera accessible sur MOODLE et prendra la forme d'un quizz-minute à tentative unique: 
+  1. Assurez-vous d'être dans les bonnes conditions pour effectuer le test : il ne comportera que 5 à 10 questions mais vous n'aurez qu'une à deux minutes pour le compléter dans son intégralité! Donc faites-le sérieusement, dans un environnement adapté, avec une connexion internet stable.
+  2. Vous n'aurez qu'un essai, soyez vigilant-e.
+  3. Le fait de faire et terminer le test vous permettra, en fonction de vos performances, d'obtenir un badge moodle. ATTENTION, seuls les meilleurs seront récompensés d'un Badge OR, les autres se contenteront d'un badge argent, bronze ou pire encore, ne pourront y prétendre ! (ignoble infamie! Honte sur vous et vous descendants pour les cinqs prochaines générations! ;-) )
+  4. Pas d'inquiétudes, ces tests ne sont pas fait pour vous piéger, bien au contraire ! Ils servent juste à s'assurrer que vous avez bien saisi les concepts et nuances présentées dans le cours. Par ailleurs, pour vous récompenser de votre implication et de votre sérieux, les notes obtenues seront utilisées dans le contrôle continu et globalement, permettront d'améliorer votre moyenne générale si cela s'avère nécessaire."
+  
+- Class: text
+  Output: "Dans la suite de ce cours, les '. . .' signifie que vous pouvez afficher le message ou la question suivante. Tapez la touche 'Entrée' pour continuer.   
+  A tout moment vous pouvez (lorsque vous avez la main sur la console) taper la commande 'play()' pour mettre temporairement le cours en pause, vous amuser avec la console, puis revenir en tapant 'nxt()'. 
+  bye() vous permettra de quitter le cours (en sauvegardant la progression associée au nom d'utilisateur fourni au débuti). 
+  info() vous rappellera ces quelques commandes! 
+  Je le rappelle, je vous recommande fortement de prendre quelques notes au fur et à mesure de votre progression dans les cours. Ceux-ci ont pour objectifs de vous présenter de façon interactive des notions et concepts nécessaire à l'utilisation intelligente de R/Rstudio, il n'a pas pour ambition de vous servir de document de support ou de fiche de révision."
+
+- Class: text
+  Output: "Bon courage à vous ! et bienvenu dans le monde de R/Rstudio ! "
+
