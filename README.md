@@ -1,6 +1,6 @@
 # README #
 
-Dépôt du cours swirl de l'ENSTBB
+Dépôt du cours [swirl](https://swirlstats.com/) de l'ENSTBB
 
 Ce cours n'a pas pour objectif d'apprendre la statistiques, il se focalise sur l'apprentissage de l'utilisation de R/RStudio, de son fonctionnement et de ses mécanismes programmatique.
 
@@ -43,6 +43,8 @@ library(swirl)
 swirl()
 # répondre aux quelques questions posées et sélectionner le cours beginr.
 ```
+# Pour les éditeurs
+suivre les indications disponibles sur le site de [swirlify](http://swirlstats.com/swirlify/writing.html)
 
 # Remaining lessons TODO #
 

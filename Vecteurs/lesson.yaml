@@ -176,7 +176,7 @@
 
 # Q31
 - Class: text
-  Output: Dans cet exemple, nous avons utilisé la fonction paste() pour concatener les éléments en un seul vecteur caractère. paste() peut également être utilisé pour concaténer les éléments de plusieurs vecteurs de caractères.
+  Output: Dans cet exemple, nous avons utilisé la fonction paste() pour concaténer les éléments en un seul vecteur de caractères. paste() peut également être utilisé pour concaténer les éléments de plusieurs vecteurs de caractères.
 
 # Q32
 - Class: cmd_question

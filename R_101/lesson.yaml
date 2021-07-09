@@ -69,7 +69,7 @@
 - Class: text
   Output: "Une variable peut également conserver un ensemble de valeurs; on parle alors de listes, vecteurs, matrices, etc.,  suivant les cas (nombres de dimensions, 'types' des données stockées, etc.). Pour l'instant, nous allons créer une 'collection' de nombres; on parle de vecteur. Tout objet (variable, etc) contenant une donnée est appelé une structure de données et les vecteurs numériques sont les structures de données les plus simples dans R. Techniquement parlant, même une variable ne stockant qu'un simple chiffre est considérée comme étant un vecteur de taille 1."
 
-- Class: cmd_question
+- Class: text
   Output: "La façon la plus simple de créer un vecteur est d'utiliser la fonction 'c()'. (Fun fact, 'c' viendrait du mot anglais concatenate ou combine, signifiant combiner, associer). Pour créer un vecteur contenant les nombres 1.1, 0 et 3.14, on écrira ainsi 'c(1.1, 9, 3.14)'. Vous remarquerez deux choses ici: "
 
 - Class: cmd_question
