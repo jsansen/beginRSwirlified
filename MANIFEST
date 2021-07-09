@@ -3,13 +3,13 @@ R_101
 Fichiers_et_espace_de_travail
 Sequences
 Vecteurs
-Valeurs_manquantes
 Sous-ensembles
 Matrices_et_Dataframes
 Logique
+Data_first_encounter
+Valeurs_manquantes
 Fonctions
 Lapply_sapply
 Vapply_tapply
-Data_first_encounter
 Lois_simulation
 Graphiques_basiques

@@ -48,6 +48,28 @@ suivre les indications disponibles sur le site de [swirlify](http://swirlstats.c
 
 # Remaining lessons TODO #
 
+**TODO : réorganisation des modules**
+
+1. R_101
+1. Fichiers_et_espace_de_travail
+1. Sequences
+1. Vecteurs
+1. Sous-ensembles
+1. Matrices_et_Dataframes
+1. Logique
+1. **TODO** : indexation de données (voir section concernée ci dessous)
+1. **TODO** : Données et typages  (voir section concernée ci dessous)
+1. Data_first_encounter
+1. Valeurs_manquantes
+1. Fonctions
+1. Lapply_sapply
+1. Vapply_tapply
+1. **TODO** : structures de manipulation générales (voir section concernée ci dessous)
+1. Lois_simulation
+1. Graphiques_basiques
+1. **TODO** : bibliothèques externes (voir section concernée ci dessous)
+
+
 ## les bibliothèques externes ##
 
 Trouver, installer, charger rechercher et utiliser une bibliothèque ext.
@@ -57,7 +79,11 @@ Trouver, installer, charger rechercher et utiliser une bibliothèque ext.
 Manipulations et casting
 
 ## Indexation de données ##
-Exercices pratiques
+Exercices pratiques d'accès à des vecteurs, listes, dataframes et matrices.
+
+> acces aux lignes, accès aux colonnes, utilisation de which, etc
+
+> nécéssite de le montrer après vecteurs, sequences, matrices df et logique
 
 ## Importation de données ##
 
@@ -93,7 +119,7 @@ Ici on voit la création de séquences et les variants de création.
 
 ## Vecteurs ##
 
-Ici on parle de vecteurs numérique et de manipulation de vecteurs de (chaînes de )caractères, methode paste etc.
+Ici on parle de vecteurs numérique(un peu), vecteur booléen et de manipulation de vecteurs de (chaînes de )caractères, methode paste etc.
 
 ## Valeurs manquantes ##
 
