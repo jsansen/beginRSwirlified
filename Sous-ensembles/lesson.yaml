@@ -213,7 +213,7 @@
 
 # Q36
 - Class: mult_question
-  Output: maitnenant, retour à nos moutons et à la sélection d'un sosu-ensemble d'un vecteur avec des éléments nommés. Laquelle de ces commande, selon vous, nous donnera le deuxième élément de vect?
+  Output: maintenant, retour à nos moutons et à la sélection d'un sosu-ensemble d'un vecteur avec des éléments nommés. Laquelle de ces commande, selon vous, nous donnera le deuxième élément de vect?
   AnswerChoices: vect["bar"]; vect[bar]; vect["2"]
   CorrectAnswer: vect["bar"]
   AnswerTests: omnitest(correctVal='vect["bar"]')
@@ -235,4 +235,4 @@
   Output: Maintenant vous connaissez les 4 méthodes de sélection de données dans un vecteur (en tout cas les méthodes de bases, il en existe d'autres plus avancées que nous verrons ultérieurement). suivant les cas, certaines approches sont plus pratiques que d'autres, dans le doute, n'hésitez pas à en tester plusieurs!
 
 - Class: text
-  Output: Sur Moodle, sélectionnez le test "subsets" et entrez le code "SnyderDN4CaPULLo" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.
+  Output: Sur Moodle, sélectionnez le test "subsets" et entrez le code "SnyderDN4CaPULLo" (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."

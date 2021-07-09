@@ -13,7 +13,7 @@
   Output: "Si, à tout moment, vous souhaitez obtenir plus d'informations sur un sujet particulier lié à R, vous pouvez taper 'help.start()' dans la console, ce qui ouvrira un menu de ressources. Sinon, une simple recherche sur le Web permettra souvent d'obtenir la réponse que vous cherchez."
 
 - Class: cmd_question
-  Output: "Dans sa forme la plus simple, R peut être utilisé comme une calculatrice interactive. Ecrivez 5 + 7 et validez en tapant sur la touche Entrée."
+  Output: "Dans sa forme la plus simple, R peut être utilisé comme une calculatrice interactive. Ecrivez '5 + 7' et validez en tapant sur la touche Entrée. Ne mettez pas de guillemets, sinon R prendra votre expression comme une chaine de caractère et ne pourra pas effectuer d'opérations mathématique avec ! A vous."
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: Ecrivez 5 + 7 et tapez sur la touche Entrée.
@@ -31,7 +31,7 @@
   Output: "Dans R, il existe plusieurs façons d'assigner une valeur à une variable (lui affecter une information). Dans quasiment tous les langages de programmation, une affectation se fait via le symbole '='."
 
 - Class: text
-  Output: "Historiquement, R n'acceptait que la flèche à gauche ('<-' écrite désormais avec les symboles 'inférieur' et 'moins' collé mais à l'époque, il y avait une touche flèche sur les claviers...) et l'accepte encore à l'heure actuelle mais je trouve préférable d'utiliser le symbole 'égal'. Que vous choississiez l'un ou l'autre, le choix reste vôtre, les deux sont acceptables mais dans la suite des cours, nous utiliserons le symbol '=' et, sauf quelques rares exceptions, l'utilisation d'un symbol autre que = pourra induire une réponse fausse (la comparaison du 'texte' de votre réponse ne correspondra pas à celle attendu)."
+  Output: "Historiquement, R n'acceptait que la flèche à gauche ('<-' écrite désormais avec les symboles 'inférieur' et 'moins' collé mais à l'époque, il y avait une touche flèche sur les claviers...) et l'accepte encore à l'heure actuelle mais je trouve préférable d'utiliser le symbole 'égal'. Que vous choississiez l'un ou l'autre, le choix reste vôtre, les deux sont acceptables mais dans la suite des cours, nous utiliserons le symbole '=' et, sauf quelques rares exceptions, l'utilisation d'un symbole autre que = pourra induire une réponse fausse (la comparaison du 'texte' de votre réponse ne correspondra pas à celle attendu)."
 
 - Class: text
   Output: "Attention, vous pouvez voir sur internet des affectations par la droite ('->') mais c'est un usage spécifique, oubliez cette méthode d'affectation et 'fuyez, pauvre fou!'  (cela a une utilité mais c'est loin de vos préoccupations actuelles et n'est VRAIMENT pas une bonne habitude à prendre...)"
@@ -70,7 +70,10 @@
   Output: "Une variable peut également conserver un ensemble de valeurs; on parle alors de listes, vecteurs, matrices, etc.,  suivant les cas (nombres de dimensions, 'types' des données stockées, etc.). Pour l'instant, nous allons créer une 'collection' de nombres; on parle de vecteur. Tout objet (variable, etc) contenant une donnée est appelé une structure de données et les vecteurs numériques sont les structures de données les plus simples dans R. Techniquement parlant, même une variable ne stockant qu'un simple chiffre est considérée comme étant un vecteur de taille 1."
 
 - Class: cmd_question
-  Output: "La façon la plus simple de créer un vecteur est d'utiliser la fonction 'c()'. (Fun fact, 'c' viendrait du mot anglais concatenate ou combine, signifiant combiner, associer). Pour créer un vecteur contenant les nombres 1.1, 0 et 3.14, on écrira ainsi 'c(1.1, 9, 3.14)'. Vous remarquerez deux choses ici: 1. le séparateur de décimal est le point (écriture à l'anglaise) et 2. les chiffres sont séparés par des virgules.  Ce deuxième point est important, la virgule servant à séparer différents éléments dans une fonction (suivant un ordre pré-établi ou non, nous le verrons par la suite). Essayez maintenant de créer un vecteur contenant ces trois chiffres et assignez-le à une variable 'z'."
+  Output: "La façon la plus simple de créer un vecteur est d'utiliser la fonction 'c()'. (Fun fact, 'c' viendrait du mot anglais concatenate ou combine, signifiant combiner, associer). Pour créer un vecteur contenant les nombres 1.1, 0 et 3.14, on écrira ainsi 'c(1.1, 9, 3.14)'. Vous remarquerez deux choses ici: "
+
+- Class: cmd_question
+  Output: "1. le séparateur de décimal est le point (écriture à l'anglaise) et 2. les chiffres sont séparés par des virgules.  Ce deuxième point est important, la virgule servant à séparer différents éléments dans une fonction (suivant un ordre pré-établi ou non, nous le verrons par la suite). Essayez maintenant de créer un vecteur contenant ces trois chiffres et assignez-le à une variable 'z'."
   CorrectAnswer: z = c(1.1, 9, 3.14)
   AnswerTests: any_of_exprs('z <- c(1.1, 9, 3.14)', 'z = c(1.1, 9, 3.14)')
   Hint: "Ecrire z = c(1.1, 9, 3.14) assignera le vecteur (1.1, 9, 3.14) a une nouvelle variable appelée 'z'. Ajouter les espaces entre les virgules n'est pas nécessaire mais facilite la lecture en rendant le code plus lisible, moins 'tassé'."
@@ -97,7 +100,7 @@
   Hint: "Tapez c(z, 555, z). Ne créez pas de nouvelle variable."
 
 - Class: cmd_question
-  Output: "les vecteurs numériques peuvent être utilisés dans des expressions arithmétiques. Tapez ceci pour voir ce que cela fait... 'z * 2 + 100'."
+  Output: "Les vecteurs numériques peuvent être utilisés dans des expressions arithmétiques. Tapez ceci pour voir ce que cela fait... 'z * 2 + 100'."
   CorrectAnswer: z * 2 + 100
   AnswerTests: omnitest(correctExpr='z * 2 + 100')
   Hint: "Entrez z * 2 + 100, sans affectation. Le symbole `*` est un caractère utilisé pour l'opérateur de multiplication."
@@ -111,9 +114,7 @@
     Pour d'autres opérations arithmétiques, nous utiliserons des fonctions spécifiques, comme la racine carré (square root en anglais) qui est accessible via la fonction sqrt()."
 
 - Class: cmd_question
-  Output: "Calculez la racine carré de 'z - 1' et assignez le résultat à une variable 'my_sqrt'.
-  (Une bonne pratique est de bannir le francais lorsque vous écrivez du code, et ce quelque soit le langage.
-  Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté de les utiliser dans vos affectations si vous écrivez en anglais.)"
+  Output: "Calculez la racine carré de 'z - 1' et assignez le résultat à une variable 'my_sqrt'. (Une bonne pratique est de bannir le francais lorsque vous écrivez du code, et ce quelque soit le langage. Les accents sont une véritable plaie en informatique, vous ne serez donc pas tenté-e de les utiliser dans vos affectations si vous écrivez en anglais.)"
   CorrectAnswer: my_sqrt = sqrt(z - 1)
   AnswerTests: any_of_exprs('my_sqrt <- sqrt(z - 1)', 'my_sqrt = sqrt(z - 1)')
   Hint: "Affectez le résultat de la fonction 'sqrt(z - 1)' à une variable appelée my_sqrt."
@@ -206,4 +207,4 @@
   Hint: "Tapez 'my'  (sans guillemets) puis appuyez sur la touche Tab et completer pour obtenir my_div."
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'R101' et entrez le code 'KING22/11/63' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon."
+  Output: "Sur Moodle, selectionnez le test 'R101' et entrez le code 'KING22/11/63' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

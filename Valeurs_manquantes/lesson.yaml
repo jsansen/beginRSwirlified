@@ -43,8 +43,8 @@
 - Class: mult_question
   Output: "Question surprise! On veut créer un vecteur contenant 1000 NA, quelle fonction utiliseriez-vous?"
   CorrectAnswer: rep
-  AnswerChoices: rep;rnorm;c;':'
-  AnswerTests: omnitest(correctVal=rep)
+  AnswerChoices: rep;rnorm;c
+  AnswerTests: omnitest(correctVal='rep')
   Hint: "Réfléchissez un peu, vous l'avez vu dans un précédent cours !"
 
 # Q8
@@ -127,4 +127,4 @@
   Hint: "Tapez Inf - Inf. Pouvez-vous prédire le résultat ?"
 
 - Class: text
-  Output: Sur Moodle, sélectionnez le test 'valeurs_manquantes' et entrez le code 'TNEVERTNOCduEDROHla' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon.
+  Output: Sur Moodle, sélectionnez le test 'valeurs_manquantes' et entrez le code 'TNEVERTNOCduEDROHla' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

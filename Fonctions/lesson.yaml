@@ -283,7 +283,7 @@
 
 # Q
 - Class: script
-  Output: "Ecrivons une nouvelle fonction mad_libs maitnenant. Assurez-vous de sauvegarder votre script avant de taper submit()."
+  Output: "Ecrivons une nouvelle fonction mad_libs maintenant. Assurez-vous de sauvegarder votre script avant de taper submit()."
   AnswerTests: test_func6()
   Hint: "Votre fonction devrait avoir trois sections: 1. capturer l'ellipse dans une fonction list(), 2. libérer les arguments de l'ellipse et les assigner à une ou plusieurs variables, 3. passer ces variables à la fonction paste()."
   Script: mad_libs.R
@@ -326,4 +326,4 @@
   Output: "Nous sommes arrivé au bout de notre cours sur les fonctions! A vous  maintenant d'improviser et d'écrire de nouvelles fonctions! et Rappelez-vous 'Un grand pouvoir implique de grandes responsabilités, jeune padawan!' -- Dumbledore, Le seigneur des Anneaux."
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'Fonctions' et entrez le code 'M4hsup_N0NS3NS' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon."
+  Output: "Sur Moodle, selectionnez le test 'Fonctions' et entrez le code 'M4hsup_N0NS3NS' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

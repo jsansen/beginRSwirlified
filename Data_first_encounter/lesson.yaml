@@ -130,4 +130,4 @@
   Output: "Dans cette leçon vous avez appris à avoir un premier aperçu et un début de compréhension des données et de leurs structures en utilisant des fonctions faisant partie des bases de R. Prendre quelques minutes pour faire cette observation à chaque fois que vous utilisez de nouvelles données est un bon réflexes qui pourra vous faire gagner du temps et vous évitera pas mal de frustration plus tard dans votre analyse. Evidemment, il vous faudra toujours rester vigilant à ce que vous observez et à bien comprendre vos données pour pouvoir correctement les appréhender... Ces fonctions vous simplifieront la tâche mais elles ne serviront à rien si vous les appliquez machinalement sans analyser les réponses qu'elles vous donnent."
 
 - Class: text
-  Output: Sur Moodle, selectionnez le test 'Data_encounter' et entrez le code 'Villeneuve20164RRiv4l' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon.
+  Output: Sur Moodle, selectionnez le test 'Data_encounter' et entrez le code 'Villeneuve20164RRiv4l' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

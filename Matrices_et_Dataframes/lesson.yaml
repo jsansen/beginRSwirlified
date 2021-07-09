@@ -12,7 +12,7 @@
 
 # Q1
 - Class: text
-  Output: "Ce cours va traiter les matrices et dataframes, des représentation 'rectangulaire'/tabulaire (tableau) de données, un peu à la façon de ce que permet de faire un tableur type calc ou excel."
+  Output: "Ce cours va traiter les matrices et dataframes, des représentations 'rectangulaire'/tabulaire (tableau) de données, un peu à la façon de ce que permet de faire un tableur type calc ou excel."
 
 
 # Q2
@@ -244,4 +244,4 @@
   Output: "Dans ce cours, vous avez appris les bases d'utilisation de deux des structures les plus couramment utilisées dans R: les matrices et les data frames. Il y a encore beaucoup de chose à apprendre les concernant et nous les verrons un peu plus tard dans le cours, notamment concernant les dataframe qui sont un incontournable du traitement de données en R."
 
 - Class: text
-  Output: 'Sur Moodle, sélectionnez le test "dataframes" et entrez le code "G4rrickhsalF4ll3N" (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon.'
+  Output: "Sur Moodle, sélectionnez le test 'dataframes' et entrez le code 'G4rrickhsalF4ll3N' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

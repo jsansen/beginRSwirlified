@@ -16,7 +16,7 @@
   Output: Attention, vue la variété des systèmes d'exploitation (linux, windows, mac) et des différences entre chaque, les résultats des commandes peuvent légèrement varier d'un ordinateur à un autre.
 #Q3
 - Class: text
-  Output: Cependant, il est important de comprendre que R fournit une API -Application Programming Interface- un ensemble de commandes) permettant d'interagir avec les fichiers afin que votre code fonctionne quelque soit le système d'exploitation.
+  Output: Cependant, il est important de comprendre que R fournit une API -Application Programming Interface- un ensemble de commandes) permettant d'interagir avec les fichiers afin que votre code fonctionne quelque soit le système d'exploitation et d'effectuer toutes les opérations que vous feriez à la souris (création, déplacement, renommage, suppression).
 #Q4
 - Class: cmd_question
   Output: A son éxecution, R considère qu'il se trouve quelque part dans votre hiérarchie de dossiers; on appelle ce dossier l'espace de travail (working directory dans la langue de Shakespeare). Vous pouvez identifier l'emplacement de cet espace de travail en utilisant la commande "getwd()".. essayez-la.
@@ -101,7 +101,7 @@
 - Class: cmd_question
   Output: Comme nous voulons effectuer toutes nos actions depuis le répértoire que nous venons de créer, il faut le déclarer comme étant le nouvel espace de travail. Pour cela, nous utiliserons la commande setwd() (pour "set working directory" qui se traduit en "définir l'espace de travail") avec le nouveau répértoire en argument. Attention à le fournir en tant que chaine de caractère (donc encadré par des guillemets doubles), il ne s'agit pas d'une variable !
   CorrectAnswer: setwd("test_dir")
-  AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/"), 'setwd("./test_dir"),'setwd("./test_dir/")')
+  AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/")', 'setwd("./test_dir")','setwd("./test_dir/")')
   Hint: Utilisez la fonction setwd("test_dir") pour définir ce répértoire comme notre nouvel espace de travail.
 
 #Q20
@@ -132,6 +132,24 @@
   CorrectAnswer: file.exists("mytest.R")
   AnswerTests: omnitest(correctExpr='file.exists("mytest.R")')
   Hint: "Utilisez file.exists('mytest.R') pour vérifier qu'un fichier existe."
+
+- Class: text
+  Output: "Considérez votre système (ordinateur) comme une hiérarchie de dossiers contenant des fichiers (c'est une structure arborescente ou les dossiers sont des branches et les fichiers des feuilles). Il est possible de naviguer dans l'arbre de votre système. Nous avons vu comment entrer dans un dossier (suivre une branche), et que l'on peut descendre dans les sous-branches (les sous-dossiers) pour accéder aux feuilles (les fichiers) mais il est tout aussi simple de remonter dans la hiérarchie ! Remonter d'un niveau se fait très simplement via '../'."
+
+- Class: cmd_question
+  Output: C'est une convention informatique, quelque soit le système. './' correspond au dossier en cours, '../' correspond au dossier précédent. Retournez dans le dossier précédent avec la commande setwd.
+  CorrectAnswer: setwd("../")
+  AnswerTests: any_of_exprs('setwd("..")', 'setwd("../")', 'setwd("./..")','setwd("./../")')
+  Hint: "Utilisez la fonction setwd('..') pour redéfinir le répértoire d'origine comme notre espace de travail."
+
+- Class: cmd_question
+  Output: Retournez dans le dossier test_dir avec la commande setwd.
+  CorrectAnswer: setwd("test_dir/")
+  AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/")', 'setwd("./test_dir")','setwd("./test_dir/")')
+  Hint: "Utilisez la fonction setwd('test_dir') pour redéfinir le répértoire d'origine comme notre espace de travail."
+
+- Class: text
+  Output: Pour information, vous pouvez très facilement composer un chemin relatif complexe. Ainsi "../../" permettra de remonter de deux niveaux dans la hiérarchie, et ainsi de suite.
 
 #Q25
 - Class: text
@@ -222,8 +240,7 @@
 # "It is often helpful to save the settings that you had before you    began an analysis and then go back to them at the end. This trick is    often used within functions; you save, say, the par() settings that    you started with, mess around a bunch, and then set them back to the    original values at the end. This isn't the same as what we have done    here, but it seems similar enough to mention."
 
 - Class: text
-  Output: "Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créé !"
-
+  Output: "Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créé ! Je ne présente pas içi les méthodes permettant de supprimer des fichiers et dossiers par mesure de sureté mais sachez que cela est totalement possible! Attention cependant, tout document et dossiers l'est complétement sans passer par la case 'Corbeille' donc.... 'Un grand pouvoir amène de grandes responsabilités'! "
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'fic_wd' et entrez le code 'GLUKHOVSKY2033' (en conservant les majuscules et sans guillemets !) cela vous octroira le badge associé à cette leçon."
+  Output: "Sur Moodle, selectionnez le test 'fic_wd' et entrez le code 'GLUKHOVSKY2033' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

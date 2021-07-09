@@ -7,8 +7,6 @@
   Version: 2.4.5
 
 
-
-
 - Class: text
   Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
 
@@ -85,7 +83,7 @@
   CorrectAnswer: sum(flips)
   AnswerTests: omnitest(correctExpr='sum(flips)')
   Hint: "sum(flips) additionnera tout les 1 et les 0, nous donnons, en toute logique, le nombre de 1 dans notre vecteur."
-  
+
 - Class: cmd_question
   Output: "Un lancer de piece fournit un résultat binaire (0 ou 1) et nous venons d'effectuer 100 essais indépendants (des lancer de dès), donc nous pourrions utiliser la fonction rbinom() pour simuler une variable aléatoire suivant la loi binomiale. Affichez la focumentation de la fonction rbinom."
   CorrectAnswer: ?rbinom
@@ -94,7 +92,7 @@
 
 - Class: text
   Output: "Chaque loi de distribution a une fonction r'something' (random 'quelque chose'), une fonction d'something' (pour density'something'), p'something' (pour probability) et q'something' (pour quantile). Dans ce cours, nous nous interesserons essentiellement aux fonctions random mais je vous encourage à expérimenter avec les autres de votre côté."
- 
+
 - Class: cmd_question
   Output: "Une variable aléatoire binomiale représentent le nombre de succès (face) lors de tirages aléatoires indépendants (les lancers de dès). Ainsi, nous pouvons générer une varaible aléatoire qui représente le nombre de face dans 100 lancers de notre pièce truquée en utilisant la commande rbinom(1, size=100, prob=0.7). Remarquez que nous n'avons besoin de spécifier que la probabilité des succès (face) et non pas la probabilité des échecs (pile). Essayez cela dès maintenant."
   CorrectAnswer: rbinom(1, size = 100, prob = 0.7)
@@ -180,4 +178,4 @@
   Output: "La simulation est tout un pan de la statistique et nous n'avons fait qu'effleurer la surface des possibilités qu'offre R dans ce domaine. Si cela vous intéresse, je ne peux que vous encourager à explorer un peu plus les fonctionnalités proposées par R dans ce domaine."
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'Lois_simulation' et entrez le code '1rs2nSc3ttC4rd' (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon."
+  Output: "Sur Moodle, selectionnez le test 'Lois_simulation' et entrez le code '1rs2nSc3ttC4rd' (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."

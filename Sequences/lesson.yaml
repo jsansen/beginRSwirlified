@@ -19,7 +19,7 @@
 
 # Q3
 - Class: cmd_question
-  Output: "Cela nous donne tout les entiers [1:20] (depuis 1, jusquà 20 inclu). Nous pourrions également l'utiliser pour créer une séquence de nombres réels. Par exemple, essayez d'écrire pi:10."
+  Output: "Cela nous donne tout les entiers [1:20] (depuis 1, jusqu'à 20 inclu). Nous pourrions également l'utiliser pour créer une séquence de nombres réels. Par exemple, essayez d'écrire pi:10."
   CorrectAnswer: pi:10
   AnswerTests: omnitest(correctExpr='pi:10')
   Hint: "Entrez pi:10 et voyez le résultat. Pi est une constante pré-définie dans R qui prend en valeur 3.1415...."
@@ -99,7 +99,7 @@
   Output: "Une autre option est d'utiliser seq(along.with = my_seq). Essayez!"
   CorrectAnswer: seq(along.with = my_seq)
   AnswerTests: omnitest(correctExpr='seq(along.with = my_seq)')
-  Hint: "Tapez seq(along.with = my_seq). Remarquez que nous utilisons toujours la même fonction seq(), mais avec un nouvel argument cet fois-ci, appelé 'along.with'. Cela indique à R que vous voulez une sequence de longueur identique à celle fournit en argument.(ici, la sequence my_seq). Rappelez vous que vous pouvez tapez ?seq si vous aviez besoin de détails sur la fonction seq()."
+  Hint: "Tapez seq(along.with = my_seq). Remarquez que nous utilisons toujours la même fonction seq(), mais avec un nouvel argument cet fois-ci, appelé 'along.with'. Cela indique à R que vous voulez une sequence de longueur identique à la séquence ou au vecteur indiqué en argument (ici, la séquence my_seq). Rappelez vous que vous pouvez tapez ?seq si vous aviez besoin de détails sur la fonction seq()."
 
 
 # Q17
@@ -144,4 +144,4 @@
 
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'Sequences' et entrez le code 'HamblyD4rW4rtH' (en conservant les majuscules et avec guillemets !) cela vous octroira le badge associé à cette leçon."
+  Output: "Sur Moodle, selectionnez le test 'Sequences' et entrez le code 'HamblyD4rW4rtH' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
