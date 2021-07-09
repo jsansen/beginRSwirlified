@@ -1,0 +1,33 @@
+Questions en vrai/faux
+intégration moodle ok.
+
+
+1.a Il est possible de faire une affectation via le symbole "<-"
+1.b Les affections ne fonctionnent qu'avec "="
+1.c "=" permet de demander le résultat d'une opération mathématique
+
+2.a Il n'est pas possible d'affecter du texte à une variable
+2.b une variable ne peut représenter qu'une variable numérique
+2.c une variable peut représenter tout type de données (matrice, tableau, nombres, textes, etc)
+
+3.a Imaginons le code suivant: y=5+7; x. x vaut 12
+3.b Imaginons le code suivant: y=5+7; x=y; x vaut 12
+3.c Imaginons le code suivant: y=5+7. y retournera l'expression 5+7
+3.d Imaginons le code suivant: y=5+7. y retournera le résultat de l' expression 5+7 (12)
+
+4.a y=5+7 produira un résultat différent de y = 5 + 7.
+4.b y=5+7 produira un résultat différent de "y = 5 + 7".
+4.c y=5+7 permet d'afficher le résultat de l'opération 5+7
+
+5.a c() est une fonction
+5.b c() permet d'instancier une variable
+5.c c() permet de créer un vecteur
+5.d c() permet de créer une chaine de caractère ( raccourci pour character()  )
+
+6.a 5 peut-être traité en R comme un vecteur de taille 1
+6.b Le recyclage de vecteur avec R permet d'effectuer des opérations entre deux vecteurs de taille différentes
+6.c Le recyclage de vecteur avec R nécessite d'avoir deux vecteurs de taille identique
+
+7.a l'opération c(1,2,3) * 5 donnera 30
+7.b l'opération c(1,2,3) * 5 donnera un vecteur [5,10,15]
+7.c l'opération c(1,2,3) * 5 ne fonctionnera pas.

@@ -1,0 +1,26 @@
+Questions en vrai/faux
+intégration moodle ok.
+
+
+1.a L'utilisation de l'espace de travail ne fonctionnera qu'avec un système windows
+1.b Définir un espace de travail revient à définir au sein de R, le dossier à partir duquel on souhaite travailler.
+1.c Il est possible de travailler avec R avec l'espace de travail par défaut
+
+2.a Il est possible de créer des dossiers et fichier avec R
+2.b Il est impossible de supprimer des dossiers et fichiers avec R
+
+3 R fournit des sécurité pour la manipulation des fichiers et dossiers de l'ordinateur
+
+4.a R ne permet d'accéder qu'a certains dossiers dans le système, c'est un système de sécurité.
+4.b Il est possible d'accéder à n'importe quel dossier de notre système; à nos risques et périls.
+
+5.a les commandes list.files() et dir() sont équivalentes
+5.b list.dir() et list.files() sont équivalentes
+
+6.a La commande setwd() permettra de connaitre quel est l'espace de travail courant
+6.b La commande getwd() permettra de connaitre quel est l'espace de travail courant
+
+7.a considérons la hiérarchie suivante: XXXX le dossier XX étant l'espace de travail courant. La commande file.info(X) fournira les informations du document X (mettre le bon chemin)
+7.b considérons la hiérarchie suivante: XXXX le dossier XX étant l'espace de travail courant. La commande file.info(X) fournira les informations du document X (ne pas mettre le bon chemin)
+7.c considérons la hiérarchie suivante: XXXX le dossier XX étant l'espace de travail courant. La commande setwd(XX) permettra de définir l'espace de travail au dossier XX. (mettre le bon chemin)
+7.d considérons la hiérarchie suivante: XXXX le dossier XX étant l'espace de travail courant. La commande setwd(XX) permettra de définir l'espace de travail au dossier XX. (ne pas mettre le bon chemin)

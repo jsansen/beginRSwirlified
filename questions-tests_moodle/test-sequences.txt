@@ -1,0 +1,29 @@
+Questions en vrai/faux
+intégration moodle ok.
+
+1.a L'opérateur ':' permettra de faire une séquence allant du point de départ au point d'arriver avec un incrément de 1.
+1.b Il est possible de paramétrer l'incrément de l'opérateur ':'
+
+2.a La commande 1.5:1.8 donnera [1.5, 1.6, 1.7, 1.8]
+2.b La commande 1.5:1.8 donnera un vecteur de 4
+2.c La commande 1.5:1.8 donnera un vecteur de 1
+
+3.a Il n'est pas possible de combiner l'operateur : avec d'autres fonctions
+3.b l'operateur : ne permet de créer que des séquences croissantes à partir de deux entiers
+3.c
+
+4.a la commande seq() ne peut prendre que deux arguments, le point de départ et le point d'arrivé de la séquence voulue
+4.b La commande seq() permet de paramétrer le nombre d'éléments dans la séquence ou l'incrément utilisé
+4.c La commande seq() ne permet pas de paramétrer le nombre d'éléments dans la séquence
+
+5.a  along.with permet d'indiquer par un entier la taille de la séquence voulue
+5.b seq(1,10,length=20) permet de définir le nombre d'éléments dans la séquence finale
+5.c seq(1,10,along.with=5) permettra d'obtenir une séquence de 5 éléments.
+
+6.a les fonctions rep() et seq() sont équivalentes
+6.b rep() permet de reproduire une opération
+6.c il est possible de paramétrer le type de répétition avec la commande rep
+
+7.a les arguments times et each sont des paramètres de la fonction rep()
+7.b l'argument times permet de répéter à un interval de temps régulier
+7.c Pour répliquer une séquence, la fonction replicate() sera la plus adaptée

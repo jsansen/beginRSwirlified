@@ -1,0 +1,32 @@
+Questions en vrai/faux
+A COMPLETER
+intégration moodle A FAIRE.
+
+1.a Un vecteur ne peut contenir que des nombres oui/non
+1.b Un vecteur ne comporte qu'un seul type de données oui/non
+1.c Il n'existe pas de vecteurs atomiques oui/non
+
+2.a un vecteur atomique se construit via la commande vect() oui/non
+2.b un vecteur s'obtient par concaténation de valeurs oui/non
+2.c la fonction c() permet de concaténer/combiner des valeurs pour créer un vecteur oui/non
+
+3.a l'opération mon_vecteur < 10 permet de vérifier si le vecteur "mon_vecteur" contient moins de 10 éléments oui/non
+3.b l'opération mon_vecteur < 10 permet de vérifier que la moyenne du vecteur est inférieur à 10
+3.c l'opération mon_vecteur < 10 permet de vérifier que la somme du vecteur est inférieur à 10
+3.d l'opération mon_vecteur < 10 permet de vérifier pour chaque élément du vecteur s'il est inférieur à 10
+
+4.a la fonction paste permet de coller l'un à l'autre les éléments d'un vecteur de chaine de caractère
+4.b l'argument collapse de la fonction pastee permet de définir le texte qui séparera les éléments du vecteur
+4.c la fonction paste ne prend que des vecteurs de chaines de caractères en argument oui/non (il fait une conversion)
+
+5.a
+5.b
+5.c
+
+6.a
+6.b
+6.c
+
+7.a
+7.b
+7.c
