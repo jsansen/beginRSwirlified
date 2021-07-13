@@ -54,6 +54,7 @@ suivre les indications disponibles sur le site de [swirlify](http://swirlstats.c
 1. Fichiers_et_espace_de_travail
 1. Sequences
 1. Vecteurs
+    - a modifier/compléter  (voir section concernée ci dessous)
 1. Sous-ensembles
 1. Matrices_et_Dataframes
 1. Logique
@@ -76,10 +77,32 @@ Trouver, installer, charger rechercher et utiliser une bibliothèque ext.
 
 ## Données et typage ##
 
-Manipulations et casting
+- différents types de base
+    - character
+    - numeric (real or decimal)
+    - integer
+    - logical
+    - complex
+
+structures de bases:
+    - vecteurs
+        - atomiques (monotypes)
+        - listes (types multiples)
+    - listes
+    - Matrices
+    - dataframes
+    - facteurs
+
+- différence vecteur/matrice/listes/array/dataframe
+- conversions (cast)
 
 ## Indexation de données ##
-Exercices pratiques d'accès à des vecteurs, listes, dataframes et matrices.
+Exercices pratiques
+
+- accès à des données dans des vecteurs
+- accès à des données dans des listes
+- accès à des données dans des matrices
+- accès à des données dans des dataframes
 
 > acces aux lignes, accès aux colonnes, utilisation de which, etc
 
@@ -120,6 +143,14 @@ Ici on voit la création de séquences et les variants de création.
 ## Vecteurs ##
 
 Ici on parle de vecteurs numérique(un peu), vecteur booléen et de manipulation de vecteurs de (chaînes de )caractères, methode paste etc.
+
+### TODO
+
+- ajouter une partie sur la concatenation de vecteurs
+- ajouter une partie sur les listes
+    - combinaisons de vecteurs de types et longueurs différentes
+    - comment les créer
+    - point rapide sur comment y accéder (avec ou sans nommage) -> retravaillé dans la partie données et indexation
 
 ## Valeurs manquantes ##
 

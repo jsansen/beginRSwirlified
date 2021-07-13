@@ -114,7 +114,7 @@
 
 # Q20
 - Class: text
-  Output: Ne vous inquietez pas si vous trouvez ces tests un peu "difficile", travailler avec les operations logiques n'est pas toujours facile, et demande un peu de temps pour s'habituer. Il faut "se poser" et prendre le temps d'évaluer DANS LE BON ORDRE les affirmations proposées. Courage !
+  Output: Ne vous inquiétez pas si vous trouvez ces tests un peu "difficile", travailler avec les opérations logiques n'est pas toujours facile, et demande un peu de temps pour s'habituer. Il faut "se poser" et prendre le temps d'évaluer DANS LE BON ORDRE les affirmations proposées. Courage !
 
 # Q21
 - Class: text
@@ -143,15 +143,15 @@
   Output: Tapez paste(my_char, collapse = " "). Assurez-vous bien qu'il y ai un espace entre les guillements de l'argument  `collapse`.
   CorrectAnswer: paste(my_char, collapse = " ")
   AnswerTests: omnitest(correctExpr='paste(my_char, collapse = " ")')
-  Hint: Utilisez paste(my_char, collapse = " ") pour coller les motds du vecteur en un seul élément. Il devrait n'y avoir qu'un seul espace séparant les mots.
+  Hint: Utilisez paste(my_char, collapse = " ") pour coller les mots du vecteur en un seul élément. Il devrait n'y avoir qu'un seul espace séparant les mots.
 
 # Q26
 - Class: text
-  Output: L'argument `collapse`de la fonction paste() indique à R que lorsque l'on fera la jointure/jonction des éléments entre eux, on veut intégrer l'espace entre chacun d'entre eux.
+  Output: "L'argument `collapse`de la fonction paste() indique à R que lorsque l'on fera la jointure/jonction des éléments entre eux, on veut intégrer l'espace entre chacun d'entre eux."
 
 # Q27
 - Class: text
-  Output: Il semblerait que nous ayons oublié quelque chose à cette chaîne de caractère.... votre nom évidemment!
+  Output: "Il semblerait que nous ayons oublié quelque chose à cette chaîne de caractère.... votre nom évidemment!"
 
 # Q28
 - Class: cmd_question
