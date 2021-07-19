@@ -20,7 +20,7 @@
   Output: "Certaines 'écoles' (dans le sens école de pensée), estiment que cette approche --présentation des fonctionnalités de bases puis des techniques plus avancées-- va dans le contresens de la logique et que nous devrions commençer par apprendre le fonctionnement et les concepts de la bibliothèque ggplot2. Vous pouvez vous réferer à cet article pour voir pourquoi: http://varianceexplained.org/r/teach_ggplot2_to_beginners/ for an outline of this view."
 
 - Class: cmd_question
-  Output: "Chargez les données cars via la commande data(cars). La commande data() permet de charger des données pré-chargées dans R, soit de base, soit via une bibliothèue importée."
+  Output: "Chargez les données cars via la commande data(cars). La commande data() permet de charger des données pré-chargées dans R, soit de base, soit via une bibliothèque importée."
   CorrectAnswer: data(cars)
   AnswerTests: omnitest(correctExpr='data(cars)')
   Hint: "Tapez data(cars) pour charger les données."

@@ -213,4 +213,73 @@
   Output: Nous discuterons un peu plus de la conversion de type dans un autre cours, mais comprenez juste pour l'instant que les nombres 1, 2, 3, 4 sont transformé en caractères '1', '2', '3' et '4'.
 
 - Class: text
+  Output: "Dans R, les listes se comportent comme des conteneurs. Contraitement aux vecteurs, une liste peut contenir différents types de données, elle n'est pas restreinte à un seul type."
+
+- Class: text
+  Output: "Les listes sont parfois appelées sous le termes génériques vecteurs mais ne vous y trompez pas, il s'agit bien de deux structures différentes. Ainsi, une liste peut contenir d'autres listes, de tailles identiques ou non, ce qui les rends très polyvalentes. Ces propriétés les rendent très différentes des vecteurs atomiques que vous avez pu manipuler jusqu'à présent."
+
+- Class: cmd_question
+  Output: "On peut créer une liste en utilisant la fonction list(). Créez une liste appelée 'x' contenant les éléments suivants (dans cet ordre): 1:3, 'a', TRUE, 1+4i"
+  CorrectAnswer: x <- list(1:3, 'a', TRUE, 1+4i)
+  AnswerTests: omnitest(correctExpr="x <- list(1:3, 'a', TRUE, 1+4i)")
+  Hint: tapez x <- list(1:3, 'a', TRUE, 1+4i)  pour créer la liste x.
+
+- Class: cmd_question
+  Output: "Vérifions que la liste contienne bien nos éléments. Observez la liste 'x' créée juste au dessus."
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr='x')
+  Hint: tapez 'x' pour observer la liste et son contenu.
+
+- Class: text
+  Output: "Comme vous vous en doutez, la liste créée devrait contenir 4 types de données différents: entier, chaine de caractère, booléen et complexes."
+
+- Class: cmd_question
+  Output: "Vérifions cela: Tapez la commande suivante: class(x[4]) pour voir le type de l'élément en 4ème position."
+  CorrectAnswer: class(x[4])
+  AnswerTests: omnitest(correctExpr='class(x[4])')
+  Hint: tapez class(x[4]) pour observer le type de l'élément en 4e position de notre liste x.
+
+- Class: text
+  Output: "Hey! Il nous dit qu'il s'agit d'une liste !..... et oui, une liste répertorie les éléments sous formes de listes! pour accéder à l'élément visé, il nous faudra utiliser les doubles crochets."
+
+
+- Class: cmd_question
+  Output: "Réessayons cela, en tapant la commande adaptée cette-fois ci. Tapez la commande suivante: class(x[[4]]). Voyez comme les crochets ont été doublé pour permettre d'accéder aux éléments contenus."
+  CorrectAnswer: class(x[[4]])
+  AnswerTests: omnitest(correctExpr='class(x[[4]])')
+  Hint: tapez class(x[[4]]) pour observer le type de l'élément en 4e position de notre liste x.
+
+- Class: text
+  Output: "Vous le constatez par vous-même cela permet d'accéder à l'élément, et nous obtenons bien un type 'complexe' pour l'élément 1+4i. Nous reviendrons sur cette notion de double crochets un peu plus tard dans le cours sur l'indexation, qui a aussi son utilité avec d'autres formats, notamment les vecteurs présentés précdemment."
+
+
+- Class: cmd_question
+  Output: "Observons maintenant les tailles des éléments contenu dans la liste. En utilisant la commande length, vérifions que la suite crée en première position est bien constituée de 3 éléments. Attention, n'oubliez pas d'utiliser les doubles crochets!"
+  CorrectAnswer: length(x[[1]])
+  AnswerTests: omnitest(correctExpr='length(x[[1]])')
+  Hint: tapez length(x[[1]]) pour afficher la taille du premier élement de notre liste.
+
+- Class: cmd_question
+  Output: "Sachez également qu'il est possible de nommer les variables répertoriées dans une liste. Créez une nouvelle liste, y contenant les mêmes éléments mais que nous nommerons cette fois-ci. Ecrivez y = list(a=1:3, b='a', c=TRUE, d=1+4i)."
+  CorrectAnswer: y = list(a=1:3, b='a', c=TRUE, d=1+4i)
+  AnswerTests: omnitest(correctExpr="y = list(a=1:3, b='a', c=TRUE, d=1+4i)")
+  Hint: "tapez 'y = list(a=1:3, b='a', c=TRUE, d=1+4i)'."
+
+- Class: cmd_question
+  Output: "Observez maintenant le contenu de la variable y."
+  CorrectAnswer: 'y'
+  AnswerTests: omnitest(correctExpr='y')
+  Hint: "tapez 'y' pour en observer le contenu."
+
+- Class: text
+  Output: "On peut voir les différents éléments contenu dans la liste y et les noms associés. Ainsi y$a nous donnera la suite 1, 2, 3; y$b nous donnera 'a', et ainsi de suite."
+
+
+- Class: cmd_question
+  Output: "Affichez le 4e élément, de type complexe, répertorié sous le nom 'd' (sans guillemets)."
+  CorrectAnswer: y$d
+  AnswerTests: omnitest(correctExpr='y$d')
+  Hint: "tapez y$d pour en observer le contenu."
+
+- Class: text
   Output: Sur Moodle, selectionnez le test "Vecteurs" et entrez le code "Shangri6LALalAla" (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."
