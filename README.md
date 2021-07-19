@@ -52,7 +52,7 @@ suivre les indications disponibles sur le site de [swirlify](http://swirlstats.c
 
 1. R_101
 1. Fichiers_et_espace_de_travail
-1. Sequences
+1. Suites
 1. Vecteurs
     - a modifier/compléter  (voir section concernée ci dessous)
 1. Sous-ensembles
@@ -136,9 +136,9 @@ Comme son nom l'indique, ce cours est à faire en premier et donne la base de R.
 
 Içi, nous chercherons a travailler sur la notion d'espace de travail et la manipulation des fichiers. Cela est primordial à la bonne compréhension de la façon dont travaille R et comment il interprète votre système, comment lui faire ouvrir un fichier et naviguer dans votre espace de fichiers (votre ordinateur).
 
-## Sequences ##
+## Suites ##
 
-Ici on voit la création de séquences et les variants de création.
+Ici on voit la création de suites et les variants de création.
 
 ## Vecteurs ##
 
