@@ -10,13 +10,13 @@
   Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
 
 - Class: text
-  Output: Dans cette leçon, vous allez apprendre comment examiner votre espace de travail local dans R et commencer à explorer la relation entre votre espace de travail et le système de fichier de votre ordinateur.
+  Output: Dans cette leçon, vous allez apprendre comment examiner votre espace de travail local dans R et commencer à explorer la relation entre votre espace de travail et le système de fichiers de votre ordinateur.
 #Q2
 - Class: text
   Output: Attention, vue la variété des systèmes d'exploitation (linux, windows, mac) et des différences entre chaque, les résultats des commandes peuvent légèrement varier d'un ordinateur à un autre.
 #Q3
 - Class: text
-  Output: Cependant, il est important de comprendre que R fournit une API -Application Programming Interface- un ensemble de commandes) permettant d'interagir avec les fichiers afin que votre code fonctionne quelque soit le système d'exploitation et d'effectuer toutes les opérations que vous feriez à la souris (création, déplacement, renommage, suppression).
+  Output: Cependant, il est important de comprendre que R fournit une API (Application Programming Interface- un ensemble de commandes) permettant d'interagir avec les fichiers afin que votre code fonctionne quel que soit le système d'exploitation et d'effectuer toutes les opérations que vous feriez à la souris (création, déplacement, renommage, suppression).
 #Q4
 - Class: cmd_question
   Output: A son éxecution, R considère qu'il se trouve quelque part dans votre hiérarchie de dossiers; on appelle ce dossier l'espace de travail (working directory dans la langue de Shakespeare). Vous pouvez identifier l'emplacement de cet espace de travail en utilisant la commande "getwd()".. essayez-la.
@@ -26,14 +26,14 @@
 
 #Q5
 - Class: cmd_question
-  Output: Lister tous les 'éléments' présents dans votre espace de travail en utilisant la commande 'ls()'. Ceux-ci sont différents des fichiers et dossiers de votre système mais représentent les élements utilisable dans R.
+  Output: Lister tous les 'éléments' (les variables) présents dans votre espace de travail (appelé 'environment' sous Rstudio) en utilisant la commande 'ls()'. Ceux-ci sont différents des fichiers et dossiers de votre système mais représentent les élements utilisables dans R.
   CorrectAnswer: ls()
   AnswerTests: omnitest(correctExpr='ls()')
   Hint: Ecrivez ls() pour voir tout les objets accessibles dans votre espace de travail.
 
 #Q6
 - Class: text
-  Output: Certaines de ces commandes sont équivalentes à celles utilisées dans un terminal Linux ou Mac, tout deux étant basé sur un système Unix. Windows a un fonctionnement un peu différent.
+  Output: Certaines de ces commandes sont équivalentes à celles utilisées dans un terminal Linux ou Mac, tous deux étant basés sur un système Unix. Windows a un fonctionnement un peu différent.
 
 #Q7
 - Class: cmd_question
@@ -63,14 +63,14 @@
 
 #Q11
 - Class: text
-  Output: Une des partie les plus utiles d'une fiche de documentation est la section "See Also" (avec les sections Description, Arguments, Details et Examples... oui, tout est utile dans une fiche de documentation :-) . Lisez avec attention la section "See also" pour la commande list.files. Certaines des fonctions mentionnées seront utilisées plus loin dans le cours.
+  Output: Une des parties les plus utiles d'une fiche de documentation est la section "See Also" (avec les sections Description, Arguments, Details et Examples... oui, tout est utile dans une fiche de documentation :-) . Lisez avec attention la section "See also" pour la commande list.files. Certaines des fonctions mentionnées seront utilisées plus loin dans le cours.
 #Q12
 - Class: text
-  Output: Une fonction peut s'utiliser telle quelle, sans arguments spécifiques (comme nous l'avons fait pour utiliser les fonction list.files() ou dir()) ou s'utiliser avec des arguments, c'est-à-dire en lui fournissant des données complémentaires à utiliser. C'est par exemple ce que nous avons fait lorsque nous avons créer un vecteur; nous avons utiliser une fonction (c()) a qui nous avons fourni un ou plusieurs arguments (une valeur ou un ensemble de données), comme dans c(9) (ou 9 est un nombre fourni en argument) ou encore c(1,2,3) (ou 1, 2 et 3 sont 3 arguments fournis à la fonction).
+  Output: Une fonction peut s'utiliser telle quelle, sans arguments spécifiques (comme nous l'avons fait pour utiliser les fonction list.files() ou dir()) ou s'utiliser avec des arguments, c'est-à-dire en lui fournissant des données complémentaires à utiliser. C'est par exemple ce que nous avons fait lorsque nous avons créé un vecteur; nous avons utilisé une fonction (c()) à qui nous avons fourni un ou plusieurs arguments (une valeur ou un ensemble de données), comme dans c(9) (ou 9 est un nombre fourni en argument) ou encore c(1,2,3) (ou 1, 2 et 3 sont 3 arguments fournis à la fonction).
 
 #Q13
 - Class: text
-  Output: Chaque fonction a ses spécificités, certaines s'utilisent sans arguments, d'autres avec, certaines ont des arguments obligatoires tandis que pour d'autres, les arguments sont optionnels, cela varie d'une fonction à une autre. Vous pouvez utiliser la fonction args() pour obtenir le détail des arguments qu'une fonction peut (ou doit s'ils sont obligatoires) utiliser. Pour cela, vous ajouterez le nom de la fonction dont vous voulez plus d'information en argument.
+  Output: Chaque fonction a ses spécificités, certaines s'utilisent sans arguments, d'autres avec, certaines ont des arguments obligatoires tandis que pour d'autres, les arguments sont optionnels, cela varie d'une fonction à une autre. Vous pouvez utiliser la fonction args() pour obtenir le détail des arguments qu'une fonction peut (ou doit s'ils sont obligatoires) utiliser. Pour cela, vous ajouterez le nom de la fonction dont vous voulez plus d'informations en argument.
 
 #Q14
 - Class: cmd_question
@@ -90,7 +90,7 @@
   Output: Nous utiliserons cette variable pour rétablir l'espace de travail à son emplacement initial à la fin de la leçon.
 
 - Class: cmd_question
-  Output: Utilisez dir.create() pour créer un répértoire (dossier) dans l'espace de travail courant. Vous appellerez ce dossier "test_dir".
+  Output: Utilisez dir.create() pour créer un répértoire (dossier) dans l'espace de travail courant. Vous appellerez ce dossier "test_dir". Attention à le fournir en tant que chaine de caractère (donc encadré par des guillemets doubles), il ne s'agit pas d'une variable !
   CorrectAnswer: dir.create("test_dir")
   AnswerTests: omnitest(correctExpr='dir.create("test_dir")')
   Hint: Ecrivez dir.create("test_dir") pour créer le dossier test_dir dans l'espace de travail.
@@ -99,8 +99,7 @@
   Output: Tout ce que nous allons faire dans la suite de cette leçon sera fait dans ce répértoire, nous pourrons ainsi le supprimer à la fin de la leçon.
 
 - Class: cmd_question
-  Output: Comme nous voulons effectuer toutes nos actions depuis le répértoire que nous venons de créer, il faut le déclarer comme étant le nouvel espace de travail. Pour cela, nous utiliserons la commande setwd() (pour "set working directory" qui se traduit en "définir l'espace de travail") avec le nouveau répértoire en argument. Attention à le fournir en tant que chaine de caractère (donc encadré par des guillemets doubles), il ne s'agit pas d'une variable !
-  CorrectAnswer: setwd("test_dir")
+  Output: Comme nous voulons effectuer toutes nos actions depuis le répértoire que nous venons de créer, il faut le déclarer comme étant le nouvel espace de travail. Pour cela, nous utiliserons la commande setwd() (pour "set working directory" qui se traduit en "définir l'espace de travail") avec le nouveau répértoire en argument.
   AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/")', 'setwd("./test_dir")','setwd("./test_dir/")')
   Hint: Utilisez la fonction setwd("test_dir") pour définir ce répértoire comme notre nouvel espace de travail.
 
@@ -115,7 +114,7 @@
   Hint: file.create("mytest.R") devrait très bien fonctionner!
 
 - Class: mult_question
-  Output: "Ce devrait être le seul fichier présent dans ce dossier. Attention, petit quizz: Quelle commande utiliseriez-vous pour vérifier cela?"
+  Output: "Ce devrait être le seul fichier présent dans ce dossier. Attention, petit quizz: quelle commande utiliseriez-vous pour vérifier cela?"
   CorrectAnswer: list.files()
   AnswerChoices: ls();getwd();list.files()
   AnswerTests: omnitest(correctVal='list.files()')
@@ -134,13 +133,13 @@
   Hint: "Utilisez file.exists('mytest.R') pour vérifier qu'un fichier existe."
 
 - Class: text
-  Output: "Considérez votre système (ordinateur) comme une hiérarchie de dossiers contenant des fichiers (c'est une structure arborescente ou les dossiers sont des branches et les fichiers des feuilles). Il est possible de naviguer dans l'arbre de votre système. Nous avons vu comment entrer dans un dossier (suivre une branche), et que l'on peut descendre dans les sous-branches (les sous-dossiers) pour accéder aux feuilles (les fichiers) mais il est tout aussi simple de remonter dans la hiérarchie ! Remonter d'un niveau se fait très simplement via '../'."
+  Output: "Considérez votre système (ordinateur) comme une hiérarchie de dossiers contenant des fichiers (c'est une structure arborescente où les dossiers sont des branches et les fichiers des feuilles). Il est possible de naviguer dans l'arbre de votre système. Nous avons vu comment entrer dans un dossier (suivre une branche), et que l'on peut descendre dans les sous-branches (les sous-dossiers) pour accéder aux feuilles (les fichiers) mais il est tout aussi simple de remonter dans la hiérarchie ! Remonter d'un niveau se fait très simplement via '../'."
 
 - Class: cmd_question
-  Output: C'est une convention informatique, quelque soit le système. './' correspond au dossier en cours, '../' correspond au dossier précédent. Retournez dans le dossier précédent avec la commande setwd.
+  Output: C'est une convention informatique, quel que soit le système. './' correspond au dossier en cours, '../' correspond au dossier précédent. Retournez dans le dossier précédent avec la commande setwd.
   CorrectAnswer: setwd("../")
   AnswerTests: any_of_exprs('setwd("..")', 'setwd("../")', 'setwd("./..")','setwd("./../")')
-  Hint: "Utilisez la fonction setwd('..') pour redéfinir le répértoire d'origine comme notre espace de travail."
+  Hint: "Utilisez la fonction setwd('..') pour redéfinir le répértoire d'origine comme espace de travail."
 
 - Class: cmd_question
   Output: Retournez dans le dossier test_dir avec la commande setwd.
@@ -157,13 +156,13 @@
 
 
 - Class: cmd_question
-  Output: "Vous pouvez accéder aux informations technique du fichier en utilisant la commande file.info(). A vous!"
+  Output: "Vous pouvez accéder aux informations techniques du fichier 'mytest.R' en utilisant la commande file.info(). A vous!"
   CorrectAnswer: file.info("mytest.R")
   AnswerTests: omnitest(correctExpr='file.info("mytest.R")')
   Hint: "file.info('mytest.R') devrait faire l'affaire..."
 
 - Class: text
-  Output: "Sachez également que les commandes vues ici pour un fichier ou un dossier (ex. file.exists(), dir.create(), etc.) sont utilisable dans les deux cas, pour les fichiers (via file.***) et les dossiers (via dir.***)."
+  Output: "Sachez également que les commandes vues ici pour un fichier ou un dossier (ex. file.exists(), dir.create(), etc.) sont utilisables dans les deux cas, pour les fichiers (via file.***) et les dossiers (via dir.***)."
 
 - Class: text
   Output: "Vous pouvez utiliser l'opérateur $ (exemple file.info('mytest.R')$mode )pour accéder à des informations spécifique. (nous reviendrons plus tard sur cet opérateur $, il est beaucoup utilisé)"
@@ -172,10 +171,10 @@
   Output: "Changez le nom du fichier 'mytest.R' en 'mytest2.R' en utilisant la commande file.rename(). N'hésitez pas à regarder la documentation pour savoir comment utiliser cette commande!"
   CorrectAnswer: file.rename("mytest.R", "mytest2.R")
   AnswerTests: any_of_exprs('file.rename("mytest.R", "mytest2.R")', 'file.rename(from = "mytest.R", to = "mytest2.R")')
-  Hint: "La commande est file.rename('mytest.R', 'mytest2.R'). Pensez à regarder la fiche de documentation et, si le contenu est trop obscure ou peu clair, n'oubliez pas qu'internet est fait pour ça!"
+  Hint: "La commande est file.rename('mytest.R', 'mytest2.R'). Pensez à regarder la fiche de documentation et, si le contenu est trop obscur ou peu clair, n'oubliez pas qu'internet est fait pour ça!"
 #Q30
 - Class: text
-  Output: "Votre système d'exploitation vous fournit des outils plus simple pour ce type de tâches mais être en capacité de les effectuer automatiquement et programmatiquement est toujours utile."
+  Output: "Votre système d'exploitation vous fournit des outils plus simples pour ce type de tâches mais être en capacité de les effectuer automatiquement et programmatiquement est toujours utile."
 
 - Class: mult_question
   Output: Pourrions-nous supprimer le document mytest.R ?
@@ -195,7 +194,7 @@
   Hint: "file.copy('mytest2.R', 'mytest3.R') works."
 
 - Class: text
-  Output: "Vous devriez avoir désormais 2 fichiers dans le répértoire. Encore une fois, ce type d'opération se fait simplement via votre système d'exploitation mais est plus simple a effectuer par programmation lorsque l'on doit manipuler des dizaines/centaines de documents."
+  Output: "Vous devriez avoir désormais 2 fichiers dans le répértoire. Encore une fois, ce type d'opérations se fait simplement via votre système d'exploitation mais est plus simple à effectuer par programmation lorsque l'on doit manipuler des dizaines/centaines de documents."
 #You now have two files in the current directory. That may not seem very interesting. But what if you were working with dozens, or millions,    of individual files? In that case, being able to programatically act on    many files would be absolutely necessary. Don't forget that you can,    temporarily, leave the lesson by typing play() and then    return by typing nxt().
 
 #Q35
@@ -218,10 +217,10 @@
   Hint: "?dir.create will show you the docs."
 
 - Class: text
-  Output: "Prétez attention tout particulièrement la partie sur l'argument 'recursive'. Cet argument permet de créer des répértoires imbriqués, et pour cela, il suffit passer l'argument recursive à TRUE."
+  Output: "Prêtez attention tout particulièrement à la partie sur l'argument 'recursive'. Cet argument permet de créer des répértoires imbriqués, et pour cela, il suffit passer l'argument recursive égal à TRUE."
 
 - Class: cmd_question
-  Output: "Créez en une seule commande un répértoire dans l'espace de travail courant et ajoutez, dans ce nouveau répértoire, un 3e répértoire. Vous appellerez le 1er répértoire créé 'testdir2' et le 3e 'testdir3'. Pour cela, vous utiliserez les commandes file.path et dir.create."
+  Output: "Créez en une seule commande un répértoire dans l'espace de travail courant et ajoutez, dans ce nouveau répertoire, un 3e répertoire. Vous appellerez le 1er répertoire créé 'testdir2' et le 3e 'testdir3'. Pour cela, vous utiliserez les commandes file.path et dir.create."
   CorrectAnswer: dir.create(file.path("testdir2", "testdir3"), recursive = TRUE)
   AnswerTests: omnitest(correctExpr='dir.create(file.path("testdir2", "testdir3"), recursive = TRUE)')
   Hint: "La bonne commande est 'dir.create(file.path('testdir2', 'testdir3'), recursive = TRUE)'. Il faut pensez à utiliser les deux commandes conjointement et surtout penser à définir l'argument recursive à TRUE pour bien créer une hiérarchie imbriquée et non pas les créer l'un à coté de l'autre."
@@ -240,7 +239,7 @@
 # "It is often helpful to save the settings that you had before you    began an analysis and then go back to them at the end. This trick is    often used within functions; you save, say, the par() settings that    you started with, mess around a bunch, and then set them back to the    original values at the end. This isn't the same as what we have done    here, but it seems similar enough to mention."
 
 - Class: text
-  Output: "Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créé ! Je ne présente pas içi les méthodes permettant de supprimer des fichiers et dossiers par mesure de sureté mais sachez que cela est totalement possible! Attention cependant, tout document et dossiers l'est complétement sans passer par la case 'Corbeille' donc.... 'Un grand pouvoir amène de grandes responsabilités'! "
+  Output: "Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créés ! Je ne présente pas içi les méthodes permettant de supprimer des fichiers et dossiers par mesure de sureté mais sachez que cela est totalement possible! Attention cependant, tout document ou dossier l'est complétement sans passer par la case 'Corbeille' donc.... 'Un grand pouvoir amène de grandes responsabilités'! "
 
 - Class: text
   Output: "Sur Moodle, selectionnez le test 'fic_wd' et entrez le code 'GLUKHOVSKY2033' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
