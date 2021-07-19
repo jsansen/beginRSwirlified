@@ -69,7 +69,7 @@
   Hint: Affichez la documentation en tapant ?tapply.
 
 - Class: cmd_question
-  Output: "La variable 'landmass' prend un entier entre 1 et 6, chaque chiffre représentant une partie différente du monde. Utilisez la commande table(flags$landmass) pour voir combien de drapeaux/pays appartiennent à chaque groupe."
+  Output: "La variable 'landmass' prend un entier entre 1 et 6, chaque nombre représentant une partie différente du monde. Utilisez la commande table(flags$landmass) pour voir combien de drapeaux/pays appartiennent à chaque groupe."
   CorrectAnswer: table(flags$landmass)
   AnswerTests: omnitest(correctExpr="table(flags$landmass)")
   Hint: "Utilisez la fonction table(flags$landmass) pour voir les groupes associés à chaque drapeaux/pays."

@@ -8,7 +8,7 @@
 
 # Q1
 - Class: text
-  Output: La forme la plus simple et la plus répandue de structure de données dans R est le vecteur.
+  Output: "La forme la plus simple et la plus répandue de structure de données dans R est le vecteur."
 
 # Q2
 - Class: text
@@ -16,7 +16,7 @@
 
 # Q3
 - Class: text
-  Output: Dans le cours R101, nous ne nous sommes intéréssé qu'aux vecteurs numériques, qui sont une forme de vecteur atomique. Il en existe d'autres tels que les vecteurs atomique logique,de chaînes de caractères(texte), (nombres)entiers ou complexes. Dans ce cours, nous nous intéresserons particulièrement aux vecteurs logiques et caractères.
+  Output: "Dans le cours R101, nous ne nous sommes intéréssé qu'aux vecteurs numériques, qui sont une forme de vecteur atomique. Il en existe d'autres tels que les vecteurs atomique logique,de chaînes de caractères(texte), (nombres) entiers ou complexes. Dans ce cours, nous nous intéresserons particulièrement aux vecteurs logiques et caractères."
 
 # Q4
 - Class: text
@@ -27,7 +27,7 @@
   Output: "Tout d'abord, créez un vecteur numérique num_vect contenant les valeurs suivantes: 0.5, 55, -10, and 6."
   CorrectAnswer: num_vect = c(0.5, 55, -10, 6)
   AnswerTests: omnitest(correctExpr='num_vect = c(0.5, 55, -10, 6)')
-  Hint: Souvenez vous de la fonction c(), utilisée pour créer un vecteur. Si vous avez oubliez comment l'utiliser, penser à lire la documentation avec ?c. N'oubliez pas l'affectation à la variable num_vect.
+  Hint: "Souvenez vous de la fonction c(), utilisée pour créer un vecteur. Si vous avez oubliez comment l'utiliser, penser à lire la documentation avec ?c. N'oubliez pas l'affectation à la variable num_vect."
 
 # Q6
 - Class: cmd_question
@@ -49,7 +49,7 @@
   Output: Affichez le contenu de tf.
   CorrectAnswer: tf
   AnswerTests: omnitest(correctExpr='tf')
-  Hint: Tapez juste tf puis Entrée pour afficher le contenu de cette variable.
+  Hint: "Tapez juste tf puis Entrée pour afficher le contenu de cette variable."
 
 # Q9
 - Class: text
@@ -58,8 +58,7 @@
 # Q10
 - Class: text
   Output: "Le premier élément de num_vect est 0.5, ce qui est plus petit que 1, ainsi la réponse à l'affirmation 0.5 < 1 est TRUE (VRAI).
-  Le second élement de num_vect est 55, ce qui est plus grand que 1, donc l'affirmation 55 < 1 est FALSE (FAUX).
-  Cette logique s'applique pour tout les éléments du vecteur."
+  Le second élement de num_vect est 55, ce qui est plus grand que 1, donc l'affirmation 55 < 1 est FALSE (FAUX). Cette logique s'applique pour tout les éléments du vecteur."
 
 # Q11
 - Class: cmd_question
@@ -74,15 +73,15 @@
 
 # Q13
 - Class: text
-  Output: Les symboles `<` et `>=` dans ces exemples sont appelées des opérateurs logiques. Il en existe d'autres tels que `>`, `<=`, `==` (égalité stricte -puisque `=` sert à l'affectation-), et `!=` pour la différence (le point d'exclamation correspond au "non" dans `non égal`).
+  Output: "Les symboles `<` et `>=` dans ces exemples sont appelés des opérateurs logiques. Il en existe d'autres tels que `>`, `<=`, `==` (égalité stricte -puisque `=` sert à l'affectation-), et `!=` pour la différence (le point d'exclamation correspond au 'non' dans `non égal`)."
 
 # Q14
 - Class: text
-  Output: Si nous avons deux expressions logiques, A et B, on peut demander si au moins l'une est vraie avec l'opérateur `|` (symbol pipe -tuyau?je ne l'utilise jamais traduit- correspondant au "OR" -OU- logique également appelé "union") ou si les deux sont vraies avec l'opérateur & (le "and" -ET- logique appelé "intersection"). Enfin, comme vu précedemment, !A est la négation de A et est vrai lorsque A est FALSE  et vice-versa.
+  Output: "Si nous avons deux expressions logiques, A et B, on peut demander si au moins l'une est vraie avec l'opérateur `|` (symbol pipe -tuyau?je ne l'utilise jamais traduit- correspondant au 'OR' -OU- logique également appelé 'union') ou si les deux sont vraies avec l'opérateur & (le 'and' -ET- logique appelé 'intersection'). Enfin, comme vu précedemment, !A (point d'exclamation A) est la négation de A et est vraie lorsque A est à FALSE et vice-versa."
 
 # Q15
 - Class: text
-  Output: C'est généralement une bonne idée de passer un peu de temps à s'amuser avec différentes combinaisons de ces operateurs logiques jusqu'à ce que vous soyez à l'aise avec leur fonctionnement. Nous en verrons quelques examples içi pour vous mettre sur la voie.
+  Output: "C'est généralement une bonne idée de passer un peu de temps à s'amuser avec différentes combinaisons de ces operateurs logiques jusqu'à ce que vous soyez à l'aise avec leur fonctionnement. Nous en verrons quelques exemples içi pour vous mettre sur la voie."
 
 # Q16
 - Class: text
@@ -110,15 +109,15 @@
   CorrectAnswer: 'TRUE'
   AnswerChoices: TRUE; FALSE
   AnswerTests: omnitest(correctVal='TRUE')
-  Hint: Celle ci est plus difficile; rappelez vous que le point d'exclamation signifie une négation de ce qui suit. Il y a aussi un ordre des opérations qui s'applique ici, les parenthèses étant prioritaire sur les operateurs, on commence par elles.
+  Hint: "Celle ci est plus difficile; rappelez vous que le point d'exclamation signifie une négation de ce qui suit. Il y a aussi un ordre des opérations qui s'applique ici, les parenthèses étant prioritaire sur les operateurs, on commence par elles."
 
 # Q20
 - Class: text
-  Output: Ne vous inquiétez pas si vous trouvez ces tests un peu "difficile", travailler avec les opérations logiques n'est pas toujours facile, et demande un peu de temps pour s'habituer. Il faut "se poser" et prendre le temps d'évaluer DANS LE BON ORDRE les affirmations proposées. Courage !
+  Output: "Ne vous inquiétez pas si vous trouvez ces tests un peu 'difficile', travailler avec les opérations logiques n'est pas toujours facile, et demande un peu de temps pour s'habituer. Il faut 'se poser' et prendre le temps d'évaluer DANS LE BON ORDRE les affirmations proposées. Courage !"
 
 # Q21
 - Class: text
-  Output: Les vecteurs de caractères sont également très courant en R. Les doubles quotes (guillements doubles) sont utilisés pour distinguer un objet caractères des autres, comme dans l'exemple suivant.
+  Output: "Les vecteurs de caractères sont également très courant en R. Les doubles quotes (guillements doubles) sont utilisés pour distinguer un objet caractères des autres, comme dans l'exemple suivant."
 
 # Q22
 - Class: cmd_question
@@ -129,14 +128,14 @@
 
 # Q23
 - Class: cmd_question
-  Output: Affichez le contenu de my_char pour voir à quoi elle ressemble.
+  Output: "Affichez le contenu de my_char pour voir à quoi elle ressemble."
   CorrectAnswer: my_char
   AnswerTests: omnitest(correctExpr='my_char')
-  Hint: Tapez my_char pour voir son contenu.
+  Hint: "Tapez my_char pour voir son contenu."
 
 # Q24
 - Class: text
-  Output: Parfait, maintenant, my_char est un vecteur de chaine de caractères de taille 3. Imaginons que nous voulions joindre ensemble les éléments de  my_char en une seule chaîne (i.e. un vecteur de caractère de taille 1). Nous pouvons faire cela en utilisant la fonction paste().
+  Output: "Parfait, maintenant, my_char est un vecteur de chaine de caractères de taille 3. Imaginons que nous voulions joindre ensemble les éléments de  my_char en une seule chaîne (i.e. un vecteur de caractère de taille 1). Nous pouvons faire cela en utilisant la fonction paste()."
 
 # Q25
 - Class: cmd_question
@@ -201,7 +200,7 @@
   Output: Le recyclage de vecteur! Essayez paste(LETTERS, 1:4, sep = "-"), où LETTERS est une variable pré-définie dans R contenant toutes les 26 lettres de l'alphabet anglais.
   CorrectAnswer: paste(LETTERS, 1:4, sep = "-")
   AnswerTests: omnitest(correctExpr='paste(LETTERS, 1:4, sep = "-")')
-  Hint: Tapez paste(LETTERS, 1:4, sep = "-") pour voir comment R va recycler la séquence 1:4 pour qu'elle corresponde à la longueur de LETTERS. Remarquez que nous utilisons '-' comme séparateur à la place de l'espace utilisé auparavant.
+  Hint: Tapez paste(LETTERS, 1:4, sep = '-') pour voir comment R va recycler la séquence 1:4 pour qu'elle corresponde à la longueur de LETTERS. Remarquez que nous utilisons '-' comme séparateur à la place de l'espace utilisé auparavant.
 
 # Q36
 - Class: text
@@ -211,8 +210,7 @@
   Output: On remarque également que la séquence 1:4 est également convertie (coerced en anglais, retenez ce terme, vous risquez de le recroiser occasionnellement) en un vecteur de caractères par la fonction paste().
 
 - Class: text
-  Output: Nous discuterons un peu plus de la conversion de type dans un autre cours, mais comprenez juste pour l'instant que les nombres 1, 2, 3, 4 sont transformé en caractères "1", "2", "3" et "4".
-
+  Output: Nous discuterons un peu plus de la conversion de type dans un autre cours, mais comprenez juste pour l'instant que les nombres 1, 2, 3, 4 sont transformé en caractères '1', '2', '3' et '4'.
 
 - Class: text
   Output: Sur Moodle, selectionnez le test "Vecteurs" et entrez le code "Shangri6LALalAla" (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."

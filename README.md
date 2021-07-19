@@ -146,11 +146,10 @@ Ici on parle de vecteurs numérique(un peu), vecteur booléen et de manipulation
 
 ### TODO
 
-- ajouter une partie sur la concatenation de vecteurs
 - ajouter une partie sur les listes
     - combinaisons de vecteurs de types et longueurs différentes
     - comment les créer
-    - point rapide sur comment y accéder (avec ou sans nommage) -> retravaillé dans la partie données et indexation
+    - point rapide sur comment y accéder (avec ou sans nommage)
 
 ## Valeurs manquantes ##
 

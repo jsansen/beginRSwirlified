@@ -91,7 +91,7 @@
   Output: Revenons à notre variable z, observez-en le contenu.
   CorrectAnswer: z
   AnswerTests: omnitest(correctExpr='z')
-  Hint: "Tapez 'z' puis Entrée et observez le contenu de la variable."
+  Hint: "Tapez 'z' puis Entrée et affichez le contenu de la variable dans la console."
 
 - Class: cmd_question
   Output: "Vous pouvez combinez des vecteurs afin d'en créer un nouveau. Créez un vecteur contenant le vecteur z, 555, puis z à nouveau. N'affectez pas ce vecteur, nous voulons juste observer directement le résultat."
@@ -122,7 +122,7 @@
 - Class: mult_question
   Output: "Avant d'afficher le contenu de la variable my_sqrt, selon vous, que contient-elle ?"
   CorrectAnswer: un vecteur de taille 3
-  AnswerChoices: un vecteur de taille 3; un chiffre unique (un vecteur de taille 1); un vecteur vide (de taille 0)
+  AnswerChoices: un vecteur de taille 3; un nombre unique (un vecteur de taille 1); un vecteur vide (de taille 0)
   AnswerTests: omnitest(correctVal='un vecteur de taille 3')
   Hint: "Rappelez vous comment R avait traité les opérations sur les vecteurs... un élément à la fois..."
 
