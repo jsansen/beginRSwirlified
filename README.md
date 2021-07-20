@@ -54,7 +54,6 @@ suivre les indications disponibles sur le site de [swirlify](http://swirlstats.c
 1. Fichiers_et_espace_de_travail
 1. Suites
 1. Vecteurs
-    - a modifier/compléter  (voir section concernée ci dessous)
 1. Sous-ensembles
 1. Matrices_et_Dataframes
 1. Logique
@@ -144,12 +143,12 @@ Ici on voit la création de suites et les variants de création.
 
 Ici on parle de vecteurs numérique(un peu), vecteur booléen et de manipulation de vecteurs de (chaînes de )caractères, methode paste etc.
 
-### TODO
+### ~TODO~
 
-- ajouter une partie sur les listes
-    - combinaisons de vecteurs de types et longueurs différentes
-    - comment les créer
-    - point rapide sur comment y accéder (avec ou sans nommage)
+- ~ajouter une partie sur les listes~
+    - ~combinaisons de vecteurs de types et longueurs différentes~
+    - ~comment les créer~
+    - ~point rapide sur comment y accéder (avec ou sans nommage)~
 
 ## Valeurs manquantes ##
 
