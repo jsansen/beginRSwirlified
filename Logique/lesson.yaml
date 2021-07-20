@@ -13,30 +13,36 @@
 
 # Q1
 - Class: text
-  Output: "Ce cours est une courte introduction à l'utilisation des operateurs logiques dans R."
+  Output: "Ce cours est une courte introduction à l'utilisation des opérateurs logiques dans R."
 
 # Q2
 - Class: text
-  Output: "Il n'existe que deux valeurs logiques dans R (et tout autre langage), VRAI et FAUX (TRUE/FALSE) et on les appelle des booléens. On peut ainsi construire des expressions qui sont évalué en termes de vrai/faux."
+  Output: "Il n'existe que deux valeurs logiques dans R (et tout autre langage), VRAI et FAUX (TRUE/FALSE) et on les appelle des booléens. On peut ainsi construire des expressions qui sont évaluées en termes de vrai/faux."
+
+- Class: text
+  Output: "Attention, TRUE et FALSE doivent être écrit en majuscule pour être compris comme des valeurs booléennes par R, si vous les écrivez différemment, ils seront interprété comme des variables (qui normalement n'existent pas, R vous dira alors qu'il ne trouve pas l'objet en question)."
+
+- Class: text
+  Output: "Dans la suite du module nous resterons avec la terminologie TRUE/FALSE mais sachez qu'avec R, vous pouvez également utiliser T/F pour les valeurs logiques TRUE/FALSE. Vous pouvez également utiliser les nombres 0 et 1 qui correspondent respectivement à FALSE et TRUE mais cette écriture est moins explicite car il est plus difficile d'identifier si le 0/1 font références aux nombres 0/1 ou aux codes logiques FALSE/TRUE."
 
 # Q3
 - Class: text
-  Output: "Beaucoup de questions de ce cours impliqueront d'évaluer des expressions logiques. It il peut être utile d'ouvrir une deuxième session de R pour faire des essais en parallèle."
+  Output: "Beaucoup de questions de ce cours impliqueront d'évaluer des expressions logiques. Il peut être utile d'ouvrir une deuxième session de R pour faire des essais en parallèle."
 
 # Q4
 - Class: text
-  Output: "Créer une expression logique nécessite d'utiliser un opérateur logique. Vous êtes familier des opérateurs arithmétiques (+, -, *, /), nous allons nou spencher un peu plus sur les opérateurs logiques (bien que vous en ayez déjà croisés certains dans des précédents cours)."
+  Output: "Créer une expression logique nécessite d'utiliser un opérateur logique. Vous êtes familier des opérateurs arithmétiques (+, -, *, /), nous allons nous pencher un peu plus sur les opérateurs logiques (bien que vous en ayez déjà croisé certains dans les précédents modules)."
 
 # Q5
 - Class: cmd_question
-  Output: "Le premier que nous allons aborder est l'opérateur d'égalité `==`. Utilisez cet operateur pour savoir si TRUE est égal à TRUE."
+  Output: "Le premier que nous allons aborder est l'opérateur d'égalité `==`. Utilisez cet opérateur pour savoir si TRUE est égal à TRUE."
   CorrectAnswer: TRUE == TRUE
   AnswerTests: omnitest(correctExpr='TRUE == TRUE')
   Hint: "Tapez TRUE == TRUE pour savoir si TRUE est égal à TRUE avec l'operateur d'égalité `==`"
 
 # Q6
 - Class: text
-  Output: "Tout comme en arithmétique, les expressions logiques peuvent être groupées dans des parenthèses pour ordonner les expressions à évaluer. Ainsi (TRUE == TRUE) == TRUE donne TRUE."
+  Output: "Tout comme en arithmétique, les expressions logiques peuvent être groupées dans des parenthèses pour ordonner les expressions à évaluer. Ainsi (FALSE == TRUE) == FALSE donne TRUE."
 
 # Q7
 - Class: cmd_question
@@ -47,7 +53,7 @@
 
 # Q8
 - Class: cmd_question
-  Output: "L'opérateur d'egalité peut également être utilisé pour comparer des nombres. Utilisez `==` pour évaluer si 6 est égal à 7."
+  Output: "L'opérateur d'égalité peut également être utilisé pour comparer des nombres. Utilisez `==` pour évaluer si 6 est égal à 7."
   CorrectAnswer: 6 == 7
   AnswerTests: omnitest(correctExpr='6 == 7')
   Hint: "Utilisez l'opérateur d'égalité et tapez 6 == 7"
@@ -89,7 +95,7 @@
   CorrectAnswer: 9 >= 10
   AnswerChoices: 9 >= 10; 7 == 9; 57 < 8; -6 > -7
   AnswerTests: omnitest(correctVal='-6 > -7')
-  Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R."
+  Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R ou en quittant temporairement ce cours avec la commande 'play()' - rappelez-vous, vous pourrez revenir dans ce module en tapant nxt()."
 
 # Q15
 - Class: cmd_question
@@ -133,7 +139,7 @@
 
 # Q21
 - Class: cmd_question
-  Output: "Tout d'abord, examinons comment fonctionne l'operateur AND. il existe deux operateur AND dans R, `&` et `&&`, tout deux fonctionne de façon similaire: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
+  Output: "Tout d'abord, examinons comment fonctionne l'opérateur AND. il existe deux opérateurs AND dans R, `&` et `&&`, tout deux fonctionne de façon similaire: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
   CorrectAnswer: FALSE & FALSE
   AnswerTests: omnitest(correctExpr='FALSE & FALSE')
   Hint: "Tapez FALSE & FALSE pour voir comment l'operateur AND fonctionne"
