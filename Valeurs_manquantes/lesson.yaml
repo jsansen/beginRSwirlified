@@ -127,4 +127,4 @@
   Hint: "Tapez Inf - Inf. Pouvez-vous prédire le résultat ?"
 
 - Class: text
-  Output: Sur Moodle, sélectionnez le test 'valeurs_manquantes' et entrez le code 'TNEVERTNOCduEDROHla' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: Félicitations, vous avez terminé ce module! Sur Moodle, sélectionnez le test 'valeurs_manquantes' et entrez le code 'TNEVERTNOCduEDROHla' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

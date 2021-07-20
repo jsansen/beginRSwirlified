@@ -1,6 +1,6 @@
 - Class: meta
   Course: beginR
-  Lesson: Sequences
+  Lesson: Suites
   Author: SANSEN Joris
   Type: Standard
   Organization: Bordeaux INP / ENSTBB
@@ -8,25 +8,25 @@
 
 # Q1
 - Class: text
-  Output: "Dans cette leçon, nous allons travailler avec les séquences de nombres.In this lesson, you'll learn how to create sequences of numbers in R."
+  Output: "Dans cette leçon, nous allons travailler avec les suites de nombres sous R."
 
 # Q2
 - Class: cmd_question
-  Output: "La façon la plus simple de créer une séquence de nombres dans R est en utilisant l'opérateur deux-points ':'.  Tapez '1:20' pour voir comment cela fonctionne."
+  Output: "La façon la plus simple de créer une suite de nombres dans R est d'utiliser l'opérateur deux-points ':'.  Tapez '1:20' pour voir comment cela fonctionne."
   CorrectAnswer: '1:20'
   AnswerTests: omnitest(correctExpr='1:20')
   Hint: "Tapez 1:20 sans espaces ni parenthèses. Assurez-vous bien d'utiliser les deux-points et non le point-virgule."
 
 # Q3
 - Class: cmd_question
-  Output: "Cela nous donne tout les entiers [1:20] (depuis 1, jusqu'à 20 inclu). Nous pourrions également l'utiliser pour créer une séquence de nombres réels. Par exemple, essayez d'écrire pi:10."
+  Output: "Cela nous donne tous les entiers [1:20] (depuis 1, jusqu'à 20 inclus). Nous pourrions également l'utiliser pour créer une suite de nombres réels. Par exemple, essayez d'écrire pi:10."
   CorrectAnswer: pi:10
   AnswerTests: omnitest(correctExpr='pi:10')
   Hint: "Entrez pi:10 et voyez le résultat. Pi est une constante pré-définie dans R qui prend en valeur 3.1415...."
 
 # Q4
 - Class: text
-  Output: "Le résultat est un vecteur de nombres réels démarrant à pi (3.142...) et augmentant par incrément de 1. La limite maximale de 10 n'est jamais atteinte puisque le nombre suivant de notre séquence par un incrément de 1 serait supérieur à 10."
+  Output: "Le résultat est un vecteur de nombres réels démarrant à pi (3.142...) et augmentant par incrément de 1. La limite maximale de 10 n'est jamais atteinte puisque le nombre suivant de notre suite par un incrément de 1 serait supérieur à 10."
 
 # Q5
 - Class: cmd_question
@@ -41,7 +41,7 @@
 
 # Q7
 - Class: text
-  Output: "Rappelez-vous qui si vous avez des questions à propos d'une fonction particulière dans R, vous pouvez accèdez à sa documentation en utilisant le point d'interrogation suivi du nom de la fonction. '?nomdefonction'. Cependant, dans le cas d'un opérateur, il faut encadrer le symbole dans des guillements, apostrophes ou 'backticks' (apostrophe inversée généralement placée sur la touche 7, à côté du è, et donc accessible via alt-gr).  Cela Donne donc: ? `:`"
+  Output: "Rappelez-vous qui si vous avez des questions à propos d'une fonction particulière dans R, vous pouvez accèdez à sa documentation en utilisant le point d'interrogation suivi du nom de la fonction. '?nomdefonction'. Cependant, dans le cas d'un opérateur, il faut encadrer le symbole dans des guillemets, apostrophes ou 'backticks' (apostrophe inversée généralement placée sur la touche 7, à côté du è, et donc accessible via alt-gr).  Cela Donne donc: ? `:`"
 
 # Q8
 - Class: cmd_question
@@ -53,7 +53,7 @@
 
 # Q9
 - Class: text
-  Output: "Souvent, on veut avoir plus de contrôle sur une séquence que l'on crée que ce que nous permet l'opérateur ':'.  Dans ce cas, nous utiliseront la fonction seq()."
+  Output: "Souvent, on veut avoir plus de contrôle sur une suite que l'on crée que ce que nous permet l'opérateur ':'.  Dans ce cas, nous utiliserons la fonction seq() (suite se dit sequence en anglais)."
 
 # Q10
 - Class: cmd_question
@@ -64,17 +64,17 @@
 
 # Q11
 - Class: cmd_question
-  Output: "Cela vous donne le même résultat que la commande 1:20.  Cependant, disons qu'au lieu d'un vecteur allant de 1 à 20, nous voulons obtenir un vecteur allant de 0 à 10 par incrément de 0.5 (notez l'écriture à l'anglaise avec le point comme séparateur de décimal, c'est important, la virgule n'étant pas utilisable comme séparateur vous devrez vous habituer à utiliser le point). Dans ce cas, vous utiliserez la commande seq(0, 10,  by=0.5). Essayez-la."
+  Output: "Cela vous donne le même résultat que la commande 1:20.  Cependant, disons qu'au lieu d'un vecteur allant de 1 à 20, nous voulons obtenir un vecteur allant de 0 à 10 par incrément de 0.5 (notez l'écriture à l'anglaise avec le point comme séparateur décimal, c'est important, la virgule n'étant pas utilisable comme séparateur vous devrez vous habituer à utiliser le point). Dans ce cas, vous utiliserez la commande seq(0, 10,  by=0.5). Essayez-la."
   CorrectAnswer: seq(0, 10, by=0.5)
   AnswerTests: omnitest(correctExpr='seq(0, 10, by=0.5)')
   Hint: "Vous utilisez toujours la fonction seq() mais cette fois avec un argument supplémentaire qui indique que vous voulez utiliser un incrément de 0.5. Essayez seq(0, 10, by=0.5)."
 
 # Q12
 - Class: cmd_question
-  Output: "Peut-être n'avez vous aucune idée de quel incrément vous avez besoin mais savez que vous voulez une liste de 30 nombres. Dans ce cas, seq(5, 10, length=30) fera très bien l'affaire. Essayez maintenant et conservez le résultat dans un variable que vous appellerez my_seq."
+  Output: "Peut-être n'avez vous aucune idée de quel incrément vous avez besoin mais savez que vous voulez une liste de 30 nombres. Dans ce cas, seq(5, 10, length=30) fera très bien l'affaire. Essayez maintenant et conservez le résultat dans une variable que vous appellerez my_seq."
   CorrectAnswer: my_seq = seq(5, 10, length=30)
   AnswerTests: omnitest(correctExpr='my_seq = seq(5, 10, length=30)')
-  Hint: "Vous utilisez la même fonction mais en changeant les arguments pour obtenir un résultat différent. assurez vous bien de stocker le résultat dans une variable my_seq, comme ceci:  my_seq = seq(5, 10, length=30)."
+  Hint: "Vous utilisez la même fonction mais en changeant les arguments pour obtenir un résultat différent. Assurez-vous bien de stocker le résultat dans une variable my_seq, comme ceci:  my_seq = seq(5, 10, length=30)."
 
 # Q13
 - Class: cmd_question
@@ -85,11 +85,11 @@
 
 # Q14
 - Class: text
-  Output: "Imaginons que nous ne connaissions pas la longueur du vecteur my_seq, mais que nous voulions générer une séquence d'entiers de 1 à N, ou N représente la longueur du vecteur my_seq. En d'autres mots, nous voulons un nouveau vecteur (1, 2, 3, ...) qui fait la même longueur que my_seq."
+  Output: "Imaginons que nous ne connaissions pas la longueur du vecteur my_seq, mais que nous voulions générer une suite d'entiers de 1 à N, ou N représente la longueur du vecteur my_seq. En d'autres mots, nous voulons un nouveau vecteur (1, 2, 3, ...) qui fait la même longueur que my_seq."
 
 # Q15
 - Class: cmd_question
-  Output: "Plusieurs façon de faire sont possible. Une possibilité est de combiner l'opérateur ':' et la fonction length, comme ceci 1:length(my_seq). Essayez cette commande."
+  Output: "Plusieurs façons de faire sont possibles. Une possibilité est de combiner l'opérateur ':' et la fonction length, comme ceci 1:length(my_seq). Essayez cette commande."
   CorrectAnswer: 1:length(my_seq)
   AnswerTests: omnitest(correctExpr='1:length(my_seq)')
   Hint: "Essayez 1:length(my_seq), sans attribuer le résultat à une nouvelle variable."
@@ -115,33 +115,33 @@
 
 # Q19
 - Class: text
-  Output: "Si R a une fonction de base (on parle de fonction built-in car fournies directement par R sans bibliothèques additionnelles), il y a de fortes chances pour que cette fonction soit hautement optimisée pour cette tâche et il y a de fortes chances pour que ce soit la meilleure solution. Plus vous gagnerez en compétence de programmation avec R, plus vous serez amené à écrire vos propres fonction pour effectuer des tâches spécifique pour lesquelles il n'existe pas de meilleure solution. Nous verrons l'écriture de fonctions dans une future leçon."
+  Output: "Si R a une fonction de base (on parle de fonction built-in car fournie directement par R sans bibliothèques additionnelles), il y a de fortes chances pour que cette fonction soit hautement optimisée pour cette tâche et que ce soit la meilleure solution. Plus vous gagnerez en compétence de programmation avec R, plus vous serez amené à écrire vos propres fonctions pour effectuer des tâches spécifiques pour lesquelles il n'existe pas de meilleure solution. Nous verrons l'écriture de fonctions dans une future leçon."
 
 # Q20
 - Class: text
-  Output: "Une autre fonction associée à la création de séquences est la fonction rep(), qui permet de 'répliquer'. Regardons d'un peu plus près son utilisation."
+  Output: "Une autre fonction associée à la création de suites est la fonction rep(), qui permet de 'répliquer'. Regardons d'un peu plus près son utilisation."
 
 # Q21
 - Class: cmd_question
-  Output: "Si on est intéréssé dans la création d'un vecteur contenant 40 zéros, on peut utiliser la fonction rep(0, times = 40). Essayez cela."
+  Output: "Si on veut créé un vecteur contenant 40 zéros, on peut utiliser la fonction rep(0, times = 40). Essayez cela."
   CorrectAnswer: rep(0, times = 40)
   AnswerTests: omnitest(correctExpr='rep(0, times = 40)')
   Hint: "Tapez rep(0, times = 40) pour créer un vecteur contenant 40 zeros."
 
 # Q22
 - Class: cmd_question
-  Output: "Si nous voulons que notre vecteur contienne 10 répétitions de l'ensemble de valeurs (0, 1, 2), on fera alors: rep(c(0, 1, 2), times = 10). A vous, testez ça."
+  Output: "Si nous voulons que notre vecteur contienne 10 répétitions de l'ensemble de valeurs (0, 1, 2), on fera alors: rep(c(0, 1, 2), times = 10). A vous de tester cela."
   CorrectAnswer: rep(c(0, 1, 2), times = 10)
   AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), times = 10)')
-  Hint: "Essayez rep(c(0, 1, 2), times = 10) pour une autre forme de réplication. Soyez vigilant à utiliser la fonction c() pour indiquer à R que les nombres 0, 1, 2 forment l'ensemble à dupliquer."
+  Hint: "Essayez rep(c(0, 1, 2), times = 10) pour une autre forme de réplication. Utilisez la fonction c() pour indiquer à R que les nombres 0, 1, 2 forment l'ensemble à dupliquer."
 
 # Q23
 - Class: cmd_question
-  Output: "Enfin, imaginez que vous cherchiez à répeter d'abord 10 fois le zero, puis 10 fois le un, puis 10 fois le deux. Pour cela, nous utilisons l'argument 'each'. A vous !"
+  Output: "Enfin, imaginez que vous cherchiez à répéter d'abord 10 fois le zéro, puis 10 fois le un, puis 10 fois le deux. Pour cela, nous utilisons l'argument 'each'. A vous !"
   CorrectAnswer: rep(c(0, 1, 2), each = 10)
   AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), each = 10)')
   Hint: "Tapez rep(c(0, 1, 2), each = 10) pour voir comment l'argument each agit sur la répétition et modifie le résultat."
 
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'Sequences' et entrez le code 'HamblyD4rW4rtH' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'Suites' et entrez le code 'HamblyD4rW4rtH' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."

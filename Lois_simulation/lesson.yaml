@@ -46,7 +46,7 @@
   Hint: "Tapez tout simplement sample(1:20, 10) pour tirer aléatoirement 10 nombres entre 1 et 20, sans remise (la valeur par defaut de to replacement est déjà à FALSE)."
 
 - Class: text
-  Output: "Puisque la dernière commande est un tirage sans remise, aucun chiffre ne peut apparaitre plus d'une fois."
+  Output: "Puisque la dernière commande est un tirage sans remise, aucun nombre ne peut apparaitre plus d'une fois."
 
 - Class: cmd_question
   Output: "LETTERS, que vous avez déjà rencontré dans un autre cours, est une variable pré-définie contenant un vecteur avec les 26 lettres de l'alphabet anglais. Jetez-y un oeil dès mantenant."
@@ -178,4 +178,4 @@
   Output: "La simulation est tout un pan de la statistique et nous n'avons fait qu'effleurer la surface des possibilités qu'offre R dans ce domaine. Si cela vous intéresse, je ne peux que vous encourager à explorer un peu plus les fonctionnalités proposées par R dans ce domaine."
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'Lois_simulation' et entrez le code '1rs2nSc3ttC4rd' (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'Lois_simulation' et entrez le code '1rs2nSc3ttC4rd' (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."

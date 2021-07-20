@@ -69,7 +69,7 @@
   Hint: Affichez la documentation en tapant ?tapply.
 
 - Class: cmd_question
-  Output: "La variable 'landmass' prend un entier entre 1 et 6, chaque chiffre représentant une partie différente du monde. Utilisez la commande table(flags$landmass) pour voir combien de drapeaux/pays appartiennent à chaque groupe."
+  Output: "La variable 'landmass' prend un entier entre 1 et 6, chaque nombre représentant une partie différente du monde. Utilisez la commande table(flags$landmass) pour voir combien de drapeaux/pays appartiennent à chaque groupe."
   CorrectAnswer: table(flags$landmass)
   AnswerTests: omnitest(correctExpr="table(flags$landmass)")
   Hint: "Utilisez la fonction table(flags$landmass) pour voir les groupes associés à chaque drapeaux/pays."
@@ -122,4 +122,4 @@
   Output: "Dans ce cours, vous avec appris à utiliser la fonction vapply, une variante plus sûre de sapply, ce qui est plus conseillée lorsqu'on l'intègre dans une fonction ou dans un script. Vous avez également appris à utiliser la fonction tapply pour séparer des données en groupes sur la base de la valeur dans une autre variable, puis a appliquer une fonction sur chacun des groupes résultants. vous vous rendrez compte que ces fonctions sont très pratique au cours de votre apprentissage et progression en traitement et analyse de données. Comme tout en informatique, on apprend et on retient par la pratique. Je tairais l'auteur de cette citation mais 'pour devenir un bon codeur, il faut pisser du code'* (*expression signifiant qu'il faut beaucoup coder pour s'améliorer)"
 
 - Class: text
-  Output: Sur Moodle, selectionnez le test 'vapply_tapply' et entrez le code 'D4RW4RTH3logyh4mbly' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'vapply_tapply' et entrez le code 'D4RW4RTH3logyh4mbly' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
