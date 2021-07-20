@@ -326,4 +326,4 @@
   Output: "Nous sommes arrivé au bout de notre cours sur les fonctions! A vous  maintenant d'improviser et d'écrire de nouvelles fonctions! et Rappelez-vous 'Un grand pouvoir implique de grandes responsabilités, jeune padawan!' -- Dumbledore, Le seigneur des Anneaux."
 
 - Class: text
-  Output: "Sur Moodle, selectionnez le test 'Fonctions' et entrez le code 'M4hsup_N0NS3NS' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'Fonctions' et entrez le code 'M4hsup_N0NS3NS' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
