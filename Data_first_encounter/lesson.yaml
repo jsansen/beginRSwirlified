@@ -10,10 +10,10 @@
   Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
 
 - Class: text
-  Output: "Dès lors que vous démarrez un travail avec un nouveau jeu de données, l'une des premières choses que vous devez faire est inspecter les données. Quel est le format utilisé? quelles sont les dimensions? quels sont les noms des variables? comment les données sont-elles stockées (types)? Y a-t-il des données manquantes? y a-t-il des erreurs dans les données?"
+  Output: "Dès lors que vous démarrez un travail avec un nouveau jeu de données, l'une des premières choses que vous devez faire est d'inspecter les données. Quel est le format utilisé ? Quelles sont les dimensions ? Quels sont les noms des variables ? Comment les données sont-elles stockées (types) ? Y a-t-il des données manquantes ? Y a-t-il des erreurs dans les données ?"
 
 - Class: text
-  Output: "Ce cours va vous montrer comment répondre à la plupart de ces questions et quelques autres en utilisant les fonctions de base de R. Evidemment on ne saurait couvrir l'intégralité des cas qui peuvent se produire mais cela vous donnera les bons réflexes de bases, après il ne tiendra qu'à vous d'être vigilant à bien inspecter vos données et à essayer de repérer les erreurs qui auraient pu passer ces premiers filtres (et je vous l'annonce d'avance, cela arrive... malheureusement)."
+  Output: "Ce cours va vous montrer comment répondre à la plupart de ces questions et quelques autres en utilisant les fonctions de base de R. Evidemment on ne saurait couvrir l'intégralité des cas qui peuvent se produire mais cela vous donnera les bons réflexes de base, après il ne tiendra qu'à vous d'être vigilant à bien inspecter vos données et à essayer de repérer les erreurs qui auraient pu passer ces premiers filtres (et je vous l'annonce d'avance, cela arrive... malheureusement)."
 
 - Class: text
   Output: "Nous allons utiliser ici un jeu de données construit à partir de la base de données PLANTS du United States Department of Agriculture (http://plants.usda.gov/adv_search.html)."
@@ -31,10 +31,10 @@
   Hint: "Utilisez la commande class(plants) pour vérifier la classe de la variable plants."
 
 - Class: text
-  Output: "Il est très commun pour des données d'être stockées sous forme de dataframe. C'est la classe par defaut lorsque l'on charge des données avec R  (lorsque l'on utilise la fonction read.csv() ou read.table() par exemple, mais vous verrez ces fonctions dans un autre cours)."
+  Output: "Il est très commun pour des données d'être stockées sous forme de dataframe. C'est la classe par défaut lorsque l'on charge des données avec R  (lorsque l'on utilise la fonction read.csv() ou read.table() par exemple, mais vous verrez ces fonctions dans un autre cours)."
 
 - Class: cmd_question
-  Output: "Puisque les données sont stockées dans un dataframe, nous savons que les données sont 'rectangulaires', tabulaires. En d'autres mots, qu'il y a deux dimensions (lignes et colonnes) et que cela se présente sous la forme d'un tableau. Utilisez la commande dim(plants) pour voir exactement combien de lignes et de colonnes sont présentent dans les données."
+  Output: "Puisque les données sont stockées dans un dataframe, nous savons que les données sont 'rectangulaires', tabulaires. En d'autres mots, qu'il y a deux dimensions (lignes et colonnes) et que cela se présente sous la forme d'un tableau. Utilisez la commande dim(plants) pour voir exactement combien de lignes et de colonnes sont présentes dans les données."
   CorrectAnswer: dim(plants)
   AnswerTests: omnitest(correctExpr='dim(plants)')
   Hint: "Utilisez dim(plants) pour connaitre les dimensions exactes de nos données."
@@ -43,34 +43,34 @@
   Output: "Le premier nombre que vous voyez (5166) est le nombre de lignes (observations) tandis que le deuxième (10) est le nombre de colonnes (variables)."
 
 - Class: cmd_question
-  Output: "Vous pouvez aussi utiliser la fonction nrow(plants) pour n'obtenir que le nombre de lignes. Essayez-la!"
+  Output: "Vous pouvez aussi utiliser la fonction nrow(plants) pour n'obtenir que le nombre de lignes. Essayez-la !"
   CorrectAnswer: nrow(plants)
   AnswerTests: omnitest(correctExpr='nrow(plants)')
   Hint: "Utilisez nrow(plants) pour obtenir uniquement le nombre d'observations décrites dans les données."
 
 - Class: cmd_question
-  Output: "et de façon relativement évidente, ncol permettra d'obtenir... le nombre de colonnes. A vous!"
+  Output: "Et de façon relativement évidente, ncol permettra d'obtenir... le nombre de colonnes. A vous !"
   CorrectAnswer: ncol(plants)
   AnswerTests: omnitest(correctExpr='ncol(plants)')
   Hint: Utilisez ncol(plants) pour voir uniquement le nombre de colonnes des données.
 
 - Class: cmd_question
-  Output: "Si vous êtes curieux de connaitre l'espace mémoire occupé par le jeu de données, vous pouvez utiliser la fonction object.size(). à vos claviers.. go!"
+  Output: "Si vous êtes curieux de connaitre l'espace mémoire occupé par le jeu de données, vous pouvez utiliser la fonction object.size(). A vos claviers.. go!"
   CorrectAnswer: object.size(plants)
   AnswerTests: omnitest(correctExpr='object.size(plants)')
   Hint: "object.size(plants) vous indiquera l'espace mémoire occupé par le jeu de données plants."
 
 - Class: cmd_question
-  Output: "Maintenant que nous avons les informations de taille et de longueur de nos données, jetons un oeil à ce qu'elles contiennent. La commande names(plants) vous retournera un vecteur de chaine de caractères des noms des variables (colonnes). Essayez cela."
+  Output: "Maintenant que nous avons les informations de taille et de longueur de nos données, jetons un oeil à ce qu'elles contiennent. La commande names(plants) vous retournera un vecteur de chaines de caractères des noms des variables (colonnes). Essayez cela."
   CorrectAnswer: names(plants)
   AnswerTests: omnitest(correctExpr='names(plants)')
   Hint: "names(plants) vous fournira une vecteur avec les noms des variables représentées dans les données."
 
 - Class: text
-  Output: "Les variables ont un nom relativement explicite, mais ne vous détrompez pas, ce ne sera pas toujours le cas, souvent des acronymes ou noms 'techniques' sont utilisés et seront moins descriptifs que ceux-là."
+  Output: "Les variables ont ici un nom relativement explicite, mais ne vous détrompez pas, ce ne sera pas toujours le cas, souvent des acronymes ou noms 'techniques' seront utilisés et seront moins descriptifs que ceux-là."
 
 - Class: text
-  Output: "En toute logique, l'étape suivante consiste à regarder les données en elles-même... problème, nous sommes face à 5k observations (lignes), il est donc relativement difficile de toutes les observer et d'avoir un aperçu global de l'ensemble."
+  Output: "En toute logique, l'étape suivante consiste à regarder les données en elles-mêmes... problème, nous sommes face à 5k lignes d'observations, il est donc relativement difficile de toutes les observer et d'avoir un aperçu global de l'ensemble."
 
 - Class: cmd_question
   Output: "La fonction head() vous permettra d'afficher un aperçu des premières lignes des données. Essayez cette fonction en lui donnant votre variable en argument."
@@ -100,13 +100,13 @@
   Hint: "Essayez la fonction summary(plants) pour observer la distribution de vos données et la proportion de données manquantes."
 
 - Class: text
-  Output: "summary() fournit différentes informations pour chaque variable, dependant de sa classe. Pour des données numériques, comme Precip_min par exemple, summary affichera: le minimum, 1er quartile, mediane, moyenne, 3e quartile et maximum. Ces informations nous servent à avoir un aperçu numérique rapide de la distribution des données pour cette variable."
+  Output: "summary() fournit différentes informations pour chaque variable, dependant de sa classe. Pour des données numériques, comme Precip_min par exemple, summary affichera: minimum, 1er quartile, mediane, moyenne, 3e quartile et maximum. Ces informations nous servent à avoir un aperçu numérique rapide de la distribution des données pour cette variable."
 
 - Class: text
-  Output: "Pour des variables catégorielles, (on appelle ces variables des facteurs, 'factor' en anglais) summary affichera le nombre de fois qu'un niveau (une valeur utilisable -- 'level' en anglais) est utilisé. Par exemple, chaque valeur de la variable Scientific_Name n'apparait qu'une fois, puisque c'est une information qui est spécifique à chaque plante. Au contraire, le résumé de Duration (également une variable de type factor) nous dis que le jeu de données contient 3031 plantes vivaces, 682 plantes annuelles, etc."
+  Output: "Pour des variables catégorielles, (on appelle ces variables des facteurs, 'factor' en anglais) summary affichera le nombre de fois qu'un niveau (une valeur utilisable -- 'level' en anglais) est utilisé. Par exemple, chaque valeur de la variable Scientific_Name n'apparait qu'une fois, puisque c'est une information qui est spécifique à chaque plante. Au contraire, le résumé de Duration (également une variable de type factor) nous dit que le jeu de données contient 3031 plantes vivaces, 682 plantes annuelles, etc."
 
 - Class: cmd_question
-  Output: "Vous pouvez voir que R à tronqué le résumé de Active_Growth_Period en incluant une catégorie fourre-tout appelée 'Other'. Puisqu'il s'agit d'une variable catégorielle/factor, nous pouvons voir combien de fois chaque niveau(level) est utilisé dans les données avec la commande table(plants$Active_Growth_Period)."
+  Output: "Vous pouvez voir que R a tronqué le résumé de Active_Growth_Period en incluant une catégorie fourre-tout appelée 'Other'. Puisqu'il s'agit d'une variable catégorielle/factor, nous pouvons voir combien de fois chaque niveau(level) est utilisé dans les données avec la commande table(plants$Active_Growth_Period)."
   CorrectAnswer: table(plants$Active_Growth_Period)
   AnswerTests: omnitest(correctExpr='table(plants$Active_Growth_Period)')
   Hint: "table(plants$Active_Growth_Period) vous affichera un tableau des décomptes d'utilisation de chaque niveau du facteur Active_Growth_Period."
@@ -127,7 +127,7 @@
   Output: "str() est en fait une fonction très générique que vous pouvez utiliser sur quasiment tout objet dans R. Chaque fois que vous voulez comprendre la structure de quoique ce soit (données, fonction, etc), str() sera en général un bon point de départ."
 
 - Class: text
-  Output: "Dans cette leçon vous avez appris à avoir un premier aperçu et un début de compréhension des données et de leurs structures en utilisant des fonctions faisant partie des bases de R. Prendre quelques minutes pour faire cette observation à chaque fois que vous utilisez de nouvelles données est un bon réflexes qui pourra vous faire gagner du temps et vous évitera pas mal de frustration plus tard dans votre analyse. Evidemment, il vous faudra toujours rester vigilant à ce que vous observez et à bien comprendre vos données pour pouvoir correctement les appréhender... Ces fonctions vous simplifieront la tâche mais elles ne serviront à rien si vous les appliquez machinalement sans analyser les réponses qu'elles vous donnent."
+  Output: "Dans cette leçon vous avez appris à avoir un premier aperçu et un début de compréhension des données et de leurs structures en utilisant des fonctions faisant partie des bases de R. Prendre quelques minutes pour faire cette observation à chaque fois que vous utilisez de nouvelles données est un bon réflexe qui pourra vous faire gagner du temps et vous évitera pas mal de frustration plus tard dans votre analyse. Evidemment, il vous faudra toujours rester vigilant à ce que vous observez et à bien comprendre vos données pour pouvoir correctement les appréhender... Ces fonctions vous simplifieront la tâche mais elles ne serviront à rien si vous les appliquez machinalement sans analyser les réponses qu'elles vous donnent."
 
 - Class: text
   Output: Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'Data_encounter' et entrez le code 'Villeneuve20164RRiv4l' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
