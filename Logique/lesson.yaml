@@ -9,7 +9,7 @@
 
 
 - Class: text
-  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder(bye()), etc."
+  Output: "Je vous rappelle que la commande info() vous permettra d'obtenir les quelques commandes de manipulation de swirl, notamment pour pauser (play()), reprendre (nxt()), quitter+sauvegarder (bye()), etc."
 
 # Q1
 - Class: text
@@ -17,13 +17,13 @@
 
 # Q2
 - Class: text
-  Output: "Il n'existe que deux valeurs logiques dans R (et tout autre langage), VRAI et FAUX (TRUE/FALSE) et on les appelle des booléens. On peut ainsi construire des expressions qui sont évaluées en termes de vrai/faux."
+  Output: "Il n'existe que deux valeurs logiques dans R (et tout autre langage), VRAI et FAUX (TRUE/FALSE) et on les appelle des booléens. On peut ainsi construire des expressions qui sont évaluées en terme de vrai/faux."
 
 - Class: text
-  Output: "Attention, TRUE et FALSE doivent être écrit en majuscule pour être compris comme des valeurs booléennes par R, si vous les écrivez différemment, ils seront interprété comme des variables (qui normalement n'existent pas, R vous dira alors qu'il ne trouve pas l'objet en question)."
+  Output: "Attention, TRUE et FALSE doivent être écrits en majuscules pour être compris comme des valeurs booléennes par R, si vous les écrivez différemment, ils seront interprétés comme des variables (qui normalement n'existent pas, R vous dira alors qu'il ne trouve pas l'objet en question)."
 
 - Class: text
-  Output: "Dans la suite du module nous resterons avec la terminologie TRUE/FALSE mais sachez qu'avec R, vous pouvez également utiliser T/F pour les valeurs logiques TRUE/FALSE. Vous pouvez également utiliser les nombres 0 et 1 qui correspondent respectivement à FALSE et TRUE mais cette écriture est moins explicite car il est plus difficile d'identifier si le 0/1 font références aux nombres 0/1 ou aux codes logiques FALSE/TRUE."
+  Output: "Dans la suite du module nous resterons avec la terminologie TRUE/FALSE mais sachez qu'avec R, vous pouvez également utiliser T/F pour les valeurs logiques TRUE/FALSE. Vous pouvez également utiliser les nombres 0 et 1 qui correspondent respectivement à FALSE et TRUE mais cette écriture est moins explicite car il est plus difficile d'identifier si le 0/1 font référence aux nombres 0/1 ou aux codes logiques FALSE/TRUE."
 
 # Q3
 - Class: text
@@ -64,7 +64,7 @@
 
 # Q10
 - Class: cmd_question
-  Output: "L'opérateur `plus petit` `<` test si un nombre à gauche (left operand) est plus petit que le nombre de droite (right operand). Ecrivez une expression permetrant d'évaluer si 6 est plus petit que 7."
+  Output: "L'opérateur `plus petit` `<` test si un nombre à gauche (left operand) est plus petit que le nombre de droite (right operand). Ecrivez une expression permettant d'évaluer si 6 est plus petit que 7."
   CorrectAnswer: 6 < 7
   AnswerTests: omnitest(correctExpr='6 < 7')
   Hint: "Utilisez le symbole `<`(généralement à coté de maj sur les claviers francophones) et tapez 6 < 7"
@@ -72,14 +72,14 @@
 
 # Q11
 - Class: cmd_question
-  Output: "On peut également tester `inférieur ou égal` via l'opérateur `<=` qui, en toute logique, vérifie si la valeur de gauche est inférieure ou égale à celle de droite. Testez cette expression en vérifiant si 10 <= 10."
-  CorrectAnswer: 10 <= 10
+  Output: "On peut également tester `inférieur ou égal` via l'operateur `<=` qui, en toute logique, vérifie si la valeur de gauche est inférieure ou égale à celle de droite. Testez cette expression en vérifiant si 10 est inférieur ou égal à 10."
+  CorrectAnswer: -
   AnswerTests: omnitest(correctExpr='10 <= 10')
   Hint: "Utilisez l'opérateur `<=` et tapez 10 <= 10"
 
 # Q12
 - Class: text
-  Output: "Nous ne l'expérimenterons pas içi mais gardez à l'esprit qu'il y a l'équivalent `supérieur (ou égal) à`  `>` et `>=`."
+  Output: "Nous ne l'expérimenterons pas ici mais gardez à l'esprit qu'il y a l'équivalent `supérieur (ou égal) à  `>` et `>=`."
 
 # Q13
 - Class: mult_question
@@ -99,17 +99,17 @@
 
 # Q15
 - Class: cmd_question
-  Output: "Le prochain opérateur dont nous allons discuter est l'opérateur diférent (non égal plus exactement), représenté par le symbole `!=`. Différent test si deux valeurs sont, je vous le donne en mille, différentes; ainsi, TRUE != FALSE retourne TRUE. Tout comme pour l'opérateur d'égalité,  `!=` peut aussi être utilisé avec des nombres. Essayez d'écrire une expression verifiant si 5 est différent de 7."
+  Output: "Le prochain opérateur dont nous allons discuter est l'opérateur différent (non égal plus exactement), représenté par le symbole `!=`. Différent test si deux valeurs sont, je vous le donne en mille, différentes; ainsi, TRUE != FALSE retourne TRUE. Tout comme pour l'opérateur d'égalité,  `!=` peut aussi être utilisé avec des nombres. Essayez d'écrire une expression verifiant si 5 est différent de 7."
   CorrectAnswer: 5 != 7
   AnswerTests: omnitest(correctExpr='5 != 7')
   Hint: "Utilisez l'opérateur non égal et tapez 5 != 7"
 
 # Q16
 - Class: cmd_question
-  Output: "On peut également utiliser le point d'exclamation (le `not`) pour négativer une expression booléenne. Ainsi, le `!` dans !TRUE (not TRUE) repond FALSE et !FALSE (not FALSE) répond TRUE. Essayez d'utiliser le `not` and l'opérateur d'egalité pour trouver la négation de 5 est égal à 7."
+  Output: "On peut également utiliser le point d'exclamation (le `not`) pour négativer une expression booléenne. Ainsi, le `!` dans !TRUE (not TRUE) répond FALSE et !FALSE (not FALSE) répond TRUE. Essayez d'utiliser le `not` et l'opérateur d'égalité pour trouver la négation de 5 est égal à 7."
   CorrectAnswer: '!5 == 7'
   AnswerTests: any_of_exprs('!5 == 7', '!(5 == 7)')
-  Hint: "Cette expression peut sembler un peu tordue, penser à décomposer en différentes partie, ce que l'on teste (5 == 7) et ce que l'on veut négativer (le résultat de ce qui a été testé)."
+  Hint: "Cette expression peut sembler un peu tordue, pensez à décomposer en différentes parties, ce que l'on teste (5 == 7) et ce que l'on veut négativer (le résultat de ce qui a été testé)."
 
 # Q17
 - Class: text
@@ -126,9 +126,9 @@
 
 # Q19
 - Class: mult_question
-  Output: 'Selon-vous, que retournera cette expression ?: (TRUE != FALSE) == !(6 == 7)'
+  Output: 'Selon vous, que retournera cette expression ?: (TRUE != FALSE) == !(6 == 7)'
   CorrectAnswer: TRUE
-  AnswerChoices: TRUE; FALSE; Peux-on vraiment obtenir une vérité objective en programmation?; %>%
+  AnswerChoices: TRUE; FALSE; Peut-on vraiment obtenir une vérité objective en programmation ?; %>%
   AnswerTests: omnitest(correctVal='TRUE')
   Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
@@ -139,7 +139,7 @@
 
 # Q21
 - Class: cmd_question
-  Output: "Tout d'abord, examinons comment fonctionne l'opérateur AND. il existe deux opérateurs AND dans R, `&` et `&&`, tout deux fonctionne de façon similaire: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
+  Output: "Tout d'abord, examinons comment fonctionne l'opérateur AND. Il existe deux opérateurs AND dans R, `&` et `&&`, tous deux fonctionnent de façon similaire: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
   CorrectAnswer: FALSE & FALSE
   AnswerTests: omnitest(correctExpr='FALSE & FALSE')
   Hint: "Tapez FALSE & FALSE pour voir comment l'opérateur AND fonctionne"
@@ -147,7 +147,7 @@
 
 # Q22
 - Class: cmd_question
-  Output: "Vous pouvez utiliser l'opérateur `&` pour évaluer l'ensemble des valeurs d'un vecteur. l'opérateur `&&` n'évaluera que le premier élément d'un vecteur. Testons les deux pour les voir en action. Tapez l'expression TRUE & c(TRUE, FALSE, FALSE)."
+  Output: "Vous pouvez utiliser l'opérateur `&` pour évaluer l'ensemble des valeurs d'un vecteur. L'opérateur `&&` n'évaluera que le premier élément d'un vecteur. Testons les deux pour les voir en action. Tapez l'expression TRUE & c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE & c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE & c(TRUE, FALSE, FALSE)')
   Hint: "Tapez simplement TRUE & c(TRUE, FALSE, FALSE) pour voir comment l'opérateur & fonctionne"
@@ -162,51 +162,51 @@
   Output: "Maintenant nous allons utiliser la même expression mais avece cette fois-ci un double & (&&) comme opérateur AND. Evaluez cette expression: TRUE && c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE && c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
-  Hint: "comme vous allez le constater, && est une version un peu différente de l'opérateur AND. Tapez: TRUE && c(TRUE, FALSE, FALSE)"
+  Hint: "Comme vous allez le constater, && est une version un peu différente de l'opérateur AND. Tapez: TRUE && c(TRUE, FALSE, FALSE)"
 
 
 # Q25
 - Class: text
-  Output: "Dans ce cas, la partie de gauche n'est évaluée qu'avec le premier élément de la partie de droite. Le reste du vecteur n'est pas testé par l'expression."
+  Output: "Dans ce cas, la partie de gauche n'est évaluée qu'avec le premier élément de la partie de droite. Le reste du vecteur n'est pas testé."
 
 # Q26
 - Class : text
-  Output: L'opérateur OR (ou) suit globalement les même règles que l'opérateur AND. il utilise le symbole `|` (pipe) pour évaluer l'ensemble d'un vecteur et `||` pour n'évaluer que le premier élément.
+  Output: L'operateur OR (ou) suit globalement les mêmes règles que l'opérateur AND. Il utilise le symbole `|` (pipe) pour évaluer l'ensemble d'un vecteur et `||` pour n'évaluer que le premier élément.
 
 # Q27
 - Class : text
-  Output: "Une expression utilisant l'opérateur OR sera vraie dès lors qu'une des partie de gauche ou droite sera vraie; si toutes les deux sont vraies, il retournera vrai mais si aucune n'est vraie, il retournera alors faux. Il faut lire cet opérateur comme 'au moins l'une des deux parties est vraie'."
+  Output: "Une expression utilisant l'opérateur OR sera vraie dès lors qu'une des parties de gauche ou de droite sera vraie; si toutes les deux sont vraies, il retournera vrai mais si aucune n'est vraie, il retournera alors faux. Il faut lire cet opérateur comme 'au moins l'une des deux parties est vraie'."
 
 # Q28
 - Class: cmd_question
-  Output: "testons la version vecteur de l'opérateur OR. Evaluez l'expression suivante: TRUE | c(TRUE, FALSE, FALSE)."
+  Output: "Testons la version vecteur de l'opérateur OR. Evaluez l'expression suivante: TRUE | c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE | c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE | c(TRUE, FALSE, FALSE)')
   Hint: "Tapez: TRUE | c(TRUE, FALSE, FALSE) pour tester l'opérateur OR sur un vecteur."
 
 # Q29
 - Class: cmd_question
-  Output: "et maintenant la version non vectorisée TRUE || c(TRUE, FALSE, FALSE)."
+  Output: "Et maintenant la version non vectorisée TRUE || c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE || c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE || c(TRUE, FALSE, FALSE)')
-  Hint: "Comme pour le AND, le double pipe permet d'empecher le recyclage d'expression. Testez le avec la commande TRUE || c(TRUE, FALSE, FALSE)"
+  Hint: "Comme pour le AND, le double pipe permet d'empêcher le recyclage d'expression. Testez le avec la commande TRUE || c(TRUE, FALSE, FALSE)"
 
 
 # Q30
 - Class : text
-  Output: "Les opérateurs logiques peuvent être chainés, tout comme les opérateurs arithmétiques. Ainsi les expressions du genre `6 != 10 && FALSE && 1 >= 2` ou `TRUE || 5 < 9.3 || FALSE` n'ont rien d'exceptionnelles"
+  Output: "Les opérateurs logiques peuvent être chainés, tout comme les opérateurs arithmétiques. Ainsi les expressions du genre `6 != 10 && FALSE && 1 >= 2` ou `TRUE || 5 < 9.3 || FALSE` n'ont rien d'exceptionnel."
 
 
 # Q31
 - Class : cmd_question
-  Output: "Si vous vous rappelez vos cours, les expression arithmétiques ont un ordre et des priorités. Il en est de même avec les expressions boléennes. Ainsi, les opérateurs AND sont évalués avant les expressions OR s'ils ont le même niveau dans l'expression (hors priorisation par parenthèses). Exemple d'expression ambigue: Tapez 5 > 8 || 6 != 8 && 4 > 3.9"
+  Output: "Si vous vous rappelez vos cours, les expressions arithmétiques ont un ordre et des priorités. Il en est de même avec les expressions booléennes. Ainsi, les opérateurs AND sont évalués avant les expressions OR s'ils ont le même niveau dans l'expression (hors priorisation par parenthèses). Exemple d'expression ambigue: Tapez 5 > 8 || 6 != 8 && 4 > 3.9"
   CorrectAnswer: "5 > 8 || 6 != 8 && 4 > 3.9"
   AnswerTests: omnitest(correctExpr='5 > 8 || 6 != 8 && 4 > 3.9')
   Hint: "Voyez comment l'ordre des opérations peut avoir un impact sur la réponse retournée en tapant: 5 > 8 || 6 != 8 && 4 > 3.9"
 
 # Q32
 - Class : text
-  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et droite de l'opérateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE && TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE || TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vraie."
+  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et de droite de l'opérateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE && TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE || TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vrai."
 
 # Q33
 - Class: mult_question
@@ -230,8 +230,7 @@
 
 # Q36
 - Class : cmd_question
-  Output: "La fonction isTRUE() prend un suel argument
-. Si cet argument est évalué à TRUE, la fonction retournera TRUE. Sinon, elle retournera FALSE. Essayez en tapant: isTRUE(6 > 4)"
+  Output: "La fonction isTRUE() prend un seul argument. Si cet argument est évalué à TRUE, la fonction retournera TRUE. Sinon, elle retournera FALSE. Essayez en tapant: isTRUE(6 > 4)"
   CorrectAnswer: "isTRUE(6 > 4)"
   AnswerTests: omnitest(correctExpr='isTRUE(6 > 4)')
   Hint: "Testez la fonction isTRUE() en tapant: isTRUE(6 > 4)"
@@ -246,7 +245,7 @@
 
 # Q38
 - Class : cmd_question
-  Output: "La fonction identical() retournera TRUE si les deux objets mis ena rguments sont identiques. Essayez cela avec cette commande: identical('twins', 'twins')"
+  Output: "La fonction identical() retournera TRUE si les deux objets mis en argument sont identiques. Essayez cela avec cette commande: identical('twins', 'twins')"
   CorrectAnswer: "identical('twins', 'twins')"
   AnswerTests: omnitest(correctExpr="identical('twins', 'twins')")
   Hint: "Tapez: identical('twins', 'twins')"
@@ -261,7 +260,7 @@
 
 # Q40
 - Class : cmd_question
-  Output: "Vous devriez également être informé du fonctionnement de la fonction xor(). Cette fonction prends deux arguments et correspond à l'opérateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE.Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
+  Output: "Vous devriez également connaître le fonctionnement de la fonction xor(). Cette fonction prend deux arguments et correspond à l'opérateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE. Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
   CorrectAnswer: "xor(5 == 6, !FALSE)"
   AnswerTests: omnitest(correctExpr='xor(5 == 6, !FALSE)')
   Hint: "Testez le xor en tapant: xor(5 == 6, !FALSE)"
@@ -269,7 +268,7 @@
 # Q41
 - Class : text
   Output: "5 == 6 retournera FALSE, !FALSE retourne TRUE, d'ou xor(FALSE, TRUE)
-    retourne TRUE. D'un autre côté, si le premier argument était changé en 5 == 5 et le 2eme maitenu tel quel, alors les deux aurait retourné TRUE, donc  xor(TRUE, TRUE) aurait retourné FALSE."
+    retourne TRUE. D'un autre côté, si le premier argument était changé en 5 == 5 et le 2ème maintenu tel quel, alors les deux auraient retourné TRUE, donc  xor(TRUE, TRUE) aurait retourné FALSE."
 
 # Q42
 - Class: mult_question
@@ -282,7 +281,7 @@
 
 # Q43
 - Class : cmd_question
-  Output: "Pour les prochaines questions, nous allons avoir besoin de créer un vecteur d'entiers que nous appellerons ints. Créez ce vecteur d'entier en effectuant un tirage aléatoire de 10 éléments."
+  Output: "Pour les prochaines questions, nous allons avoir besoin de créer un vecteur d'entiers que nous appellerons ints. Créez ce vecteur d'entiers en effectuant un tirage aléatoire de 10 éléments avec la fonction sample."
   CorrectAnswer: "ints = sample(10)"
   AnswerTests: omnitest(correctExpr='ints = sample(10)')
   Hint: "Bloqué? Rappelez-vous que l'on peut tirer aléatoirement 10 éléments suivant une distribution normale sans remise avec la commande sample(10). Pensez bien à affecter ce tirage à une variable appelée ints."
@@ -296,14 +295,14 @@
 
 # Q45
 - Class : cmd_question
-  Output: "Le vecteur `ints` correspond donc à un tirage aléatoire de 10 éléments suivant une distribution normale sans remise. Imaginons que nous cherchions a evaluer des expressions booléennes à propos des valeurs contenues dans ints. Si l'on tape ints > 5, nous obtiendrons un vecteur de booléens évaluant pour chaque valeurs de ints si oui ou non elles sont plus grandes que 5. Essayez cela en tapant: ints > 5"
+  Output: "Le vecteur `ints` correspond donc à un tirage aléatoire de 10 éléments suivant une distribution normale sans remise. Imaginons que nous cherchions à évaluer des expressions booléennes à propos des valeurs contenues dans ints. Si l'on tape ints > 5, nous obtiendrons un vecteur de booléens évaluant pour chaque valeur de ints si oui ou non elle est plus grande que 5. Essayez cela en tapant: ints > 5"
   CorrectAnswer: "ints > 5"
   AnswerTests: omnitest(correctExpr='ints > 5')
   Hint: "Vérifiez quels éléments de `ints` sont plus grands que 5 en tapant: ints > 5."
 
 # Q46
 - Class : text
-  Output: "Nous pouvons utiliser le vecteur logique résultant pour poser d'aurtes question à propos de ints.La fonction which() prend un vecteur logique en argument et retourne les indices de position du vecteur évalué à TRUE. Par exemple which(c(TRUE, FALSE, TRUE)) retournerai le vecteur c(1, 3)."
+  Output: "Nous pouvons utiliser le vecteur logique résultant pour poser d'autres questions sur ints. La fonction which() prend un vecteur logique en argument et retourne les indices de position du vecteur évalués à TRUE. Par exemple which(c(TRUE, FALSE, TRUE)) retournerai le vecteur c(1, 3)."
 
 # Q47
 - Class : cmd_question
@@ -322,7 +321,7 @@
 
 # Q49
 - Class : text
-  Output: "De façon similaire à la fonction which(), les fonctionsany() et all() prennent des vecteurs logique en argument. La fonction any() retournera TRUE si UN OU PLUS des éléments dans le vecteuer logique est à TRUE. La fonction all() ne retournera TRUE que si TOUT les élements du vecteur logique sont à TRUE."
+  Output: "De façon similaire à la fonction which(), les fonctions any() et all() prennent des vecteurs logiques en argument. La fonction any() retournera TRUE si UN OU PLUS des éléments dans le vecteuer logique est à TRUE. La fonction all() ne retournera TRUE que si TOUS les élements du vecteur logique sont à TRUE."
 
 # Q50
 - Class : cmd_question
@@ -333,7 +332,7 @@
 
 # Q51
 - Class : cmd_question
-  Output: "Utilisez la fonction all() pour voir si tout les éléments de ints sont plus grands que 0."
+  Output: "Utilisez la fonction all() pour voir si tous les éléments de ints sont plus grands que 0."
   CorrectAnswer: "all(ints > 0)"
   AnswerTests: omnitest(correctExpr='all(ints > 0)')
   Hint: "Utilisez la fonction all() sur le vectur logique produit par l'expression `ints > 0`"
@@ -348,7 +347,7 @@
 
 # Q53
 - Class : text
-  Output: "C'est tout pour cette introduction aux booléen dans R. Félicitations!"
+  Output: "C'est tout pour cette introduction aux booléens dans R. Félicitations!"
 
 - Class: text
   Output: Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test "Logique" et entrez le code "MAUDOUX'sfr34k's" (en conservant les majuscules et sans les guillemets !) cela vous ouvrira le test associé à cette leçon."
