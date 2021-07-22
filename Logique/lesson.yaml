@@ -38,7 +38,7 @@
   Output: "Le premier que nous allons aborder est l'opérateur d'égalité `==`. Utilisez cet opérateur pour savoir si TRUE est égal à TRUE."
   CorrectAnswer: TRUE == TRUE
   AnswerTests: omnitest(correctExpr='TRUE == TRUE')
-  Hint: "Tapez TRUE == TRUE pour savoir si TRUE est égal à TRUE avec l'operateur d'égalité `==`"
+  Hint: "Tapez TRUE == TRUE pour savoir si TRUE est égal à TRUE avec l'opérateur d'égalité `==`"
 
 # Q6
 - Class: text
@@ -72,7 +72,7 @@
 
 # Q11
 - Class: cmd_question
-  Output: "On peut également tester `inférieur ou égal` via l'operateur `<=` qui, en toute logique, vérifie si la valeur de gauche est inférieure ou égale à celle de droite. Testez cette expression en vérifiant si 10 <= 10."
+  Output: "On peut également tester `inférieur ou égal` via l'opérateur `<=` qui, en toute logique, vérifie si la valeur de gauche est inférieure ou égale à celle de droite. Testez cette expression en vérifiant si 10 <= 10."
   CorrectAnswer: 10 <= 10
   AnswerTests: omnitest(correctExpr='10 <= 10')
   Hint: "Utilisez l'opérateur `<=` et tapez 10 <= 10"
@@ -113,7 +113,7 @@
 
 # Q17
 - Class: text
-  Output: "Prenons un moment pour analyser un peu ça: l'opérateur `==` test si les deux parties de gauche et droite sont bien égales, l'opérateur `!=` test la différence et l'operateur NOT (`!`) négative une expressison logique changeant ainsi un TRUE en FALSE et un FALSE en TRUE."
+  Output: "Prenons un moment pour analyser un peu ça: l'opérateur `==` test si les deux parties de gauche et droite sont bien égales, l'opérateur `!=` test la différence et l'opérateur NOT (`!`) négative une expressison logique changeant ainsi un TRUE en FALSE et un FALSE en TRUE."
 
 # Q18
 - Class: mult_question
@@ -135,14 +135,14 @@
 
 # Q20
 - Class: text
-  Output: "Au bout d'un moment, vous serez amené à evaluer les relations entre plusieurs expressions logiques. C'est là que les operateurs AND (et) et OR (ou) interviennent."
+  Output: "Au bout d'un moment, vous serez amené à evaluer les relations entre plusieurs expressions logiques. C'est là que les opérateurs AND (et) et OR (ou) interviennent."
 
 # Q21
 - Class: cmd_question
   Output: "Tout d'abord, examinons comment fonctionne l'opérateur AND. il existe deux opérateurs AND dans R, `&` et `&&`, tout deux fonctionne de façon similaire: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
   CorrectAnswer: FALSE & FALSE
   AnswerTests: omnitest(correctExpr='FALSE & FALSE')
-  Hint: "Tapez FALSE & FALSE pour voir comment l'operateur AND fonctionne"
+  Hint: "Tapez FALSE & FALSE pour voir comment l'opérateur AND fonctionne"
 
 
 # Q22
@@ -150,7 +150,7 @@
   Output: "Vous pouvez utiliser l'opérateur `&` pour évaluer l'ensemble des valeurs d'un vecteur. l'opérateur `&&` n'évaluera que le premier élément d'un vecteur. Testons les deux pour les voir en action. Tapez l'expression TRUE & c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE & c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE & c(TRUE, FALSE, FALSE)')
-  Hint: "Tapez simplement TRUE & c(TRUE, FALSE, FALSE) pour voir comment l'operateur & fonctionne"
+  Hint: "Tapez simplement TRUE & c(TRUE, FALSE, FALSE) pour voir comment l'opérateur & fonctionne"
 
 
 # Q23
@@ -159,7 +159,7 @@
 
 # Q24
 - Class: cmd_question
-  Output: "Maintenant nous allons utiliser la même expression mais avece cette fois-ci un double & (&&) comme operateur AND. Evaluez cette expression: TRUE && c(TRUE, FALSE, FALSE)."
+  Output: "Maintenant nous allons utiliser la même expression mais avece cette fois-ci un double & (&&) comme opérateur AND. Evaluez cette expression: TRUE && c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE && c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
   Hint: "comme vous allez le constater, && est une version un peu différente de l'opérateur AND. Tapez: TRUE && c(TRUE, FALSE, FALSE)"
@@ -171,18 +171,18 @@
 
 # Q26
 - Class : text
-  Output: L'operateur OR (ou) suit globalement les même règles que l'operatuer AND. il utilise le symbole `|` (pipe) pour évaluer l'ensemble d'un vecteur et `||` pour n'évaluer que le premier élément.
+  Output: L'opérateur OR (ou) suit globalement les même règles que l'opérateur AND. il utilise le symbole `|` (pipe) pour évaluer l'ensemble d'un vecteur et `||` pour n'évaluer que le premier élément.
 
 # Q27
 - Class : text
-  Output: "Une expression utilisant l'opérateur OR sera vraie dès lors qu'une des partie de gauche ou droite sera vraie; si toutes les deux sont vraies, il retournera vrai mais si aucune n'est vraie, il retournera alors faux. Il faut lire cet operateur comme 'au moins l'une des deux parties est vraie'."
+  Output: "Une expression utilisant l'opérateur OR sera vraie dès lors qu'une des partie de gauche ou droite sera vraie; si toutes les deux sont vraies, il retournera vrai mais si aucune n'est vraie, il retournera alors faux. Il faut lire cet opérateur comme 'au moins l'une des deux parties est vraie'."
 
 # Q28
 - Class: cmd_question
-  Output: "testons la version vecteur de l'operateur OR. Evaluez l'expression suivante: TRUE | c(TRUE, FALSE, FALSE)."
+  Output: "testons la version vecteur de l'opérateur OR. Evaluez l'expression suivante: TRUE | c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE | c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE | c(TRUE, FALSE, FALSE)')
-  Hint: "Tapez: TRUE | c(TRUE, FALSE, FALSE) pour tester l'operateur OR sur un vecteur."
+  Hint: "Tapez: TRUE | c(TRUE, FALSE, FALSE) pour tester l'opérateur OR sur un vecteur."
 
 # Q29
 - Class: cmd_question
@@ -199,14 +199,14 @@
 
 # Q31
 - Class : cmd_question
-  Output: "Si vous vous rappelez vos cours, les expression arithmétiques ont un ordre et des priorités. Il en est de même avec les expressions boléennes. Ainsi, les operateurs AND sont évalués avant les expressions OR s'ils ont le même niveau dans l'expression (hors priorisation par parenthèses). Exemple d'expression ambigue: Tapez 5 > 8 || 6 != 8 && 4 > 3.9"
+  Output: "Si vous vous rappelez vos cours, les expression arithmétiques ont un ordre et des priorités. Il en est de même avec les expressions boléennes. Ainsi, les opérateurs AND sont évalués avant les expressions OR s'ils ont le même niveau dans l'expression (hors priorisation par parenthèses). Exemple d'expression ambigue: Tapez 5 > 8 || 6 != 8 && 4 > 3.9"
   CorrectAnswer: "5 > 8 || 6 != 8 && 4 > 3.9"
   AnswerTests: omnitest(correctExpr='5 > 8 || 6 != 8 && 4 > 3.9')
   Hint: "Voyez comment l'ordre des opérations peut avoir un impact sur la réponse retournée en tapant: 5 > 8 || 6 != 8 && 4 > 3.9"
 
 # Q32
 - Class : text
-  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et droite de l'operateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE && TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE || TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vraie."
+  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et droite de l'opérateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE && TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE || TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vraie."
 
 # Q33
 - Class: mult_question
@@ -261,7 +261,7 @@
 
 # Q40
 - Class : cmd_question
-  Output: "Vous devriez également être informé du fonctionnement de la fonction xor(). Cette fonction prends deux arguments et correspond à l'operateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE.Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
+  Output: "Vous devriez également être informé du fonctionnement de la fonction xor(). Cette fonction prends deux arguments et correspond à l'opérateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE.Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
   CorrectAnswer: "xor(5 == 6, !FALSE)"
   AnswerTests: omnitest(correctExpr='xor(5 == 6, !FALSE)')
   Hint: "Testez le xor en tapant: xor(5 == 6, !FALSE)"
@@ -351,4 +351,4 @@
   Output: "C'est tout pour cette introduction aux booléen dans R. Félicitations!"
 
 - Class: text
-  Output: Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test "Logique" et entrez le code "MAUDOUX'sfr34k's" (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test "Logique" et entrez le code "MAUDOUX'sfr34k's" (en conservant les majuscules et sans les guillemets !) cela vous ouvrira le test associé à cette leçon."
