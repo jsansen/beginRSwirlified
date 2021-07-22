@@ -73,7 +73,7 @@
 # Q11
 - Class: cmd_question
   Output: "On peut également tester `inférieur ou égal` via l'operateur `<=` qui, en toute logique, vérifie si la valeur de gauche est inférieure ou égale à celle de droite. Testez cette expression en vérifiant si 10 est inférieur ou égal à 10."
-  CorrectAnswer: -
+  CorrectAnswer: 10 <= 10
   AnswerTests: omnitest(correctExpr='10 <= 10')
   Hint: "Utilisez l'opérateur `<=` et tapez 10 <= 10"
 
