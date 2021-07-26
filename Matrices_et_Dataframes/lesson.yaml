@@ -128,6 +128,11 @@
   AnswerTests: calculates_same_value('matrix(1:20, nrow=4, ncol=5)'); expr_creates_var('my_matrix2')
   Hint: "Utilisez la fonction matrix() avec 3 arguments: 1:20, le nombre de lignes et le nombre de colonnes. Assurez vous de bien spécifier les arguments par leurs noms et de stocker le résultat dans une variable appelée my_matrix2 (pas dans my_matrix)."
 
+- Class: cmd_question
+  Output: "Si vous avez bien prété attention à la documentation de la fonction, vous devriez avoir repéré l'argument byrow. Quand nous traitons une matrice issue d'un système linéaire, on remplit naturellement de gauche à droite et de haut vers bas (comme pour l'ordre de la lecture). Tapez matrix(1:20, nrow=4, ncol=5,byrow=TRUE) pour bien identifier la différence avec la commande précédente. Ne faites pas d'affectation."
+  CorrectAnswer: matrix(1:20, nrow=4, ncol=5,byrow=TRUE)
+  AnswerTests: omnitest(correctExp='matrix(1:20, nrow=4, ncol=5,byrow=TRUE)')
+  Hint: "Tapez matrix(1:20, nrow=4, ncol=5,byrow=TRUE) pour remplir la matrice par ligne cette fois-ci."
 # Q18
 - Class: mult_question
   Output: "Enfin, vérifions que my_matrix et my_matrix2 sont réellement identiques. On vérifie cela avec une fonction que nous avons déjà croisée, laquelle est-ce ?"
@@ -143,6 +148,24 @@
   AnswerTests: any_of_exprs('identical(my_matrix, my_matrix2)', 'identical(my_matrix2, my_matrix)')
   Hint: "Si vous n'êtes pas sûr de savoir comment l'utiliser, vérifiez son fonctionnement via la documentation! (?identical)."
 
+- Class: cmd_question
+  Output: Affichons maintenant l'élément ligne 2 et colonne 4 de my_matrix. Pour cela, nous allons taper my_matrix[2, 4]. les crochets servent à créer des sous-ensembles de lignes et/ou colonnes. Le premier élément indiqué entre les crochets correspond à la ligne désirée suivi, après la virgule de la ou des colonnes recherchées. A vous, essayez cette commande.
+  CorrectAnswer: my_matrix[2, 4]
+  AnswerTests: omnitest(correctExpr='my_matrix[2, 4]')
+  Hint: Tapez my_matrix[2, 4] pour afficher la valeur en ligne 2 colonne 4.
+
+- Class: cmd_question
+  Output: "Affichons maintenant les valeurs en colonne 2 et 4 uniquement, mais pour toutes les lignes de notre matrice. Pour cela, nous allons indiquer que nous ne voulons pas filtrer les lignes (aucunes indications de sélection) mais que nous voulons certaines colonnes spécifiques, colonnes que nous fournissons sous forme d'un vecteur. On tape ainsi: my_matrix[, c(2, 4)]"
+  CorrectAnswer: my_matrix[, c(2, 4)]
+  AnswerTests: omnitest(correctExp='my_matrix[, c(2, 4)]')
+  Hint: Tapez my_matrix[, c(2, 4)].
+
+
+- Class: cmd_question
+  Output: Trouvez maintenant comment n'afficher que les lignes 1 et 3 pour toutes les colonnes.
+  CorrectAnswer: my_matrix[c(1, 3), ]
+  AnswerTests: omnitest(correctExp='my_matrix[c(1, 3), ]')
+  Hint: Tapez my_matrix[c(1, 3), ].
 
 # Q20
 - Class: text
@@ -223,7 +246,7 @@
   Output: "Puisque nous avons 6 colonnes (incluant les noms des patients), nous devons tout d'abord créer un vecteur, que nous appellerons cnames contenant ces valeurs (dans l'ordre): patient, age, weight, bp, rating et test."
   CorrectAnswer: cnames = c("patient", "age", "weight", "bp", "rating", "test")
   AnswerTests: omnitest(correctExpr='cnames = c("patient", "age", "weight", "bp", "rating", "test")')
-  Hint: "Assurez-vous que chaque mot soit en minuscule, entre guillemets (et sans espace à l'intérieur des guillemets), et séparés par des virgules. N'oubliez pas de mettre tout ça dans un vecteur avec la fonction c() et d'affectez tout ça a une variable cnames."
+  Hint: "Assurez-vous que chaque mot soit en minuscules, entre guillemets (et sans espace à l'intérieur des guillemets), et séparés par des virgules. N'oubliez pas de mettre tout ça dans un vecteur avec la fonction c() et d'affectez tout ça a une variable cnames."
 
 # Q34
 - Class: cmd_question

@@ -8,7 +8,7 @@
 
 # Q1
 - Class: text
-  Output: "Les valeurs manquantes jouent un rôle important en statistiques et en analyse de données. Souvent, les valeurs manquantes sont ignorées, mais elles peuvent parfois être vectrices d'une information qui peut être intéressante d'étudier afin de déterminer l'existence d'un schéma expliquant leur absence (défaillance d'un capteur ou erreur dans le protocole par exemple)."
+  Output: "Nous allons voir içi les valeurs manquantes et valeurs spécifiques de R. Les valeurs manquantes jouent un rôle important en statistiques et en analyse de données. Souvent, les valeurs manquantes sont ignorées, mais elles peuvent parfois être vectrices d'une information qui peut être intéressante d'étudier afin de déterminer l'existence d'un schéma expliquant leur absence (défaillance d'un capteur ou erreur dans le protocole par exemple)."
 
 # Q2
 - Class: text
@@ -41,7 +41,7 @@
 
 # Q7
 - Class: mult_question
-  Output: "ok! Maintenant, créons un vecteur contenant 1000 NA, quelle fonction utiliseriez-vous?"
+  Output: "ok! Maintenant, créons un vecteur contenant 1000 NAs, quelle fonction utiliseriez-vous?"
   CorrectAnswer: rep
   AnswerChoices: rep;rnorm;c
   AnswerTests: omnitest(correctVal='rep')
@@ -100,7 +100,7 @@
 
 # Q17
 - Class: text
-  Output: "L'astuce consiste à comprendre que de façon interne, R représente TRUE par le chiffre 1 et FALSE par le chiffre 0 (c'est une convention informatique, en ce qui me concerne, je m'en rappelle en imaginant le Ø (ou rond/zero barré) qui veut dire absence d'où 0=FALSE mais chacun son moyen mnémotechnique). Ainsi, si on calcule la somme d'un ensemble de TRUE/FALSE, on obtient le nombre total de TRUE."
+  Output: "L'astuce consiste à comprendre que de façon interne, R représente TRUE par le chiffre 1 et FALSE par le chiffre 0 (c'est une convention informatique 'universelle', en ce qui me concerne, je m'en rappelle en imaginant le Ø (ou rond/zero barré) qui veut dire absence d'où 0=FALSE mais chacun son moyen mnémotechnique). Ainsi, si on calcule la somme d'un ensemble de TRUE/FALSE, on obtient le nombre total de TRUE."
 
 # Q18
 - Class: cmd_question
@@ -139,6 +139,27 @@
   CorrectAnswer: Inf - Inf
   AnswerTests: omnitest(correctExpr='Inf - Inf')
   Hint: "Tapez Inf - Inf. Pouvez-vous prédire le résultat ?"
+
+- Class: cmd_question
+  Output: "Voyons maintenant comment R se comporte pour des calculs classiques avec des données contenant des NAs. Reprenez My_data et Affichons-en un résumé statistique avec la fonction summary. A vous!"
+  CorrectAnswer: summary(my_data)
+  AnswerTests: omnitest(correctExpr='summary(my_data)')
+  Hint: "Tapez summary(my_data) pour en afficher une rapide description statistique."
+
+- Class: cmd_question
+  Output: "Maintenant, affichons la moyenne de notre vecteur en utilisant la fonction mean()."
+  CorrectAnswer: mean(my_data)
+  AnswerTests: omnitest(correctExpr='mean(my_data)')
+  Hint: "Affichez la moyenne des données en tapant mean(my_data)."
+
+- Class: cmd_question
+  Output: "Comme vous pouvez le constater, cela ne fonctionne pas... Les NAs faussent le calcul et empêchent d'obtenir un résultat cohérent. Mais pas d'inquiétude, on peut facilement contourner le problème. Pour cela, nous allons utiliser une option, na.rm (remove NAs --retirer les NAs--), qui permet de demander à R de retirer les valeurs NAs lorsqu'il effectue un calcul. Essayons cela: mean(my_data, na.rm = TRUE)"
+  CorrectAnswer: mean(my_data, na.rm = TRUE)
+  AnswerTests: omnitest(correctExpr='mean(my_data, na.rm = TRUE)')
+  Hint: "Affichez maintenant la moyenne des données en tapant mean(my_data, na.rm = TRUE)."
+
+- Class: text
+  Output: "Et voila! cette option (on appelle cela un argument de la fonction mean) est souvent disponible sur les fontions de calculs de R mais avec une valeur par défaut placée à FALSE. Avoir une valeur par défaut permet de ne pas devoir indiquer le traitement à apporter aux NAs à chaque appel de fonction. Le fait que cette valeur par défaut soit à FALSE nous force à garder à l'esprit qu'il y a des NAs dans nos données."
 
 # Q22
 - Class: text
