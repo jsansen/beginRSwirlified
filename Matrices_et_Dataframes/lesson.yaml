@@ -246,7 +246,7 @@
   Output: "Puisque nous avons 6 colonnes (incluant les noms des patients), nous devons tout d'abord créer un vecteur, que nous appellerons cnames contenant ces valeurs (dans l'ordre): patient, age, weight, bp, rating et test."
   CorrectAnswer: cnames = c("patient", "age", "weight", "bp", "rating", "test")
   AnswerTests: omnitest(correctExpr='cnames = c("patient", "age", "weight", "bp", "rating", "test")')
-  Hint: "Assurez-vous que chaque mot soit en minuscule, entre guillemets (et sans espace à l'intérieur des guillemets), et séparés par des virgules. N'oubliez pas de mettre tout ça dans un vecteur avec la fonction c() et d'affectez tout ça a une variable cnames."
+  Hint: "Assurez-vous que chaque mot soit en minuscules, entre guillemets (et sans espace à l'intérieur des guillemets), et séparés par des virgules. N'oubliez pas de mettre tout ça dans un vecteur avec la fonction c() et d'affectez tout ça a une variable cnames."
 
 # Q34
 - Class: cmd_question
