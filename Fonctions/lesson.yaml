@@ -101,7 +101,7 @@
 
 # Q12
 - Class: text
-  Output: "En écrivant des fonctions, vous pouvez sérieusement améliorer votre compréhension du fonctionnement de R. Comme l'a un jour dit John Chambers, le créatoeur de R: \n\n Il y a deux choses utiles à savoir pour bien comprendre comment fonctionne les calculs dans R: 1. Tout ce qui existe dans R est un objet. 2. Tout ce qui se produit dans R est lié à un appel de fonction."
+  Output: "En écrivant des fonctions, vous pouvez sérieusement améliorer votre compréhension du fonctionnement de R. Comme l'a un jour dit John Chambers, le créatoeur de R: Il y a deux choses utiles à savoir pour bien comprendre comment fonctionne les calculs dans R: 1. Tout ce qui existe dans R est un objet. 2. Tout ce qui se produit dans R est lié à un appel de fonction."
 
 # Q13
 - Class: cmd_question
