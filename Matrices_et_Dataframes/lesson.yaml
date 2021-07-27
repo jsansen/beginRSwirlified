@@ -25,7 +25,7 @@
   Output: "Créons une suite de nombres allant de 1 à 20 et stockons cette suite dans une variable my_vector."
   CorrectAnswer: my_vector = 1:20
   AnswerTests: omnitest(correctExpr='my_vector = 1:20')
-  Hint: "Allez réflechissez un peu! On utilise l'opérateur ':' pour créer une suite. Par exemple, 4:8 est équivalent à écrire c(4, 5, 6, 7, 8), c'est juste plus pratique :-) Pensez-bien à la stocker dans une variable appelée my_vector."
+  Hint: "Allez réflechissez un peu, rappelez-vous ! On utilise l'opérateur ':' pour créer une suite. Par exemple, 4:8 est équivalent à écrire c(4, 5, 6, 7, 8), c'est juste plus pratique :-) Pensez-bien à la stocker dans une variable appelée my_vector."
 
 
 # Q4
@@ -62,7 +62,7 @@
 
 # Q8
 - Class: text
-  Output: "Ne vous inquietez pas si la commande que vous venez de taper vous semble un peu bizarre, c'est totalement normale, elle n'a rien de logique ! La fonction dim nous permet d'obtenir ou de définir l'attribut dim d'un objet R. Dans notre cas, on lui a assigné la valeur c(4, 5)."
+  Output: "Ne vous inquiétez pas si la commande que vous venez de taper vous semble un peu bizarre, c'est totalement normale, elle n'a rien de logique ! La fonction dim nous permet d'obtenir et de définir l'attribut dim d'un objet R. Dans notre cas, on lui a assigné la valeur c(4, 5)."
 
 # Q9
 - Class: cmd_question
@@ -86,7 +86,7 @@
 
 # Q12
 - Class: cmd_question
-  Output: "Attention, cela ne ressemble plus du tout à un vecteur ce truc, et en effet ce n'est plus un vecteur. Il a évolué en matrice ! (Datatypes, attrapez les tous !... bref je m'égare). Affichez maintenant le contenu de my_vector pour voir à quoi il ressemble."
+  Output: "Attention, cela ne ressemble plus du tout à un vecteur ce truc, et en effet ce n'est plus un vecteur. Il a évolué en matrice ! (Datatypes, attrapez-les tous !... bref je m'égare). Affichez maintenant le contenu de my_vector pour voir à quoi il ressemble."
   CorrectAnswer: my_vector
   AnswerTests: omnitest(correctExpr='my_vector')
   Hint: Tapez my_vector pour  voir son contenu.
@@ -110,7 +110,7 @@
 
 # Q15
 - Class: text
-  Output: "Cet exemple avait pour but d'illustrer le fait qu'une matrice est un simple vecteur atomique avec un atribut dimension. Une façon plus directe de créer une matrice est d'utiliser la fonction matrix()."
+  Output: "Cet exemple avait pour but d'illustrer le fait qu'une matrice est un simple vecteur atomique avec un attribut dimension. Une façon plus directe de créer une matrice est d'utiliser la fonction matrix()."
 
 
 # Q16
@@ -196,7 +196,7 @@
 
 # Q24
 - Class: text
-  Output: "Crediou c'est quoi ce bordel ?! il a totalement foiré notre jeu de données ! il a tout mis entre guillemets ! En fait, on aurait pu s'y attendre... Si vous avez été vigilant à ce qui a été expliqué un peu plus tôt, vous vous rappelez que les matrices ne peuvent contenir qu'UN SEUL type de données. Du coup, lorsque l'on a voulu associer notre vecteur et notre matrice, R a tenté de les convertir, hors comme il est difficile de convertir une chaîne de caractères en nombre, il a fait l'inverse et a simplement converti les nombres en chaines de caractères, d'où l'apparition des guillemets."
+  Output: "Crediou c'est quoi ce bordel ?! il a totalement foiré notre jeu de données ! il a tout mis entre guillemets ! En fait, on aurait pu s'y attendre... Si vous avez été vigilant à ce qui a été expliqué un peu plus tôt, vous vous rappelez que les matrices ne peuvent contenir qu'UN SEUL type de données. Du coup, lorsque l'on a voulu associer notre vecteur et notre matrice, R a tenté de les convertir. Sauf que, comme il est difficile de convertir une chaîne de caractères en nombre, il a fait l'inverse et a simplement converti les nombres en chaines de caractères, d'où l'apparition des guillemets."
 
 # Q25
 - Class: text
@@ -228,29 +228,29 @@
 
 # Q30
 - Class: cmd_question
-  Output: Confirmons cela en appelant la focntion class() sur notre tout nouveau dataframe.
+  Output: Confirmons cela en appelant la fonction class() sur notre tout nouveau dataframe.
   CorrectAnswer: class(my_data)
   AnswerTests: omnitest(correctExpr='class(my_data)')
   Hint: "La fonction class prend un seul argument: l'objet dont on veut identifier la classe."
 
 # Q31
 - Class: text
-  Output: "Il est aussi possible d'assigner des noms individuellement aux lignes et colonnes d'un dataframe, ce qui offre une alternative pour identifier quelle ligne de valeurs correspond à quel-le patient-e."
+  Output: "Il est aussi possible d'assigner des noms individuellement aux lignes et colonnes d'un dataframe (ou d'une matrice), ce qui offre une alternative pour identifier quelle ligne de valeurs correspond à quel-le patient-e."
 
 # Q32
 - Class: text
-  Output: "Cependant, puisque nous avons déjà résolu ce problème, résolvons-en un nouveau, celui d'attribuer un nom aux colonnes de notre dataframe afin de clairement identifier quel type d'examen/mesure chaque colonne représente."
+  Output: "Essayons cela en attribuant un nom aux colonnes de notre dataframe afin de clairement identifier quel type d'examen/mesure chaque colonne représente."
 
 # Q33
 - Class: cmd_question
   Output: "Puisque nous avons 6 colonnes (incluant les noms des patients), nous devons tout d'abord créer un vecteur, que nous appellerons cnames contenant ces valeurs (dans l'ordre): patient, age, weight, bp, rating et test."
   CorrectAnswer: cnames = c("patient", "age", "weight", "bp", "rating", "test")
   AnswerTests: omnitest(correctExpr='cnames = c("patient", "age", "weight", "bp", "rating", "test")')
-  Hint: "Assurez-vous que chaque mot soit en minuscules, entre guillemets (et sans espace à l'intérieur des guillemets), et séparés par des virgules. N'oubliez pas de mettre tout ça dans un vecteur avec la fonction c() et d'affectez tout ça a une variable cnames."
+  Hint: "Assurez-vous que chaque mot soit en minuscules, entre guillemets (et sans espace à l'intérieur des guillemets), et séparés par des virgules. N'oubliez pas de mettre tout ça dans un vecteur avec la fonction c() et d'affectez le tout à une variable appelée cnames."
 
 # Q34
 - Class: cmd_question
-  Output: "Maintenant, de façon très similaire à ce qui a été fait précédemment, utilisez la fonction colnames() pour définir l'attribut colnames de notre dataframe."
+  Output: "Maintenant, utilisez la fonction colnames() pour définir l'attribut colnames de notre dataframe. (pour information, rownames() permettrait, en suivant une logique très similaire, de nommer les lignes d'un dataframe ou d'une matrice mais c'est une pratique beaucoup moins fréquente que de nommer les colonnes)."
   CorrectAnswer: colnames(my_data) = cnames
   AnswerTests: omnitest(correctExpr='colnames(my_data) = cnames')
   Hint: "Vous ne trouvez pas ? Essayez colnames(my_data) = cnames."
