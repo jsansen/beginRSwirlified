@@ -6,7 +6,7 @@ Ce cours n'a pas pour objectif d'apprendre la statistiques, il se focalise sur l
 
 L'objectif est de comprendre comment R fonctionne pour pouvoir l'utiliser correctement/efficacement/intelligement pour faire de la statistiques.
 
-Cours traduit et completé du cours [R_programming_E](https://github.com/swirldev/R_Programming_E) lui-même issu du MOOC Coursera **R-programming** de l'équipe biostatistics du *John Hopkins School of Public Health*.
+Cours traduit et adapté du cours [R_programming_E](https://github.com/swirldev/R_Programming_E) lui-même issu du MOOC Coursera **R-programming** de l'équipe biostatistics du *John Hopkins School of Public Health*.
 
 Un grand merci à eux pour le travail accompli et la publication en open-source.
 
