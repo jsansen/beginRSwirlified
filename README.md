@@ -26,14 +26,24 @@ De façon assez simple, ce cours s'installe de cette façon:
 Image source : [sthda - Running Rstudio and  setting up your working directory](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
 
 5. Taper les commandes suivantes:
-et sélectionner le fichier téléchargé en étape 1.
+
 
 ```r
 install.packages("swirl")
 #si besoin, installer les dépendances requises
 library(swirl)
+```
+Et soit :
+```r
 install_course()
 ```
+et sélectionner le fichier téléchargé en étape 1. 
+
+Soit :
+```r
+install_course_github("jsansen","beginrswirlified") 
+```
+
 Vous êtes maintenant prêt à démarrer le cours, il ne vous reste plus qu'à démarrer le cours
 
 ```r
