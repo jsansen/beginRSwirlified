@@ -33,7 +33,7 @@
   Output: "La fonction mean() prend un vecteur en entrée et retourne la moyenne de tous les nombres présents dans le vecteur d'entrée. Les variables d'entrée d'une fonction sont généralement appelées des arguments. Pour fournir des arguments à une fonction (on dit également 'passer des arguments'), on les indique dans la parenthèse de la fonction. Essayez de passer l'argument c(2, 4, 5) à la fonction mean()."
   CorrectAnswer: mean(c(2, 4, 5))
   AnswerTests: omnitest(correctExpr='mean(c(2, 4, 5))')
-  Hint: "Calculez la moyenne de 2, 4, and 5 en tapant: mean(c(2, 4, 5)). Ici il faut que vous entriez les valeurs exactement dans cet ordre (afin de faciliter la vérification de votre réponse par le logiciel) mais ce n'est normalement pas nécessaire avec la fonction mean."
+  Hint: "Calculez la moyenne du vecteur (2, 4, 5) en tapant: mean(c(2, 4, 5)). Ici il faut que vous entriez les valeurs exactement dans cet ordre (afin de faciliter la vérification de votre réponse par le logiciel) mais ce n'est normalement pas nécessaire avec la fonction mean."
 
 # Q6
 - Class: text

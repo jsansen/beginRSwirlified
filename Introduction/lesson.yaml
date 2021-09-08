@@ -27,11 +27,12 @@
   Output: " 1. Assurez-vous d'être dans les bonnes conditions pour effectuer le test : il ne comportera que 5 à 10 questions mais vous n'aurez qu'une à deux minutes pour le compléter dans son intégralité! Donc faites-le sérieusement, dans un environnement adapté, avec une connexion internet stable."
 - Class: text
   Output: " 2. Vous n'aurez qu'un essai, soyez vigilant-e."
-- Class: text
-  Output: " 3. Le fait de faire et terminer le test vous permettra, en fonction de vos performances, d'obtenir un badge moodle. Seuls les meilleurs seront récompensés d'un Badge OR, les autres se contenteront d'un badge argent, bronze ou pire encore, ne pourront y prétendre ! (ignoble infamie! Honte sur vous et vous descendants pour les cinqs prochaines générations! )"
+
+# - Class: text
+#  Output: " 3. Le fait de faire et terminer le test vous permettra, en fonction de vos performances, d'obtenir un badge moodle. Seuls les meilleurs seront récompensés d'un Badge OR, les autres se contenteront d'un badge argent, bronze ou pire encore, ne pourront y prétendre ! (ignoble infamie! Honte sur vous et vous descendants pour les cinqs prochaines générations! )"
 
 - Class: text
-  Output: " 4. Restez zen, ces tests ne sont pas fait pour vous piéger, bien au contraire ! Ils servent juste à s'assurrer que vous avez bien saisi les concepts et nuances présentées dans le cours."
+  Output: " 3. Restez zen, ces tests ne sont pas fait pour vous piéger, bien au contraire ! Ils servent juste à s'assurer que vous avez bien saisi les concepts et nuances présentés dans le cours."
 
 - Class: text
   Output: "Par ailleurs, pour vous récompenser de votre implication et de votre sérieux, les notes obtenues seront utilisées dans le contrôle continu et globalement, permettront d'améliorer votre moyenne générale si cela s'avère nécessaire."
