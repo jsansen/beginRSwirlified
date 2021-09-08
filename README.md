@@ -6,19 +6,16 @@ Ce cours n'a pas pour objectif d'apprendre la statistiques, il se focalise sur l
 
 L'objectif est de comprendre comment R fonctionne pour pouvoir l'utiliser correctement/efficacement/intelligement pour faire de la statistiques.
 
-Cours traduit et completé du cours [R_programming_E](https://github.com/swirldev/R_Programming_E) lui-même issu du MOOC Coursera **R-programming** de l'équipe biostatistics du *John Hopkins School of Public Health*.
+Cours traduit et adapté du cours [R_programming_E](https://github.com/swirldev/R_Programming_E) lui-même issu du MOOC Coursera **R-programming** de l'équipe biostatistics du *John Hopkins School of Public Health*.
 
 Un grand merci à eux pour le travail accompli et la publication en open-source.
 
 # Installation #
 
-De façon assez simple, ce cours s'installe de cette façon:
-
-1. Télécharger le document beginr.swc
-1. Installer R/RStudio
+1. Installer R/RStudio (R version 4.* recommandée)
 1. Ouvrir R/Rstudio
 1. Mettre le focus (curseur actif) sur la console:
-    - dans R, vous n'avez qu'une   console, donc pas de problème
+    - dans R, vous n'avez qu'une console, donc pas de problème
     - dans Rstudio, la console est censée être en bas à gauche. Si vous ne la voyez pas, cliquez sur View(Affichage) > Panes (Panneau) > Zoom Console
 
 ![Rstudio console position](images/RStudioConsole.png)
@@ -26,20 +23,28 @@ De façon assez simple, ce cours s'installe de cette façon:
 Image source : [sthda - Running Rstudio and  setting up your working directory](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
 
 5. Taper les commandes suivantes:
-et sélectionner le fichier téléchargé en étape 1.
 
 ```r
 install.packages("swirl")
 #si besoin, installer les dépendances requises
 library(swirl)
+```
+Et soit :
+```r
 install_course()
 ```
-Vous êtes maintenant prêt à démarrer le cours, il ne vous reste plus qu'à démarrer le cours
+et sélectionner le fichier beginr.swc qu'il faut télécharger.
+
+
+Soit :
+```r
+install_course_github("jsansen", "beginrswirlified", "main") 
+```
+
+Vous êtes maintenant normalement prêt à démarrer le cours, il ne vous reste plus qu'à lancer le package.
 
 ```r
-install.packages("swirl")
-#si besoin, installer les dépendances requises
-library(swirl)
+library(swirl) //(normalement déjà fait précédemment pour installer le cours mais a reproduire si vous éteignez R/RStudio)
 swirl()
 # répondre aux quelques questions posées et sélectionner le cours beginr.
 ```
