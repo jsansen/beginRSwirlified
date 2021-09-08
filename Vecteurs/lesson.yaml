@@ -291,7 +291,7 @@
 - Class: cmd_question
   Output: "Essayons cela. Modifions notre liste y afin de ne nommer que les élements de types complexes et de types chaine de caractère et laisserez la suite '1:3' et le booléen 'TRUE' sans nom d'accès. A vous."
   CorrectAnswer: y = list(1:3, caractere = 'a', TRUE, nbComplexe= 1+4i)
-  AnswerTests: omnitest(correctExpr='y = list(1:3, caractere = 'a', TRUE, nbComplexe= 1+4i)')
+  AnswerTests: omnitest(correctExpr='y = list(1:3, caractere = "a", TRUE, nbComplexe= 1+4i)')
   Hint: "tapez y = list(1:3, caractere = 'a', TRUE, nbComplexe= 1+4i) pour modifier notre liste."
 
 
