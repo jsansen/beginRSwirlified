@@ -44,7 +44,7 @@
   Output: "ok! Maintenant, créons un vecteur contenant 1000 NAs, quelle fonction utiliseriez-vous?"
   CorrectAnswer: rep
   AnswerChoices: rep;rnorm;c
-  AnswerTests: omnitest(correctVal='rep')
+  AnswerTests: omnitest(correctVal = "rep")
   Hint: "Réfléchissez un peu, vous l'avez vu dans un précédent cours !"
 
 # Q8

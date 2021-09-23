@@ -85,7 +85,7 @@
 - Class: mult_question
   Output: "Laquelle de ces expressions s'évalue à FALSE ?"
   CorrectAnswer: 9 >= 10
-  AnswerChoices: 9 >= 10; 7 == 7; 6 < 8; 0 > -36
+  AnswerChoices: 9 >= 10;7 == 7;6 < 8;0 > -36
   AnswerTests: omnitest(correctVal='9 >= 10')
   Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R."
 
@@ -93,7 +93,7 @@
 - Class: mult_question
   Output: "Laquelle de ces expressions s'évalue à TRUE?"
   CorrectAnswer: 9 >= 10
-  AnswerChoices: 9 >= 10; 7 == 9; 57 < 8; -6 > -7
+  AnswerChoices: 9 >= 10;7 == 9;57 < 8;-6 > -7
   AnswerTests: omnitest(correctVal='-6 > -7')
   Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R ou en quittant temporairement ce cours avec la commande 'play()' - rappelez-vous, vous pourrez revenir dans ce module en tapant nxt()."
 
@@ -119,7 +119,7 @@
 - Class: mult_question
   Output: Laquelle de ces propositions retourne FALSE?
   CorrectAnswer: "!(0 >= -1)"
-  AnswerChoices: "!(0 >= -1); !FALSE; 7 != 8; 9 < 10"
+  AnswerChoices: "!(0 >= -1);!FALSE;7 != 8;9 < 10"
   AnswerTests: omnitest(correctVal='!(0 >= -1)')
   Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R."
 
@@ -128,7 +128,7 @@
 - Class: mult_question
   Output: 'Selon vous, que retournera cette expression ?: (TRUE != FALSE) == !(6 == 7)'
   CorrectAnswer: TRUE
-  AnswerChoices: TRUE; FALSE; Peut-on vraiment obtenir une vérité objective en programmation ?; %>%
+  AnswerChoices: TRUE;FALSE;Peut-on vraiment obtenir une vérité objective en programmation ?;%>%
   AnswerTests: omnitest(correctVal='TRUE')
   Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
@@ -212,7 +212,7 @@
 - Class: mult_question
   Output: Laquelle de ces expressions retournera TRUE?
   CorrectAnswer: "TRUE && FALSE || 9 >= 4 && 3 < 6"
-  AnswerChoices: "TRUE && FALSE || 9 >= 4 && 3 < 6; TRUE && 62 < 62 && 44 >= 44; 99.99 > 100 || 45 < 7.3 || 4 != 4.0; FALSE || TRUE && FALSE"
+  AnswerChoices: "TRUE && FALSE || 9 >= 4 && 3 < 6;TRUE && 62 < 62 && 44 >= 44;99.99 > 100 || 45 < 7.3 || 4 != 4.0;FALSE || TRUE && FALSE"
   AnswerTests: omnitest(correctVal='TRUE && FALSE || 9 >= 4 && 3 < 6')
   Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
@@ -220,7 +220,7 @@
 - Class: mult_question
   Output: Laquelle de ces expressions retournera FALSE?
   CorrectAnswer: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5"
-  AnswerChoices: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5; FALSE || TRUE && 6 != 4 || 9 > 4; !(8 > 4) ||  5 == 5.0 && 7.8 >= 7.79; 6 >= -9 && !(6 > 7) && !(!TRUE)"
+  AnswerChoices: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5;FALSE || TRUE && 6 != 4 || 9 > 4;!(8 > 4) ||  5 == 5.0 && 7.8 >= 7.79;6 >= -9 && !(6 > 7) && !(!TRUE)"
   AnswerTests: omnitest(correctVal='FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5')
   Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
@@ -239,7 +239,7 @@
 - Class: mult_question
   Output: Laquelle de ces expressions retournera TRUE?
   CorrectAnswer: "!isTRUE(4 < 3)"
-  AnswerChoices: "isTRUE(!TRUE); isTRUE(3); isTRUE(NA); !isTRUE(4 < 3); !isTRUE(8 != 5)"
+  AnswerChoices: "isTRUE(!TRUE);isTRUE(3);isTRUE(NA);!isTRUE(4 < 3);!isTRUE(8 != 5)"
   AnswerTests: omnitest(correctVal='!isTRUE(4 < 3)')
   Hint: 'isTRUE() ne retournera TRUE que si son argument est évalué à TRUE.'
 
@@ -254,7 +254,7 @@
 - Class: mult_question
   Output: Laquelle de ces expressions retournera TRUE?
   CorrectAnswer: "identical(5 > 4, 3 < 3.1)"
-  AnswerChoices: "identical(5 > 4, 3 < 3.1); identical(4, 3.1); identical('hello', 'Hello'); !identical(7, 7)"
+  AnswerChoices: "identical(5 > 4, 3 < 3.1);identical(4, 3.1);identical('hello', 'Hello');!identical(7, 7)"
   AnswerTests: omnitest(correctVal='identical(5 > 4, 3 < 3.1)')
   Hint: "Rappelez-vous, identical() ne retournera TRUE que si ses arguments sont strictement identiques."
 
@@ -274,7 +274,7 @@
 - Class: mult_question
   Output: Laquelle de ces expressions retournera FALSE?
   CorrectAnswer: "xor(4 >= 9, 8 != 8.0)"
-  AnswerChoices: "xor(4 >= 9, 8 != 8.0); xor(!isTRUE(TRUE), 6 > -1); xor(identical(xor, 'xor'), 7 == 7.0); xor(!!TRUE, !!FALSE)"
+  AnswerChoices: "xor(4 >= 9, 8 != 8.0);xor(!isTRUE(TRUE), 6 > -1);xor(identical(xor, 'xor'), 7 == 7.0);xor(!!TRUE, !!FALSE)"
   AnswerTests: omnitest(correctVal='xor(4 >= 9, 8 != 8.0)')
   Hint: "Pour que xor() retourne TRUE, un seul des deux arguments doit être évalué à TRUE."
 
@@ -315,7 +315,7 @@
 - Class: mult_question
   Output: Laquelle de ces expressions fournirait les indices de position des éléments de ints inférieurs ou égaux à 2 ?
   CorrectAnswer: "which(ints <= 2)"
-  AnswerChoices: "ints < 2; ints <= 2; which(ints < 2); which(ints <= 2)"
+  AnswerChoices: "ints < 2;ints <= 2;which(ints < 2);which(ints <= 2)"
   AnswerTests: omnitest(correctVal='which(ints <= 2)')
   Hint: 'Utilisez la fonction which().'
 
@@ -341,7 +341,7 @@
 - Class: mult_question
   Output: Laquelle de ces expression est evaluée à TRUE?
   CorrectAnswer: "any(ints == 10)"
-  AnswerChoices: "any(ints == 10); all(ints == 10); all(c(TRUE, FALSE, TRUE)); any(ints == 2.5)"
+  AnswerChoices: "any(ints == 10);all(ints == 10);all(c(TRUE, FALSE, TRUE));any(ints == 2.5)"
   AnswerTests: omnitest(correctVal='any(ints == 10)')
   Hint: "any() retournera TRUE si au moins un des éléments du vecteur vérifie l'expression (est évalué à TRUE dans le vecteur logique)."
 

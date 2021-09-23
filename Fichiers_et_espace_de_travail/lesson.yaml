@@ -180,7 +180,7 @@
 - Class: mult_question
   Output: Pourrions-nous supprimer le document mytest.R ?
   CorrectAnswer: No
-  AnswerChoices: Yes; No
+  AnswerChoices: Yes;No
   AnswerTests: omnitest(correctVal='No')
   Hint: Ce document existe-t-il encore?
 

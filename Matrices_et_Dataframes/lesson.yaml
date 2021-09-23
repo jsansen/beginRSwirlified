@@ -136,7 +136,7 @@
 # Q18
 - Class: mult_question
   Output: "Enfin, vérifions que my_matrix et my_matrix2 sont réellement identiques. On vérifie cela avec une fonction que nous avons déjà croisée, laquelle est-ce ?"
-  AnswerChoices: id; identical; same; similar; ==
+  AnswerChoices: id;identical;same;similar;==
   CorrectAnswer: identical
   AnswerTests: omnitest(correctVal='identical')
   Hint: "C'est une fonction que nous avons déjà croisé, qui permet d'évaluer si deux objets sont identiques... "

@@ -122,7 +122,7 @@
 - Class: mult_question
   Output: "Avant d'afficher le contenu de la variable my_sqrt, selon vous, que contient-elle ?"
   CorrectAnswer: un vecteur de taille 3
-  AnswerChoices: un vecteur de taille 3; un nombre unique (un vecteur de taille 1); un vecteur vide (de taille 0)
+  AnswerChoices: un vecteur de taille 3;un nombre unique (un vecteur de taille 1);un vecteur vide (de taille 0)
   AnswerTests: omnitest(correctVal='un vecteur de taille 3')
   Hint: "Rappelez vous comment R avait traité les opérations sur les vecteurs... un élément à la fois..."
 
@@ -144,7 +144,7 @@
 - Class: mult_question
   Output: Choisissez la bonne réponse
   CorrectAnswer: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e.
-  AnswerChoices: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e.; my_div est un vecteur de taille 1 (une valeur unique); my_div est non définie
+  AnswerChoices: Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e.;my_div est un vecteur de taille 1 (une valeur unique);my_div est non définie
   AnswerTests: omnitest(correctVal='Le premier élément de my_div est égal au 1er élément de z divisé par le 1er élément de my_sqrt, et ainsi de suite pour les 2e, 3e.')
   Hint: "Rappelez vous comment R a géré les précédentes opérations '+' et '-' sur les vecteurs."
 

@@ -100,7 +100,7 @@
 
 - Class: mult_question
   Output: Quelle est la médiane (en millions) des pays N'AYANT PAS la couleur rouge sur leurs drapeaux?
-  AnswerChoices: 9.0; 4.0; 27.6; 3.0; 22.1; 0.0
+  AnswerChoices: 9.0;4.0;27.6;3.0;22.1;0.0
   CorrectAnswer: 3.0
   AnswerTests: omnitest(correctVal= '3.0')
   Hint: "Utilisez le résultat de la question précédente. Rappelez-vous que red = 0 signifie que la couleur rouge n'est pas présente sur le drapeau"
@@ -113,7 +113,7 @@
 
 - Class: mult_question
   Output: "Quel est la population maximale (en millions) pour le groupe 4 (Afrique)?"
-  AnswerChoices: 56.00; 1010.0; 119.0; 5.00; 157.00
+  AnswerChoices: 56.00;1010.0;119.0;5.00;157.00
   CorrectAnswer: 56.00
   AnswerTests: omnitest(correctVal= '56.00')
   Hint: "Observez le résultat obtenu précédemment pour trouver la bonne réponse."

@@ -43,9 +43,9 @@
 # Q8
 - Class: mult_question
   Output: Que pensez-vous que x[is.na(x)] nous donnera ?
-  AnswerChoices: un vecteur entièrement rempli de NAs; un vecteur sans NAs; un vecteur de TRUE/FALSE; un vecteur de taille 0
+  AnswerChoices: un vecteur entièrement rempli de NAs;un vecteur sans NAs;un vecteur de TRUE/FALSE;un vecteur de taille 0
   CorrectAnswer: un vecteur entièrement rempli de NAs
-  AnswerTests: omnitest(correctVal="Un vecteur entièrement rempli de NAs")
+  AnswerTests: omnitest(correctVal = "Un vecteur entièrement rempli de NAs")
   Hint: Rappelez-vous que is.na(x) nous dit où sont les NAs dans le vecteur. Si on échantillonne x sur cette base, à quoi doit-on s'attendre?
 
 # Q9
@@ -76,7 +76,7 @@
 # Q13
 - Class: mult_question
   Output: Rappelez-vous que l'expression y > 0 nous donnera un vecteur de valeurs logiques de la même taille que y, avec des TRUE ou FALSE pour chaque élément en fonction de la véracité de cette expression. Selon vous, que donnera y[y > 0]?
-  AnswerChoices: un vecteur de toutes les valeurs positives de y; un vecteur de toutes les valeurs négatives de y; un vecteur rempli de NA; un vecteur de taille 0; un vecteur de TRUE/FALSE
+  AnswerChoices: un vecteur de toutes les valeurs positives de y;un vecteur de toutes les valeurs négatives de y;un vecteur rempli de NA;un vecteur de taille 0;un vecteur de TRUE/FALSE
   CorrectAnswer: un vecteur de toutes les valeurs positives de y
   AnswerTests: omnitest(correctVal="Un vecteur de toutes les valeurs positives de y")
   Hint: L'expression logique y > 0 nous donnera TRUE pour chaque élément de y qui est positif. En partant de ce postulat, selon-vous, que donnera y[y > 0] ?
@@ -214,7 +214,7 @@
 # Q36
 - Class: mult_question
   Output: Maintenant, retour à nos moutons et à la sélection d'un sous-ensemble d'un vecteur avec des éléments nommés. Laquelle de ces commandes, selon vous, nous donnera le deuxième élément de vect?
-  AnswerChoices: vect["bar"]; vect[bar]; vect["2"]
+  AnswerChoices: vect["bar"];vect[bar];vect["2"]
   CorrectAnswer: vect["bar"]
   AnswerTests: omnitest(correctVal='vect["bar"]')
   Hint: Si nous voulons l'élément nommé "bar" (i.e. le deuxième élément de vect), quelle commande nous fournira cela ?
