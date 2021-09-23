@@ -319,7 +319,7 @@
 - Class: cmd_question
   Output: "Tapez maintenant la commande suivante : y[['nbComplexe']]."
   CorrectAnswer: y[['nbComplexe']]
-  AnswerTests: omnitest(correctExpr='y[['nbComplexe']]')
+  AnswerTests: omnitest(correctExpr="y[['nbComplexe']]")
   Hint:  "Tapez la commande: y[['nbComplexe']]."
 
 - Class: text
