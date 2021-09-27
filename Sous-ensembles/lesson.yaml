@@ -45,7 +45,7 @@
   Output: Que pensez-vous que x[is.na(x)] nous donnera ?
   AnswerChoices: un vecteur entièrement rempli de NAs;un vecteur sans NAs;un vecteur de TRUE/FALSE;un vecteur de taille 0
   CorrectAnswer: un vecteur entièrement rempli de NAs
-  AnswerTests: omnitest(correctVal = "Un vecteur entièrement rempli de NAs")
+  AnswerTests: omnitest(correctVal = "un vecteur entièrement rempli de NAs")
   Hint: Rappelez-vous que is.na(x) nous dit où sont les NAs dans le vecteur. Si on échantillonne x sur cette base, à quoi doit-on s'attendre?
 
 # Q9
