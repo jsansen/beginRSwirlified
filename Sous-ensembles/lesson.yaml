@@ -76,8 +76,8 @@
 # Q13
 - Class: mult_question
   Output: Rappelez-vous que l'expression y > 0 nous donnera un vecteur de valeurs logiques de la même taille que y, avec des TRUE ou FALSE pour chaque élément en fonction de la véracité de cette expression. Selon vous, que donnera y[y > 0]?
-  AnswerChoices: un vecteur de toutes les valeurs positives de y;un vecteur de toutes les valeurs négatives de y;un vecteur rempli de NA;un vecteur de taille 0;un vecteur de TRUE/FALSE
-  CorrectAnswer: un vecteur de toutes les valeurs positives de y
+  AnswerChoices: Un vecteur de toutes les valeurs positives de y;Un vecteur de toutes les valeurs négatives de y;Un vecteur rempli de NA;Un vecteur de taille 0;Un vecteur de TRUE/FALSE
+  CorrectAnswer: Un vecteur de toutes les valeurs positives de y
   AnswerTests: omnitest(correctVal="Un vecteur de toutes les valeurs positives de y")
   Hint: L'expression logique y > 0 nous donnera TRUE pour chaque élément de y qui est positif. En partant de ce postulat, selon-vous, que donnera y[y > 0] ?
 

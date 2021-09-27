@@ -214,7 +214,7 @@
 - Class: cmd_question
   Output: "Regardez la documentation de la commande dir.create."
   CorrectAnswer: ?dir.create
-  AnswerTests: omnitest(correctExpr='?dir.create')
+  AnswerTests: any_of_exprs('?dir.create','?dir.create()')
   Hint: "?dir.create will show you the docs."
 
 - Class: text
