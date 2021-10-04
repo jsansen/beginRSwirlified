@@ -56,7 +56,7 @@ suivre les indications disponibles sur le site de [swirlify](http://swirlstats.c
 **TODO : réorganisation des modules**
 
 1. R_101
-1. Fichiers_et_espace_de_travail
+1. **CORRECT** Fichiers_et_espace_de_travail
 1. Suites
 1. Vecteurs
 1. Sous-ensembles
@@ -139,7 +139,8 @@ Comme son nom l'indique, ce cours est à faire en premier et donne la base de R.
 ## Fichiers et espaces de travail ##
 
 Içi, nous chercherons a travailler sur la notion d'espace de travail et la manipulation des fichiers. Cela est primordial à la bonne compréhension de la façon dont travaille R et comment il interprète votre système, comment lui faire ouvrir un fichier et naviguer dans votre espace de fichiers (votre ordinateur).
-
+**TODO** corriger erreur de conception (retour dans le dossier test_dir après setwd(..), très perturbant pour les étudiants
+**TODO** retirer la section file.path (peu utile et perturbant pour les étudiants + explication mal adaptée)
 ## Suites ##
 
 Ici on voit la création de suites et les variants de création.
