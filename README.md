@@ -22,7 +22,7 @@ Un grand merci à eux pour le travail accompli et la publication en open-source.
 
 Image source : [sthda - Running Rstudio and  setting up your working directory](http://www.sthda.com/english/wiki/running-rstudio-and-setting-up-your-working-directory-easy-r-programming)
 
-5. Taper les commandes suivantes:
+4. Taper les commandes suivantes:
 
 ```r
 install.packages("swirl")
@@ -30,7 +30,7 @@ install.packages("swirl")
 library(swirl)
 ```
 
-il vous faut maintenant installer le cours:
+5. Il vous faut maintenant installer le cours:
 
 ```r
 install_course_github("jsansen", "beginrswirlified", "main") 
