@@ -29,14 +29,9 @@ install.packages("swirl")
 #si besoin, installer les dépendances requises
 library(swirl)
 ```
-Et soit :
-```r
-install_course()
-```
-et sélectionner le fichier beginr.swc qu'il faut télécharger.
 
+il vous faut maintenant installer le cours:
 
-Soit :
 ```r
 install_course_github("jsansen", "beginrswirlified", "main") 
 ```
@@ -46,7 +41,7 @@ Vous êtes maintenant normalement prêt à démarrer le cours, il ne vous reste 
 ```r
 library(swirl) //(normalement déjà fait précédemment pour installer le cours mais a reproduire si vous éteignez R/RStudio)
 swirl()
-# répondre aux quelques questions posées et sélectionner le cours beginr.
+# répondre aux quelques questions posées et sélectionner le cours.
 ```
 # Pour les éditeurs
 suivre les indications disponibles sur le site de [swirlify](http://swirlstats.com/swirlify/writing.html)
@@ -56,7 +51,7 @@ suivre les indications disponibles sur le site de [swirlify](http://swirlstats.c
 **TODO : réorganisation des modules**
 
 1. R_101
-1. **CORRECT** Fichiers_et_espace_de_travail
+1. **CORRECTIONS** Fichiers_et_espace_de_travail
 1. Suites
 1. Vecteurs
 1. Sous-ensembles
