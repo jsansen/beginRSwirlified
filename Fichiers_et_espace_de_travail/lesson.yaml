@@ -136,17 +136,17 @@
 - Class: text
   Output: "Considérez votre système (ordinateur) comme une hiérarchie de dossiers contenant des fichiers (c'est une structure arborescente où les dossiers sont des branches et les fichiers des feuilles). Il est possible de naviguer dans l'arbre de votre système. Nous avons vu comment entrer dans un dossier (suivre une branche), et que l'on peut descendre dans les sous-branches (les sous-dossiers) pour accéder aux feuilles (les fichiers) mais il est tout aussi simple de remonter dans la hiérarchie ! Remonter d'un niveau se fait très simplement via '../'."
 
-- Class: cmd_question
-  Output: C'est une convention informatique, quel que soit le système. './' correspond au dossier en cours, '../' correspond au dossier précédent. Retournez dans le dossier précédent avec la commande setwd.
-  CorrectAnswer: setwd("../")
-  AnswerTests: any_of_exprs('setwd("..")', 'setwd("../")', 'setwd("./..")','setwd("./../")')
-  Hint: "Utilisez la fonction setwd('..') pour redéfinir le répértoire d'origine comme espace de travail."
+#- Class: cmd_question
+#  Output: C'est une convention informatique, quel que soit le système. './' correspond au dossier en cours, '../' correspond au dossier précédent. Retournez dans le dossier précédent avec la commande setwd.
+#  CorrectAnswer: setwd("../")
+#  AnswerTests: any_of_exprs('setwd("..")', 'setwd("../")', 'setwd("./..")','setwd("./../")')
+#  Hint: "Utilisez la fonction setwd('..') pour redéfinir le répértoire d'origine comme espace de travail."
 
-- Class: cmd_question
-  Output: Retournez dans le dossier test_dir avec la commande setwd.
-  CorrectAnswer: setwd("test_dir/")
-  AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/")', 'setwd("./test_dir")','setwd("./test_dir/")')
-  Hint: "Utilisez la fonction setwd('test_dir') pour redéfinir le répértoire d'origine comme notre espace de travail."
+#- Class: cmd_question
+#  Output: Retournez dans le dossier test_dir avec la commande setwd.
+#  CorrectAnswer: setwd("test_dir/")
+#  AnswerTests: any_of_exprs('setwd("test_dir")', 'setwd("test_dir/")', 'setwd("./test_dir")','setwd("./test_dir/")')
+#  Hint: "Utilisez la fonction setwd('test_dir') pour redéfinir le répértoire d'origine comme notre espace de travail."
 
 - Class: text
   Output: Pour information, vous pouvez très facilement composer un chemin relatif complexe. Ainsi "../../" permettra de remonter de deux niveaux dans la hiérarchie, et ainsi de suite.
