@@ -19,7 +19,7 @@
   Output: Cependant, il est important de comprendre que R fournit une API (Application Programming Interface- un ensemble de commandes) permettant d'interagir avec les fichiers afin que votre code fonctionne quel que soit le système d'exploitation et d'effectuer toutes les opérations que vous feriez à la souris (création, déplacement, renommage, suppression).
 #Q4
 - Class: cmd_question
-  Output: A son éxecution, R considère qu'il se trouve quelque part dans votre hiérarchie de dossiers; on appelle ce dossier l'espace de travail (working directory dans la langue de Shakespeare). Vous pouvez identifier l'emplacement de cet espace de travail en utilisant la commande "getwd()".. essayez-la.
+  Output: A son éxecution, R considère qu'il se trouve quelque part dans votre hiérarchie de dossiers ; on appelle ce dossier l'espace de travail (working directory dans la langue de Shakespeare). Vous pouvez identifier l'emplacement de cet espace de travail en utilisant la commande "getwd()".. essayez-la.
   CorrectAnswer: getwd()
   AnswerTests: omnitest(correctExpr='getwd()')
   Hint: Ecrivez 'getwd()' sans les guillemets pour identifier l'emplacement de l'espace de travail courant.
@@ -66,7 +66,7 @@
   Output: Une des parties les plus utiles d'une fiche de documentation est la section "See Also" (avec les sections Description, Arguments, Details et Examples... oui, tout est utile dans une fiche de documentation :-) . Lisez avec attention la section "See also" pour la commande list.files. Certaines des fonctions mentionnées seront utilisées plus loin dans le cours.
 #Q12
 - Class: text
-  Output: Une fonction peut s'utiliser telle quelle, sans arguments spécifiques (comme nous l'avons fait pour utiliser les fonction list.files() ou dir()) ou s'utiliser avec des arguments, c'est-à-dire en lui fournissant des données complémentaires à utiliser. C'est par exemple ce que nous avons fait lorsque nous avons créé un vecteur; nous avons utilisé une fonction (c()) à qui nous avons fourni un ou plusieurs arguments (une valeur ou un ensemble de données), comme dans c(9) (ou 9 est un nombre fourni en argument) ou encore c(1,2,3) (ou 1, 2 et 3 sont 3 arguments fournis à la fonction).
+  Output: Une fonction peut s'utiliser telle quelle, sans arguments spécifiques (comme nous l'avons fait pour utiliser les fonction list.files() ou dir()) ou s'utiliser avec des arguments, c'est-à-dire en lui fournissant des données complémentaires à utiliser. C'est par exemple ce que nous avons fait lorsque nous avons créé un vecteur ; nous avons utilisé une fonction (c()) à qui nous avons fourni un ou plusieurs arguments (une valeur ou un ensemble de données), comme dans c(9) (ou 9 est un nombre fourni en argument) ou encore c(1,2,3) (ou 1, 2 et 3 sont 3 arguments fournis à la fonction).
 
 #Q13
 - Class: text
@@ -115,7 +115,7 @@
   Hint: file.create("mytest.R") devrait très bien fonctionner!
 
 - Class: mult_question
-  Output: "Ce devrait être le seul fichier présent dans ce dossier. Attention, petit quizz: quelle commande utiliseriez-vous pour vérifier cela?"
+  Output: "Ce devrait être le seul fichier présent dans ce dossier. Attention, petit quizz : quelle commande utiliseriez-vous pour vérifier cela?"
   CorrectAnswer: list.files()
   AnswerChoices: ls();getwd();list.files()
   AnswerTests: omnitest(correctVal='list.files()')
@@ -166,7 +166,7 @@
   Output: "Sachez également que les commandes vues ici pour un fichier ou un dossier (ex. file.exists(), dir.create(), etc.) sont utilisables dans les deux cas, pour les fichiers (via file.***) et les dossiers (via dir.***)."
 
 - Class: text
-  Output: "Vous pouvez utiliser l'opérateur $ (exemple file.info('mytest.R')$mode )pour accéder à des informations spécifique. (nous reviendrons plus tard sur cet opérateur $, il est beaucoup utilisé)"
+  Output: "Vous pouvez utiliser l'opérateur $ (exemple file.info('mytest.R')$mode )pour accéder à des informations spécifiques. (nous reviendrons plus tard sur cet opérateur $, il est beaucoup utilisé)"
 
 - Class: cmd_question
   Output: "Changez le nom du fichier 'mytest.R' en 'mytest2.R' en utilisant la commande file.rename(). N'hésitez pas à regarder la documentation pour savoir comment utiliser cette commande!"
@@ -218,7 +218,7 @@
   Hint: "?dir.create will show you the docs."
 
 - Class: text
-  Output: "Prêtez attention tout particulièrement à la partie sur l'argument 'recursive'. Cet argument permet de créer des répértoires imbriqués, et pour cela, il suffit passer l'argument recursive égal à TRUE."
+  Output: "Prêtez attention tout particulièrement à la partie sur l'argument 'recursive'. Cet argument permet de créer des répertoires imbriqués, et pour cela, il suffit passer l'argument recursive égal à TRUE."
 
 - Class: cmd_question
   Output: "Créez en une seule commande un répértoire dans l'espace de travail courant et ajoutez, dans ce nouveau répertoire, un 3e répertoire. Vous appellerez le 1er répertoire créé 'testdir2' et le 3e 'testdir3'. Pour cela, vous utiliserez les commandes file.path et dir.create."
@@ -240,7 +240,7 @@
 # "It is often helpful to save the settings that you had before you    began an analysis and then go back to them at the end. This trick is    often used within functions; you save, say, the par() settings that    you started with, mess around a bunch, and then set them back to the    original values at the end. This isn't the same as what we have done    here, but it seems similar enough to mention."
 
 - Class: text
-  Output: "Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créés ! Je ne présente pas içi les méthodes permettant de supprimer des fichiers et dossiers par mesure de sureté mais sachez que cela est totalement possible! Attention cependant, tout document ou dossier l'est complétement sans passer par la case 'Corbeille' donc.... 'Un grand pouvoir amène de grandes responsabilités'! "
+  Output: "Après avoir terminé cette leçon, pensez à supprimer les dossiers et fichiers créés ! Je ne présente pas ici les méthodes permettant de supprimer des fichiers et dossiers par mesure de sureté mais sachez que cela est totalement possible ! Attention cependant, tout document ou dossier supprimé l'est complétement sans passer par la case 'Corbeille' donc.... 'Un grand pouvoir amène de grandes responsabilités'! "
 
 - Class: text
-  Output: "Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'fic_wd' et entrez le code 'GLUKHOVSKY2033' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module ! Sur Moodle, selectionnez le test 'fic_wd' et entrez le code 'GLUKHOVSKY2033' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
