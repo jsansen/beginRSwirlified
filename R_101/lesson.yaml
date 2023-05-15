@@ -94,7 +94,7 @@
   Hint: "Tapez 'z' puis Entrée et affichez le contenu de la variable dans la console."
 
 - Class: cmd_question
-  Output: "Vous pouvez combinez des vecteurs afin d'en créer un nouveau. Créez un vecteur contenant le vecteur z, 555, puis z à nouveau. N'affectez pas ce vecteur, nous voulons juste observer directement le résultat."
+  Output: "Vous pouvez combiner des vecteurs afin d'en créer un nouveau. Créez un vecteur contenant le vecteur z, 555, puis z à nouveau. N'affectez pas ce vecteur, nous voulons juste observer directement le résultat."
   CorrectAnswer: c(z, 555, z)
   AnswerTests: omnitest(correctExpr='c(z, 555, z)')
   Hint: "Tapez c(z, 555, z). Ne créez pas de nouvelle variable."
@@ -110,7 +110,7 @@
   Vous remarquerez qu'il a suivi l'ordre classique des opérations arithmétiques (de gauche à droite, priorité aux parenthèses, etc.)"
 
 - Class: text
-  Output: "Il existe d'autres opérateurs arithmétiques, ils sont généralement les mêmes quels que soient les langages. Les classiques sont '+', '-', '/', '*'. '^' (ou '**') pour la puissance (2^2 et 2**3 signifie respectivement 2 puissance 2 (2 au carré) et 2 puissance 3 (2 au cube)).
+  Output: "Il existe d'autres opérateurs arithmétiques, ils sont généralement les mêmes quels que soient les langages. Les classiques sont '+', '-', '/', '*'. '^' (ou '**') pour la puissance (2^2 et 2**3 signifient respectivement 2 puissance 2 (2 au carré) et 2 puissance 3 (2 au cube)).
     Pour d'autres opérations arithmétiques, nous utiliserons des fonctions spécifiques, comme la racine carrée (square root en anglais) qui est accessible via la fonction sqrt()."
 
 - Class: cmd_question
@@ -179,7 +179,7 @@
   Output: "Avant de finir cette leçon, quelques astuces permettant de gagner du temps."
 
 - Class: text
-  Output: "Un peu plus tôt, nous avons calculé z * 2 + 100. Imaginons que nous nous soyons trompé et qu'au lieu d'ajouter 100, nous voulions ajouter 1000. Nous pouvons ré-écrire entièrement la formule, mais cela peut vite devenir pénible lorsque celle-ci est longue et complexe, et rien ne nous assure de ne pas faire à nouveau une erreur..."
+  Output: "Un peu plus tôt, nous avons calculé z * 2 + 100. Imaginons que nous nous soyons trompés et qu'au lieu d'ajouter 100, nous voulions ajouter 1000. Nous pouvons ré-écrire entièrement la formule, mais cela peut vite devenir pénible lorsque celle-ci est longue et complexe, et rien ne nous assure de ne pas faire à nouveau une erreur..."
 
 - Class: cmd_question
   Output: "Dans beaucoup d'environments de programmation, la flèche vers le haut permet de parcourir un historique des commandes précédentes. Essayez de retrouver cette opération (z * 2 + 100) dans l'historique puis modifiez 100 par 1000 et appuyez sur Entrée."
@@ -195,7 +195,7 @@
 
 
 - Class: text
-  Output: "Imaginons maintenant que vous vouliez afficher le contenu d'une variable créée un peu plus tôt. Problème, vous ne vous rappelez pas comment elle s'appelle... c'est my_div ou myDiv? Mince alors.... Vous pourriez essayer les deux... ou commencer à écrire 'my' puis appuyer sur la touche 'Tab', la touche au dessus de Maj et Verr.Maj, avec les deux flèches gauche/droite l'une au dessus de l'autres (ctrl+espace peut aussi fonctionner suivant les systèmes) afin d'afficher toutes les variables et fonctions commençant par 'my'."
+  Output: "Imaginons maintenant que vous vouliez afficher le contenu d'une variable créée un peu plus tôt. Problème, vous ne vous rappelez pas comment elle s'appelle... c'est my_div ou myDiv? Mince alors.... Vous pourriez essayer les deux... ou commencer à écrire 'my' puis appuyer sur la touche 'Tab', la touche au dessus de Maj et Verr.Maj, avec les deux flèches gauche/droite l'une au-dessus de l'autre (ctrl+espace peut aussi fonctionner suivant les systèmes) afin d'afficher toutes les variables et fonctions commençant par 'my'."
 
 - Class: text
   Output: "Suivant les environnements, la liste peut même être interactive et vous pouvez alors utiliser les flèches pour selectionner l'entrée qui vous intéresse. Cela s'appelle l'auto-completion et vous fera gagner un temps non négligeable au fur et à mesure que vous programmerez pour vous économiser l'écriture des quelques derniers caractères."
@@ -207,4 +207,4 @@
   Hint: "Tapez 'my'  (sans guillemets) puis appuyez sur la touche Tab et complétez pour obtenir my_div."
 
 - Class: text
-  Output: "Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'R101' et entrez le code 'KING22/11/63' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module ! Sur Moodle, selectionnez le test 'R101' et entrez le code 'KING22/11/63' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
