@@ -139,7 +139,7 @@
 
 # Q21
 - Class: cmd_question
-  Output: "Tout d'abord, examinons comment fonctionne l'opérateur AND. Il existe deux opérateurs AND dans R, `&` et `&&`, tous deux fonctionnent de façon similaire: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
+  Output: "Tout d'abord, examinons comment fonctionne l'opérateur AND. l'opérateur AND dans R s'utilise avec `&`: si les expressions à gauche ET à droite sont vraies (TRUE) alors l'ensemble retournera TRUE, sinon on obtiendra FALSE. Il faut donc que les deux expressions soient vraies pour obtenir vrai (A ET B doivent être vraies pour que l'ensemble soit vrai). Ainsi TRUE & TRUE retournera TRUE. Essayez d'évaluer l'expression suivante: FALSE & FALSE pour voir ce qui est retourné."
   CorrectAnswer: FALSE & FALSE
   AnswerTests: omnitest(correctExpr='FALSE & FALSE')
   Hint: "Tapez FALSE & FALSE pour voir comment l'opérateur AND fonctionne"
@@ -147,7 +147,7 @@
 
 # Q22
 - Class: cmd_question
-  Output: "Vous pouvez utiliser l'opérateur `&` pour évaluer l'ensemble des valeurs d'un vecteur. L'opérateur `&&` n'évaluera que le premier élément d'un vecteur. Testons les deux pour les voir en action. Tapez l'expression TRUE & c(TRUE, FALSE, FALSE)."
+  Output: "Vous pouvez utiliser l'opérateur `&` pour évaluer l'ensemble des valeurs d'un vecteur. Testons les deux pour les voir en action. Tapez l'expression TRUE & c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE & c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE & c(TRUE, FALSE, FALSE)')
   Hint: "Tapez simplement TRUE & c(TRUE, FALSE, FALSE) pour voir comment l'opérateur & fonctionne"
@@ -158,20 +158,20 @@
   Output: "Ce qu'il se passe ici est que la partie gauche de l'expression (avant le &) est recyclée pour chaque élément de la partie de droite. Cela revient à faire 'rep(TRUE, 3) & c(TRUE, FALSE, FALSE)'."
 
 # Q24
-- Class: cmd_question
-  Output: "Maintenant nous allons utiliser la même expression mais avece cette fois-ci un double & (&&) comme opérateur AND. Evaluez cette expression: TRUE && c(TRUE, FALSE, FALSE)."
-  CorrectAnswer: "TRUE && c(TRUE, FALSE, FALSE)"
-  AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
-  Hint: "Comme vous allez le constater, && est une version un peu différente de l'opérateur AND. Tapez: TRUE && c(TRUE, FALSE, FALSE)"
+#- Class: cmd_question
+#  Output: "Maintenant nous allons utiliser la même expression mais avece cette fois-ci un double & (&) comme opérateur AND. Evaluez cette expression: TRUE & c(TRUE, FALSE, FALSE)."
+#  CorrectAnswer: "TRUE & c(TRUE, FALSE, FALSE)"
+#  AnswerTests: omnitest(correctExpr='TRUE & c(TRUE, FALSE, FALSE)')
+#  Hint: "Comme vous allez le constater, & est une version un peu différente de l'opérateur AND. Tapez: TRUE & c(TRUE, FALSE, FALSE)"
 
 
 # Q25
-- Class: text
-  Output: "Dans ce cas, la partie de gauche n'est évaluée qu'avec le premier élément de la partie de droite. Le reste du vecteur n'est pas testé."
+# - Class: text
+ # Output: "Dans ce cas, la partie de gauche n'est évaluée qu'avec le premier élément de la partie de droite. Le reste du vecteur n'est pas testé."
 
 # Q26
 - Class : text
-  Output: L'operateur OR (ou) suit globalement les mêmes règles que l'opérateur AND. Il utilise le symbole `|` (pipe) pour évaluer l'ensemble d'un vecteur et `||` pour n'évaluer que le premier élément.
+  Output: L'operateur OR (ou) suit globalement les mêmes règles que l'opérateur AND. Il utilise le symbole `|` (pipe) pour évaluer l'ensemble d'un vecteur.
 
 # Q27
 - Class : text
@@ -185,43 +185,43 @@
   Hint: "Tapez: TRUE | c(TRUE, FALSE, FALSE) pour tester l'opérateur OR sur un vecteur."
 
 # Q29
-- Class: cmd_question
-  Output: "Et maintenant la version non vectorisée TRUE || c(TRUE, FALSE, FALSE)."
-  CorrectAnswer: "TRUE || c(TRUE, FALSE, FALSE)"
-  AnswerTests: omnitest(correctExpr='TRUE || c(TRUE, FALSE, FALSE)')
-  Hint: "Comme pour le AND, le double pipe permet d'empêcher le recyclage d'expression. Testez le avec la commande TRUE || c(TRUE, FALSE, FALSE)"
+#- Class: cmd_question
+#  Output: "Et maintenant la version non vectorisée TRUE | c(TRUE, FALSE, FALSE)."
+#  CorrectAnswer: "TRUE | c(TRUE, FALSE, FALSE)"
+#  AnswerTests: omnitest(correctExpr='TRUE | c(TRUE, FALSE, FALSE)')
+#  Hint: "Comme pour le AND, le double pipe permet d'empêcher le recyclage d'expression. Testez le avec la commande TRUE | c(TRUE, FALSE, FALSE)"
 
 
 # Q30
 - Class : text
-  Output: "Les opérateurs logiques peuvent être chainés, tout comme les opérateurs arithmétiques. Ainsi les expressions du genre `6 != 10 && FALSE && 1 >= 2` ou `TRUE || 5 < 9.3 || FALSE` n'ont rien d'exceptionnel."
+  Output: "Les opérateurs logiques peuvent être chainés, tout comme les opérateurs arithmétiques. Ainsi les expressions du genre `6 != 10 & FALSE & 1 >= 2` ou `TRUE | 5 < 9.3 | FALSE` n'ont rien d'exceptionnel."
 
 
 # Q31
 - Class : cmd_question
-  Output: "Si vous vous rappelez vos cours, les expressions arithmétiques ont un ordre et des priorités. Il en est de même avec les expressions booléennes. Ainsi, les opérateurs AND sont évalués avant les expressions OR s'ils ont le même niveau dans l'expression (hors priorisation par parenthèses). Exemple d'expression ambigue: Tapez 5 > 8 || 6 != 8 && 4 > 3.9"
-  CorrectAnswer: "5 > 8 || 6 != 8 && 4 > 3.9"
-  AnswerTests: omnitest(correctExpr='5 > 8 || 6 != 8 && 4 > 3.9')
-  Hint: "Voyez comment l'ordre des opérations peut avoir un impact sur la réponse retournée en tapant: 5 > 8 || 6 != 8 && 4 > 3.9"
+  Output: "Si vous vous rappelez vos cours, les expressions arithmétiques ont un ordre et des priorités. Il en est de même avec les expressions booléennes. Ainsi, les opérateurs AND sont évalués avant les expressions OR s'ils ont le même niveau dans l'expression (hors priorisation par parenthèses). Exemple d'expression ambigue: Tapez 5 > 8 | 6 != 8 & 4 > 3.9"
+  CorrectAnswer: "5 > 8 | 6 != 8 & 4 > 3.9"
+  AnswerTests: omnitest(correctExpr='5 > 8 | 6 != 8 & 4 > 3.9')
+  Hint: "Voyez comment l'ordre des opérations peut avoir un impact sur la réponse retournée en tapant: 5 > 8 | 6 != 8 & 4 > 3.9"
 
 # Q32
 - Class : text
-  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et de droite de l'opérateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE && TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE || TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vrai."
+  Output: "Analysons un peu l'ordre des opérations de l'expression précédente. Tout d'abord, les parties de gauche et de droite de l'opérateur AND sont évaluées. 6 est différent de 8 et 4  est effectivement plus grand que 3.9, les deux sont vraies, donc le résultat de l'expression TRUE & TRUE retourne TRUE. Ensuite, la partie gauche du OR est evalué: 5 n'est pas plus grand que 8, donc l'expression devient FALSE | TRUE. Puisque la partie de droite est vraie, l'expression retourne donc vrai."
 
 # Q33
 - Class: mult_question
   Output: Laquelle de ces expressions retournera TRUE?
-  CorrectAnswer: "TRUE && FALSE || 9 >= 4 && 3 < 6"
-  AnswerChoices: "TRUE && FALSE || 9 >= 4 && 3 < 6;TRUE && 62 < 62 && 44 >= 44;99.99 > 100 || 45 < 7.3 || 4 != 4.0;FALSE || TRUE && FALSE"
-  AnswerTests: omnitest(correctVal='TRUE && FALSE || 9 >= 4 && 3 < 6')
+  CorrectAnswer: "TRUE & FALSE | 9 >= 4 & 3 < 6"
+  AnswerChoices: "TRUE & FALSE | 9 >= 4 & 3 < 6;TRUE & 62 < 62 & 44 >= 44;99.99 > 100 | 45 < 7.3 | 4 != 4.0;FALSE | TRUE & FALSE"
+  AnswerTests: omnitest(correctVal='TRUE & FALSE | 9 >= 4 & 3 < 6')
   Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
 # Q34
 - Class: mult_question
   Output: Laquelle de ces expressions retournera FALSE?
-  CorrectAnswer: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5"
-  AnswerChoices: "FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5;FALSE || TRUE && 6 != 4 || 9 > 4;!(8 > 4) ||  5 == 5.0 && 7.8 >= 7.79;6 >= -9 && !(6 > 7) && !(!TRUE)"
-  AnswerTests: omnitest(correctVal='FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5')
+  CorrectAnswer: "FALSE & 6 >= 6 | 7 >= 8 | 50 <= 49.5"
+  AnswerChoices: "FALSE & 6 >= 6 | 7 >= 8 | 50 <= 49.5;FALSE | TRUE & 6 != 4 | 9 > 4;!(8 > 4) |  5 == 5.0 & 7.8 >= 7.79;6 >= -9 & !(6 > 7) & !(!TRUE)"
+  AnswerTests: omnitest(correctVal='FALSE & 6 >= 6 | 7 >= 8 | 50 <= 49.5')
   Hint: "Si vous avez des difficultés, essayez de décomposer et d'ordonner les expressions pour reconstruire le processus de réponse."
 
 # Q35
