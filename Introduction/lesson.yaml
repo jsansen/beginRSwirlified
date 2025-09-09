@@ -7,7 +7,7 @@
   Version: 2.4.5
 
 - Class: text
-  Output: "Bonjour et bienvenu-e dans begin'R-Swirlified ! Félicitations, si vous êtes arrivé-e, jusqu'ici, vous avez effectué le tier des étapes les plus difficiles de ce module de formation ! Et vous pouvez être fier-ère de vous, car vous y êtes arrivé-e en autonomie! Guidé-e, mais seul-e, et ce n'est pas rien ! Dans la suite de ce cours, les '. . .' signifient que vous pouvez afficher le message ou la question suivante. Tapez la touche 'Entrée' pour continuer."
+  Output: "Bonjour et bienvenu-e dans begin'R-Swirlified ! Félicitations, si vous êtes arrivé-e, jusqu'ici, vous avez effectué le tier des étapes les plus difficiles de ce module de formation ! Dans la suite de ce cours, les '. . .' signifient que vous pouvez afficher le message ou la question suivante. Tapez la touche 'Entrée' pour continuer."
 
 - Class: text
   Output: "Pour ce cours et pour tous les cours de ce module, je vous présenterai quelques commandes et leurs effets et vous les testerez quasiment toutes en même temps, un apprentissage par la pratique et l'expérimentation, comme tout scientifique que vous êtes/serez !"
