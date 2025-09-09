@@ -267,4 +267,4 @@
   Output: "Dans ce cours, vous avez appris les bases d'utilisation de deux des structures les plus couramment utilisées dans R: les matrices et les data frames. Il y a encore beaucoup de choses à apprendre les concernant et nous les verrons un peu plus tard dans le cours, notamment concernant les dataframe qui sont un incontournable du traitement de données en R."
 
 - Class: text
-  Output: "Félicitations, vous avez terminé ce module ! Sur Moodle, sélectionnez le test 'dataframes' et entrez le code 'G4rrickhsalF4ll3N' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module ! Vous pouvez désormais effectuer le test moodle 'dataframes'."
