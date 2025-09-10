@@ -350,4 +350,4 @@
   Output: "C'est tout pour cette introduction aux booléens dans R. Félicitations!"
 
 - Class: text
-  Output: Félicitations, vous avez terminé ce module! Vous pouvez effectuer le test moodle 'Logique'."
+  Output: "Félicitations, vous avez terminé ce module! Vous pouvez effectuer le test moodle 'Logique'."
