@@ -12,7 +12,7 @@
 
 # Q1
 - Class: text
-  Output: "Ce cours va traiter les matrices et dataframes, des représentations 'rectangulaires'/tabulaires (tableau) de données, un peu à la façon de ce que permet de faire un tableur type calc ou excel."
+  Output: "Ce cours va traiter les matrices et dataframes, des représentations tabulaires (tableau) de données, un peu à la façon de ce que permet de faire un tableur type calc ou excel."
 
 
 # Q2
@@ -22,10 +22,10 @@
 
 # Q3
 - Class: cmd_question
-  Output: "Créons une suite de nombres allant de 1 à 20 et stockons cette suite dans une variable my_vector."
+  Output: "Créons une séquence de nombres allant de 1 à 20 et stockons cette séquence dans une variable my_vector."
   CorrectAnswer: my_vector = 1:20
   AnswerTests: omnitest(correctExpr='my_vector = 1:20')
-  Hint: "Allez réflechissez un peu, rappelez-vous ! On utilise l'opérateur ':' pour créer une suite. Par exemple, 4:8 est équivalent à écrire c(4, 5, 6, 7, 8), c'est juste plus pratique :-) Pensez-bien à la stocker dans une variable appelée my_vector."
+  Hint: "Allez réflechissez un peu, rappelez-vous ! On utilise l'opérateur ':' pour créer une séquence. Par exemple, 4:8 est équivalent à écrire c(4, 5, 6, 7, 8), c'est juste plus pratique :-) Pensez-bien à la stocker dans une variable appelée my_vector."
 
 
 # Q4
@@ -196,7 +196,7 @@
 
 # Q24
 - Class: text
-  Output: "Crediou c'est quoi ce bordel ?! il a totalement foiré notre jeu de données ! il a tout mis entre guillemets ! En fait, on aurait pu s'y attendre... Si vous avez été vigilant à ce qui a été expliqué un peu plus tôt, vous vous rappelez que les matrices ne peuvent contenir qu'UN SEUL type de données. Du coup, lorsque l'on a voulu associer notre vecteur et notre matrice, R a tenté de les convertir. Sauf que, comme il est difficile de convertir une chaîne de caractères en nombre, il a fait l'inverse et a simplement converti les nombres en chaines de caractères, d'où l'apparition des guillemets."
+  Output: "Mazette, tout a été mis entre guillemets ! En fait, on aurait pu s'y attendre... Si vous avez été vigilant à ce qui a été expliqué un peu plus tôt, vous vous rappelez que les matrices ne peuvent contenir qu'UN SEUL type de données. Du coup, lorsque l'on a voulu associer notre vecteur et notre matrice, R a tenté de les convertir. Sauf que, comme il est difficile de convertir une chaîne de caractères en nombre, il a fait l'inverse et a simplement converti les nombres en chaines de caractères, d'où l'apparition des guillemets."
 
 # Q25
 - Class: text
@@ -264,7 +264,7 @@
 
 # Q36
 - Class: text
-  Output: "Dans ce cours, vous avez appris les bases d'utilisation de deux des structures les plus couramment utilisées dans R: les matrices et les data frames. Il y a encore beaucoup de choses à apprendre les concernant et nous les verrons un peu plus tard dans le cours, notamment concernant les dataframe qui sont un incontournable du traitement de données en R."
+  Output: "Dans ce cours, vous avez appris les bases d'utilisation de deux des structures les plus couramment utilisées dans R: les matrices et les data frames. Il y a encore beaucoup de choses à apprendre les concernant et nous les verrons un peu plus tard dans le cours, notamment concernant les dataframes qui sont un incontournable du traitement de données en R."
 
 - Class: text
   Output: "Félicitations, vous avez terminé ce module ! Vous pouvez désormais effectuer le test moodle 'dataframes'."
