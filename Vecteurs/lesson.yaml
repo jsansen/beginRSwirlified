@@ -326,4 +326,4 @@
   Output: "Comme vous avez pu le constater, il existe une troisième méthode d'accès pour les éléments nommés, mélangeant les crochets et le nom attribué. Bien que l'accès par nommage avec '$' soit le plus simple (combiné à la reconnaissance des noms que fournit R, il est redoutable - il suffit généralement de taper les deux ou trois premières lettres puis d'appuyer sur la touche tab pour completer automatiquement le nom de l'élément recherché) vous pourrez, au fil de votre utilisation de R utiliser la méthode que vous préférez. Comme souvent en informatique, il existe plusieurs moyens de faire la même chose."
 
 - Class: text
-  Output: Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test "Vecteurs" et entrez le code "Shangri6LALalAla" (en conservant les majuscules et avec guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module! Vous pouvez passer au test moodle 'Vecteurs'."
