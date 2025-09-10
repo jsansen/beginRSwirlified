@@ -144,4 +144,5 @@
 
 
 - Class: text
-  Output: "Félicitations, vous avez terminé ce module! Sur Moodle, selectionnez le test 'Suites' et entrez le code 'HamblyD4rW4rtH' (en conservant les majuscules et sans guillemets !) cela vous ouvrira le test associé à cette leçon."
+  Output: "Félicitations, vous avez terminé ce module! Vous pouvez désormais effectuer le test 'Suites' sur moodle."
+
