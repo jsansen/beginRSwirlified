@@ -92,28 +92,28 @@
 # Q14
 - Class: mult_question
   Output: "Laquelle de ces expressions s'évalue à TRUE?"
-  CorrectAnswer: 9 >= 10
+  CorrectAnswer: -6 > -7
   AnswerChoices: 9 >= 10;7 == 9;57 < 8;-6 > -7
   AnswerTests: omnitest(correctVal='-6 > -7')
   Hint: "Si besoin, n'hésitez pas à les tester dans une deuxième session R ou en quittant temporairement ce cours avec la commande 'play()' - rappelez-vous, vous pourrez revenir dans ce module en tapant nxt()."
 
 # Q15
 - Class: cmd_question
-  Output: "Le prochain opérateur dont nous allons discuter est l'opérateur différent (non égal plus exactement), représenté par le symbole `!=`. Différent test si deux valeurs sont, je vous le donne en mille, différentes; ainsi, TRUE != FALSE retourne TRUE. Tout comme pour l'opérateur d'égalité,  `!=` peut aussi être utilisé avec des nombres. Essayez d'écrire une expression verifiant si 5 est différent de 7."
+  Output: "Le prochain opérateur dont nous allons discuter est l'opérateur différent (non égal plus exactement), représenté par le symbole `!=`. Ainsi, TRUE != FALSE retourne TRUE. Tout comme pour l'opérateur d'égalité,  `!=` peut aussi être utilisé avec des nombres. Essayez d'écrire une expression verifiant si 5 est différent de 7."
   CorrectAnswer: 5 != 7
   AnswerTests: omnitest(correctExpr='5 != 7')
   Hint: "Utilisez l'opérateur non égal et tapez 5 != 7"
 
 # Q16
 - Class: cmd_question
-  Output: "On peut également utiliser le point d'exclamation (le `not`) pour négativer une expression booléenne. Ainsi, le `!` dans !TRUE (not TRUE) répond FALSE et !FALSE (not FALSE) répond TRUE. Essayez d'utiliser le `not` et l'opérateur d'égalité pour trouver la négation de 5 est égal à 7."
+  Output: "On peut également utiliser le point d'exclamation (le `not`) pour négativer une expression booléenne. Ainsi, le `!` dans !TRUE (not TRUE) répond FALSE et !FALSE (not FALSE) répond TRUE. Essayez d'utiliser le `not` et l'opérateur d'égalité pour évaluer la négation de 5 est égal à 7."
   CorrectAnswer: '!5 == 7'
   AnswerTests: any_of_exprs('!5 == 7', '!(5 == 7)')
   Hint: "Cette expression peut sembler un peu tordue, pensez à décomposer en différentes parties, ce que l'on teste (5 == 7) et ce que l'on veut négativer (le résultat de ce qui a été testé)."
 
 # Q17
 - Class: text
-  Output: "Prenons un moment pour analyser un peu ça: l'opérateur `==` test si les deux parties de gauche et droite sont bien égales, l'opérateur `!=` test la différence et l'opérateur NOT (`!`) négative une expressison logique changeant ainsi un TRUE en FALSE et un FALSE en TRUE."
+  Output: "Prenons un moment pour analyser un peu ça: l'opérateur `==` teste si les deux parties de gauche et droite sont bien égales, l'opérateur `!=` test la différence et l'opérateur NOT (`!`) négative une expression logique changeant ainsi un TRUE en FALSE et un FALSE en TRUE."
 
 # Q18
 - Class: mult_question
@@ -260,7 +260,7 @@
 
 # Q40
 - Class : cmd_question
-  Output: "Vous devriez également connaître le fonctionnement de la fonction xor(). Cette fonction prend deux arguments et correspond à l'opérateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE. Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
+  Output: "Vous devriez également connaître le fonctionnement de la fonction xor(). Cette fonction prend deux arguments et correspond à l'opérateur XOR (OU EXCLUSIF). Contrairement au OR classique, le XOR ne retournera TRUE que losqu'UNE SEULE des deux expressions est évaluée à TRUE, sinon on obtient FALSE, il est donc plus restrictif puisqu'il impose la présence d'une seule valeur TRUE dans l'expression pour pouvoir retourner TRUE. Essayez cette fonction en tapant xor(5 == 6, !FALSE)"
   CorrectAnswer: "xor(5 == 6, !FALSE)"
   AnswerTests: omnitest(correctExpr='xor(5 == 6, !FALSE)')
   Hint: "Testez le xor en tapant: xor(5 == 6, !FALSE)"
@@ -284,7 +284,7 @@
   Output: "Pour les prochaines questions, nous allons avoir besoin de créer un vecteur d'entiers que nous appellerons ints. Créez ce vecteur d'entiers en effectuant un tirage aléatoire de 10 éléments avec la fonction sample."
   CorrectAnswer: "ints = sample(10)"
   AnswerTests: omnitest(correctExpr='ints = sample(10)')
-  Hint: "Bloqué? Rappelez-vous que l'on peut tirer aléatoirement 10 éléments suivant une distribution normale sans remise avec la commande sample(10). Pensez bien à affecter ce tirage à une variable appelée ints."
+  Hint: "Bloqué? ici on effectuera un tirage aleatoire sans remise de X élements dans un vecteur allant de 1 à X. Observez la documentation de sample si besoin."
 
 # Q44
 - Class : cmd_question
@@ -295,14 +295,14 @@
 
 # Q45
 - Class : cmd_question
-  Output: "Le vecteur `ints` correspond donc à un tirage aléatoire de 10 éléments suivant une distribution normale sans remise. Imaginons que nous cherchions à évaluer des expressions booléennes à propos des valeurs contenues dans ints. Si l'on tape ints > 5, nous obtiendrons un vecteur de booléens évaluant pour chaque valeur de ints si oui ou non elle est plus grande que 5. Essayez cela en tapant: ints > 5"
+  Output: "Le vecteur `ints` correspond donc à un tri aléatoire du vecteur 1:10. Imaginons que nous cherchions à évaluer des expressions booléennes à propos des valeurs contenues dans ints. Si l'on tape ints > 5, nous obtiendrons un vecteur de booléens évaluant pour chaque valeur de ints si oui ou non elle est plus grande que 5. Essayez cela en tapant: ints > 5"
   CorrectAnswer: "ints > 5"
   AnswerTests: omnitest(correctExpr='ints > 5')
   Hint: "Vérifiez quels éléments de `ints` sont plus grands que 5 en tapant: ints > 5."
 
 # Q46
 - Class : text
-  Output: "Nous pouvons utiliser le vecteur logique résultant pour poser d'autres questions sur ints. La fonction which() prend un vecteur logique en argument et retourne les indices de position du vecteur évalués à TRUE. Par exemple which(c(TRUE, FALSE, TRUE)) retournerai le vecteur c(1, 3)."
+  Output: "Nous pouvons utiliser le vecteur logique résultant pour poser d'autres questions sur ints. La fonction which() prend un vecteur logique en argument et retourne les indices de position du vecteur évalués à TRUE. Par exemple which(c(TRUE, FALSE, TRUE)) retournerai le vecteur [1, 3]."
 
 # Q47
 - Class : cmd_question
